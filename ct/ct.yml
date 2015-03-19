@@ -7,7 +7,6 @@ Country: US
 Default Script: Text
 Script Tables:
   Text:
-    Lengths: []
     Replacements:
       0x00: ''
       0x2F: ★
@@ -84,50 +83,43 @@ Script Tables:
       0xFF: ' '
 ...
 ---
-UNKNOWN_C0000E:
+UNKNOWN_C0000E: !assembly
   Offset: 0xC0000E
   Labels:
-    114: UNKNOWN0
-    125: UNKNOWN1
-    151: UNKNOWN2
+    100: UNKNOWN0
+    111: UNKNOWN1
+    137: UNKNOWN2
   Size: 221
-  Type: assembly
-UNKNOWN_C0092B:
+UNKNOWN_C0092B: !assembly
   Offset: 0xC0092B
-  Type: assembly
   Size: 53
   Initial State:
     8 Bit Accum: true
   Labels:
     0x1A: UNKNOWN0
     0x30: UNKNOWN1
-UNKNOWN_C00B4E:
+UNKNOWN_C00B4E: !assembly
   Offset: 0xC00B4E
-  Type: assembly
   Size: 22
   Initial State:
     8 Bit Accum: true
-UNKNOWN_C00B64:
+UNKNOWN_C00B64: !assembly
   Offset: 0xC00B64
-  Type: assembly
   Size: 17
   Initial State:
     8 Bit Accum: true
-UNKNOWN_C00B75:
+UNKNOWN_C00B75: !assembly
   Offset: 0xC00B75
-  Type: assembly
   Size: 17
   Initial State:
     8 Bit Accum: true
-UNKNOWN_C00B86:
+UNKNOWN_C00B86: !assembly
   Offset: 0xC00B86
-  Type: assembly
   Size: 240
   Initial State:
     8 Bit Accum: true
-UNKNOWN_C01B53:
+UNKNOWN_C01B53: !assembly
   Offset: 0xC01B53
-  Type: assembly
   Size: 61
   Initial State:
     8 Bit Accum: true
@@ -135,85 +127,69 @@ UNKNOWN_C01B53:
     0xC: UNKNOWN0
     0x30: UNKNOWN1
     0x3C: UNKNOWN2
-UNKNOWN_C02848:
+UNKNOWN_C02848: !assembly
   Offset: 0xC02848
-  Type: assembly
   Size: 36
   Initial State:
     8 Bit Accum: true
   Labels:
     0x05: UNKNOWN0
     0x1E: UNKNOWN1
-UNKNOWN_C0286C:
+UNKNOWN_C0286C: !assembly
   Offset: 0xC0286C
-  Type: assembly
   Size: 62
-UNKNOWN_C028AA:
+UNKNOWN_C028AA: !assembly
   Offset: 0xC028AA
-  Type: assembly
   Size: 22
   Labels:
     8: UNKNOWN0
-UNKNOWN_C02DF1:
+UNKNOWN_C02DF1: !assembly
   Offset: 0xC02DF1
-  Type: assembly
   Size: 45
   Initial State:
     8 Bit Accum: true
-UNKNOWN_C0B192:
+UNKNOWN_C0B192: !assembly
   Offset: 0xC0B192
-  Type: assembly
   Size: 114
   Labels:
     0x13: UNKNOWN0
     0x3F: UNKNOWN1
     0x6F: UNKNOWN2
-RESET:
+RESET: !assembly
   Offset: 0xC0FF00
   Description: Execution entry point
-  Type: assembly
   Size: 7
   Initial State:
     8 Bit Accum: true
     8 Bit Index: true
-UNKNOWN_C28004:
+UNKNOWN_C28004: !assembly
   Offset: 0xC28004
-  Type: assembly
   Size: 10
   Labels:
     0x6: UNKNOWN0
-DECOMPRESSION:
+DECOMPRESSION: !assembly
   Offset: 0xC3075B
-  Type: assembly
   Size: 344
-OVERWORLD_SPRITE_PTRS:
+OVERWORLD_SPRITE_PTRS: !array
   Offset: 0xC6FDF0
-  Type: data
   Size: 0x30
-  Entries:
-  - Type: pointer
+  Item Type: !pointer
     Size: 3
-OVERWORLD_TILE_PTRS:
+OVERWORLD_TILE_PTRS: !array
   Offset: 0xC6FE20
-  Type: data
   Size: 0x80
-  Entries:
-  - Type: pointer
+  Item Type: !pointer
     Size: 3
-OVERWORLD_PALETTE_PTRS:
+OVERWORLD_PALETTE_PTRS: !array
   Offset: 0xC6FEA0
-  Type: data
   Size: 0x60
-  Entries:
-  - Type: pointer
+  Item Type: !pointer
     Size: 3
-UNKNOWN_C70000:
+UNKNOWN_C70000: !assembly
   Offset: 0xC70000
-  Type: assembly
   Size: 3
-UNKNOWN_C70038:
+UNKNOWN_C70038: !assembly
   Offset: 0xC70038
-  Type: assembly
   Size: 264
   Labels:
     24: UNKNOWN0
@@ -227,180 +203,153 @@ UNKNOWN_C70038:
     190: UNKNOWN8
     202: UNKNOWN9
     227: UNKNOWN10
-WEAPON_STATS:
+WEAPON_STATS: !array
   Offset: 0xCC0262
   Description: Weapon Stats Table
-  Type: data
   Size: 449
-  Entries:
-  - Name: Power
-    Size: 1
-  - Name: Unknown
-    Size: 1
-  - Name: Critical Hit Chance
-    Size: 1
-  - Name: Effect
-    Size: 1
-    Values:
-      12: 1.5x damage on magic enemies
-  - Description: Effect Enabled
-    Name: EFFECT_ENABLED
-    Size: 1
-WEAPON_NAMES:
+  Item Type: !struct
+    Entries:
+      POWER: !int
+        Size: 1
+      UNKNOWN: !unknown
+        Size: 1
+      CRITICAL_HIT_CHANCE: !int
+        Size: 1
+      EFFECT: !int
+        Size: 1
+        Values:
+          12: 1.5x damage on magic enemies
+      EFFECT_ENABLED: !int
+        Pretty Name: Effect Enabled
+        Size: 1
+WEAPON_NAMES: !array
   Offset: 0xCC0B5E
   Size: 0xA71
-  Type: data
-  Entries:
-  - Type: script
+  Item Type: !script
     Size: 11
-TECH_NAMES:
+TECH_NAMES: !array
   Offset: 0xCC15CF
   Size: 0x4FC
-  Type: data
-  Entries:
-  - Size: 11
-    Type: script
-ENEMY_STATS:
+  Item Type: !script
+    Size: 11
+ENEMY_STATS: !array
   Offset: 0xCC4700
   Description: Enemy Statistics Table
-  Type: data
   Size: 5887
-  Entries:
-  - Name: HP
-    Size: 2
-  - Name: Level
-    Size: 1
-  - Name: Unknown1
-    Size: 6
-    Type: bytearray
-  - Name: Speed
-    Size: 1
-  - Name: Magic
-    Size: 1
-  - Name: Unknown2
-    Size: 3
-    Type: bytearray
-  - Name: Offense
-    Size: 1
-  - Name: Defense
-    Size: 1
-  - Name: Lightning Defense
-    Size: 1
-  - Name: Shadow Defense
-    Size: 1
-  - Name: Water Defense
-    Size: 1
-  - Name: Fire Defense
-    Size: 1
-  - Name: Evasion
-    Size: 1
-  - Name: Unknown
-    Size: 2
-    Bit Values:
-    - Boss Death
-    - Cannot see HP
-    - Unknown 1
-    - Unknown 2
-    - Unknown 3
-    - Unknown 4
-    - Unknown 5
-    - Unknown 6
-    - Unknown 7
-    - Unknown 8
-    - Unknown 9
-    - Unknown 10
-    - Unknown 11
-    - Unknown 12
-    - Unknown 13
-    - Unknown 14
-ENEMY_NAMES:
+  Item Type: !struct
+    Entries:
+      HP: !int
+        Size: 2
+      LEVEL: !int
+        Size: 1
+      UNKNOWN1: !unknown
+        Size: 6
+      SPEED: !int
+        Size: 1
+      MAGIC: !int
+        Size: 1
+      UNKNOWN2: !unknown
+        Size: 3
+        Type: bytearray
+      OFFENSE: !int
+        Size: 1
+      DEFENSE: !int
+        Size: 1
+      LIGHTNING_DEFENSE: !int
+        Size: 1
+      SHADOW_DEFENSE: !int
+        Size: 1
+      WATER_DEFENSE: !int
+        Size: 1
+      FIRE_DEFENSE: !int
+        Size: 1
+      EVASION: !int
+        Size: 1
+      FLAGS: !int
+        Size: 2
+        Bit Values:
+        - Boss Death
+        - Cannot see HP
+        - Unknown 1
+        - Unknown 2
+        - Unknown 3
+        - Unknown 4
+        - Unknown 5
+        - Unknown 6
+        - Unknown 7
+        - Unknown 8
+        - Unknown 9
+        - Unknown 10
+        - Unknown 11
+        - Unknown 12
+        - Unknown 13
+        - Unknown 14
+ENEMY_NAMES: !array
   Offset: 0xCC6500
   Size: 0xAC9
-  Type: data
-  Entries:
-  - Type: script
+  Item Type: !script
     Size: 11
-MAGUS_SPRITES:
+MAGUS_SPRITES: !unknown
   Offset: 0xD20000
   Size: 0x72C0
-  Type: data
-CRONO_SPRITES:
+CRONO_SPRITES: !unknown
   Offset: 0xD272C0
   Size: 0x75A0
-  Type: data
-FROG_SPRITES:
+FROG_SPRITES: !unknown
   Offset: 0xD30000
   Size: 0x6B40
-  Type: data
-LUCCA_SPRITES:
+LUCCA_SPRITES: !unknown
   Offset: 0xD36B40
   Size: 0x7740
-  Type: data
-MARLE_SPRITES:
+MARLE_SPRITES: !unknown
   Offset: 0xD40000
   Size: 0x7C40
-  Type: data
-ROBO_SPRITES:
+ROBO_SPRITES: !unknown
   Offset: 0xD47C40
   Size: 0x7EC0
-  Type: data
-AYLA_SPRITES:
+AYLA_SPRITES: !unknown
   Offset: 0xD50000
   Size: 0x8C00
-  Type: data
-CHAR_SPRITE_PTRS:
+CHAR_SPRITE_PTRS: !array
   Offset: 0xE42000
   Size: 0x14
-  Type: data
-  Entries:
-  - Size: 3
-    Type: pointer
-ENEMY_AND_NPC_SPRITE_PTRS:
+  Item Type: !pointer
+    Size: 3
+ENEMY_AND_NPC_SPRITE_PTRS: !array
   Offset: 0xE42015
   Size: 0x2D3
-  Type: data
-  Entries:
-  - Size: 3
-    Type: pointer
-NULLSPACE_E4CC60:
+  Item Type: !pointer
+    Size: 3
+NULLSPACE_E4CC60: !empty
   Offset: 0xE4CC60
   Size: 9120
-  Type: empty
-UNKNOWN_FDC000:
+UNKNOWN_FDC000: !assembly
   Offset: 0xFDC000
   Size: 215
-  Type: assembly
-UNKNOWN_FDE437:
+UNKNOWN_FDE437: !assembly
   Offset: 0xFDE437
-  Type: assembly
   Size: 78
   Labels:
     0x38: UNKNOWN0
-UNKNOWN_FDE4E8:
+UNKNOWN_FDE4E8: !assembly
   Offset: 0xFDE4E8
-  Type: assembly
   Size: 74
   Labels:
     0x25: UNKNOWN0
-UNKNOWN_FDE532:
+UNKNOWN_FDE532: !assembly
   Offset: 0xFDE532
-  Type: assembly
   Size: 74
   Labels:
     0x25: UNKNOWN0
-CHAPTER_TITLES:
+CHAPTER_TITLES: !array
   Description: Names of each chapter of the game
   Offset: 0xFFD074
   Size: 0x222
-  Type: data
-  Entries:
-  - Type: script
+  Item Type: !script
     Terminator: 0
-MISC_MENU_TXT:
+MISC_MENU_TXT: !array
   Offset: 0xFFD463
   Size: 0xFD
-  Type: data
-  Entries:
-  - Type: script
+  Item Type: !script
     Terminator: 0
 ...
