@@ -6,126 +6,106 @@ Title: Out of This World
 Country: US
 ...
 ---
-UNKNOWN_80E25C:
-  Offset: 0x80E25C
-  type: assembly
-  size: 58
-  labels:
-    57967: UNKNOWN0
-    58001: UNKNOWN1
-UNKNOWN_80862E:
+UNKNOWN_80862E: !assembly
   Offset: 0x80862E
-  type: assembly
-  size: 185
-  labels:
-    34438: UNKNOWN0
-    34453: UNKNOWN1
-    34505: UNKNOWN2
-UNKNOWN_80DC10:
+  Size: 185
+  Labels:
+    0x58: UNKNOWN0
+    0x67: UNKNOWN1
+    0x9B: UNKNOWN2
+UNKNOWN_80DC10: !assembly
   Offset: 0x80DC10
-  type: assembly
-  size: 307
-  labels:
-    56373: UNKNOWN0
-    56375: UNKNOWN1
-    56411: UNKNOWN2
-    56415: UNKNOWN3
-    56419: UNKNOWN4
-    56421: UNKNOWN5
-    56423: UNKNOWN6
-    56447: UNKNOWN7
-    56458: UNKNOWN8
-UNKNOWN_80DEFA:
+  Size: 307
+  Labels:
+    0x25: UNKNOWN0
+    0x27: UNKNOWN1
+    0x4B: UNKNOWN2
+    0x4F: UNKNOWN3
+    0x53: UNKNOWN4
+    0x55: UNKNOWN5
+    0x57: UNKNOWN6
+    0x6F: UNKNOWN7
+    0x7A: UNKNOWN8
+UNKNOWN_80DEFA: !assembly
   Offset: 0x80DEFA
-  type: assembly
-  size: 15
-  labels:
-    57085: UNKNOWN0
-UNKNOWN_80E13D:
+  Size: 15
+  Labels:
+    0x3: UNKNOWN0
+UNKNOWN_80E13D: !assembly
   Offset: 0x80E13D
-  type: assembly
-  size: 182
-  labels:
-    57672: UNKNOWN0
-    57699: UNKNOWN1
-    57741: UNKNOWN2
-    57754: UNKNOWN3
-    57756: UNKNOWN4
-    57774: UNKNOWN5
-    57779: UNKNOWN6
-    57799: UNKNOWN7
-    57821: UNKNOWN8
-    57824: UNKNOWN9
-UNKNOWN_80E25C:
+  Size: 182
+  Labels:
+    0x0B: UNKNOWN0
+    0x26: UNKNOWN1
+    0x50: UNKNOWN2
+    0x5D: UNKNOWN3
+    0x5F: UNKNOWN4
+    0x71: UNKNOWN5
+    0x76: UNKNOWN6
+    0x8A: UNKNOWN7
+    0xA0: UNKNOWN8
+    0xA3: UNKNOWN9
+UNKNOWN_80E25C: !assembly
   Offset: 0x80E25C
-  type: assembly
-  size: 58
-  labels:
-    57967: UNKNOWN0
-    58001: UNKNOWN1
-UNKNOWN_80E2A9:
+  Size: 58
+  Labels:
+    0x13: UNKNOWN0
+    0x35: UNKNOWN1
+UNKNOWN_80E2A9: !assembly
   Offset: 0x80E2A9
-  type: assembly
-  size: 32
-  labels:
-    58040: UNKNOWN0
-APU_STUFF_E584:
+  Size: 32
+  Labels:
+    0xF: UNKNOWN0
+APU_STUFF_E584: !assembly
   Offset: 0x80E584
-  type: assembly
-  size: 111
-  labels:
-    58759: UNKNOWN0
-    58781: UNKNOWN1
-    58793: UNKNOWN2
-    58804: UNKNOWN3
-    58826: UNKNOWN4
-    58833: UNKNOWN5
-    58846: UNKNOWN6
-APU_STUFF_E5F3:
+  Size: 111
+  Labels:
+    0x03: UNKNOWN0
+    0x19: UNKNOWN1
+    0x25: UNKNOWN2
+    0x30: UNKNOWN3
+    0x46: UNKNOWN4
+    0x4D: UNKNOWN5
+    0x5A: UNKNOWN6
+APU_STUFF_E5F3: !assembly
   Offset: 0x80E5F3
-  type: assembly
-  size: 23
-  labels:
-    58872: UNKNOWN0
-    58882: UNKNOWN1
-APU_STUFF_E60A:
+  Size: 23
+  Labels:
+    0x5: UNKNOWN0
+    0xF: UNKNOWN1
+APU_STUFF_E60A: !assembly
   Offset: 0x80E60A
-  type: assembly
-  size: 41
-  labels:
-    58900: UNKNOWN0
-    58919: UNKNOWN1
-APU_STUFF_E633:
+  Size: 41
+  Labels:
+    0x0A: UNKNOWN0
+    0x1D: UNKNOWN1
+APU_STUFF_E633: !assembly
   Offset: 0x80E633
-  type: assembly
-  size: 32
-  labels:
-    58933: UNKNOWN0
-    58951: UNKNOWN1
-LOAD_MUSIC:
+  Size: 32
+  Labels:
+    0x02: UNKNOWN0
+    0x14: UNKNOWN1
+LOAD_MUSIC: !assembly
   Offset: 0x80E653
-  type: assembly
-  size: 142
-  labels:
-    59027: UNKNOWN0
-    59040: UNKNOWN1
-    59058: UNKNOWN2
-    59074: UNKNOWN3
-    59084: UNKNOWN4
-    59087: UNKNOWN5
-UNKNOWN_80E6E1:
+  Size: 142
+  Labels:
+    0x40: UNKNOWN0
+    0x4D: UNKNOWN1
+    0x5F: UNKNOWN2
+    0x6F: UNKNOWN3
+    0x79: UNKNOWN4
+    0x7C: UNKNOWN5
+UNKNOWN_80E6E1: !assembly
   Offset: 0x80E6E1
-  type: assembly
-  size: 94
-  labels:
-    59160: UNKNOWN0
-    59168: UNKNOWN1
-    59178: UNKNOWN2
-    59181: UNKNOWN3
-UNKNOWN_80E79D:
+  Size: 94
+  Labels:
+    0x37: UNKNOWN0
+    0x3F: UNKNOWN1
+    0x49: UNKNOWN2
+    0x4C: UNKNOWN3
+UNKNOWN_80E79D: !assembly
   Offset: 0x80E79D
-  type: assembly
-  size: 45
-  labels:
-    59336: UNKNOWN0
+  Size: 45
+  Labels:
+    0x2B: UNKNOWN0
 ...
