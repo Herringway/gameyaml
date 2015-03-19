@@ -252,330 +252,220 @@ Script Tables:
       255: " "
 ...
 ---
-0xC82220: &DIALOGUE_POINTERS
-  Name: DIALOGUE_POINTERS
+DIALOGUE_POINTERS: !array
   Size: 0x10E0
-  Type: data
   Offset: 0xC82220
-  Entries:
-  - Type: pointer
+  Item Type: !pointer
     Size: 2
     Base: 0xCA0000
-0xCA0000: &TEXT
-  Name: TEXT
+TEXT: !array
   Size: 0x10000
   Type: data
   Offset: 0xCA0000
-  Entries:
-  - Type: script
+  Item Type: !script
     Charset: text
     Terminator: 0x00
-0xD00000: &ENEMY_STATS
-  Name: ENEMY_STATS
+ENEMY_STATS: !array
   Offset: 0xD00000
-  Type: data
   Size: 0x3000
-  Entries:
-  - Name: Speed
-    Type: int
-    Size: 1
-  - Name: Strength
-    Type: int
-    Size: 1
-  - Name: Strength_Multiplier
-    Type: int
-    Size: 1
-  - Name: Evasion
-    Type: int
-    Size: 1
-  - Name: Defense
-    Type: int
-    Size: 1
-  - Name: Magic
-    Type: int
-    Size: 1
-  - Name: Magic_Defense
-    Type: int
-    Size: 1
-  - Name: Magic_Evade
-    Type: int
-    Size: 1
-  - Name: HP
-    Type: int
-    Size: 2
-  - Name: MP
-    Type: int
-    Size: 2
-  - Name: EXP
-    Type: int
-    Size: 2
-  - Name: GP
-    Type: int
-    Size: 2
-  - Name: AttackType
-    Type: int
-    Size: 1
-  - Name: Elemental_Immunities
-    Type: int
-    Size: 1
-    Bit Values: &ELEMENTAL_TYPES [Fire,Ice,Lightning,Poison,Holy,Earth,Wind,Water]
-  - Name: Status_Immunities
-    Type: int
-    Size: 3
-    Bit Values: &STATUS_EFFECTS [Darkness,Zombie,Poison,Stop,Mini,Toad,Petrify,Death,Image (1),Image (2),Silence,Berserk,Confuse,Paralyze,Sleep,Old,Regen,Invulnerability,Slow,Haste,Stop,Shell,Armor,Wall,Hidden,N Dead,Singing,HP Leak,Countdown,Controlled,F. Image,Erased]
-  - Name: Elemental_Absorption
-    Type: int
-    Size: 1
-    Bit Values: *ELEMENTAL_TYPES
-  - Name: Cannot_Evade
-    Type: int
-    Size: 1
-  - Name: Elemental_Weakness
-    Type: int
-    Size: 1
-    Bit Values: *ELEMENTAL_TYPES
-  - Name: Type
-    Type: int
-    Size: 1
-    Bit Values:
-    - Undead
-    - Toad
-    - Beast
-    - Aevis
-    - Dragon
-    - Heavy
-    - Desert
-    - Humanoid
-  - Name: Command_Immunity
-    Type: int
-    Size: 1
-  - Name: Initial_Status
-    Type: int
-    Size: 4
-    Bit Values: *STATUS_EFFECTS
-  - Name: Internal_ID
-    Type: int
-    Size: 1
-  - Name: Level
-    Type: int
-    Size: 1
-0xD03000: &ENEMY_FORMATIONS
-  Name: ENEMY_FORMATIONS
+  Item Type: !struct
+    Entries:
+      SPEED: !int
+        Size: 1
+      STRENGTH: !int
+        Size: 1
+      STRENGTH_MULTIPLIER: !int
+        Size: 1
+      EVASION: !int
+        Size: 1
+      DEFENSE: !int
+        Size: 1
+      MAGIC: !int
+        Size: 1
+      MAGIC_DEFENSE: !int
+        Size: 1
+      MAGIC_EVADE: !int
+        Size: 1
+      HP: !int
+        Size: 2
+      MP: !int
+        Size: 2
+      EXP: !int
+        Size: 2
+      GP: !int
+        Size: 2
+      ATTACK_TYPE: !int
+        Size: 1
+      ELEMENTAL_IMMUNITIES: !int
+        Size: 1
+        Bit Values: &ELEMENTAL_TYPES [Fire,Ice,Lightning,Poison,Holy,Earth,Wind,Water]
+      STATUS_IMMUNITIES: !int
+        Size: 3
+        Bit Values: &STATUS_EFFECTS [Darkness,Zombie,Poison,Stop,Mini,Toad,Petrify,Death,Image (1),Image (2),Silence,Berserk,Confuse,Paralyze,Sleep,Old,Regen,Invulnerability,Slow,Haste,Stop,Shell,Armor,Wall,Hidden,N Dead,Singing,HP Leak,Countdown,Controlled,F. Image,Erased]
+      ELEMENTAL_ABSORPTION: !int
+        Size: 1
+        Bit Values: *ELEMENTAL_TYPES
+      CANNOT_EVADE: !int
+        Size: 1
+      ELEMENTAL_WEAKNESS: !int
+        Size: 1
+        Bit Values: *ELEMENTAL_TYPES
+      TYPE: !int
+        Size: 1
+        Bit Values:
+        - Undead
+        - Toad
+        - Beast
+        - Aevis
+        - Dragon
+        - Heavy
+        - Desert
+        - Humanoid
+      COMMAND_IMMUNITY: !int
+        Size: 1
+      INITIAL_STATUS: !int
+        Size: 4
+        Bit Values: *STATUS_EFFECTS
+      INTERNAL_ID: !int
+        Size: 1
+      LEVEL: !int
+        Size: 1
+ENEMY_FORMATIONS: !array
   Offset: 0xD03000
-  Type: data
   Size: 8192
-  Entries:
-  - Type: int
-    Size: 1
-    Name: Visual Effects
-  - Type: int
-    Size: 1
-    Name: Escape Chance
-  - Type: int
-    Size: 1
-    Name: AP
-  - Type: int
-    Size: 1
-    Name: Visibility
-  - Type: bytearray
-    Size: 8
-    Name: Enemies
-  - Type: int
-    Size: 2
-    Name: Palette
-  - Type: int
-    Size: 2
-    Name: Flags
-0xD05000: &ENEMY_ITEMS
-  Name: ENEMY_ITEMS
+  Item Type: !struct
+    Entries:
+      VISUAL_EFFECTS: !int
+        Size: 1
+      ESCAPE_CHANCE: !int
+        Size: 1
+      AP: !int
+        Size: 1
+      VISIBILITY: !int
+        Size: 1
+      ENEMIES: !array
+        Size: 8
+        Item Type: !int
+          Size: 1
+      PALETTE: !int
+        Size: 2
+      FLAGS: !int
+        Size: 2
+ENEMY_ITEMS: !array
   Offset: 0xD05000
-  Type: data
   Size: 0x600
-  Entries:
-  - Type: int
-    Size: 1
-    Name: Stolen Item A
-  - Type: int
-    Size: 1
-    Name: Stolen Item B
-  - Type: int
-    Size: 1
-    Name: Dropped Item A
-  - Type: int
-    Size: 1
-    Name: Dropped Item B
-0xD05600: &ENEMY_CONTROL_ABILITIES
-  Name: ENEMY_CONTROL_ABILITIES
+  Item Type: !struct
+    Entries:
+      STOLEN_ITEMS: !array
+        Size: 2
+        Item Type: !int
+          Size: 1
+      DROPPED_ITEMS: !array
+        Size: 2
+        Item Type: !int
+          Size: 1
+ENEMY_CONTROL_ABILITIES: !array
   Offset: 0xD05600
-  Type: data
   Size: 0x600
-  Entries:
-  - Type: bytearray
+  Item Type: !array
     Size: 4
-    Name: Abilities
-0xD05C00: &ENEMY_NAMES
-  Name: ENEMY_NAMES
+    Item Type: !int
+      Size: 1
+ENEMY_NAMES: !unknown
   Offset: 0xD05C00
-  Type: data
   Size: 3072
-0xD08600: &RELEASE_ABILITIES
-  Name: RELEASE_ABILITIES
+RELEASE_ABILITIES: !array
   Offset: 0xD08600
-  Type: data
   Size: 256
-  Entries:
-  - Name: ID
-    Type: int
+  Item Type: !int
     Size: 1
-0xD08900: &COORDINATE_BASE
-  Name: COORDINATE_BASE
+COORDINATE_BASE: !array
   Size: 0x1000
   Offset: 0xD08900
-  Type: data
-  Entries:
-  - Type: int
-    Name: Enemy 1
-    Size: 1
-  - Type: int
-    Name: Enemy 2
-    Size: 1
-  - Type: int
-    Name: Enemy 3
-    Size: 1
-  - Type: int
-    Name: Enemy 4
-    Size: 1
-  - Type: int
-    Name: Enemy 5
-    Size: 1
-  - Type: int
-    Name: Enemy 6
-    Size: 1
-  - Type: int
-    Name: Enemy 7
-    Size: 1
-  - Type: int
-    Name: Enemy 8
-    Size: 1
-0xD09900: &SPECIAL_ABILITY_TABLE
-  Name: SPECIAL_ABILITY_TABLE
+  Item Type: !array
+    Item Type: !int
+      Size: 1
+SPECIAL_ABILITY_TABLE: !array
   Size: 0x300
   Offset: 0xD09900
-  Type: data
-  Entries:
-  - Type: bytearray
+  Item Type: !array
     Size: 3
-0xD09C00: &SCRIPT_TABLE
-  Name: SCRIPT_TABLE
+    Item Type: !int
+      Size: 1
+SCRIPT_TABLE: !array
   Offset: 0xD09C00
-  Type: data
   Size: 768
-  Entries:
-  - Type: pointer
+  Item Type: !pointer
     Size: 2
     Base: 0xD00000
-0xD09F00: &BATTLE_SCRIPTS
-  Name: BATTLE_SCRIPTS
+BATTLE_SCRIPTS: !array
   Offset: 0xD09F00
-  Type: data
   Size: 0x28F0
-  Entries:
-  - Type: bytearray
-    Size: 5
-    Name: UNKNOWN
-  - Type: script
-    Charset: battle
-    Terminator: 0xFF
-    Name: NORMAL_ROUTINE
-  - Type: script
-    Charset: battle
-    Terminator: 0xFF
-    Name: COUNTER_ROUTINE
-0xD0C7F0:
+  Item Type: !struct
+    Entries:
+      UNKNOWN: !unknown
+        Size: 5
+      NORMAL_ROUTINE: !script
+        Charset: battle
+        Terminator: 0xFF
+      COUNTER_ROUTINE: !script
+        Charset: battle
+        Terminator: 0xFF
+UNKNOWN_D0C7F0: !empty
   Offset: 0xD0C7F0
   Size: 0x10
-  Type: empty
-0xD11380: &ITEM_NAMES
-  Name: ITEM_NAMES
+ITEM_NAMES: !array
   Offset: 0xD11380
-  Type: data
   Size: 2304
-  Entries:
-  - Type: script
+  Item Type: !script
     Charset: text
     Size: 9
-0xD11C80: &SPELL_NAMES
-  Name: SPELL_NAMES
+SPELL_NAMES: !array
   Offset: 0xD11C80
   Type: data
   Size: 2043
-  Entries:
-  - Type: struct
-    Size: 522
+  Item Type: !struct
     Entries:
-    - Type: script
-      Charset: text
-      Size: 6
-  - Type: struct
-    Size: 1521
-    Entries:
-    - Type: script
-      Charset: text
-      Size: 9
-0xD12D00: &SHOP_DATA
-  Name: SHOP_DATA
+      NAMES1: !array
+        Size: 522
+        Item Type: !script
+          Charset: text
+          Size: 6
+      NAMES2: !array
+        Size: 1521
+        Item Type: !script
+          Charset: text
+          Size: 9
+SHOP_DATA: !unknown
   Offset: 0xD12D00
-  Type: data
   Size: 0x300
-0xD139A9: 
+UNKNOWN_D139A9: !array
   Offset: 0xD139A9
-  Type: data
   Size: 512
-  Entries:
-  - Type: pointer
+  Item Type: !pointer
     Size: 2
-0xD14000: 
+UNKNOWN_D14000: !array
   Offset: 0xD14000
-  Type: data
   Size: 256
-  Entries:
-  - Type: pointer
+  Item Type: !pointer
     Size: 2
     Base: 0xD10000
-0xD14100:
+UNKNOWN_D14100: !array
   Offset: 0xD14100
-  Type: data
   Size: 0x4B6
-  Entries:
-  - Type: script
+  Item Type: !script
     Terminator: 0
     Charset: text
-0xD152EA: &ABILITY_COUNT
-  Name: ABILITY_COUNT
+ABILITY_COUNT: !array
   Offset: 0xD152EA
-  Type: data
   Size: 22
-  Entries:
-  - Type: int
+  Item Type: !int
     Size: 1
-    Name: Count
-0xD15300: &JOB_ABILITIES
-  Name: JOB_ABILITIES
+JOB_ABILITIES: !array
   Offset: 0xD15300
-  Type: data
   Size: 0x12D
-  Entries:
-  - Type: table
+  Item Type: !array
     Terminator: 0
-    Name: Abilities
-    Entries:
-    - Type: int
+    Item Type: !int
       Size: 1
-      Name: Ability ID
-ENEMY_FORMATIONS: *ENEMY_FORMATIONS
-ENEMY_ITEMS: *ENEMY_ITEMS
-ENEMY_CONTROL_ABILITIES: *ENEMY_CONTROL_ABILITIES
-ENEMY_NAMES: *ENEMY_NAMES
-ABILITY_COUNT: *ABILITY_COUNT
-JOB_ABILITIES: *JOB_ABILITIES
 ...
