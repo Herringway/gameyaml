@@ -7,249 +7,163 @@ Country: US
 Version: 1
 ...
 ---
-0x080736B8: &TEXT_PTR_TABLE
+TEXT_PTR_TABLE: !array
   Offset: 0x080736B8
-  Type: data
   Size: 0x150
-  Name: TEXT_PTR_TABLE
-  Entries:
-  - Type: pointer
+  Item Type: !pointer
     Size: 4
-    Name: Pointer
-0x0807EE58: &ABILITY_TABLE
+ABILITY_TABLE: !array
   Offset: 0x0807EE58
-  Type: data
-  Name: ABILITY_TABLE
   Size: 0x2070
-  Entries:
-  - Type: bytearray
-    Size: 8
-    Name: Unknown
-  - Type: int
-    Size: 1
-    Name: Range
-    Values:
-      0: 0
-      1: 1
-      2: 3
-      3: 5
-      4: 7
-      5: 9
-      6: 11
-      255: all
-  - Type: int
-    Size: 1
-    Name: PP Cost
-  - Type: int
-    Size: 1
-    Name: Power
-  - Type: bytearray
-    Size: 5
-    Name: UnknownC
-0x08080EC8: &ENEMY_CONFIGURATION_TABLE
+  Item Type: !struct
+    Entries:
+      UNKNOWN1: !unknown
+        Size: 8
+      RANGE: !int
+        Size: 1
+        Values:
+          0: 0
+          1: 1
+          2: 3
+          3: 5
+          4: 7
+          5: 9
+          6: 11
+          255: all
+      PP_COST: !int
+        Size: 1
+      POWER: !int
+        Size: 1
+      UNKNOWN2: !unknown
+        Size: 5
+ENEMY_CONFIGURATION_TABLE: !array
   Offset: 0x08080EC8
   Size: 13776
-  Type: data
-  Name: ENEMY_CONFIGURATION_TABLE
-  Entries:
-  - Type: script
-    Charset: ascii
-    Size: 15
-    Name: Name
-  - Type: int
-    Name: Level
-    Size: 1
-  - Type: int
-    Name: HP
-    Size: 2
-  - Type: int
-    Name: PP
-    Size: 2
-  - Type: int
-    Name: Attack
-    Size: 2
-  - Type: int
-    Name: Defense
-    Size: 2
-  - Type: int
-    Name: Agility
-    Size: 2
-  - Type: int
-    Name: Luck
-    Size: 1
-  - Type: int
-    Name: Turns
-    Size: 1
-  - Type: int
-    Name: HP Regen
-    Size: 1
-  - Type: bytearray
-    Size: 25
-    Name: Unknown
-  - Type: int
-    Size: 2
-    Name: Attack Pattern
-    Values:
-    - Equal Distribution
-    - Earlier Linearly More Likely
-    - Earlier Exponentially More Likely
-    - Unknown A
-    - Unknown B
-    - Only Use First Ability
-    - Always Defend
-  - Type: int
-    Name: Move 1 ID
-    Size: 2
-  - Type: int
-    Name: Move 2 ID
-    Size: 2
-  - Type: int
-    Name: Move 3 ID
-    Size: 2
-  - Type: int
-    Name: Move 4 ID
-    Size: 2
-  - Type: int
-    Name: Move 5 ID
-    Size: 2
-  - Type: int
-    Name: Move 6 ID
-    Size: 2
-  - Type: int
-    Name: Move 7 ID
-    Size: 2
-  - Type: int
-    Name: Move 8 ID
-    Size: 2
-  - Type: bytearray
-    Size: 4
-    Name: Unknown3
-  - Type: int
-    Size: 2
-    Name: Coins
-  - Type: int
-    Size: 2
-    Name: Item Dropped
-  - Type: int
-    Size: 2
-    Name: Item Dropped Chance
-    Values:
-    - never
-    - 1/1
-    - 1/2
-    - 1/4
-    - 1/8
-    - 1/16
-    - 1/32
-    - 1/64
-    - 1/128
-    - 1/256
-  - Type: int
-    Size: 2
-    Name: EXP
-0x08084B1C: &CLASS_CONFIG_TABLE
+  Item Type: !struct
+    Entries:
+      NAME: !script
+        Charset: ascii
+        Size: 15
+      LEVEL: !int
+        Size: 1
+      HP: !int
+        Size: 2
+      PP: !int
+        Size: 2
+      ATTACK: !int
+        Size: 2
+      DEFENSE: !int
+        Size: 2
+      AGILITY: !int
+        Size: 2
+      LUCK: !int
+        Size: 1
+      TURNS: !int
+        Size: 1
+      HP_REGEN: !int
+        Size: 1
+      UNKNOWN1: !unknown
+        Size: 25
+      ATTACK_PATTERN: !int
+        Size: 2
+        Values:
+        - Equal Distribution
+        - Earlier Linearly More Likely
+        - Earlier Exponentially More Likely
+        - Unknown A
+        - Unknown B
+        - Only Use First Ability
+        - Always Defend
+      MOVES: !array
+        Size: 16
+        Item Type: !int
+          Size: 2
+      UNKNOWN2: !unknown
+        Size: 4
+      COINS: !int
+        Size: 2
+      ITEM_DROPPED: !int
+        Size: 2
+      ITEM_DROPPED_CHANCE: !int
+        Size: 2
+        Values:
+        - never
+        - 1/1
+        - 1/2
+        - 1/4
+        - 1/8
+        - 1/16
+        - 1/32
+        - 1/64
+        - 1/128
+        - 1/256
+      EXP: !int
+        Size: 2
+CLASS_CONFIG_TABLE: !array
   Offset: 0x08084B1C
   Size: 0x429C
-  Type: data
-  Name: CLASS_CONFIG_TABLE
-  Entries:
-  - Type: int
-    Size: 1
-    Name: Type
-  - Type: bytearray
-    Size: 3
-    Name: UnknownA
-  - Type: int
-    Size: 1
-    Name: Venus Djinni
-  - Type: int
-    Size: 1
-    Name: Mercury Djinni
-  - Type: int
-    Size: 1
-    Name: Mars Djinni
-  - Type: int
-    Size: 1
-    Name: Jupiter Djinni
-  - Type: int
-    Size: 1
-    Name: HP Mod
-  - Type: int
-    Size: 1
-    Name: PP Mod
-  - Type: int
-    Size: 1
-    Name: Atk Mod
-  - Type: int
-    Size: 1
-    Name: Def Mod
-  - Type: int
-    Size: 1
-    Name: Agi Mod
-  - Type: int
-    Size: 1
-    Name: Luk Mod
-  - Type: struct
-    Size: 64
-    Name: Psynergy Learned
+  Item Type: !struct
     Entries:
-    - Type: int
-      Size: 1
-      Name: UnknownA
-    - Type: int
-      Size: 1
-      Name: UnknownB
-    - Type: int
-      Size: 1
-      Name: Psynergy ID
-    - Type: int
-      Size: 1
-      Name: Level
-  - Type: bytearray
-    Size: 6
-    Name: UnknownB
-0x080C2DA0: &ABILITY_ANIMATION_TABLE
+      TYPE: !int
+        Size: 1
+      UNKNOWN1: !unknown
+        Size: 3
+      VENUS_DJINNI: !int
+        Size: 1
+      MERCURY_DJINNI: !int
+        Size: 1
+      MARS_DJINNI: !int
+        Size: 1
+      JUPITER_DJINNI: !int
+        Size: 1
+      HP_MOD: !int
+        Size: 1
+      PP_MOD: !int
+        Size: 1
+      ATK_MOD: !int
+        Size: 1
+      DEF_MOD: !int
+        Size: 1
+      AGI_MOD: !int
+        Size: 1
+      LUK_MOD: !int
+        Size: 1
+      PSYNERGY_LEARNED: !array
+        Size: 64
+        Item Type: !struct
+          Entries:
+            UNKNOWN1: !int
+              Size: 1
+            UNKNOWN2: !int
+              Size: 1
+            ID: !int
+              Size: 1
+            LEVEL: !int
+              Size: 1
+      UNKNOWN2: !unknown
+        Size: 6
+ABILITY_ANIMATION_TABLE: !array
   Offset: 0x080C2DA0
   Size: 2072
-  Type: data
-  Name: ABILITY_ANIMATION_TABLE
-  Entries:
-  - Type: int
-    Size: 1
-    Name: Animation Group ID
-  - Type: int
-    Size: 1
-    Name: Animation Args
-  - Type: bytearray
-    Size: 2
-    Name: Unknown
-0x08128972: &UNKNOWN_ABILITY_TYPES
+  Item Type: !struct
+    Entries:
+      ANIMATION_GROUP_ID: !int
+        Size: 1
+      ANIMATION_ARGS: !int
+        Size: 1
+      UNKNOWN: !unknown
+        Size: 2
+UNKNOWN_ABILITY_TYPES: !array
   Offset: 0x08128972
   Size: 733
-  Type: data
-  Name: UNKNOWN_ABILITY_TYPES
-  Entries:
-  - Type: int
+  Item Type: !int
     Size: 1
-0x08130D0C: &INDIVIDUAL_ENEMY_TABLE
+INDIVIDUAL_ENEMY_TABLE: !array
   Offset: 0x08130D0C
   Size: 1000
-  Type: data
-  Name: INDIVIDUAL_ENEMY_TABLE
-  Entries:
-  - Type: bytearray
+  Item Type: !unknown
     Size: 8
-0x08682010: &MENU_TILES
+MENU_TILES: !unknown
   Offset: 0x08682010
   Size: 0x2000
-  Type: data
-  Name: MENU_TILES
-TEXT_PTR_TABLE: *TEXT_PTR_TABLE
-ABILITY_TABLE: *ABILITY_TABLE
-ENEMY_CONFIGURATION_TABLE: *ENEMY_CONFIGURATION_TABLE
-CLASS_CONFIG_TABLE: *CLASS_CONFIG_TABLE
-ABILITY_ANIMATION_TABLE: *ABILITY_ANIMATION_TABLE
-UNKNOWN_ABILITY_TYPES: *UNKNOWN_ABILITY_TYPES
-INDIVIDUAL_ENEMY_TABLE: *INDIVIDUAL_ENEMY_TABLE
-MENU_TILES: *MENU_TILES
 ...
