@@ -6,7 +6,7 @@ Country: US
 Platform: gbc
 ...
 ---
-MAIN: 
+MAIN: !assembly
   Description: Main Routine
   Offset: 0x000150
 ...
