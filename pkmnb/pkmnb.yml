@@ -6,23 +6,21 @@ Country: US
 Platform: gb
 ...
 ---
-UNKNOWN_000150:
+UNKNOWN_000150: !assembly
   Offset: 0x000150
-  type: assembly
-  size: 73
-  labels:
-    0x0157: UNKNOWN0
-    0x0159: UNKNOWN1
-UNKNOWN_001F54:
+  Size: 73
+  Labels:
+    0x7: UNKNOWN0
+    0x9: UNKNOWN1
+UNKNOWN_001F54: !assembly
   Offset: 0x001F54
-  type: assembly
-  size: 346
-  labels:
-    0x1F80: UNKNOWN0
-    0x203F: UNKNOWN1
-    0x2069: UNKNOWN2
-    0x2071: UNKNOWN3
-    0x2085: UNKNOWN4
-    0x2091: UNKNOWN5
-    0x2094: UNKNOWN6
+  Size: 346
+  Labels:
+    0x02C: UNKNOWN0
+    0x0EB: UNKNOWN1
+    0x115: UNKNOWN2
+    0x11D: UNKNOWN3
+    0x131: UNKNOWN4
+    0x13D: UNKNOWN5
+    0x140: UNKNOWN6
 ...
