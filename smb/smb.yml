@@ -6,52 +6,45 @@ Country: US
 Platform: nes
 ...
 ---
-UNKNOWN_000F:
+ENEMY_IDS: !array
   Offset: 0x000F
-  description: Enemy 1 ID
-UNKNOWN_0010:
-  Offset: 0x0010
-  description: Enemy 2 ID
-UNKNOWN_0011:
-  Offset: 0x0011
-  description: Enemy 3 ID
-UNKNOWN_0012:
-  Offset: 0x0012
-  description: Enemy 4 ID
-UNKNOWN_0057:
+  Size: 4
+  Item Type: !int
+    Size: 1
+HORIZONTAL_VELOCITY: !int
   Offset: 0x0057
-  description: X Speed
-UNKNOWN_006D:
+  Size: 1
+LEVEL_X_2ND: !int
   Offset: 0x006D
-  description: Level X 2nd
-UNKNOWN_0086:
+  Size: 1
+LEVEL_X: !int
   Offset: 0x0086
-  description: Level X
-UNKNOWN_009F:
+  Size: 1
+VERTICAL_VELOCITY: !int
   Offset: 0x009F
-  description: Y Speed
-UNKNOWN_00CE:
+  Size: 1
+Y_PIXEL: !int
   Offset: 0x00CE
-  description: Y Pixel
-UNKNOWN_03AD:
+  Size: 1
+ON_SCREEN_X: !int
   Offset: 0x03AD
-  description: On Screen X
-UNKNOWN_0400:
+  Size: 1
+X_SUBPIXEL: !int
   Offset: 0x0400
-  description: X SubPixel
-UNKNOWN_0416:
+  Size: 1
+Y_SUBPIXEL: !int
   Offset: 0x0416
-  description: Y SubPixel
-UNKNOWN_0483:
+  Size: 1
+BOWSER_HP: !int
   Offset: 0x0483
-  description: Bowser HP
-UNKNOWN_0705:
+  Size: 1
+X_SPEED_SUB: !int
   Offset: 0x0705
-  description: X Speed Sub
-UNKNOWN_071D:
+  Size: 1
+CAMERA_X: !int
   Offset: 0x071D
-  description: Camera X
-UNKNOWN_077F:
+  Size: 1
+21_FRAME_RULE: !int
   Offset: 0x077F
-  description: 21 Frame Rule
+  Size: 1
 ...
