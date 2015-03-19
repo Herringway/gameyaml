@@ -8,107 +8,97 @@ Country: US
 Version: 1.1
 ...
 ---
-UNKNOWN_008000:
+UNKNOWN_008000: !assembly
   Offset: 0x008000
-  type: assembly
-  size: 320
-  labels:
-    32866: UNKNOWN0
-    32908: UNKNOWN1
-    32969: UNKNOWN2
-    33008: UNKNOWN3
-    33009: UNKNOWN4
-    33031: UNKNOWN5
-    33057: UNKNOWN6
-    33067: UNKNOWN7
-    33069: UNKNOWN8
-    33072: UNKNOWN9
-    33082: UNKNOWN10
-UNKNOWN_008239:
+  Size: 320
+  Labels:
+    0x062: UNKNOWN0
+    0x08C: UNKNOWN1
+    0x0C9: UNKNOWN2
+    0x0F0: UNKNOWN3
+    0x0F1: UNKNOWN4
+    0x107: UNKNOWN5
+    0x121: UNKNOWN6
+    0x12B: UNKNOWN7
+    0x12D: UNKNOWN8
+    0x130: UNKNOWN9
+    0x13A: UNKNOWN10
+UNKNOWN_008239: !assembly
   Offset: 0x008239
-  type: assembly
-  size: 12
-  accumsize: 8
-UNKNOWN_008288:
+  Size: 12
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_008288: !assembly
   Offset: 0x008288
-  type: assembly
-  size: 35
-  indexsize: 8
-UNKNOWN_0082AB:
+  Size: 35
+  Initial State:
+    8 Bit Index: true
+UNKNOWN_0082AB: !assembly
   Offset: 0x0082AB
-  type: assembly
-  size: 37
-  indexsize: 8
-UNKNOWN_0082D0:
+  Size: 37
+  Initial State:
+    8 Bit Index: true
+UNKNOWN_0082D0: !assembly
   Offset: 0x0082D0
-  type: assembly
-  size: 76
-UNKNOWN_008543:
+  Size: 76
+UNKNOWN_008543: !assembly
   Offset: 0x008543
-  type: assembly
-  size: 143
-  accumsize: 8
-  indexsize: 8
-  labels:
-    34130: UNKNOWN0
-    34137: UNKNOWN1
-    34156: UNKNOWN2
-    34207: UNKNOWN3
-    34227: UNKNOWN4
-    34229: UNKNOWN5
-LEVEL_ENTRANCES_PTRS:
+  Size: 143
+  Initial State:
+    8 Bit Accum: true
+    8 Bit Index: true
+  Labels:
+    0x0F: UNKNOWN0
+    0x16: UNKNOWN1
+    0x29: UNKNOWN2
+    0x5C: UNKNOWN3
+    0x70: UNKNOWN4
+    0x72: UNKNOWN5
+LEVEL_ENTRANCES_PTRS: !array
   Offset: 0x0FE446
-  type: data
-  size: 138
-  entries:
-  - name: Pointer
-    size: 2
-    base: 0x0FE4D0
-    type: pointer
-LEVEL_ENTRANCES:
+  Size: 138
+  Item Type: !pointer
+    Size: 2
+    Base: 0x0FE4D0
+LEVEL_ENTRANCES: !array
   Offset: 0x0FE4D0
-  type: data
-  size: 224
-  entries:
-  - name: Level ID
-    size: 1
-  - name: X Position
-    size: 1
-  - name: Y Position
-    size: 1
-  - name: Map Icon
-    size: 1
-MIDWAY_ENTRANCES_PTRS:
+  Size: 224
+  Item Type: !struct
+    Entries:
+      ID: !int
+        Size: 1
+      X: !int
+        Size: 1
+      'Y': !int
+        Size: 1
+      MAP_ICON: !int
+        Size: 1
+MIDWAY_ENTRANCES_PTRS: !array
   Offset: 0x0FE5B0
-  type: data
-  size: 138
-  entries:
-  - name: Pointer
-    size: 2
-    base: 0x0FE63A
-    type: pointer
-MIDWAY_ENTRANCES:
+  Size: 138
+  Item Type: !pointer
+    Size: 2
+    Base: 0x0FE63A
+MIDWAY_ENTRANCES: !array
   Offset: 0x0FE63A
-  type: data
-  size: 488
-  entries:
-  - name: Level ID
-    size: 1
-  - name: X Position
-    size: 1
-  - name: Y Position
-    size: 1
-  - name: Entrance Type
-    size: 1
-UNKNOWN_0FE822:
+  Size: 488
+  Item Type: !struct
+    Entries:
+      ID: !int
+        Size: 1
+      X: !int
+        Size: 1
+      'Y': !int
+        Size: 1
+      ENTRANCE_TYPE: !int
+        Size: 1
+UNKNOWN_0FE822: !array
   Offset: 0x0FE822
-  type: data
-  size: 1332
-  entries:
-  - name: Object Data
-    size: 3
-    type: pointer
-  - name: Sprite Data
-    size: 3
-    type: pointer
+  Size: 1332
+  Item Type: !struct
+    Entries:
+      OBJECT_DATA: !pointer
+        Size: 3
+      SPRITE_DATA: !pointer
+        Size: 3
 ...
