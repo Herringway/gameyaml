@@ -144,116 +144,96 @@ Script Tables:
       0xFA: '[V]'
 ...
 ---
-UNKNOWN_008000:
+UNKNOWN_008000: !assembly
   Offset: 0x008000
-  type: assembly
-  size: 320
-  labels:
-    32866: UNKNOWN0
-    32908: UNKNOWN1
-    32969: UNKNOWN2
-    33008: UNKNOWN3
-    33009: UNKNOWN4
-    33031: UNKNOWN5
-    33057: UNKNOWN6
-    33067: UNKNOWN7
-    33069: UNKNOWN8
-    33072: UNKNOWN9
-    33082: UNKNOWN10
-YOSHI_LEVEL_COLOUR:
+  Size: 320
+  Labels:
+    0x062: UNKNOWN0
+    0x08C: UNKNOWN1
+    0x0C9: UNKNOWN2
+    0x0F0: UNKNOWN3
+    0x0F1: UNKNOWN4
+    0x107: UNKNOWN5
+    0x121: UNKNOWN6
+    0x12B: UNKNOWN7
+    0x12D: UNKNOWN8
+    0x130: UNKNOWN9
+    0x13A: UNKNOWN10
+YOSHI_LEVEL_COLOUR: !array
   Offset: 0x028000
-  description: Stage -> Yoshi colour mapping
-  type: data
-  size: 72
-  entries:
-  - name: Colour
-    size: 1
-UNKNOWN_088000:
-  Offset: 0x088000
-  type: assembly
-UNKNOWN_1681C7:
-  Offset: 0x1681C7
-  type: data
-  size:
-UNKNOWN_168583:
-  Offset: 0x168583
-  type: data
-  size:
-LEVEL_ENTRANCES_PTRS:
+  Description: Stage -> Yoshi colour mapping
+  Size: 72
+  Item Type: !int
+    Size: 1
+# UNKNOWN_088000: !assembly
+#   Offset: 0x088000
+# UNKNOWN_1681C7:
+#   Offset: 0x1681C7
+#   Size:
+# UNKNOWN_168583:
+#   Offset: 0x168583
+#   Size:
+LEVEL_ENTRANCES_PTRS: !array
   Offset: 0x17F3E7
-  type: data
-  size: 138
-  entries:
-  - name: Pointer
-    size: 2
-    base: 0x17F471
-    type: pointer
-LEVEL_ENTRANCES:
+  Size: 138
+  Item Type: !pointer
+    Size: 2
+    Base: 0x17F471
+LEVEL_ENTRANCES: !array
   Offset: 0x17F471
-  type: data
-  size: 224
-  entries:
-  - name: Level ID
-    size: 1
-  - name: X Position
-    size: 1
-  - name: Y Position
-    size: 1
-  - name: Map Icon
-    size: 1
-MIDWAY_ENTRANCES_PTRS:
+  Size: 224
+  Item Type: !struct
+    Entries:
+      ID: !int
+        Size: 1
+      X: !int
+        Size: 1
+      'Y': !int
+        Size: 1
+      MAP_ICON: !int
+        Size: 1
+MIDWAY_ENTRANCES_PTRS: !array
   Offset: 0x17F551
-  type: data
-  size: 138
-  entries:
-  - name: Pointer
-    size: 2
-    base: 0x17F5DB
-    type: pointer
-MIDWAY_ENTRANCES:
+  Size: 138
+  Item Type: !pointer
+    Size: 2
+    Base: 0x17F5DB
+MIDWAY_ENTRANCES: !array
   Offset: 0x17F5DB
-  type: data
-  size: 488
-  entries:
-  - name: Level ID
-    size: 1
-  - name: X Position
-    size: 1
-  - name: Y Position
-    size: 1
-  - name: Entrance Type
-    size: 1
-UNKNOWN_17F7C3:
+  Size: 488
+  Item Type: !struct
+    Entries:
+      ID: !int
+        Size: 1
+      X: !int
+        Size: 1
+      'Y': !int
+        Size: 1
+      ENTRANCE_TYPE: !int
+        Size: 1
+UNKNOWN_17F7C3: !array
   Offset: 0x17F7C3
-  type: data
-  size: 1332
-  entries:
-  - name: Object Data
-    size: 3
-    type: pointer
-  - name: Sprite Data
-    size: 3
-    type: pointer
-TEXT_DATA:
-  description: Text data
+  Size: 1332
+  Item Type: !struct
+    Entries:
+      OBJECT_DATA: !pointer
+        Size: 3
+      SPRITE_DATA: !pointer
+        Size: 3
+TEXT_DATA: !array
+  Description: Text data
   Offset: 0x229334
-  type: data
-  size: 0x4014
-  entries:
-  - name: Text
-    terminator: 0xFF
-    type: yitext
-UNKNOWN_22D349:
+  Size: 0x4014
+  Item Type: !script
+    Terminator: 0xFF
+UNKNOWN_22D349: !empty
   Offset: 0x22D349
-  type: empty
-  size: 0x2CB7
-UNKNOWN_238000:
+  Size: 0x2CB7
+UNKNOWN_238000: !empty
   Offset: 0x238000
-  type: empty
-  size: 0x8000
-GFX_DATA:
+  Size: 0x8000
+GFX_DATA: !unknown
   Offset: 0x248000
-  description: Compressed graphics data
-  type: data
-  size: 887350
+  Description: Compressed graphics data
+  Size: 887350
 ...
