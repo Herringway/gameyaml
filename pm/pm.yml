@@ -129,11 +129,9 @@ Script Tables:
       0xFD: ''
 ...
 ---
-TEXT_DATA:
+TEXT_DATA: !array
   Offset: 0x11B830C1
   Size: 0xF3407
-  Type: data
-  Entries:
-  - Type: script
+  Item Type: !script
     Terminator: 0xFD
 ...
