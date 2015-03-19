@@ -8,35 +8,29 @@ Mapper: 4
 Platform: nes
 ...
 ---
-UNKNOWN_CED3:
+UNKNOWN_CED3: !assembly
   Offset: 0xCED3
-  type: assembly
-  size: 41
-  labels:
-    52976: UNKNOWN0
-    52983: UNKNOWN1
-UNKNOWN_FD14:
+  Size: 41
+  Labels:
+    0x1D: UNKNOWN0
+    0x24: UNKNOWN1
+UNKNOWN_FD14: !assembly
   Offset: 0xFD14
-  type: assembly
-  size: 38
-  labels:
-    32774: UNKNOWN0
-    64796: UNKNOWN1
-    64816: UNKNOWN2
-    64819: UNKNOWN3
-RESET:
+  Size: 38
+  Labels:
+    0x08: UNKNOWN0
+    0x1C: UNKNOWN1
+    0x1F: UNKNOWN2
+RESET: !assembly
   Offset: 0xFF40
-  description: Execution Entry Point
-  type: assembly
-  size: 160
-  labels:
-    52036: UNKNOWN0
-    65375: UNKNOWN1
-    65400: UNKNOWN2
-    65429: UNKNOWN3
-BANK_SWAP:
+  Description: Execution Entry Point
+  Size: 160
+  Labels:
+    0x1F: UNKNOWN1
+    0x38: UNKNOWN2
+    0x55: UNKNOWN3
+BANK_SWAP: !assembly
   Offset: 0xFFD0
-  description: Swaps PRG-ROM banks
-  type: assembly
-  size: 16
+  Description: Swaps PRG-ROM banks
+  Size: 16
 ...
