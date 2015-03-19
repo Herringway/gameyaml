@@ -1,0 +1,17 @@
+---
+CPU:
+  Architecture: SPC700
+Title: Earthbound SPC
+Country: US
+Platform: SPC700
+...
+---
+SEQUENCE_POINTER_TABLE:
+  Offset: 0x2D4A
+  size: 0x17E
+  type: data
+  entries:
+  - name: Pointer
+    size: 2
+    type: hexint
+...

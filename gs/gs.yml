@@ -1,0 +1,255 @@
+---
+CPU:
+  Architecture: ARM
+Platform: gba
+Title: "Golden Sun"
+Country: US
+Version: 1
+...
+---
+0x080736B8: &TEXT_PTR_TABLE
+  Offset: 0x080736B8
+  Type: data
+  Size: 0x150
+  Name: TEXT_PTR_TABLE
+  Entries:
+  - Type: pointer
+    Size: 4
+    Name: Pointer
+0x0807EE58: &ABILITY_TABLE
+  Offset: 0x0807EE58
+  Type: data
+  Name: ABILITY_TABLE
+  Size: 0x2070
+  Entries:
+  - Type: bytearray
+    Size: 8
+    Name: Unknown
+  - Type: int
+    Size: 1
+    Name: Range
+    Values:
+      0: 0
+      1: 1
+      2: 3
+      3: 5
+      4: 7
+      5: 9
+      6: 11
+      255: all
+  - Type: int
+    Size: 1
+    Name: PP Cost
+  - Type: int
+    Size: 1
+    Name: Power
+  - Type: bytearray
+    Size: 5
+    Name: UnknownC
+0x08080EC8: &ENEMY_CONFIGURATION_TABLE
+  Offset: 0x08080EC8
+  Size: 13776
+  Type: data
+  Name: ENEMY_CONFIGURATION_TABLE
+  Entries:
+  - Type: script
+    Charset: ascii
+    Size: 15
+    Name: Name
+  - Type: int
+    Name: Level
+    Size: 1
+  - Type: int
+    Name: HP
+    Size: 2
+  - Type: int
+    Name: PP
+    Size: 2
+  - Type: int
+    Name: Attack
+    Size: 2
+  - Type: int
+    Name: Defense
+    Size: 2
+  - Type: int
+    Name: Agility
+    Size: 2
+  - Type: int
+    Name: Luck
+    Size: 1
+  - Type: int
+    Name: Turns
+    Size: 1
+  - Type: int
+    Name: HP Regen
+    Size: 1
+  - Type: bytearray
+    Size: 25
+    Name: Unknown
+  - Type: int
+    Size: 2
+    Name: Attack Pattern
+    Values:
+    - Equal Distribution
+    - Earlier Linearly More Likely
+    - Earlier Exponentially More Likely
+    - Unknown A
+    - Unknown B
+    - Only Use First Ability
+    - Always Defend
+  - Type: int
+    Name: Move 1 ID
+    Size: 2
+  - Type: int
+    Name: Move 2 ID
+    Size: 2
+  - Type: int
+    Name: Move 3 ID
+    Size: 2
+  - Type: int
+    Name: Move 4 ID
+    Size: 2
+  - Type: int
+    Name: Move 5 ID
+    Size: 2
+  - Type: int
+    Name: Move 6 ID
+    Size: 2
+  - Type: int
+    Name: Move 7 ID
+    Size: 2
+  - Type: int
+    Name: Move 8 ID
+    Size: 2
+  - Type: bytearray
+    Size: 4
+    Name: Unknown3
+  - Type: int
+    Size: 2
+    Name: Coins
+  - Type: int
+    Size: 2
+    Name: Item Dropped
+  - Type: int
+    Size: 2
+    Name: Item Dropped Chance
+    Values:
+    - never
+    - 1/1
+    - 1/2
+    - 1/4
+    - 1/8
+    - 1/16
+    - 1/32
+    - 1/64
+    - 1/128
+    - 1/256
+  - Type: int
+    Size: 2
+    Name: EXP
+0x08084B1C: &CLASS_CONFIG_TABLE
+  Offset: 0x08084B1C
+  Size: 0x429C
+  Type: data
+  Name: CLASS_CONFIG_TABLE
+  Entries:
+  - Type: int
+    Size: 1
+    Name: Type
+  - Type: bytearray
+    Size: 3
+    Name: UnknownA
+  - Type: int
+    Size: 1
+    Name: Venus Djinni
+  - Type: int
+    Size: 1
+    Name: Mercury Djinni
+  - Type: int
+    Size: 1
+    Name: Mars Djinni
+  - Type: int
+    Size: 1
+    Name: Jupiter Djinni
+  - Type: int
+    Size: 1
+    Name: HP Mod
+  - Type: int
+    Size: 1
+    Name: PP Mod
+  - Type: int
+    Size: 1
+    Name: Atk Mod
+  - Type: int
+    Size: 1
+    Name: Def Mod
+  - Type: int
+    Size: 1
+    Name: Agi Mod
+  - Type: int
+    Size: 1
+    Name: Luk Mod
+  - Type: struct
+    Size: 64
+    Name: Psynergy Learned
+    Entries:
+    - Type: int
+      Size: 1
+      Name: UnknownA
+    - Type: int
+      Size: 1
+      Name: UnknownB
+    - Type: int
+      Size: 1
+      Name: Psynergy ID
+    - Type: int
+      Size: 1
+      Name: Level
+  - Type: bytearray
+    Size: 6
+    Name: UnknownB
+0x080C2DA0: &ABILITY_ANIMATION_TABLE
+  Offset: 0x080C2DA0
+  Size: 2072
+  Type: data
+  Name: ABILITY_ANIMATION_TABLE
+  Entries:
+  - Type: int
+    Size: 1
+    Name: Animation Group ID
+  - Type: int
+    Size: 1
+    Name: Animation Args
+  - Type: bytearray
+    Size: 2
+    Name: Unknown
+0x08128972: &UNKNOWN_ABILITY_TYPES
+  Offset: 0x08128972
+  Size: 733
+  Type: data
+  Name: UNKNOWN_ABILITY_TYPES
+  Entries:
+  - Type: int
+    Size: 1
+0x08130D0C: &INDIVIDUAL_ENEMY_TABLE
+  Offset: 0x08130D0C
+  Size: 1000
+  Type: data
+  Name: INDIVIDUAL_ENEMY_TABLE
+  Entries:
+  - Type: bytearray
+    Size: 8
+0x08682010: &MENU_TILES
+  Offset: 0x08682010
+  Size: 0x2000
+  Type: data
+  Name: MENU_TILES
+TEXT_PTR_TABLE: *TEXT_PTR_TABLE
+ABILITY_TABLE: *ABILITY_TABLE
+ENEMY_CONFIGURATION_TABLE: *ENEMY_CONFIGURATION_TABLE
+CLASS_CONFIG_TABLE: *CLASS_CONFIG_TABLE
+ABILITY_ANIMATION_TABLE: *ABILITY_ANIMATION_TABLE
+UNKNOWN_ABILITY_TYPES: *UNKNOWN_ABILITY_TYPES
+INDIVIDUAL_ENEMY_TABLE: *INDIVIDUAL_ENEMY_TABLE
+MENU_TILES: *MENU_TILES
+...

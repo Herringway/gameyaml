@@ -1,0 +1,1183 @@
+---
+CPU:
+  Architecture: 65816
+  Localvars: directpage
+  Coprocessor: 65816
+Platform: snes
+Title: Super Mario RPG
+Country: US
+Default Script: dialoguetext
+Script Tables:
+  battlescript:
+    Lengths:
+      0xE0: 4
+      0xE1: 2
+      0xE2: 2
+      0xE3: 2
+      0xE4: 2
+      0xE5: 2
+      0xE6: 3
+      0xE7: 4
+      0xE8: 2
+      0xE9: 2
+      0xEA: 4
+      0xEB: 3
+      0xEC: 1
+      0xED: 2
+      0xEF: 2
+      0xF0: 4
+      0xF1: 2
+      0xF2: 3
+      0xF3: 3
+      0xF4: 4
+      0xF5: 2
+      0xF6: 2
+      0xF7: 2
+      0xF8: 2
+      0xF9: 2
+      0xFA: 2
+      0xFB: 2
+      0xFC: 4
+      0xFD: 1
+      0xFE: 1
+      0xFF: 1
+    Replacements:
+      0x00: "Stationary attack\n"
+      0x01: "Normal attack\n"
+      0x02: "High jump attack\n"
+      0x03: "Normal attack\n"
+      0x04: "Normal attack\n"
+      0x05: "After-images\n"
+      0x06: "Spin attack\n"
+      0x07: "Don't move\n"
+      0x08: "Dive underground\n"
+      0x09: "Charge\n"
+      0x0A: "Levitate attack\n"
+      0x0B: "High jump attack\n"
+      0x0C: "Teleport attack\n"
+      0x0D: "Short jump attack\n"
+      0x0E: "Croco charge\n"
+      0x0F: "Shoulder charge\n"
+      0x10: "Small spike shot\n"
+      0x11: "Thornet\n"
+      0x12: "Large spike shot\n"
+      0x13: "Funguspike\n"
+      0x14: "Knife throw\n"
+      0x15: "Shuriken throw\n"
+      0x16: "Full House\n"
+      0x17: "Wild Card\n"
+      0x18: "Royal Flush\n"
+      0x19: "Bomb throw\n"
+      0x1A: "Spritz Bomb\n"
+      0x1B: "Black rock throw\n"
+      0x1C: "Black rock throw, approach\n"
+      0x1D: "Bullet bill shot\n"
+      0x1E: "Blazer\n"
+      0x1F: "Raspberry orb shot\n"
+      0x20: "Smithy's finger shot\n"
+      0x21: "Echofinder\n"
+      0x22: "S'crow Bell\n"
+      0x23: "Doom Reverb\n"
+      0x24: "Spore Chimes\n"
+      0x25: "Ink Blast\n"
+      0x26: "Gunk Ball\n"
+      0x27: "Endobubble\n"
+      0x28: "Water drop\n"
+      0x29: "Sleep-Sauce\n"
+      0x2A: "Venom Drool\n"
+      0x2B: "Mush Funk\n"
+      0x2C: "S'crow Funk\n"
+      0x2D: "Stench\n"
+      0x2E: "Throw hammer\n"
+      0x2F: "Throw hammer (Fear)\n"
+      0x30: "Viro Plasm\n"
+      0x31: "Psycho Plasm\n"
+      0x32: "Light ball (Mute)\n"
+      0x33: "Light ball (Sleep)\n"
+      0x34: "Pollen Nap\n"
+      0x35: "S'crow Dust\n"
+      0x36: "Sporocyst\n"
+      0x37: "Toxicyst\n"
+      0x38: "Throw bone, approach\n"
+      0x39: "Throw bone\n"
+      0x3A: "Lulla-Bye\n"
+      0x3B: "Elegy\n"
+      0x3C: "Backfire\n"
+      0x3D: "Va Va Voom\n"
+      0x3E: "Fun'n'Run\n"
+      0x3F: "Body Slam\n"
+      0x40: "Howl\n"
+      0x41: "Scream\n"
+      0x42: "Iron Maiden\n"
+      0x43: "Fangs\n"
+      0x44: "Poison\n"
+      0x45: "Carni-Kiss\n"
+      0x46: "Claw\n"
+      0x47: "Grinder\n"
+      0x48: "Dark Claw\n"
+      0x49: "Scythe\n"
+      0x4A: "Sickle\n"
+      0x4B: "Deathsickle\n"
+      0x4C: "Eerie Jig\n"
+      0x4D: "Somnus Waltz\n"
+      0x4E: "Dahlia Dance\n"
+      0x4F: "Skewer\n"
+      0x50: "Pierce\n"
+      0x51: "Smithy Tank Head bullet\n"
+      0x52: "Magnum\n"
+      0x53: "Psyche!\n"
+      0x54: "Migraine\n"
+      0x55: "Bob-omb self-destruct\n"
+      0x56: "Microbomb self-destruct\n"
+      0x57: "Multistrike\n"
+      0x58: "Flutter Hush\n"
+      0x59: "Geno Clone attack\n"
+      0x5A: "Mario Clone attack\n"
+      0x5B: "Toadstool 2 sleep attack\n"
+      0x5C: "Fear Roulette\n"
+      0x5D: "Smithy Form 1 hammer attack\n"
+      0x5E: "Attack\n"
+      0x5F: "Smithy Body hammer attack\n"
+      0x60: "Hammer Time\n"
+      0x61: "Valor Up\n"
+      0x62: "Terrapin attack\n"
+      0x63: "Last Shot!\n"
+      0x64: "Bowser claw strike\n"
+      0x65: "Bowser spike shot\n"
+      0x66: "Bowyer Button A lock\n"
+      0x67: "Bowyer Button Y lock\n"
+      0x68: "Bowyer Button X lock\n"
+      0x69: "Bowyer arrow shot\n"
+      0x6A: "G'night\n"
+      0x6B: "Shyguy slingshot\n"
+      0x6C: "Heavy Troopa launch\n"
+      0x6D: "Chomp\n"
+      0x6E: "Get Tough!\n"
+      0x6F: "Mukumuku attack\n"
+      0x70: "Missed Me!\n"
+      0x71: "Mukumuku attack\n"
+      0x72: "Loco Express\n"
+      0x73: "3 egg shot\n"
+      0x74: "1 egg shot, ricochet\n"
+      0x75: "Self-destruct, slow\n"
+      0x76: "Eggbert self-destruct\n"
+      0x77: "Jinxed\n"
+      0x78: "Triple Kick\n"
+      0x79: "Quicksilver\n"
+      0x7A: "Bombs Away\n"
+      0x7B: "Vigor Up\n"
+      0x7C: "Intro Goomba attack\n"
+      0x7D: "Silver Bullet\n"
+      0x7E: "Terrapunch\n"
+      0x7F: "S'crow Fangs\n"
+      0x80: "Shaker\n"
+      0xE0: "Use Random Attack: [01]/[02]/[03]\n"
+      0xE1: "Unknown (E1)\n"
+      0xE2: "Targetting: [01]\n"
+      0xE3: "Battle Dialogue: [01]\n"
+      0xE4: "Unknown (E4)\n"
+      0xE5: "Event: [01]\n"
+      0xE6: "[01] $[02]\n"
+      0xE7: "[01] Var [02]: [03]\n"
+      0xE8: "Unset [01]\n"
+      0xE9: "Unknown (E9)\n"
+      0xEA: "[01] target: [02]\n"
+      0xEB: "Set invincibility for: [01]\n"
+      0xEC: "Exit Battle\n"
+      0xED: "rand(0,[01])\n"
+      0xEF: "Use Spell: [01]\n"
+      0xF0: "Use Random Spell: [01]/[02]/[03]\n"
+      0xF1: "Animation: [01]\n"
+      0xF2: "[02] becomes [01]\n"
+      0xF3: "[01] command [02]\n"
+      0xF4: "[01] inventory\n"
+      0xF5: "Unknown (F5)\n"
+      0xF6: "Unknown (F6)\n"
+      0xF7: "Unknown (F7)\n"
+      0xF8: "Unknown (F8)\n"
+      0xF9: "Unknown (F9)\n"
+      0xFA: "Unknown (FA)\n"
+      0xFB: "Unknown (FB)\n"
+      0xFC: "If ([01] [02] [03])\n"
+      0xFD: "Wait until next turn\n"
+      0xFE: "End if, Return to beginning\n"
+      0xFF: "\n\n"
+  dialoguetext:
+    Lengths:
+      0x09: 2
+      0x0B: 2
+      0x0D: 2
+      0x1C: 2
+      0x83: 2
+      0x90: 2
+    Replacements:
+      0x00: ""
+      0x01: "\n"
+      0x04: ""
+      0x06: "\n"
+      0x08: "\n"
+      0x0C: ""
+      0x0E: ' the'
+      0x0F: ' you'
+      0x10: in
+      0x11: ' to '
+      0x12: '''s '
+      0x13: Mario
+      0x14: ' I '
+      0x15: ' and '
+      0x16: 'is '
+      0x17: ' so'
+      0x20: ' '
+      0x21: '!'
+      0x22: '"'
+      0x23: '"'
+      0x24: "~"
+      0x25: "\u266A"
+      0x27: ''''
+      0x28: (
+      0x29: )
+      0x2B: "\u2026"
+      0x2C: ','
+      0x2E: .
+      0x2D: '-'
+      0x30: 0
+      0x31: 1
+      0x32: 2
+      0x33: 3
+      0x34: 4
+      0x35: 5
+      0x36: 6
+      0x37: 7
+      0x38: 8
+      0x39: 9
+      0x3F: '?'
+      0x40: ★
+      0x41: A
+      0x42: B
+      0x43: C
+      0x44: D
+      0x45: E
+      0x46: F
+      0x47: G
+      0x48: H
+      0x49: I
+      0x4A: J
+      0x4B: K
+      0x4C: L
+      0x4D: M
+      0x4E: "N"
+      0x4F: O
+      0x50: P
+      0x51: Q
+      0x52: R
+      0x53: S
+      0x54: T
+      0x55: U
+      0x56: V
+      0x57: W
+      0x58: X
+      0x59: "Y"
+      0x5A: Z
+      0x61: a
+      0x62: b
+      0x63: c
+      0x64: d
+      0x65: e
+      0x66: f
+      0x67: g
+      0x68: h
+      0x69: i
+      0x6A: j
+      0x6B: k
+      0x6C: l
+      0x6D: m
+      0x6E: "n"
+      0x6F: o
+      0x70: p
+      0x71: q
+      0x72: r
+      0x73: s
+      0x74: t
+      0x75: u
+      0x76: v
+      0x77: w
+      0x78: x
+      0x79: "y"
+      0x7A: z
+      0x7D: '-'
+      0x7E: "'"
+      0x8E: ':'
+      0x96: '%'
+      0x9B: ''''
+      0x9C: '&'
+  script:
+    lengths:
+      0x0002: 2
+    replacements:
+      0x0000: ""
+      0x0001: |2+
+
+      0x000C: |2+
+
+      0x0020: ' '
+      0x0021: '!'
+      0x0022: '"'
+      0x0023: '"'
+      0x0024: "~"
+      0x0027: ''''
+      0x002C: ','
+      0x002E: .
+      0x002D: '-'
+      0x0030: 0
+      0x0031: 1
+      0x0032: 2
+      0x0033: 3
+      0x0034: 4
+      0x0035: 5
+      0x0036: 6
+      0x0037: 7
+      0x0038: 8
+      0x0039: 9
+      0x003F: '?'
+      0x0041: A
+      0x0042: B
+      0x0043: C
+      0x0044: D
+      0x0045: E
+      0x0046: F
+      0x0047: G
+      0x0048: H
+      0x0049: I
+      0x004A: J
+      0x004B: K
+      0x004C: L
+      0x004D: M
+      0x004E: "N"
+      0x004F: O
+      0x0050: P
+      0x0051: Q
+      0x0052: R
+      0x0053: S
+      0x0054: T
+      0x0055: U
+      0x0056: V
+      0x0057: W
+      0x0058: X
+      0x0059: "Y"
+      0x005A: Z
+      0x0061: a
+      0x0062: b
+      0x0063: c
+      0x0064: d
+      0x0065: e
+      0x0066: f
+      0x0067: g
+      0x0068: h
+      0x0069: i
+      0x006A: j
+      0x006B: k
+      0x006C: l
+      0x006D: m
+      0x006E: "n"
+      0x006F: o
+      0x0070: p
+      0x0071: q
+      0x0072: r
+      0x0073: s
+      0x0074: t
+      0x0075: u
+      0x0076: v
+      0x0077: w
+      0x0078: x
+      0x0079: "y"
+      0x007A: z
+      0x007D: '-'
+      0x007E: "~"
+      0x008E: ':'
+      0x0096: '%'
+      0x009B: ''''
+      0x009C: '&'
+      0x0200: ""
+      0x0201: |2+
+
+...
+---
+RESET_VECTOR:
+  Offset: 0x00FF90
+  Size: 7
+  Type: assembly
+WAIT_3001:
+  Offset: 0x7FF760
+  Size: 6
+  Type: assembly
+UNKNOWN_C00088:
+  Offset: 0xC00088
+  Type: assembly
+  Size: 0xB2
+UNKNOWN_C0013A:
+  Offset: 0xC0013A
+  Type: assembly
+  Size: 206
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_C00208:
+  Offset: 0xC00208
+  Type: assembly
+  Size: 90
+  Initial State:
+    8 Bit Index: false
+UNKNOWN_C00262:
+  Offset: 0xC00262
+  Type: assembly
+  Size: 5
+UNKNOWN_C00267:
+  Offset: 0xC00267
+  Type: assembly
+  Size: 15
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_C002C3:
+  Offset: 0xC002C3
+  Type: assembly
+  Size: 975
+  Initial State:
+    8 Bit Accum: true
+  labels:
+    0x02D4: UNKNOWN0
+    0x02F3: UNKNOWN1
+    0x02FE: UNKNOWN2
+    0x0340: UNKNOWN3
+    0x0346: UNKNOWN4
+    0x039D: UNKNOWN5
+    0x03DB: UNKNOWN6
+    0x042C: UNKNOWN7
+    0x0474: UNKNOWN8
+    0x049D: UNKNOWN9
+    0x04AE: UNKNOWN10
+    0x04B3: UNKNOWN11
+    0x04B4: UNKNOWN12
+    0x04C1: UNKNOWN13
+    0x04DA: UNKNOWN14
+    0x04DE: UNKNOWN15
+    0x04DF: UNKNOWN16
+    0x04FC: UNKNOWN17
+    0x0512: UNKNOWN18
+    0x0518: UNKNOWN19
+    0x0523: UNKNOWN20
+    0x052B: UNKNOWN21
+    0x054A: UNKNOWN22
+    0x0553: UNKNOWN23
+    0x055E: UNKNOWN24
+    0x0564: UNKNOWN25
+    0x056A: UNKNOWN26
+    0x0579: UNKNOWN27
+    0x05E3: UNKNOWN28
+    0x05E6: UNKNOWN29
+    0x0601: UNKNOWN30
+    0x060E: UNKNOWN31
+    0x064B: UNKNOWN32
+    0x064C: UNKNOWN33
+    0x0656: UNKNOWN34
+    0x065A: UNKNOWN35
+    0x0660: UNKNOWN36
+    0x0676: UNKNOWN37
+UNKNOWN_C00692:
+  Offset: 0xC00692
+  Type: assembly
+  Size: 31
+  labels:
+    0x06B0: UNKNOWN0
+UNKNOWN_C00817:
+  Offset: 0xC00817
+  Type: assembly
+  Size: 197
+  Initial State:
+    8 Bit Accum: true
+  labels:
+    0x0875: UNKNOWN0
+    0x088E: UNKNOWN1
+UNKNOWN_C0084D:
+  Offset: 0xC0084D
+  Type: assembly
+  Size: 41
+  Initial State:
+    8 Bit Accum: true
+  labels:
+    0x0875: UNKNOWN0
+UNKNOWN_C00936:
+  Offset: 0xC00936
+  Type: assembly
+  Size: 25
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_C0096C:
+  Offset: 0xC0096C
+  Type: assembly
+  Size: 43
+UNKNOWN_C009B4:
+  Offset: 0xC009B4
+  Type: assembly
+  Size: 43
+UNKNOWN_C009F2:
+  Offset: 0xC009F2
+  Type: assembly
+  Size: 6
+  labels:
+    0x09F2: UNKNOWN0
+UNKNOWN_C00A88:
+  Offset: 0xC00A88
+  Type: assembly
+  Size: 52
+  Initial State:
+    8 Bit Accum: true
+  labels:
+    0x0A94: UNKNOWN0
+UNKNOWN_C02FBB:
+  Offset: 0xC02FBB
+  Type: assembly
+  Size: 59
+UNKNOWN_C02FF6:
+  Offset: 0xC02FF6
+  Type: assembly
+  Size: 81
+UNKNOWN_C0359F:
+  Offset: 0xC0359F
+  Type: assembly
+  Size: 198
+  Initial State:
+    8 Bit Accum: true
+  labels:
+    0x35B0: UNKNOWN0
+UNKNOWN_C0656E:
+  Offset: 0xC0656E
+  Type: assembly
+  Size: 39
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_C06595:
+  Offset: 0xC06595
+  Type: assembly
+  Size: 51
+  Initial State:
+    8 Bit Accum: true
+  labels:
+    0x65A7: UNKNOWN0
+UNKNOWN_C06671:
+  Offset: 0xC06671
+  Type: assembly
+  Size: 69
+  Initial State:
+    8 Bit Accum: true
+    8 Bit Index: false
+UNKNOWN_C06C60:
+  Offset: 0xC06C60
+  Type: assembly
+  Size: 39
+  Initial State:
+    8 Bit Accum: true
+    8 Bit Index: false
+UNKNOWN_C07347:
+  Offset: 0xC07347
+  Type: assembly
+  Size: 150
+  labels:
+    0x739D: UNKNOWN0
+    0x73A4: UNKNOWN1
+    0x73B5: UNKNOWN2
+    0x73C4: UNKNOWN3
+    0x73CB: UNKNOWN4
+    0x73D5: UNKNOWN5
+UNKNOWN_C0F45F:
+  Offset: 0xC0F45F
+  Type: assembly
+  Size: 34
+  Initial State:
+    8 Bit Accum: true
+  labels:
+    0xF480: UNKNOWN0
+UNKNOWN_C0F53B:
+  Offset: 0xC0F53B
+  Type: assembly
+  Size: 51
+  Initial State:
+    8 Bit Accum: true
+  labels:
+    0xF563: UNKNOWN0
+UNKNOWN_C0F54C:
+  Offset: 0xC0F54C
+  Type: assembly
+  Size: 34
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_C10658:
+  Offset: 0xC10658
+  Size: 100
+  Type: assembly
+BATTLE_FONT_GFX:
+  Offset: 0xC3F000
+  Description: Battle Numeral/Cursor GFX
+  Type: data
+  Size: 3072
+  Entries:
+  - Name: Tile
+    Size: 32
+    Type: tile
+    bpp: 4
+BATTLE_FONT_PAL:
+  Offset: 0xC3FC00
+  Description: Battle Numeral/Cursor GFX Palette
+  Type: data
+  Size: 1024
+  Entries:
+  - Name: Palette
+    Size: 32
+    Type: palette
+UNKNOWN_C40008:
+  Offset: 0xC40008
+  Type: assembly
+  Size: 3
+UNKNOWN_C4000B:
+  Offset: 0xC4000B
+  Type: assembly
+  Size: 273
+  labels:
+    0x0030: UNKNOWN0
+    0x003E: UNKNOWN1
+    0x005D: UNKNOWN2
+    0x0075: UNKNOWN3
+    0x0081: UNKNOWN4
+    0x00A4: UNKNOWN5
+    0x00BE: UNKNOWN6
+    0x00D0: UNKNOWN7
+    0x0100: UNKNOWN8
+UNKNOWN_C4072A:
+  Offset: 0xC4072A
+  Type: assembly
+  Size: 0x65
+  Initial State:
+    DBR: 0
+    8 Bit Index: false
+UNKNOWN_C407EC:
+  Offset: 0xC407EC
+  Type: assembly
+  Size: 162
+  Initial State:
+    DBR: 0x00
+  Labels:
+    0x15: WAIT_APU_BOOT
+    0x23: APU_NOT_READY
+    0x2A: APU_READY
+    0x3E: WAIT_APU_READY
+    0x54: TRANSFER_BYTE
+    0x64: WAIT_FOR_BYTE_TRANSFER
+    0x82: WAIT_APU_FINISHED
+UNKNOWN_C95B39:
+  Offset: 0xC95B39
+  Type: assembly
+  Size: 40
+  Initial State:
+    8 Bit Accum: true
+  labels:
+    0x5B46: UNKNOWN0
+    0x5B53: UNKNOWN1
+    0x5B60: UNKNOWN2
+UNKNOWN_C97450:
+  Offset: 0xC97450
+  Type: assembly
+  Size: 27
+  Initial State:
+    8 Bit Accum: true
+DIALOGUE:
+  Offset: 0xE20000
+  Description: Dialogue
+  Type: data
+  Size: 168192
+  header:
+  - Name: Unknown
+    Type: bytearray
+    Size: 8
+  Entries:
+  - Name: Text
+    Type: script
+    Terminator: 0
+UNCOMPRESSED_OBJECT_GFX:
+  Offset: 0xE80000
+  Description: Uncompressed Object Graphics
+  Type: data
+  Size: 720896
+  Entries:
+  - Name: Tile
+    Size: 32
+    Type: tile
+    bpp: 4
+UNKNOWN_F90000:
+  Offset: 0xF90000
+  Size: 0x26
+  Type: data
+ENEMY_STATS_PTRS:
+  Offset: 0xF90026
+  Description: Pointers to enemy stats entries
+  Type: data
+  Size: 0x200
+  Entries:
+  - Type: pointer
+    Size: 2
+    Base: 0xF90000
+ENEMY_STATS: 
+  Offset: 0xF90226
+  Description: Enemy Statistics
+  Type: data
+  Size: 4096
+  Entries:
+  - Name: HP
+    Size: 2
+  - Name: Speed
+    Size: 1
+  - Name: Attack
+    Size: 1
+  - Name: Defense
+    Size: 1
+  - Name: Magic Attack
+    Size: 1
+  - Name: Magic Defense
+    Size: 1
+  - Name: FP
+    Size: 1
+  - Name: Evade
+    Size: 1
+  - Name: Magic Evade
+    Size: 1
+  - Name: Special Attributes
+    Size: 2
+    bitvalues:
+    - Enemy Removed By Script
+    - Unknown
+    - Invincible
+    - Instant Death Protection
+    - Unknown2
+    - Unknown3
+    - Unknown4
+    - Unknown5
+    - Unknown6
+    - Unknown7
+    - Morph Chance Bit 1
+    - Morph Chance Bit 2
+    - Attack Sound Bit 1
+    - Attack Sound Bit 2
+    - Attack Sound Bit 3
+    - Attack Sound Bit 4
+  - Name: Elemental Resistances
+    Size: 1
+    bitvalues:
+    - Unknown1
+    - Unknown2
+    - Unknown3
+    - Unknown4
+    - Ice
+    - Thunder
+    - Fire
+    - Earth
+  - Name: Elemental Weaknesses
+    Size: 1
+    bitvalues:
+    - Unknown1
+    - Unknown2
+    - Unknown3
+    - Unknown4
+    - Ice
+    - Thunder
+    - Fire
+    - Earth
+  - Name: Status Resistances
+    Size: 1
+  - Name: Unknown
+    Size: 1
+ENEMY_SCRIPT_PTRS: 
+  Offset: 0xF930AA
+  Type: data
+  Size: 512
+  Entries:
+  - Name: Pointer
+    Size: 2
+    Base: 0xF90000
+    Type: pointer
+ENEMY_SCRIPTS: 
+  Offset: 0xF932AA
+  Size: 0x274A
+  Type: data
+  Entries:
+  - Type: script
+    Terminator: 0xFF
+    Charset: battlescript
+    Name: NORMAL_SCRIPT
+  - Type: script
+    Terminator: 0xFF
+    Charset: battlescript
+    Name: COUNTER_SCRIPT
+ABILITY_NAMES:
+  Offset: 0xF959F4
+  Description: Enemy Ability Names
+  Type: data
+  Size: 2912
+  Entries:
+  - Name: Text
+    Type: script
+    Size: 13
+BATTLE_DIALOGUE_PTRS:
+  Offset: 0xF96554
+  Description: Pointers to Enemy Battle Dialogue
+  Type: data
+  Size: 512
+  Entries:
+  - Name: Pointer
+    Type: pointer
+    Base: 0xF90000
+    Size: 2
+BATTLE_DIALOGUE:
+  Offset: 0xF96754
+  Description: Enemy Battle Dialogue
+  Type: data
+  Size: 11133
+  Entries:
+  - Name: Text
+    Type: script
+    Terminator: 0
+ENEMY_NAMES:
+  Offset: 0xF992D1
+  Description: Enemy Names
+  Type: data
+  Size: 3328
+  Entries:
+  - Name: Text
+    Type: script
+    Size: 13
+PSYCHO_PTRS:
+  Offset: 0xF99FD1
+  Description: Psychopath Message Pointers
+  Type: data
+  Size: 512
+  Entries:
+  - Name: Pointer
+    Type: pointer
+    Size: 2
+PSYCHO_MESSAGES:
+  Offset: 0xF9A1D1
+  Description: Psychopath Messages
+  Type: data
+  Size: 5235
+  Entries:
+  - Name: Text
+    Type: script
+    Terminator: [0x02, 0x00]
+BATTLEFIELD_LAYOUT:
+  Offset: 0xF9B644
+  Description: Layout data for each battlefield
+  Type: data
+  Size: 768
+  Entries:
+  - Name: GFX Sets
+    Size: 5
+    Type: bytearray
+  - Name: Unknown
+    Size: 1
+  - Name: BG1 Tileset
+    Size: 1
+  - Name: Palette ID
+    Size: 1
+MONSTER_TARGETTING_COORDS:
+  Offset: 0xF9B944
+  Description: Coordinates for targetting each monster
+  Type: data
+  Size: 256
+MAP_BATTLEFIELDS:
+  Offset: 0xF9BA44
+  Description: Battlefields for each area map
+  Type: data
+  Size: 256
+  Entries:
+  - Name: Battlefield IDs
+    Size: 4
+    Type: bytearray
+FLOWER_BONUSES:
+  Offset: 0xF9BB44
+  Description: Flower bonuses for each monster
+  Type: data
+  Size: 256
+UNKNOWN_F9BC44:
+  Offset: 0xF9BC44
+  Type: data
+  Size: 19
+UNKNOWN_F9BC57:
+  Offset: 0xF9BC57
+  Type: nullspace
+  Size: 937
+MONSTER_FORMATIONS:
+  Offset: 0xF9C000
+  Description: Monster Formations
+  Type: data
+  Size: 13312
+  Entries:
+  - Name: Unknown
+    Size: 26
+    Type: bytearray
+UNKNOWN_F9F400:
+  Offset: 0xF9F400
+  Type: nullspace
+  Size: 3072
+INITIAL_STATS_PTR:
+  Offset: 0xFA0000
+  Type: data
+  Size: 2
+FA0002_PTR:
+  Offset: 0xFA0002
+  Type: data
+  Size: 2
+ITEM_STATS_PTR:
+  Offset: 0xFA0004
+  Type: data
+  Size: 2
+CHARACTER_NAME_PTR:
+  Offset: 0xFA0006
+  Type: data
+  Size: 2
+SPELL_NAME_PTR:
+  Offset: 0xFA0008
+  Type: data
+  Size: 2
+ITEM_NAME_PTR:
+  Offset: 0xFA000A
+  Type: data
+  Size: 2
+LEVEL_UP_XP_PTR:
+  Offset: 0xFA000C
+  Type: data
+  Size: 2
+LEVEL_UP_STATUS_PTR:
+  Offset: 0xFA000E
+  Type: data
+  Size: 2
+LEVEL_UP_BONUSES_PTR:
+  Offset: 0xFA0010
+  Type: data
+  Size: 2
+MAGIC_STATS_PTR:
+  Offset: 0xFA0012
+  Type: data
+  Size: 2
+BATTLE_MESSAGES_PTR:
+  Offset: 0xFA0014
+  Type: data
+  Size: 2
+FA0016_PTR:
+  Offset: 0xFA0016
+  Type: data
+  Size: 2
+MAGIC_DESCRIPTIONS_PTR:
+  Offset: 0xFA0018
+  Type: data
+  Size: 2
+ITEM_DESCRIPTIONS_PTR:
+  Offset: 0xFA001A
+  Type: data
+  Size: 2
+SHOP_PRICES_PTR:
+  Offset: 0xFA001C
+  Type: data
+  Size: 2
+FA001E_PTR:
+  Offset: 0xFA001E
+  Type: data
+  Size: 2
+LEVEL_UP_SPELLS_PTR:
+  Offset: 0xFA0020
+  Type: data
+  Size: 2
+FA0022_PTR:
+  Offset: 0xFA0022
+  Type: data
+  Size: 2
+FA0024_PTR:
+  Offset: 0xFA0024
+  Type: data
+  Size: 2
+WEAPON_TIMING_PTR:
+  Offset: 0xFA0026
+  Type: data
+  Size: 2
+FA0028_PTR:
+  Offset: 0xFA0028
+  Type: data
+  Size: 2
+SHOP_STATS_PTR:
+  Offset: 0xFA002A
+  Type: data
+  Size: 2
+INITIAL_STATS:
+  Offset: 0xFA002C
+  Description: Characters' initial stats
+  Size: 96
+  Type: data
+  Entries:
+  - Name: unknown
+    Size: 16
+    Type: bytearray
+UNKNOWN_FA008C:
+  Offset: 0xFA008C
+  Size: 4
+  Type: data
+STARTING_ITEMS:
+  Offset: 0xFA0090
+  Description: Items Mario begins with
+  Size: 75
+  Type: data
+  Entries:
+  - Name: Items
+    Size: 75
+    Type: bytearray
+STARTING_MISC:
+  Offset: 0xFA00DB
+  Description: Miscellaneous things Mario begins with
+  Size: 5
+  Type: data
+  Entries:
+  - Name: Coins
+    Size: 2
+  - Name: FP
+    Size: 1
+  - Name: FP Max
+    Size: 1
+  - Name: Frog Coins
+    Size: 1
+UNKNOWN_FA00E0:
+  Type: data
+  Offset: 0xFA00E0
+  Size: 109
+ITEM_STATS:
+  Offset: 0xFA014D
+  Description: Item Stats
+  Type: data
+  Size: 4608
+  Entries:
+  - Name: Unknown
+    Type: bytearray
+    Size: 18
+CHARACTER_NAMES:
+  Offset: 0xFA134D
+  Type: data
+  Size: 50
+  Entries:
+  - Name: Name
+    Type: script
+    Size: 10
+SPELL_NAMES:
+  Offset: 0xFA137F
+  Type: data
+  Size: 1920
+  Entries:
+  - Name: Name
+    Type: script
+    Size: 15
+EXPERIENCE_TABLE:
+  Offset: 0xFA1AFF
+  Description: Experience needed to level up
+  Size: 58
+  Type: data
+  Graph: true
+  Entries:
+  - Size: 2
+STAT_MODS:
+  Offset: 0xFA1B39
+  Size: 434
+  Type: data
+  Entries:
+  - Size: 3
+    Name: Mario
+    Type: bitstruct
+    Entries: &STATMODENTRIES
+    - Name: Padding
+      Size: 4
+      Type: int
+    - Name: HP
+      Size: 4
+      Type: int
+    - Name: Magic_Attack
+      Size: 4
+      Type: int
+    - Name: Magic_Defense
+      Size: 4
+      Type: int
+    - Name: Attack
+      Size: 4
+      Type: int
+    - Name: Defense
+      Size: 4
+      Type: int
+  - Size: 3
+    Name: Toadstool
+    Type: bitstruct
+    Entries: *STATMODENTRIES
+  - Size: 3
+    Name: Bowser
+    Type: bitstruct
+    Entries: *STATMODENTRIES
+  - Size: 3
+    Name: Geno
+    Type: bitstruct
+    Entries: *STATMODENTRIES
+  - Size: 3
+    Name: Mallow
+    Type: bitstruct
+    Entries: *STATMODENTRIES
+SPELL_DESCRIPTIONS_PTRS:
+  Offset: 0xFA2B80
+  Type: data
+  Size: 0x36
+  Entries:
+  - Type: pointer
+    Base: 0xFA0000
+    Size: 2
+SPELL_DESCRIPTIONS:
+  Offset: 0xFA2BB6
+  Type: data
+  Size: 874
+  Entries:
+  - Type: script
+    Terminator: 0
+ITEM_DESCRIPTIONS_PTRS:
+  Offset: 0xFA2F20
+  Type: data
+  Size: 0x200
+  Entries:
+  - Type: pointer
+    Base: 0xFA0000
+    Size: 2
+ITEM_DESCRIPTIONS:
+  Offset: 0xFA3120
+  Type: data
+  Size: 0xFD2
+  Entries:
+  - Type: script
+    Terminator: 0
+ITEM_NAMES:
+  Offset: 0xFA46EF
+  Type: data
+  Size: 0xF00
+  Entries:
+  - Type: script
+    Size: 0xF
+MAP_STRING_PTRS:
+  Offset: 0xFEFD00
+  Size: 0x80
+  Type: data
+  Entries:
+  - Type: pointer
+    Base: 0xFEFD80
+    Size: 2
+MAP_STRINGS:
+  Offset: 0xFEFD80
+  Size: 0x1A1
+  Type: data
+  Entries:
+  - Type: script
+    Terminator: 6
+...

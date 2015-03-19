@@ -1,0 +1,12 @@
+---
+CPU:
+  Architecture: z80g
+Title: Dragon Warrior Monsters
+Country: US
+Platform: gbc
+...
+---
+MAIN: 
+  Description: Main Routine
+  Offset: 0x000150
+...

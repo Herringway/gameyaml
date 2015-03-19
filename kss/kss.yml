@@ -1,0 +1,1952 @@
+---
+CPU:
+  Architecture: 65816
+Platform: snes
+Title: Kirby Super Star
+Country: US
+Version: 1.0
+Default Script: scripttext
+Script Tables:
+  scripttext:
+    Lengths:
+      0xE: 3
+    Replacements:
+      0: ''
+      2: "\n"
+      32: ' '
+      43: .
+      44: ','
+      45: "'"
+      48: '-'
+      51: '!'
+      52: "?"
+      77: A
+      78: B
+      79: C
+      80: D
+      81: E
+      82: F
+      83: G
+      84: H
+      85: I
+      86: J
+      87: K
+      88: L
+      89: M
+      90: 'N'
+      91: O
+      92: P
+      93: Q
+      94: R
+      95: S
+      96: T
+      97: U
+      98: V
+      99: W
+      100: X
+      101: 'Y'
+      102: Z
+      103: a
+      104: b
+      105: c
+      106: d
+      107: e
+      108: f
+      109: g
+      110: h
+      111: i
+      112: j
+      113: k
+      114: l
+      115: m
+      116: 'n'
+      117: o
+      118: p
+      119: q
+      120: r
+      121: s
+      122: t
+      123: u
+      124: v
+      125: w
+      126: x
+      127: 'y'
+      128: z
+      0xCB: "\n"
+...
+---
+ENTRY_POINT:
+  Offset: 0x008004
+  Label States:
+    398:
+      8 Bit Accum: false
+  Type: assembly
+DECOMP:
+  Offset: 0x00889A
+  Initial State:
+     8 Bit Index: n
+  Type: assembly
+UNKNOWN_DECOMP:
+  Offset: 0x008C92
+  Initial State:
+    8 Bit Accum: n
+  Type: assembly
+SNES_HEADER:
+  Description: Structure holding information about the game, including cartridge type and various code vectors.
+  Offset: 0x00FFB0
+  Size: 0x4F
+  Type: data
+  Entries:
+  - Size: 6
+    Type: script
+    Charset: ascii
+    Name: Game ID
+  - Size: 10
+    Name: Empty
+    Type: bytearray
+  - Size: 0x15
+    Type: script
+    Charset: ascii
+    Name: Game Title
+  - Size: 1
+    Name: ROM Layout
+  - Size: 1
+    Name: Cartridge Type
+  - Size: 1
+    Name: ROM Size
+    Values: &__HEADER_SIZES
+      0: None
+      1: 2KiB
+      2: 4KiB
+      3: 8KiB
+      4: 16KiB
+      5: 32KiB
+      6: 64KiB
+      7: 128KiB
+      8: 256KiB
+      9: 512KiB
+      10: 1024KiB
+      11: 2048KiB
+      12: 4096KiB
+      13: 8192KiB
+  - Size: 1
+    Name: RAM Size
+    Values: *__HEADER_SIZES
+  - Size: 1
+    Name: Country Code
+    Values:
+      0x00: Japan
+      0x01: North America
+      0x02: Europe
+      0x03: Scandinavia
+      0x06: Europe (French)
+      0x07: Dutch
+      0x08: Spanish
+      0x09: German
+      0x0A: Italian
+      0x0B: Chinese
+      0x0D: Korean
+      0x0E: Common
+      0x0F: Canada
+      0x10: Brazil
+      0x11: Australia
+  - Size: 1
+    Name: Licensee
+    Values:
+      0x33: Extended
+  - Size: 1
+    Name: Revision
+  - Size: 2
+    Type: int
+    Base: 16
+    Name: Checksum
+  - Size: 2
+    Type: int
+    Base: 16
+    Name: Checksum Complement
+  - Type: struct
+    Size: 0x10
+    Name: Native Mode Vectors
+    Entries:
+    - Size: 2
+      Type: pointer
+      Name: Unused
+    - Size: 2
+      Type: pointer
+      Name: Unused 2
+    - Size: 2
+      Type: pointer
+      Name: COP
+    - Size: 2
+      Type: pointer
+      Name: BRK
+    - Size: 2
+      Type: pointer
+      Name: ABORT
+    - Size: 2
+      Type: pointer
+      Name: NMI
+    - Size: 2
+      Type: pointer
+      Name: Unused 3
+    - Size: 2
+      Type: pointer
+      Name: IRQ
+  - Type: struct
+    Size: 0x10
+    Name: Emulation Mode Vectors
+    Entries:
+    - Size: 2
+      Type: pointer
+      Name: Unused
+    - Size: 2
+      Type: pointer
+      Name: Unused 2
+    - Size: 2
+      Type: pointer
+      Name: COP
+    - Size: 2
+      Type: pointer
+      Name: Unused 3
+    - Size: 2
+      Type: pointer
+      Name: ABORT
+    - Size: 2
+      Type: pointer
+      Name: NMI
+    - Size: 2
+      Type: pointer
+      Name: RESET
+    - Size: 2
+      Type: pointer
+      Name: IRQ
+UNKNOWN_TABLE_C03910:
+  Offset: 0xC03910
+  Size: 0x31C
+  Type: data
+ATTACK_STRENGTHS:
+  Offset: 0xC82886
+  Size: 0x44
+  Type: data
+  Entries:
+  - Type: int
+    Size: 1
+ATTACK_SOUNDS:
+  Offset: 0xC82A1E
+  Size: 0x44
+  Type: data
+  Entries:
+  - Type: int
+    Size: 1
+OBJECT_HP:
+  Offset: 0xD040AA
+  Size: 224
+  Type: data
+  Entries:
+  - Type: int
+    Size: 2
+OBJECT_POWER:
+  Offset: 0xD0426A
+  Size: 112
+  Type: data
+  Entries:
+  - Type: int
+    Size: 1
+DEDEDE_SPR:
+  Description: Sprite of King Dedede. Purpose currently unknown.
+  Offset: 0xC17281
+  Size: 0x800
+  Type: data
+DEDEDE_SPR2:
+  Description: Another sprite of King Dedede. Purpose currently unknown.
+  Offset: 0xC38000
+  Size: 0x800
+  Type: data
+UNKNOWN_FONT:
+  Description: An unknown wide 2bpp font.
+  Offset: 0xCAF818
+  Size: 0x1700
+  Type: data
+TEXT_PTR_TABLE:
+  Offset: 0xCB0F18
+  Size: 0x6A4
+  Type: data
+  Entries:
+  - Type: pointer
+    Size: 2
+    Base: 0xCB0000
+TEXT_DATA:
+  Description: Text data used throughout the game.
+  Offset: 0xCB15BC
+  Size: 0x6386
+  Type: data
+  Entries:
+  - Terminator: 0x00
+    Type: script
+UNKNOWN_KIRBY_TILES:
+  Offset: 0xD00000
+  Filter_Size: 7744
+  Filters:
+  -  ebcomp
+  Size: 4265
+  Type: data
+CROWD_TILES:
+  Description: Tiles for the crowd background.
+  Offset: 0xE5213C
+  Size: 0x1800
+  Type: data
+DEDEDE_SPR3:
+  Description: More King Dedede sprites.
+  Offset: 0xE80818
+  Size: 0x2400
+  Type: data
+ROOM_F00000:
+  Type: data
+  Offset: 0xF00000
+  Size: 460
+  Description: 'Dyna Blade 5 -- Room #1.'
+  Entries:
+  - Type: struct
+    Name: HEADER
+    Size: 17
+    Description: Header
+    Entries:
+    - Name: Unknown
+      Size: 1
+    - Name: Unknown 2
+      Size: 1
+    - Name: Music ID
+      Size: 1
+    - Name: Music Unknown
+      Size: 1
+    - Name: Background Toggle
+      Size: 1
+    - Name: Background Unknown
+      Size: 1
+    - Name: Background XY Coords
+      Size: 1
+    - Name: Foreground XY Coords
+      Size: 1
+    - Name: Dark Palette Toggle
+      Size: 1
+      Values:
+      - Disabled
+      - Enabled
+    - Name: Unknown 3
+      Size: 1
+    - Name: Unknown 4
+      Size: 1
+    - Name: Spawn Object ID
+      Size: 2
+    - Name: Unknown 5
+      Size: 1
+    - Name: Unknown 6
+      Size: 1
+    - Name: Unknown 7
+      Size: 1
+    - Name: Unknown 8
+      Size: 1
+ROOM_F001CD:
+  Type: data
+  Offset: 0xF001CD
+  Size: 456
+  Description: '??? Planet -- Room #1.'
+ROOM_F00395:
+  Type: data
+  Offset: 0xF00395
+  Size: 454
+  Description: Old Tower -- Coconut Room.
+ROOM_F0055B:
+  Type: data
+  Offset: 0xF0055B
+  Size: 889
+  Description: Crystal Area -- Main Hub.
+ROOM_F008D4:
+  Type: data
+  Offset: 0xF008D4
+  Size: 439
+  Description: Old Tower -- Gim Room.
+ROOM_F00A8B:
+  Type: data
+  Offset: 0xF00A8B
+  Size: 439
+  Description: 'Meta Knight 3 -- Room #5.'
+ROOM_F00C42:
+  Type: data
+  Offset: 0xF00C42
+  Size: 438
+  Description: The Arena -- Whispy Woods.
+ROOM_F00DF8:
+  Type: data
+  Offset: 0xF00DF8
+  Size: 438
+  Description: Green Greens -- Whispy Woods.
+ROOM_F00FAE:
+  Type: data
+  Offset: 0xF00FAE
+  Size: 436
+  Description: 'Garden Area -- Room #2.'
+ROOM_F01162:
+  Type: data
+  Offset: 0xF01162
+  Size: 435
+  Description: 'Meta Knight 1 -- Room #2.'
+ROOM_F01315:
+  Type: data
+  Offset: 0xF01315
+  Size: 429
+  Description: Meta Knight 3 -- Ability Room.
+ROOM_F014C2:
+  Type: data
+  Offset: 0xF014C2
+  Size: 409
+  Description: Old Tower -- Right Space Room.
+ROOM_F0165B:
+  Type: data
+  Offset: 0xF0165B
+  Size: 395
+  Description: Garden Area -- Mine Platform Room.
+ROOM_F017E6:
+  Type: data
+  Offset: 0xF017E6
+  Size: 394
+  Description: Garden Area -- Xmas Tree Room.
+ROOM_F01970:
+  Type: data
+  Offset: 0xF01970
+  Size: 390
+  Description: Meta Knight 8 -- Wheelie Room.
+ROOM_F01AF6:
+  Type: data
+  Offset: 0xF01AF6
+  Size: 388
+  Description: Garden Area -- Ship 1Up Room.
+ROOM_F01C7A:
+  Type: data
+  Offset: 0xF01C7A
+  Size: 385
+  Description: 'Cavios -- Room #1.'
+ROOM_F01DFB:
+  Type: data
+  Offset: 0xF01DFB
+  Size: 378
+  Description: 'Dyna Blade 1 -- Room #1.'
+ROOM_F020EF:
+  Type: data
+  Offset: 0xF020EF
+  Size: 368
+  Description: 'Green Greens -- Room #1.'
+ROOM_F0225F:
+  Type: data
+  Offset: 0xF0225F
+  Size: 366
+  Description: 'Bubbly Clouds -- Room #2.'
+ROOM_F023CD:
+  Type: data
+  Offset: 0xF023CD
+  Size: 364
+  Description: Garden Area -- Maxim Tomato Room.
+ROOM_F02539:
+  Type: data
+  Offset: 0xF02539
+  Size: 362
+  Description: 'Mecheye -- Room #1.'
+ROOM_F026A3:
+  Type: data
+  Offset: 0xF026A3
+  Size: 361
+  Description: Old Tower -- Water Current Room.
+ROOM_F02972:
+  Type: data
+  Offset: 0xF02972
+  Size: 358
+  Description: 'Float Islands -- Room #1.'
+ROOM_F02AD8:
+  Type: data
+  Offset: 0xF02AD8
+  Size: 353
+  Description: 'Aqualiss -- Room #1.'
+ROOM_F02C39:
+  Type: data
+  Offset: 0xF02C39
+  Size: 349
+  Description: Garden Area -- Falling Star Room.
+ROOM_F031A3:
+  Type: data
+  Offset: 0xF031A3
+  Size: 343
+  Description: Garden Area -- Spike Ball Room.
+ROOM_F032FA:
+  Type: data
+  Offset: 0xF032FA
+  Size: 342
+  Description: Old Tower -- Laser Room.
+ROOM_F03450:
+  Type: data
+  Offset: 0xF03450
+  Size: 342
+  Description: 'Dyna Blade 4 -- Room #4.'
+ROOM_F035A6:
+  Type: data
+  Offset: 0xF035A6
+  Size: 341
+  Description: Old Tower -- Knight Battle Room.
+ROOM_F036FB:
+  Type: data
+  Offset: 0xF036FB
+  Size: 340
+  Description: Old Tower -- Mine Platform Room.
+ROOM_F0384F:
+  Type: data
+  Offset: 0xF0384F
+  Size: 335
+  Description: 'Meta Knight 1 -- Room #3.'
+ROOM_F0399E:
+  Type: data
+  Offset: 0xF0399E
+  Size: 335
+  Description: 'Dyna Blade 3 -- Room #6.'
+ROOM_F03AED:
+  Type: data
+  Offset: 0xF03AED
+  Size: 332
+  Description: '??? Planet -- Room #2.'
+ROOM_F03C39:
+  Type: data
+  Offset: 0xF03C39
+  Size: 324
+  Description: Old Tower -- Outside Stairs.
+ROOM_F03D7D:
+  Type: data
+  Offset: 0xF03D7D
+  Size: 322
+  Description: Old Tower -- Hammer Post Room.
+ROOM_F03EBF:
+  Type: data
+  Offset: 0xF03EBF
+  Size: 312
+  Description: Meta Knight 6 -- Armory.
+ROOM_F03FF7:
+  Type: data
+  Offset: 0xF03FF7
+  Size: 600
+  Description: Hotbeat -- Burnin' Leo Room.
+ROOM_F0424F:
+  Type: data
+  Offset: 0xF0424F
+  Size: 294
+  Description: Skyhigh -- Scarfy Room.
+ROOM_F04375:
+  Type: data
+  Offset: 0xF04375
+  Size: 294
+  Description: Skyhigh -- Shotzo Room.
+ROOM_F0449B:
+  Type: data
+  Offset: 0xF0449B
+  Size: 293
+  Description: 'Dyna Blade 2 -- Room #1.'
+ROOM_F045C0:
+  Type: data
+  Offset: 0xF045C0
+  Size: 293
+  Description: Skyhigh -- Sir Kibble Room.
+ROOM_F046E5:
+  Type: data
+  Offset: 0xF046E5
+  Size: 292
+  Description: Old Tower -- Bouncing Gordo Room.
+ROOM_F04809:
+  Type: data
+  Offset: 0xF04809
+  Size: 286
+  Description: Dyna Blade 2 -- Knight Battle Room.
+ROOM_F04927:
+  Type: data
+  Offset: 0xF04927
+  Size: 284
+  Description: Old Tower -- Sleep Room.
+ROOM_F04A43:
+  Type: data
+  Offset: 0xF04A43
+  Size: 282
+  Description: Tutorial -- The Great Cave Offensive.
+ROOM_F04B5D:
+  Type: data
+  Offset: 0xF04B5D
+  Size: 282
+  Description: Skyhigh -- Bomber Room.
+ROOM_F04C77:
+  Type: data
+  Offset: 0xF04C77
+  Size: 279
+  Description: Skyhigh -- Gordo Room.
+ROOM_F04D8E:
+  Type: data
+  Offset: 0xF04D8E
+  Size: 277
+  Description: Skyhigh -- Sleeping Room.
+ROOM_F04EA3:
+  Type: data
+  Offset: 0xF04EA3
+  Size: 276
+  Description: Skyhigh -- Wheelie Room.
+ROOM_F04FB7:
+  Type: data
+  Offset: 0xF04FB7
+  Size: 272
+  Description: Skyhigh -- Parasol Waddle Dee Room.
+ROOM_F050C7:
+  Type: data
+  Offset: 0xF050C7
+  Size: 270
+  Description: Skyhigh -- Poppy Bros room.
+ROOM_F051D5:
+  Type: data
+  Offset: 0xF051D5
+  Size: 270
+  Description: Garden Area -- Grassy Treasure Room.
+ROOM_F052E3:
+  Type: data
+  Offset: 0xF052E3
+  Size: 266
+  Description: Skyhigh -- Wing Room.
+ROOM_F053ED:
+  Type: data
+  Offset: 0xF053ED
+  Size: 265
+  Description: Garden Area -- Twin Switch Room.
+ROOM_F054F6:
+  Type: data
+  Offset: 0xF054F6
+  Size: 263
+  Description: 'Meta Knight 2 -- Room #4.'
+ROOM_F055FD:
+  Type: data
+  Offset: 0xF055FD
+  Size: 261
+  Description: Old Tower -- Flamin' Leo Room.
+ROOM_F05702:
+  Type: data
+  Offset: 0xF05702
+  Size: 260
+  Description: 'Meta Knight 4 -- Room #5.'
+ROOM_F05806:
+  Type: data
+  Offset: 0xF05806
+  Size: 259
+  Description: Skyhigh -- Jet Room.
+ROOM_F05E14:
+  Type: data
+  Offset: 0xF05E14
+  Size: 256
+  Description: Mt. Dedede -- King Dedede.
+ROOM_F05F14:
+  Type: data
+  Offset: 0xF05F14
+  Size: 256
+  Description: The Great Cave Offensive -- Entrance.
+ROOM_F06014:
+  Type: data
+  Offset: 0xF06014
+  Size: 255
+  Description: Garden Area -- Pre-Boss Room.
+ROOM_F06113:
+  Type: data
+  Offset: 0xF06113
+  Size: 254
+  Description: Aqualiss -- 1Up Room.
+ROOM_F06211:
+  Type: data
+  Offset: 0xF06211
+  Size: 253
+  Description: Garden Area -- Bird Room.
+ROOM_F0630E:
+  Type: data
+  Offset: 0xF0630E
+  Size: 251
+  Description: 'Meta Knight 6 -- Room #3.'
+ROOM_F06409:
+  Type: data
+  Offset: 0xF06409
+  Size: 249
+  Description: The Arena -- King Dedede.
+ROOM_F06502:
+  Type: data
+  Offset: 0xF06502
+  Size: 246
+  Description: 'Bubbly Clouds -- Room #3.'
+ROOM_F065F8:
+  Type: data
+  Offset: 0xF065F8
+  Size: 245
+  Description: Old Tower -- Flaming Skull Room.
+ROOM_F066ED:
+  Type: data
+  Offset: 0xF066ED
+  Size: 243
+  Description: Bubbly Clouds -- Kracko.
+ROOM_F067E0:
+  Type: data
+  Offset: 0xF067E0
+  Size: 243
+  Description: The Great Cave Offensive -- Exit.
+ROOM_F068D3:
+  Type: data
+  Offset: 0xF068D3
+  Size: 242
+  Description: The Arena -- Kracko.
+ROOM_F069C5:
+  Type: data
+  Offset: 0xF069C5
+  Size: 242
+  Description: Meta Knight 4 -- Invincibility Candy Room.
+ROOM_F06AB7:
+  Type: data
+  Offset: 0xF06AB7
+  Size: 240
+  Description: Dyna Blade 4 -- 1Up Room.
+ROOM_F06BA7:
+  Type: data
+  Offset: 0xF06BA7
+  Size: 238
+  Description: 'Meta Knight 6 -- Room #1.'
+ROOM_F06C95:
+  Type: data
+  Offset: 0xF06C95
+  Size: 236
+  Description: Meta Knight 3 -- Maxim Tomato Room.
+ROOM_F06D81:
+  Type: data
+  Offset: 0xF06D81
+  Size: 236
+  Description: 'Dyna Blade 5 -- Room #2.'
+ROOM_F06E6D:
+  Type: data
+  Offset: 0xF06E6D
+  Size: 235
+  Description: Meta Knight 7 -- Tomato Room.
+ROOM_F06F58:
+  Type: data
+  Offset: 0xF06F58
+  Size: 232
+  Description: Dyna Blade 1 -- Sword Room.
+ROOM_F07040:
+  Type: data
+  Offset: 0xF07040
+  Size: 231
+  Description: Cavios -- Stone Room.
+ROOM_F07127:
+  Type: data
+  Offset: 0xF07127
+  Size: 230
+  Description: Crystal Area -- Save Room.
+ROOM_F0720D:
+  Type: data
+  Offset: 0xF0720D
+  Size: 230
+  Description: Crystal Area -- Pre-Boss Room.
+ROOM_F072F3:
+  Type: data
+  Offset: 0xF072F3
+  Size: 230
+  Description: Sub-Tree Area -- Save Room.
+ROOM_F073D9:
+  Type: data
+  Offset: 0xF073D9
+  Size: 230
+  Description: Old Tower -- Save Room.
+ROOM_F074BF:
+  Type: data
+  Offset: 0xF074BF
+  Size: 230
+  Description: Garden Area -- Save Room.
+ROOM_F07AF1:
+  Type: data
+  Offset: 0xF07AF1
+  Size: 226
+  Description: Meta Knight 8 -- Meta Knight.
+ROOM_F07CB5:
+  Type: data
+  Offset: 0xF07CB5
+  Size: 219
+  Description: 'Float Islands -- Room #4.'
+ROOM_F07D90:
+  Type: data
+  Offset: 0xF07D90
+  Size: 217
+  Description: Dyna Blade 2 -- 1Up Room.
+ROOM_F07E69:
+  Type: data
+  Offset: 0xF07E69
+  Size: 217
+  Description: The Arena -- Meta Knight.
+ROOM_F07F42:
+  Type: data
+  Offset: 0xF07F42
+  Size: 216
+  Description: The Arena -- Maxim Tomato Room.
+ROOM_F080EF:
+  Type: data
+  Offset: 0xF080EF
+  Size: 213
+  Description: Dyna Blade -- Iron Mom Battle.
+ROOM_F081C4:
+  Type: data
+  Offset: 0xF081C4
+  Size: 213
+  Description: Green Greens -- Maxim Tomato Room.
+ROOM_F0836C:
+  Type: data
+  Offset: 0xF0836C
+  Size: 210
+  Description: Mt. Dedede Intro.
+ROOM_F0843E:
+  Type: data
+  Offset: 0xF0843E
+  Size: 210
+  Description: Fountain of Dreams.
+ROOM_F08510:
+  Type: data
+  Offset: 0xF08510
+  Size: 209
+  Description: 'Meta Knight 7 -- Room #5.'
+ROOM_F085E1:
+  Type: data
+  Offset: 0xF085E1
+  Size: 209
+  Description: Old Tower -- Chameleo Arm.
+ROOM_F086B2:
+  Type: data
+  Offset: 0xF086B2
+  Size: 208
+  Description: 'Meta Knight 8 -- Room #3.'
+ROOM_F08782:
+  Type: data
+  Offset: 0xF08782
+  Size: 208
+  Description: Floria -- Cutter Room.
+ROOM_F08852:
+  Type: data
+  Offset: 0xF08852
+  Size: 208
+  Description: Mecheye -- Yo-yo Room.
+ROOM_F08922:
+  Type: data
+  Offset: 0xF08922
+  Size: 207
+  Description: Halfmoon -- Ninja Room.
+ROOM_F089F1:
+  Type: data
+  Offset: 0xF089F1
+  Size: 201
+  Description: Float Islands -- 1Up Room.
+ROOM_F08ABA:
+  Type: data
+  Offset: 0xF08ABA
+  Size: 199
+  Description: Old Tower -- Right Tower Treasure Room.
+ROOM_F08B81:
+  Type: data
+  Offset: 0xF08B81
+  Size: 199
+  Description: old Tower -- Left Tower Treasure Room.
+ROOM_F08C48:
+  Type: data
+  Offset: 0xF08C48
+  Size: 199
+  Description: Old Tower -- Pre-Boss Room.
+ROOM_F08D0F:
+  Type: data
+  Offset: 0xF08D0F
+  Size: 194
+  Description: Garden Area -- Wham Bam Rock.
+ROOM_F08F55:
+  Type: data
+  Offset: 0xF08F55
+  Size: 193
+  Description: Crystal Area -- Computer Virus.
+ROOM_F09016:
+  Type: data
+  Offset: 0xF09016
+  Size: 192
+  Description: Unknown Bonus Cannon Room [UNUSED].
+ROOM_F090D6:
+  Type: data
+  Offset: 0xF090D6
+  Size: 189
+  Description: Hotbeat -- Suplex Room.
+ROOM_F09193:
+  Type: data
+  Offset: 0xF09193
+  Size: 189
+  Description: The Great Cave Offensive -- Exit Cutscene Room.
+ROOM_F09250:
+  Type: data
+  Offset: 0xF09250
+  Size: 186
+  Description: Aqualiss -- Parasol Room.
+ROOM_F0930A:
+  Type: data
+  Offset: 0xF0930A
+  Size: 185
+  Description: Sub-Tree Area -- Pre-Boss Room.
+ROOM_F093C3:
+  Type: data
+  Offset: 0xF093C3
+  Size: 185
+  Description: The Arena -- Lololo & Lalala.
+ROOM_F0947C:
+  Type: data
+  Offset: 0xF0947C
+  Size: 551
+  Description: Float Islands -- Lololo & Lalala.
+ROOM_F096A3:
+  Type: data
+  Offset: 0xF096A3
+  Size: 181
+  Description: The Arena -- Waddle Dee.
+ROOM_F09758:
+  Type: data
+  Offset: 0xF09758
+  Size: 180
+  Description: 'The Arena -- Mini Boss Area #2.'
+ROOM_F0980C:
+  Type: data
+  Offset: 0xF0980C
+  Size: 180
+  Description: Float Islands -- Star Room.
+ROOM_F098C0:
+  Type: data
+  Offset: 0xF098C0
+  Size: 180
+  Description: 'The Arena -- Mini Boss Arena #1.'
+ROOM_F09974:
+  Type: data
+  Offset: 0xF09974
+  Size: 176
+  Description: Halfmoon -- Computer Virus.
+ROOM_F09A24:
+  Type: data
+  Offset: 0xF09A24
+  Size: 175
+  Description: Bubbly Clouds Intro.
+ROOM_F09AD3:
+  Type: data
+  Offset: 0xF09AD3
+  Size: 175
+  Description: Float Islands Intro.
+ROOM_F09B82:
+  Type: data
+  Offset: 0xF09B82
+  Size: 170
+  Description: 'Dyna Blade 3 -- Room #1.'
+ROOM_F09C2C:
+  Type: data
+  Offset: 0xF09C2C
+  Size: 169
+  Description: Floria -- Fighter Room, Winter.
+ROOM_F09CD5:
+  Type: data
+  Offset: 0xF09CD5
+  Size: 167
+  Description: Hotbeat -- Chameleo Arm.
+ROOM_F09D7C:
+  Type: data
+  Offset: 0xF09D7C
+  Size: 167
+  Description: The Arena -- Chameleo Arm.
+ROOM_F09E23:
+  Type: data
+  Offset: 0xF09E23
+  Size: 167
+  Description: Dyna Blade 4 -- Switch Room.
+ROOM_F09ECA:
+  Type: data
+  Offset: 0xF09ECA
+  Size: 166
+  Description: The Arena -- Win/Loss Room.
+ROOM_F09F70:
+  Type: data
+  Offset: 0xF09F70
+  Size: 165
+  Description: The Arena -- Twin Woods.
+ROOM_F0A015:
+  Type: data
+  Offset: 0xF0A015
+  Size: 165
+  Description: Floria -- Twin Woods.
+ROOM_F0A0BA:
+  Type: data
+  Offset: 0xF0A0BA
+  Size: 163
+  Description: Floria -- Ice Room.
+ROOM_F0B3B7:
+  Type: data
+  Offset: 0xF0B3B7
+  Size: 162
+  Description: Gourmet Race Intro.
+ROOM_F0CEE8:
+  Type: data
+  Offset: 0xF0CEE8
+  Size: 157
+  Description: Cavios -- Wham Bam Rock.
+ROOM_F0CF85:
+  Type: data
+  Offset: 0xF0CF85
+  Size: 152
+  Description: Hotbeat -- Fire Room.
+ROOM_F0D01D:
+  Type: data
+  Offset: 0xF0D01D
+  Size: 151
+  Description: Floria -- Fighter Room, Summer.
+ROOM_F0D0B4:
+  Type: data
+  Offset: 0xF0D0B4
+  Size: 149
+  Description: Sub-Tree Area -- Treasure Room.
+ROOM_F0D149:
+  Type: data
+  Offset: 0xF0D149
+  Size: 145
+  Description: The Arena -- Halberd's Reactor.
+ROOM_F0D1DA:
+  Type: data
+  Offset: 0xF0D1DA
+  Size: 143
+  Description: The Arena -- Computer Virus.
+ROOM_F0D269:
+  Type: data
+  Offset: 0xF0D269
+  Size: 143
+  Description: Meta Knight 4 -- Twin Cannon.
+ROOM_F0D2F8:
+  Type: data
+  Offset: 0xF0D2F8
+  Size: 143
+  Description: The Arena -- Twin Cannon.
+ROOM_F0D387:
+  Type: data
+  Offset: 0xF0D387
+  Size: 142
+  Description: Aqualiss -- Fatty Whale.
+ROOM_F0D415:
+  Type: data
+  Offset: 0xF0D415
+  Size: 141
+  Description: Tutorial -- Gourmet Race.
+ROOM_F0D4A2:
+  Type: data
+  Offset: 0xF0D4A2
+  Size: 141
+  Description: Sub-Tree Area -- Fatty Whale.
+ROOM_F0D52F:
+  Type: data
+  Offset: 0xF0D52F
+  Size: 279
+  Description: 'Tutorial -- Spring Breeze #2.'
+ROOM_F0D646:
+  Type: data
+  Offset: 0xF0D646
+  Size: 136
+  Description: 'Tutorial -- Spring Breeze #3.'
+ROOM_F0D6CE:
+  Type: data
+  Offset: 0xF0D6CE
+  Size: 136
+  Description: Tutorial -- Milky Way Wishes.
+ROOM_F0D756:
+  Type: data
+  Offset: 0xF0D756
+  Size: 136
+  Description: 'Tutorial -- Dyna Blade #1.'
+ROOM_F0D7DE:
+  Type: data
+  Offset: 0xF0D7DE
+  Size: 136
+  Description: 'Tutorial -- Dyna Blade #2.'
+ROOM_F0D866:
+  Type: data
+  Offset: 0xF0D866
+  Size: 136
+  Description: 'Tutorial -- Spring Breeze #1.'
+ROOM_F0D8EE:
+  Type: data
+  Offset: 0xF0D8EE
+  Size: 133
+  Description: The Arena -- Wham Bam Rock.
+ROOM_F0D9EA:
+  Type: data
+  Offset: 0xF0D9EA
+  Size: 114
+  Description: Mecheye -- Heavy Lobster.
+ROOM_F0DA5C:
+  Type: data
+  Offset: 0xF0DA5C
+  Size: 114
+  Description: The Arena -- Heavy Lobster.
+ROOM_F0DACE:
+  Type: data
+  Offset: 0xF0DACE
+  Size: 109
+  Description: Green Greens Intro.
+ROOM_F0DB3B:
+  Type: data
+  Offset: 0xF0DB3B
+  Size: 107
+  Description: '??? Planet -- Room #3.'
+ROOM_F0DBA6:
+  Type: data
+  Offset: 0xF0DBA6
+  Size: 107
+  Description: Marx.
+ROOM_F0DC11:
+  Type: data
+  Offset: 0xF0DC11
+  Size: 107
+  Description: The Arena -- Dyna Blade.
+ROOM_F0DC7C:
+  Type: data
+  Offset: 0xF0DC7C
+  Size: 107
+  Description: The Arena -- Marx.
+ROOM_F0DCE7:
+  Type: data
+  Offset: 0xF0DCE7
+  Size: 106
+  Description: Quick Tutorial -- Dyna Blade.
+ROOM_F0DD51:
+  Type: data
+  Offset: 0xF0DD51
+  Size: 212
+  Description: Quick Tutorial -- Milky Way Wishes.
+ROOM_F0DE25:
+  Type: data
+  Offset: 0xF0DE25
+  Size: 106
+  Description: Quick Tutorial -- Gourmet Race.
+ROOM_F0DE8F:
+  Type: data
+  Offset: 0xF0DE8F
+  Size: 106
+  Description: Quick Tutorial -- ???
+ROOM_F0DEF9:
+  Type: data
+  Offset: 0xF0DEF9
+  Size: 106
+  Description: Quick Tutorial -- The Great Cave Offensive.
+ROOM_F0DF63:
+  Type: data
+  Offset: 0xF0DF63
+  Size: 105
+  Description: Dyna Blade 5 -- Dyna Blade.
+ROOM_F0DFCC:
+  Type: data
+  Offset: 0xF0DFCC
+  Size: 104
+  Description: Empty Green Greens Room [UNUSED].
+ROOM_F0E034:
+  Type: data
+  Offset: 0xF0E034
+  Size: 102
+  Description: Meta Knight 3 -- Dyna Blade.
+ROOM_F0E09A:
+  Type: data
+  Offset: 0xF0E09A
+  Size: 99
+  Description: 'Empty Room #8.'
+ROOM_F0E0FD:
+  Type: data
+  Offset: 0xF0E0FD
+  Size: 99
+  Description: 'Empty Room #9.'
+ROOM_F0E160:
+  Type: data
+  Offset: 0xF0E160
+  Size: 99
+  Description: 'Empty Room #10.'
+ROOM_F0E1C3:
+  Type: data
+  Offset: 0xF0E1C3
+  Size: 99
+  Description: 'Empty Room #11.'
+ROOM_F0E226:
+  Type: data
+  Offset: 0xF0E226
+  Size: 99
+  Description: 'Empty Room #12.'
+ROOM_F0E289:
+  Type: data
+  Offset: 0xF0E289
+  Size: 99
+  Description: 'Empty Room #13.'
+ROOM_F0E2EC:
+  Type: data
+  Offset: 0xF0E2EC
+  Size: 99
+  Description: 'Empty Room #14.'
+ROOM_F0E34F:
+  Type: data
+  Offset: 0xF0E34F
+  Size: 99
+  Description: 'Empty Room #15.'
+ROOM_F0E3B2:
+  Type: data
+  Offset: 0xF0E3B2
+  Size: 99
+  Description: 'Empty Room #16.'
+ROOM_F0E415:
+  Type: data
+  Offset: 0xF0E415
+  Size: 99
+  Description: 'Empty Room #17.'
+ROOM_F0E478:
+  Type: data
+  Offset: 0xF0E478
+  Size: 99
+  Description: 'Empty Room #18.'
+ROOM_F0E4DB:
+  Type: data
+  Offset: 0xF0E4DB
+  Size: 99
+  Description: 'Empty Room #1.'
+ROOM_F0E53E:
+  Type: data
+  Offset: 0xF0E53E
+  Size: 99
+  Description: 'Empty Room #2.'
+ROOM_F0E5A1:
+  Type: data
+  Offset: 0xF0E5A1
+  Size: 99
+  Description: 'Empty Room #3.'
+ROOM_F0E604:
+  Type: data
+  Offset: 0xF0E604
+  Size: 99
+  Description: 'Empty Room #4.'
+ROOM_F0E667:
+  Type: data
+  Offset: 0xF0E667
+  Size: 99
+  Description: 'Empty Room #5'
+ROOM_F0E6CA:
+  Type: data
+  Offset: 0xF0E6CA
+  Size: 99
+  Description: 'Empty Room #6.'
+ROOM_F0E72D:
+  Type: data
+  Offset: 0xF0E72D
+  Size: 99
+  Description: 'Empty Room #7.'
+ROOM_F10000:
+  Type: data
+  Offset: 0xF10000
+  Size: 984
+  Description: 'Sub-Tree Area -- Room #4.'
+ROOM_F103D8:
+  Type: data
+  Offset: 0xF103D8
+  Size: 983
+  Description: 'Dyna Blade 1 -- Room #2.'
+ROOM_F107AF:
+  Type: data
+  Offset: 0xF107AF
+  Size: 967
+  Description: 'Meta Knight 4 -- Room #3.'
+ROOM_F10F3D:
+  Type: data
+  Offset: 0xF10F3D
+  Size: 952
+  Description: Floria -- Spring.
+ROOM_F112F5:
+  Type: data
+  Offset: 0xF112F5
+  Size: 952
+  Description: 'Meta Knight 6 -- Room #2.'
+ROOM_F116AD:
+  Type: data
+  Offset: 0xF116AD
+  Size: 942
+  Description: 'Sub-Tree Area -- Room #5.'
+ROOM_F11A5B:
+  Type: data
+  Offset: 0xF11A5B
+  Size: 939
+  Description: Old Tower -- Cannon Room.
+ROOM_F12557:
+  Type: data
+  Offset: 0xF12557
+  Size: 922
+  Description: Old Tower -- Lava Room.
+ROOM_F128F1:
+  Type: data
+  Offset: 0xF128F1
+  Size: 880
+  Description: Old Tower -- Collapsing Bridge Room.
+ROOM_F12C61:
+  Type: data
+  Offset: 0xF12C61
+  Size: 878
+  Description: 'Dyna Blade 4 -- Room #6.'
+ROOM_F13338:
+  Type: data
+  Offset: 0xF13338
+  Size: 873
+  Description: Heart of Nova.
+ROOM_F136A1:
+  Type: data
+  Offset: 0xF136A1
+  Size: 873
+  Description: The Arena -- Heart of Nova.
+ROOM_F13D6F:
+  Type: data
+  Offset: 0xF13D6F
+  Size: 869
+  Description: 'Bubbly Clouds -- Room #4.'
+ROOM_F1549A:
+  Type: data
+  Offset: 0xF1549A
+  Size: 830
+  Description: Dyna Blade 4 -- End of Level.
+ROOM_F157D8:
+  Type: data
+  Offset: 0xF157D8
+  Size: 828
+  Description: Old Tower -- Bottom Room.
+ROOM_F15B14:
+  Type: data
+  Offset: 0xF15B14
+  Size: 267
+  Description: Bubbly Clouds -- Kracko Jr.
+ROOM_F15E50:
+  Type: data
+  Offset: 0xF15E50
+  Size: 801
+  Description: Crystal Area -- Trolley Room.
+ROOM_F16171:
+  Type: data
+  Offset: 0xF16171
+  Size: 22
+  Description: Unknown
+ROOM_F16187:
+  Type: data
+  Offset: 0xF16187
+  Size: 71
+  Description: 'Meta Knight 2 -- Room #1.'
+ROOM_F1648E:
+  Type: data
+  Offset: 0xF1648E
+  Size: 796
+  Description: Old Tower -- Space Connecting Room.
+ROOM_F167AA:
+  Type: data
+  Offset: 0xF167AA
+  Size: 790
+  Description: 'Garden Area -- Right Room #2.'
+ROOM_F16AC0:
+  Type: data
+  Offset: 0xF16AC0
+  Size: 782
+  Description: Old Tower -- Simirror Water Room.
+ROOM_F16DCE:
+  Type: data
+  Offset: 0xF16DCE
+  Size: 774
+  Description: 'Sub-Tree Area -- Room #1.'
+ROOM_F170D4:
+  Type: data
+  Offset: 0xF170D4
+  Size: 772
+  Description: 'Dyna Blade 3 -- Room #3.'
+ROOM_F176DC:
+  Type: data
+  Offset: 0xF176DC
+  Size: 771
+  Description: Garden Area -- Trolley Room.
+ROOM_F17CDF:
+  Type: data
+  Offset: 0xF17CDF
+  Size: 766
+  Description: Old Tower -- Twin Spires Room.
+ROOM_F182C9:
+  Type: data
+  Offset: 0xF182C9
+  Size: 1489
+  Description: 'Dyna Blade 3 -- Room #2.'
+ROOM_F1889A:
+  Type: data
+  Offset: 0xF1889A
+  Size: 735
+  Description: Aqualiss -- Sword Room.
+ROOM_F18B79:
+  Type: data
+  Offset: 0xF18B79
+  Size: 735
+  Description: Sub-Tree Area -- Trolley Room.
+ROOM_F18E58:
+  Type: data
+  Offset: 0xF18E58
+  Size: 722
+  Description: 'Dyna Blade 7 -- Room #1.'
+ROOM_F1912A:
+  Type: data
+  Offset: 0xF1912A
+  Size: 710
+  Description: Meta Knight 2 -- Twin Woods.
+ROOM_F193F0:
+  Type: data
+  Offset: 0xF193F0
+  Size: 686
+  Description: 'Mt. Dedede -- Room #1.'
+ROOM_F1969E:
+  Type: data
+  Offset: 0xF1969E
+  Size: 680
+  Description: Old Tower -- Trolley Room.
+ROOM_F19E90:
+  Type: data
+  Offset: 0xF19E90
+  Size: 676
+  Description: Dyna Blade 1 -- End of Level.
+ROOM_F1A670:
+  Type: data
+  Offset: 0xF1A670
+  Size: 663
+  Description: Dyna Blade 2 -- End of Level.
+ROOM_F1AE23:
+  Type: data
+  Offset: 0xF1AE23
+  Size: 644
+  Description: Dyna Blade 3 -- 1Up Room.
+ROOM_F1B0A7:
+  Type: data
+  Offset: 0xF1B0A7
+  Size: 639
+  Description: Dyna Blade 2 -- Ninja Room.
+ROOM_F1B594:
+  Type: data
+  Offset: 0xF1B594
+  Size: 622
+  Description: 'Dyna Blade 4 -- Room #7.'
+ROOM_F1B802:
+  Type: data
+  Offset: 0xF1B802
+  Size: 620
+  Description: Old Tower -- Jukid Room.
+ROOM_F1BCD3:
+  Type: data
+  Offset: 0xF1BCD3
+  Size: 607
+  Description: 'Dyna Blade Ability Room #1.'
+ROOM_F1C190:
+  Type: data
+  Offset: 0xF1C190
+  Size: 595
+  Description: 'Garden Area -- Room #1.'
+ROOM_F1C3E3:
+  Type: data
+  Offset: 0xF1C3E3
+  Size: 592
+  Description: Old Tower -- Underwater Cannon Room.
+ROOM_F1C633:
+  Type: data
+  Offset: 0xF1C633
+  Size: 579
+  Description: Float Islands -- Warp Star Room.
+ROOM_F1C876:
+  Type: data
+  Offset: 0xF1C876
+  Size: 574
+  Description: 'Dyna Blade Ability Room #2.'
+ROOM_F1CAB4:
+  Type: data
+  Offset: 0xF1CAB4
+  Size: 574
+  Description: 'Float Islands -- Room #2.'
+ROOM_F1CCF2:
+  Type: data
+  Offset: 0xF1CCF2
+  Size: 572
+  Description: Garden Area -- Wheelie Room.
+ROOM_F1CF2E:
+  Type: data
+  Offset: 0xF1CF2E
+  Size: 568
+  Description: Old Tower -- Unlit Candle Room.
+ROOM_F1D166:
+  Type: data
+  Offset: 0xF1D166
+  Size: 564
+  Description: Old Tower -- Lit Candle Room.
+ROOM_F1D39A:
+  Type: data
+  Offset: 0xF1D39A
+  Size: 560
+  Description: 'Bubbly Clouds -- Room #5.'
+ROOM_F1D5CA:
+  Type: data
+  Offset: 0xF1D5CA
+  Size: 558
+  Description: 'Garden Area -- Middle Room #1.'
+ROOM_F1D7F8:
+  Type: data
+  Offset: 0xF1D7F8
+  Size: 548
+  Description: 'Halfmoon -- Room #1.'
+ROOM_F1DA1C:
+  Type: data
+  Offset: 0xF1DA1C
+  Size: 515
+  Description: 'Skyhigh -- Room #1.'
+ROOM_F1DC1F:
+  Type: data
+  Offset: 0xF1DC1F
+  Size: 514
+  Description: 'Bubbly Clouds -- Room #1.'
+ROOM_F1E020:
+  Type: data
+  Offset: 0xF1E020
+  Size: 511
+  Description: 'Green Greens -- Room #3.'
+ROOM_F1E21F:
+  Type: data
+  Offset: 0xF1E21F
+  Size: 508
+  Description: Meta Knight 7 -- Cloud Room.
+ROOM_F1E41B:
+  Type: data
+  Offset: 0xF1E41B
+  Size: 502
+  Description: Old Tower -- Middle Space Room.
+ROOM_F1E611:
+  Type: data
+  Offset: 0xF1E611
+  Size: 498
+  Description: 'Green Greens -- Room #2.'
+ROOM_F1E9F2:
+  Type: data
+  Offset: 0xF1E9F2
+  Size: 494
+  Description: 'Meta Knight 4 -- Room #2.'
+ROOM_F1EBE0:
+  Type: data
+  Offset: 0xF1EBE0
+  Size: 492
+  Description: 'Aqualiss -- Room #4.'
+ROOM_F1EDCC:
+  Type: data
+  Offset: 0xF1EDCC
+  Size: 482
+  Description: Garden Area -- Main Hub.
+ROOM_F1EFAE:
+  Type: data
+  Offset: 0xF1EFAE
+  Size: 481
+  Description: Old Tower -- Bonkers Room.
+ROOM_F1F18F:
+  Type: data
+  Offset: 0xF1F18F
+  Size: 479
+  Description: Old Tower -- High Gravity Room.
+ROOM_F1F36E:
+  Type: data
+  Offset: 0xF1F36E
+  Size: 473
+  Description: 'Garden Area -- Middle Room #2.'
+ROOM_F1F547:
+  Type: data
+  Offset: 0xF1F547
+  Size: 471
+  Description: 'Meta Knight 3 -- Room #1.'
+ROOM_F1F71E:
+  Type: data
+  Offset: 0xF1F71E
+  Size: 470
+  Description: Mecheye -- Gim Room.
+ROOM_F1F8F4:
+  Type: data
+  Offset: 0xF1F8F4
+  Size: 468
+  Description: 'Float Islands -- Room #3.'
+ROOM_F1FAC8:
+  Type: data
+  Offset: 0xF1FAC8
+  Size: 466
+  Description: Dyna Blade 3 -- Maxim Tomato Room.
+ROOM_F1FE69:
+  Type: data
+  Offset: 0xF1FE69
+  Size: 407
+  Description: Old Tower -- Left Space Room.
+ROOM_F20BC5:
+  Type: data
+  Offset: 0xF20BC5
+  Size: 1475
+  Description: 'Meta Knight 8 -- Room #2.'
+ROOM_F21188:
+  Type: data
+  Offset: 0xF21188
+  Size: 1473
+  Description: Floria -- Winter.
+ROOM_F21749:
+  Type: data
+  Offset: 0xF21749
+  Size: 1444
+  Description: Gourmet Race 1.
+ROOM_F21CED:
+  Type: data
+  Offset: 0xF21CED
+  Size: 1437
+  Description: 'Dyna Blade 3 -- Room #4.'
+ROOM_F23343:
+  Type: data
+  Offset: 0xF23343
+  Size: 1414
+  Description: 'Meta Knight 1 -- Room #1.'
+ROOM_F238C9:
+  Type: data
+  Offset: 0xF238C9
+  Size: 1411
+  Description: 'Cavios -- Room #3.'
+ROOM_F23E4C:
+  Type: data
+  Offset: 0xF23E4C
+  Size: 1368
+  Description: Nova.
+ROOM_F243A4:
+  Type: data
+  Offset: 0xF243A4
+  Size: 1368
+  Description: 'Halfmoon -- Room #4.'
+ROOM_F248FC:
+  Type: data
+  Offset: 0xF248FC
+  Size: 1359
+  Description: 'Meta Knight 3 -- Room #2.'
+ROOM_F25394:
+  Type: data
+  Offset: 0xF25394
+  Size: 1332
+  Description: 'Dyna Blade 1 -- Room #3.'
+ROOM_F258C8:
+  Type: data
+  Offset: 0xF258C8
+  Size: 1330
+  Description: 'Dyna Blade 2 -- Room #5.'
+ROOM_F25DFA:
+  Type: data
+  Offset: 0xF25DFA
+  Size: 1329
+  Description: 'Hotbeat -- Room #3.'
+ROOM_F2632B:
+  Type: data
+  Offset: 0xF2632B
+  Size: 1312
+  Description: 'Dyna Blade 4 -- Room #2.'
+ROOM_F26D64:
+  Type: data
+  Offset: 0xF26D64
+  Size: 1280
+  Description: 'Sub-Tree Area -- Room #2.'
+ROOM_F27264:
+  Type: data
+  Offset: 0xF27264
+  Size: 1278
+  Description: 'Meta Knight 8 -- Room #1.'
+ROOM_F28105:
+  Type: data
+  Offset: 0xF28105
+  Size: 1220
+  Description: 'Meta Knight 5 -- Room #1.'
+ROOM_F28A67:
+  Type: data
+  Offset: 0xF28A67
+  Size: 1180
+  Description: 'Meta Knight 4 -- Room #4.'
+ROOM_F29CCB:
+  Type: data
+  Offset: 0xF29CCB
+  Size: 1152
+  Description: 'Meta Knight 4 -- Room #1.'
+ROOM_F2A14B:
+  Type: data
+  Offset: 0xF2A14B
+  Size: 1148
+  Description: Bubbly Clouds -- Behind the Moon.
+ROOM_F2AE83:
+  Type: data
+  Offset: 0xF2AE83
+  Size: 1101
+  Description: Old Tower -- Long Connecting Room.
+ROOM_F2B2D0:
+  Type: data
+  Offset: 0xF2B2D0
+  Size: 1083
+  Description: 'Meta Knight 7 -- Room #2.'
+ROOM_F2C7C0:
+  Type: data
+  Offset: 0xF2C7C0
+  Size: 4147
+  Description: Old Tower -- Main Hub.
+ROOM_F2D7F3:
+  Type: data
+  Offset: 0xF2D7F3
+  Size: 1030
+  Description: 'Halfmoon -- Room #2.'
+ROOM_F2DFFC:
+  Type: data
+  Offset: 0xF2DFFC
+  Size: 1025
+  Description: Floria -- Summer.
+ROOM_F2E3FD:
+  Type: data
+  Offset: 0xF2E3FD
+  Size: 1024
+  Description: 'Garden Area -- Right Room #1.'
+ROOM_F2E7FD:
+  Type: data
+  Offset: 0xF2E7FD
+  Size: 992
+  Description: 'Aqualiss -- Room #3.'
+ROOM_F2EBDD:
+  Type: data
+  Offset: 0xF2EBDD
+  Size: 991
+  Description: Garden Area -- Left Room.
+ROOM_F2EFBC:
+  Type: data
+  Offset: 0xF2EFBC
+  Size: 991
+  Description: Floria -- Autumn.
+ROOM_F2F39B:
+  Type: data
+  Offset: 0xF2F39B
+  Size: 987
+  Description: Crystal Area -- Entrance.
+ROOM_F2FB51:
+  Type: data
+  Offset: 0xF2FB51
+  Size: 984
+  Description: Dyna Blade 3 -- End of Level.
+ROOM_F2FF29:
+  Type: data
+  Offset: 0xF2FF29
+  Size: 215
+  Description: Skyhigh -- Kracko.
+ROOM_F30000:
+  Type: data
+  Offset: 0xF30000
+  Size: 2171
+  Description: 'Mecheye -- Room #3.'
+ROOM_F318E4:
+  Type: data
+  Offset: 0xF318E4
+  Size: 2039
+  Description: 'Skyhigh -- Room #2.'
+ROOM_F330C3:
+  Type: data
+  Offset: 0xF330C3
+  Size: 2025
+  Description: 'Dyna Blade 3 -- Room #5.'
+ROOM_F338AC:
+  Type: data
+  Offset: 0xF338AC
+  Size: 2014
+  Description: 'Mecheye -- Room #2.'
+ROOM_F3408A:
+  Type: data
+  Offset: 0xF3408A
+  Size: 1955
+  Description: 'Halfmoon -- Room #3.'
+ROOM_F3482D:
+  Type: data
+  Offset: 0xF3482D
+  Size: 1942
+  Description: 'Dyna Blade 2 -- Room #4.'
+ROOM_F34FC3:
+  Type: data
+  Offset: 0xF34FC3
+  Size: 1942
+  Description: 'Aqualiss -- Room #5.'
+ROOM_F35E9F:
+  Type: data
+  Offset: 0xF35E9F
+  Size: 1859
+  Description: Meta Knight 8 -- Escape.
+ROOM_F365E2:
+  Type: data
+  Offset: 0xF365E2
+  Size: 1835
+  Description: 'Dyna Blade 4 -- Room #3.'
+ROOM_F36D0D:
+  Type: data
+  Offset: 0xF36D0D
+  Size: 1785
+  Description: 'Garden Area -- Right Room #3.'
+ROOM_F388B3:
+  Type: data
+  Offset: 0xF388B3
+  Size: 3363
+  Description: Garden Area -- Sky Room.
+ROOM_F395D6:
+  Type: data
+  Offset: 0xF395D6
+  Size: 1652
+  Description: 'Sub-Tree Area -- Room #3.'
+ROOM_F39C4A:
+  Type: data
+  Offset: 0xF39C4A
+  Size: 1640
+  Description: 'Meta Knight 2 -- Room #2.'
+ROOM_F3A2B2:
+  Type: data
+  Offset: 0xF3A2B2
+  Size: 1629
+  Description: 'Hotbeat -- Room #1.'
+ROOM_F3C872:
+  Type: data
+  Offset: 0xF3C872
+  Size: 1580
+  Description: 'Dyna Blade 2 -- Room #2.'
+ROOM_F3CE9E:
+  Type: data
+  Offset: 0xF3CE9E
+  Size: 1575
+  Description: 'Dyna Blade 4 -- Room #1.'
+ROOM_F3D4C5:
+  Type: data
+  Offset: 0xF3D4C5
+  Size: 1554
+  Description: Meta Knight 6 -- Heavy Lobster.
+ROOM_F3DAD7:
+  Type: data
+  Offset: 0xF3DAD7
+  Size: 1550
+  Description: 'Mecheye -- Room #4.'
+ROOM_F3ECF4:
+  Type: data
+  Offset: 0xF3ECF4
+  Size: 1540
+  Description: 'Aqualiss -- Room #2.'
+ROOM_F3F2F8:
+  Type: data
+  Offset: 0xF3F2F8
+  Size: 1526
+  Description: Dyna Blade 4 -- 3 1Up Room.
+ROOM_F3F8EE:
+  Type: data
+  Offset: 0xF3F8EE
+  Size: 1810
+  Description: 'Halfmoon -- Room #5.'
+ROOM_F40000:
+  Type: data
+  Offset: 0xF40000
+  Size: 2685
+  Description: Crystal Area -- Left Room.
+ROOM_F40A7D:
+  Type: data
+  Offset: 0xF40A7D
+  Size: 2660
+  Description: 'Meta Knight 3 -- Room #4.'
+ROOM_F4479A:
+  Type: data
+  Offset: 0xF4479A
+  Size: 2546
+  Description: 'Dyna Blade 4 -- Room #5.'
+ROOM_F4518C:
+  Type: data
+  Offset: 0xF4518C
+  Size: 2535
+  Description: Gourmet Race 2.
+ROOM_F4654A:
+  Type: data
+  Offset: 0xF4654A
+  Size: 2489
+  Description: 'Meta Knight 7 -- Room #3.'
+ROOM_F48252:
+  Type: data
+  Offset: 0xF48252
+  Size: 2417
+  Description: Crystal Area -- Right Room.
+ROOM_F48BC3:
+  Type: data
+  Offset: 0xF48BC3
+  Size: 2409
+  Description: 'Dyna Blade 2 -- Room #3.'
+ROOM_F49E93:
+  Type: data
+  Offset: 0xF49E93
+  Size: 2406
+  Description: 'Meta Knight 2 -- Room #3.'
+ROOM_F4BA70:
+  Type: data
+  Offset: 0xF4BA70
+  Size: 4625
+  Description: Crystal Area -- Middle Room.
+ROOM_F4CC81:
+  Type: data
+  Offset: 0xF4CC81
+  Size: 2246
+  Description: 'Meta Knight 3 -- Room #3.'
+ROOM_F4D547:
+  Type: data
+  Offset: 0xF4D547
+  Size: 2245
+  Description: 'Meta Knight 5 -- Room #2.'
+ROOM_F53CCF:
+  Type: data
+  Offset: 0xF53CCF
+  Size: 3780
+  Description: 'Hotbeat -- Room #2.'
+ROOM_F5A02C:
+  Type: data
+  Offset: 0xF5A02C
+  Size: 3405
+  Description: 'Cavios -- Room #2.'
+ROOM_F5FED2:
+  Type: data
+  Offset: 0xF5FED2
+  Size: 302
+  Description: Dyna Blade 2 -- Switch Room.
+ROOM_F63F60:
+  Type: data
+  Offset: 0xF63F60
+  Size: 5263
+  Description: Gourmet Race 3.
+ROOM_F7FE8F:
+  Type: data
+  Offset: 0xF7FE8F
+  Size: 13
+  Description: The Arena -- Lobby.
+ROOM_F7FE9C:
+  Type: data
+  Offset: 0xF7FE9C
+  Size: 356
+  Description: Unknown
+ROOM_F8FF32:
+  Type: data
+  Offset: 0xF8FF32
+  Size: 206
+  Description: Halfmoon -- Mirror Room.
+ROOM_FAFF93:
+  Type: data
+  Offset: 0xFAFF93
+  Size: 109
+  Description: The Arena -- Fatty Whale.
+ROOM_FFFF6E:
+  Type: data
+  Offset: 0xFFFF6E
+  Size: 146
+  Description: Meta Knight 7 -- Halberd's Reactor.
+ROOM_PTRS:
+  Description: Pointers to room data
+  Offset: 0xFF009A
+  Size: 0x4FB
+  Type: data
+  Entries:
+  - Type: pointer
+    Size: 4
+...

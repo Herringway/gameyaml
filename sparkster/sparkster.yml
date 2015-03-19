@@ -1,0 +1,26 @@
+---
+CPU:
+  Architecture: 65816
+Platform: snes
+Title: Sparkster
+Country: US
+Version: 1.0
+...
+---
+EMPTY_80FD5F:
+  Offset: 0x80FD5F
+  Size: 0x23F
+  Type: empty
+ENTRY_POINT:
+  Offset: 0x80FF9E
+  Size: 7
+  Type: assembly
+SPARKSTER_SPRITES:
+  Offset: 0x8B8000
+  Size: 0x15280
+  Type: data
+EMPTY_8FCB70:
+  Offset: 0x8FCB70
+  Size: 0x3490
+  Type: empty
+...

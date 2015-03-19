@@ -1,0 +1,57 @@
+---
+CPU:
+  Architecture: 6502
+Title: Super Mario Bros
+Country: US
+Platform: nes
+...
+---
+UNKNOWN_000F:
+  Offset: 0x000F
+  description: Enemy 1 ID
+UNKNOWN_0010:
+  Offset: 0x0010
+  description: Enemy 2 ID
+UNKNOWN_0011:
+  Offset: 0x0011
+  description: Enemy 3 ID
+UNKNOWN_0012:
+  Offset: 0x0012
+  description: Enemy 4 ID
+UNKNOWN_0057:
+  Offset: 0x0057
+  description: X Speed
+UNKNOWN_006D:
+  Offset: 0x006D
+  description: Level X 2nd
+UNKNOWN_0086:
+  Offset: 0x0086
+  description: Level X
+UNKNOWN_009F:
+  Offset: 0x009F
+  description: Y Speed
+UNKNOWN_00CE:
+  Offset: 0x00CE
+  description: Y Pixel
+UNKNOWN_03AD:
+  Offset: 0x03AD
+  description: On Screen X
+UNKNOWN_0400:
+  Offset: 0x0400
+  description: X SubPixel
+UNKNOWN_0416:
+  Offset: 0x0416
+  description: Y SubPixel
+UNKNOWN_0483:
+  Offset: 0x0483
+  description: Bowser HP
+UNKNOWN_0705:
+  Offset: 0x0705
+  description: X Speed Sub
+UNKNOWN_071D:
+  Offset: 0x071D
+  description: Camera X
+UNKNOWN_077F:
+  Offset: 0x077F
+  description: 21 Frame Rule
+...

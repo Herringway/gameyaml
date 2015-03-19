@@ -1,0 +1,901 @@
+---
+CPU:
+  Architecture: 65816
+Platform: snes
+Title: Final Fantasy 6
+Country: US
+Default Script: Dialogue
+Script Tables:
+  Dialogue:
+    Lengths:
+      0x11: 2
+      0x14: 2
+      0x16: 2
+    Replacements:
+      0: ""
+      1: \n
+      2: "TERRA"
+      3: "LOCKE"
+      4: "CYAN"
+      5: "SHADOW"
+      6: "EDGAR"
+      7: "SABIN"
+      8: "CELES"
+      9: "STRAGO"
+      10: "RELM"
+      11: "SETZER"
+      12: "MOG"
+      13: "GAU"
+      14: "GOGO"
+      15: "UMARO"
+      16: 
+      17:
+      18:
+      19: " "
+      21:
+      32: A
+      33: B
+      34: C
+      35: D
+      36: E
+      37: F
+      38: G
+      39: H
+      40: I
+      41: J
+      42: K
+      43: L
+      44: M
+      45: "N"
+      46: O
+      47: P
+      48: Q
+      49: R
+      50: S
+      51: T
+      52: U
+      53: V
+      54: W
+      55: X
+      56: "Y"
+      57: Z
+      58: a
+      59: b
+      60: c
+      61: d
+      62: e
+      63: f
+      64: g
+      65: h
+      66: i
+      67: j
+      68: k
+      69: l
+      70: m
+      71: "n"
+      72: o
+      73: p
+      74: q
+      75: r
+      76: s
+      77: t
+      78: u
+      79: v
+      80: w
+      81: x
+      82: "y"
+      83: z
+      84: "0"
+      85: "1"
+      86: "2"
+      87: "3"
+      88: "4"
+      89: "5"
+      90: "6"
+      91: "7"
+      92: "8"
+      93: "9"
+      94: "!"
+      95: "?"
+      96: /
+      97: ":"
+      98: '”'
+      99: "'"
+      100: "-"
+      101: "."
+      102: ","
+      103: "..."
+      104: ";"
+      105: "#"
+      106: "+"
+      107: (
+      108: )
+      109: "%"
+      110: ~
+      111: "*"
+      112: "@"
+      113: ♪
+      114: =
+      115: '“'
+      127: " "
+      128: "e "
+      129: " t"
+      130: ": "
+      131: th
+      132: "t "
+      133: he
+      134: "s "
+      135: er
+      136: " a"
+      137: re
+      138: in
+      139: ou
+      140: "d "
+      141: " w"
+      142: " s"
+      143: an
+      144: "o "
+      145: " h"
+      146: " o"
+      147: "r "
+      148: "n "
+      149: at
+      150: to
+      151: " i"
+      152: ", "
+      153: ve
+      154: ng
+      155: ha
+      156: " m"
+      157: Th
+      158: st
+      159: "on"
+      160: yo
+      161: " b"
+      162: me
+      163: "y "
+      164: en
+      165: it
+      166: ar
+      167: ll
+      168: ea
+      169: "I "
+      170: ed
+      171: " f"
+      172: " y"
+      173: hi
+      174: "is"
+      175: es
+      176: or
+      177: "l "
+      178: " c"
+      179: ne
+      180: "'s"
+      181: nd
+      182: le
+      183: se
+      184: " I"
+      185: "a "
+      186: te
+      187: " l"
+      188: pe
+      189: as
+      190: ur
+      191: "u "
+      192: al
+      193: " p"
+      194: "g "
+      195: om
+      196: " d"
+      197: "f "
+      198: " g"
+      199: ow
+      200: rs
+      201: be
+      202: ro
+      203: us
+      204: ri
+      205: wa
+      206: we
+      207: Wh
+      208: et
+      209: " r"
+      210: nt
+      211: "m "
+      212: ma
+      213: "I'"
+      214: li
+      215: ho
+      216: of
+      217: Yo
+      218: "h "
+      219: " n"
+      220: ee
+      221: de
+      222: so
+      223: gh
+      224: ca
+      225: ra
+      226: "n'"
+      227: ta
+      228: ut
+      229: el
+      230: "! "
+      231: fo
+      232: ti
+      233: We
+      234: lo
+      235: "e!"
+      236: ld
+      237: "no"
+      238: ac
+      239: ce
+      240: "k "
+      241: " u"
+      242: oo
+      243: ke
+      244: ay
+      245: "w "
+      246: "!!"
+      247: ag
+      248: il
+      249: ly
+      250: co
+      251: ". "
+      252: ch
+      253: go
+      254: ge
+      255: e...
+...
+---
+ACTORS: !array
+  Offset: 0x7E1600
+  Size: 0x24F
+  Item Type: !struct
+  Entries:
+    ID: !int
+      Size: 1
+    GFXID: !int
+      Size: 1
+    NAME: !script
+      Size: 6
+    LEVEL: !int
+      Size: 1
+    CURRENT_HP: !int
+      Size: 2
+    MAX_HP: !int
+      Size: 2
+    CURRENT_MP: !int
+      Size: 2
+    MAX_MP: !int
+      Size: 2
+    EXP: !int
+      Size: 4
+    STATUS_EFFECTS:
+      Size: 2
+    BATTLE_COMMANDS: !array
+      Item Type: !int
+        Size: 1
+      Size: 4
+    VIGOR: !int
+      Size: 1
+    SPEED: !int
+      Size: 1
+    STAMINA: !int
+      Size: 1
+    MAGIC_POWER: !int
+      Size: 1
+    ESPER_EQUIPPED: !int
+      Size: 1
+    RIGHT_HAND_EQUIPPED: !int
+      Size: 1
+    LEFT_HAND_EQUIPPED: !int
+      Size: 1
+    HEAD_EQUIPPED: !int
+      Size: 1
+    BODY_EQUIPPED: !int
+      Size: 1
+    RELIC_1_EQUIPPED: !int
+      Size: 1
+    RELIC_2_EQUIPPED: !int
+      Size: 1
+RESET_VECTOR:
+  Offset: 0xC0FF00
+  Description: Entry point for execution
+  Type: assembly
+  Size: 7
+  accumsize: 8
+  indexsize: 8
+UNKNOWN_C00525:
+  Offset: 0xC00525
+  Type: assembly
+  Size: 63
+  Labels:
+    1328: UNKNOWN0
+UNKNOWN_C34EDD:
+  Offset: 0xC34EDD
+  Size: 8
+  Type: assembly
+SPELL_DATA:
+  Offset: 0xC46AC0
+  Size: 0xE00
+  Type: data
+  Entries:
+  - Name: TARGETTING
+    Size: 1
+    Bit Values:
+    - Can move cursor
+    - Selects one side
+    - Auto-selects everyone
+    - Auto-selects party
+    - Auto-confirm
+    - Can select party
+    - Cursor starts on enemy
+    - Random (Roulette)
+  - Name: ELEMENT
+    Size: 1
+    Bit Values: &ELEMENTS
+      - Fire
+      - Ice
+      - Thunder
+      - Poison
+      - Wind
+      - Holy
+      - Earth
+      - Water
+  - Name: SPECIAL
+    Size: 3
+    Bit Values:
+    - Physical damage
+    - Misses if immune to death
+    - Can only target dead allies
+    - Effects reversed on undead
+    - Random Target
+    - Ignore Defense
+    - Damage is not split between targets
+    - Fail on allies?
+    - Usable outside battle
+    - Not reflectable
+    - Learnable
+    - Absorbable
+    - Unknown (warp, quick)
+    - Change target if target is dead
+    - Caster dies
+    - Affects MP instead of HP
+    - Heal
+    - Heals user
+    - Lift Status
+    - Toggle Status
+    - Target's stamina affects damage
+    - Undodgable
+    - Affects targets of level (success rate)x
+    - Damage = (power*6.25)% of health
+  - Size: 1
+    Name: MPCOST
+    Description: MP cost of spell
+  - Size: 1
+    Name: POWER
+    Description: Power of spell
+  - Size: 1
+    Name: SPECIAL2
+    Bit Values:
+    - Misses if immune to status
+    - Display text if successful (monster only)
+    - Unknown 1
+    - Unknown 2
+    - Unknown 3
+    - Unknown 4
+    - Unknown 5
+    - Unknown 6
+  - Size: 1
+    Name: SUCCESSRATE
+    Description: Success rate of spell
+  - Size: 1
+    Name: SPECIALEFFECT
+    Values:
+      255: Nothing
+  - Name: STATUSEFFECTS
+    Size: 4
+    Bit Values:
+    - Blind
+    - Zombie
+    - Poison
+    - Magitek
+    - Invisible
+    - Imp
+    - Petrify
+    - Death
+    - Condemned
+    - Near Fatal
+    - Image
+    - Mute
+    - Berserk
+    - Muddle
+    - Seizure
+    - Sleep
+    - Dancing
+    - Regen
+    - Slow
+    - Haste
+    - Stop
+    - Shell
+    - Safe
+    - Reflect
+    - Rage
+    - Freeze
+    - Reraise
+    - Morph
+    - Chant?
+    - Hidden
+    - Interceptor
+    - Float
+DIALOGUE_TEXT_PTR_TABLE:
+  Offset: 0xCCE604
+  Size: 0x19FC
+  Type: data
+  Entries:
+  - Size: 2
+    Type: pointer
+    Base: 0xCD0000
+DIALOGUE_TEXT:
+  Offset: 0xCD0000
+  Size: 0x1EFBB
+  Type: data
+  Entries:
+  - Type: script
+    Terminator: 0x00
+PLACE_NAMES:
+  Offset: 0xCEF100
+  Size: 0x363
+  Type: data
+  Entries:
+  - Type: script
+    Terminator: 0x00
+EMPTY_CEF463:
+  Offset: 0xCEF463
+  Type: empty
+  Size: 0x19D
+MONSTER_CONFIGURATION_TABLE:
+  Offset: 0xCF0000
+  Size: 0x2FE0
+  Type: data
+  Entries:
+  - Size: 1
+    Name: SPEED
+  - Size: 1
+    Name: ATTACKPOWER
+  - Size: 1
+    Name: HITRATE
+  - Size: 1
+    Name: EVASION
+  - Size: 1
+    Name: MAGICEVASION
+  - Size: 1
+    Name: DEFENSE
+  - Size: 1
+    Name: MAGICDEFENSE
+  - Size: 1
+    Name: MAGICPOWER
+  - Size: 2
+    Name: HP
+  - Size: 2
+    Name: MP
+  - Size: 2
+    Name: EXP
+  - Size: 2
+    Name: GP
+  - Size: 1
+    Name: LEVEL
+  - Size: 3
+    Name: UNKNOWN
+    Type: bytearray
+  - Size: 3
+    Name: STATUSIMMUNITIES
+    Bit Values:
+    - Blind
+    - Zombie
+    - Poison
+    - Magitek
+    - Invisible
+    - Imp
+    - Petrify
+    - Death
+    - Condemned
+    - Near Fatal
+    - Image
+    - Mute
+    - Berserk
+    - Confusion
+    - Sap
+    - Sleep
+    - Float
+    - Regen
+    - Slow
+    - Haste
+    - Stop
+    - Shell
+    - Safe
+    - Reflect
+  - Size: 3
+    Name: ELEMENTALRESISTANCE
+    Type: struct
+    Entries:
+    - Size: 1
+      Name: ABSORBS
+      Bit Values: *ELEMENTS
+    - Size: 1
+      Name: NULLIFIES
+      Bit Values: *ELEMENTS
+    - Size: 1
+      Name: WEAKNESSES
+      Bit Values: *ELEMENTS
+  - Size: 1
+    Name: ATTACKANIMATION
+  - Size: 4
+    Name: INITIALSTATUS
+    Bit Values:
+    - Blind
+    - Zombie
+    - Poison
+    - Magitek
+    - Invisible
+    - Imp
+    - Petrify
+    - Death
+    - Condemned
+    - Near Fatal
+    - Image
+    - Mute
+    - Berserk
+    - Confusion
+    - Sap
+    - Sleep
+    - Float
+    - Regen
+    - Slow
+    - Haste
+    - Stop
+    - Shell
+    - Safe
+    - Reflect
+    - UNKNOWN1
+    - Runic
+    - Reraise
+    - UNKNOWN3
+    - UNKNOWN4
+    - UNKNOWN5
+    - UNKNOWN6
+    - UNKNOWN7
+  - Size: 1
+    Name: SPECIALABILITY
+    Bit Values:
+    - Effect ID 1
+    - Effect ID 2
+    - Effect ID 3
+    - Effect ID 4
+    - Effect ID 5
+    - Effect ID 6
+    - No Damage
+    - Unavoidable
+MONSTER_ITEMS:
+  Offset: 0xCF3000
+  Size: 0x600
+  Type: data
+  Entries:
+  - Size: 1
+    Name: RARESTEAL
+    Description: Rare Steal
+  - Size: 1
+    Name: COMMONSTEAL
+    Description: Common Steal
+  - Size: 1
+    Name: RAREDROP
+    Description: Rare Drop
+  - Size: 1
+    Name: COMMONDROP
+    Description: Common Drop
+UNKNOWN_DATA_CF3600:
+  Offset: 0xCF3600
+  Type: data
+  Size: 0x700
+CONTROL_DATA:
+  Offset: 0xCF3D00
+  Type: data
+  Size: 0x600
+  Entries:
+  - Size: 1
+    Name: ABIL1
+    Values:
+      255: Empty
+  - Size: 1
+    Name: ABIL2
+    Values:
+      255: Empty
+  - Size: 1
+    Name: ABIL3
+    Values:
+      255: Empty
+  - Size: 1
+    Name: ABIL4
+    Values:
+      255: Empty
+MONSTER_SKETCH_MOVES:
+  Offset: 0xCF4300
+  Type: data
+  Size: 0x300
+  Entries:
+  - Size: 1
+    Name: ABIL1
+  - Size: 1
+    Name: ABIL2
+MONSTER_RAGE_MOVES:
+  Offset: 0xCF4600
+  Type: data
+  Size: 0x200
+  Entries:
+  - Size: 1
+    Name: ABIL1
+  - Size: 1
+    Name: ABIL2
+MONSTER_PACK_TABLE:
+  Offset: 0xCF4800
+  Type: data
+  Size: 0x800
+  Entries:
+  - Size: 2
+    Name: FORMATION_ONE
+  - Size: 2
+    Name: FORMATION_TWO
+  - Size: 2
+    Name: FORMATION_THREE
+  - Size: 2
+    Name: FORMATION_FOUR
+UNKNOWN_DATA_CF5000:
+  Offset: 0xCF5000
+  Type: data
+  Size: 0x400
+  Entries:
+  - Size: 2
+SECTOR_FORMATION_TABLE:
+  Offset: 0xCF5400
+  Type: data
+  Size: 1024
+  Entries:
+  - Size: 1
+    Name: FORMATION_ONE
+    Description: First formation
+  - Size: 1
+    Name: FORMATION_TWO
+    Description: Second formation
+  - Size: 1
+    Name: FORMATION_THREE
+    Description: Third formation
+  - Size: 1
+    Name: FORMATION_FOUR
+    Description: Fourth formation
+MONSTER_FORMATION_ATTRIBUTES_TABLE:
+  Offset: 0xCF5900
+  Size: 0x900
+  Type: data
+  Entries:
+  - Size: 1
+    Bit Values:
+    - APPEARANCE1
+    - APPEARANCE2
+    - APPEARANCE3
+    - APPEARANCE4
+    - No Normal Attacks
+    - No Back Attacks
+    - No Pincer Attacks
+    - No Side Attacks
+  - Size: 1
+    Bit Values:
+    - UNKNOWN_1
+    - No Victory Stance
+    - Block Joker Doom
+    - UNKNOWN_4
+    - UNKNOWN_5
+    - UNKNOWN_6
+    - UNKNOWN_7
+    - Event Battle
+  - Size: 1
+    Name: EVENT
+  - Size: 1
+    Bit Values:
+    - Running Disabled
+    - Cannot Appear on Veldt
+    - Hide Start Messages
+    - MUSIC1
+    - MUSIC2
+    - MUSIC3
+    - UNKNOWN
+    - No Music Change
+MONSTER_FORMATION_TABLE:
+  Offset: 0xCF6200
+  Size: 0x21C0
+  Type: data
+  Entries:
+  - Size: 1
+    Name: UNKNOWN_1
+  - Size: 1
+    Name: VISIBILITY
+    Bit Values:
+    - Enemy 1
+    - Enemy 2
+    - Enemy 3
+    - Enemy 4
+    - Enemy 5
+    - Enemy 6
+    - Unused
+    - Unused2
+  - Size: 6
+    Type: bytearray
+    Name: ENEMIES
+  - Size: 6
+    Type: bytearray
+    Name: ENEMY_POSITIONS
+  - Size: 1
+    Name: BOSS_FLAGS
+    Bit Values:
+    - Enemy 1
+    - Enemy 2
+    - Enemy 3
+    - Enemy 4
+    - Enemy 5
+    - Enemy 6
+    - Unused
+    - Unused2
+AI_OFFSET_TABLE:
+  Offset: 0xCF8400
+  Size: 768
+  Type: data
+  Entries:
+  - Type: pointer
+    Size: 2
+    Base: 0xCF8700
+AI_SCRIPT_DATA:
+  Offset: 0xCF8700
+  Size: 0x394A
+  Type: data
+SPELL_EFFECT_DATA:
+  Offset: 0xD07FB2
+  Size: 0xE00
+  Type: data
+  Entries:
+  - Type: struct
+    Size: 6
+    Name: UNKNOWNOFFSETS
+    Entries:
+    - Size: 2
+      Type: pointer
+  - Type: struct
+    Size: 3
+    Name: PALETTES
+    Options:
+      Use Offset as Key: n
+    Entries:
+    - Name: PALETTEID
+      Size: 1
+  - Name: SOUNDEFFECT
+    Size: 1
+  - Type: bytearray
+    Size: 3
+  - Name: ANIMATIONSPEED
+    Size: 1
+SPELL_PALETTES:
+  Offset: 0xD26000
+  Size: 0xF00
+  Type: data
+  Entries:
+  - Type: palette
+    Size: 16
+ITEM_DATA:
+  Offset: 0xD85000
+  Size: 0x1E00
+  Type: data
+  Entries:
+  - Size: 1
+    Name: ITEMTYPE
+  - Size: 2
+    Name: USABLEBY
+    Bit Values:
+    - Terra
+    - Locke
+    - Cyan
+    - Shadow
+    - Edgar
+    - Sabin
+    - Celes
+    - Strago
+    - Relm
+    - Setzer
+    - Mog
+    - Gau
+    - Gogo
+    - Umaro
+    - Imp Special
+    - Merit Award
+  - Size: 1
+    Name: SPELLLEARNRATE
+  - Size: 1
+    Name: SPELLLEARNED
+  - Type: bytearray
+    Size: 25
+CHARACTER_DATA:
+  Offset: 0xED7CA0
+  Size: 0x580
+  Type: data
+  Entries:
+  - Size: 1
+    Name: BONUSHP
+  - Size: 1
+    Name: BONUSMP
+  - Size: 4
+    Type: struct
+    Name: COMMANDS
+    Options:
+      Use Offset as Key: n
+    Entries:
+    - Size: 1
+      Values:
+        0: Fight
+        1: Items
+        2: Magic
+        3: Trance
+        4: Revert
+        5: Steal
+        6: Mug
+        7: Bushido
+        8: Throw
+        9: Tools
+        10: Blitz
+        11: Runic
+        12: Lore
+        13: Sketch
+        14: Control
+        15: Slot
+        16: Rage
+        17: Leap
+        18: Mimic
+        19: Dance
+        20: Row
+        21: Defend
+        22: Jump
+        23: Dualcast
+        24: Gil Toss
+        25: Summon
+        26: Pray
+        27: Shock
+        28: Possess
+        29: Magitek
+        255: None
+  - Size: 1
+    Name: VIGOR
+  - Size: 1
+    Name: SPEED
+  - Size: 1
+    Name: STAMINA
+  - Size: 1
+    Name: MAGICPOWER
+  - Size: 1
+    Name: ATTACKPOWER
+  - Size: 1
+    Name: DEFENSE
+  - Size: 1
+    Name: MAGICDEFENSE
+  - Size: 1
+    Name: EVASION
+  - Size: 1
+    Name: MAGICEVASION
+  - Size: 6
+    Type: struct
+    Name: EQUIPMENT
+    Options:
+      Use Offset as Key: n
+    Entries:
+    - Size: 1
+      Values:
+        255: Empty
+  - Size: 1
+    Name: UNKNOWN
+...

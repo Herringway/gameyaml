@@ -1,0 +1,581 @@
+---
+CPU:
+  Architecture: 65816
+Platform: snes
+Title: Final Fantasy 5
+Country: JPN
+Script Tables:
+  battle:
+    Lengths:
+      0xF1: 2
+      0xF2: 2
+      0xF3: 2
+      0xF4: 2
+      0xF5: 2
+      0xF6: 2
+      0xF7: 2
+      0xF8: 2
+      0xF9: 2
+      0xFA: 2
+      0xFB: 2
+      0xFC: 4
+      0xFD: 4
+      0xFE: 1
+      0xFF: 1
+  text:
+    Lengths:
+      0x1E: 2
+      119: 2
+      194: 2
+      195: 2
+      196: 2
+      197: 2
+      198: 2
+      199: 2
+      200: 2
+      201: 2
+      202: 2
+      203: 2
+      204: 2
+      211: 2
+      212: 2
+    Replacements:
+      1: "\n"
+      32: バ
+      33: ば
+      34: ビ
+      35: び
+      36: ブ
+      37: ぶ
+      38: ベ
+      39: べ
+      40: ボ
+      41: ぼ
+      42: ガ
+      43: が
+      44: ギ
+      45: ぎ
+      46: グ
+      47: ぐ
+      48: ゲ
+      49: げ
+      50: ゴ
+      51: ご
+      52: ザ
+      53: ざ
+      54: ジ
+      55: じ
+      56: ズ
+      57: ず
+      58: ゼ
+      59: ぜ
+      60: ゾ
+      61: ぞ
+      62: ダ
+      63: だ
+      65: ぢ
+      67: づ
+      68: デ
+      69: で
+      70: ド
+      71: ど
+      72: ヴ
+      73: パ
+      74: ぱ
+      75: ピ
+      77: プ
+      78: ぷ
+      79: ペ
+      80: ぺ
+      81: ポ
+      82: ぽ
+      83: 0
+      84: 1
+      85: 2
+      86: 3
+      87: 4
+      88: 5
+      89: 6
+      90: 7
+      91: 8
+      92: 9
+      93: M
+      94: H
+      95: P
+      96: ハ
+      97: は
+      98: ヒ
+      99: ひ
+      100: フ
+      101: ふ
+      102: ヘ
+      103: へ
+      104: ホ
+      105: ほ
+      106: カ
+      107: か
+      108: キ
+      109: き
+      110: ク
+      111: く
+      112: ケ
+      113: け
+      114: コ
+      115: こ
+      116: サ
+      117: さ
+      118: シ
+      119: し
+      120: ス
+      121: す
+      122: セ
+      123: せ
+      124: ソ
+      125: そ
+      126: タ
+      127: た
+      128: チ
+      129: ち
+      130: ツ
+      131: つ
+      132: テ
+      133: て
+      134: ト
+      135: と
+      136: ウ
+      137: う
+      138: ア
+      139: あ
+      140: イ
+      141: い
+      142: エ
+      143: え
+      144: オ
+      145: お
+      146: ナ
+      147: な
+      148: ニ
+      149: に
+      150: ヌ
+      151: ぬ
+      152: ネ
+      153: ね
+      154: ノ
+      155: の
+      156: マ
+      157: ま
+      158: ミ
+      159: み
+      160: ム
+      161: む
+      162: メ
+      163: め
+      164: モ
+      165: も
+      166: ラ
+      167: ら
+      168: リ
+      169: り
+      170: ル
+      171: る
+      172: レ
+      173: れ
+      174: ロ
+      175: ろ
+      176: ヤ
+      177: や
+      179: ゆ
+      181: よ
+      182: ワ
+      183: わ
+      184: ン
+      185: ん
+      187: を
+      188: ッ
+      189: っ
+      190: ャ
+      191: ゃ
+      192: ュ
+      193: ゅ
+      194: ョ
+      195: ょ
+      196: ァ
+      197: ー
+      198: ス
+      199: …
+      200: ゥ
+      201: !
+      202: ェ
+      203: "?"
+      204: ォ
+      205: "%"
+      206: /
+      207: ":"
+      208: 「
+      209: 」
+      210: "."
+      211: A
+      212: B
+      213: X
+      214: Y
+      215: L
+      216: R
+      217: E
+      218: H
+      219: M
+      220: P
+      221: S
+      222: C
+      223: T
+      224: ↑
+      225: →
+      226: +
+      0xE3: '[SWORD]'
+      0xE4: '[WHITE]'
+      0xE5: '[BLACK]'
+      0xE6: '[TIME]'
+      0xE7: '[KNIFE]'
+      0xE8: '[SPEAR]'
+      0xE9: '[AXE]'
+      0xEA: '[KATANA]'
+      0xEB: '[ROD]'
+      0xEC: '[STAFF]'
+      0xED: '[BOW]'
+      0xEE: '[HARP]'
+      0xEF: '[WHIP]'
+      0xF0: '[BELL]'
+      0xF1: '[SHIELD]'
+      0xF2: '[HELM]'
+      0xF3: '[ARMOUR]'
+      0xF4: '[ACCESSORY]'
+      245: U
+      255: " "
+...
+---
+0xC82220: &DIALOGUE_POINTERS
+  Name: DIALOGUE_POINTERS
+  Size: 0x10E0
+  Type: data
+  Offset: 0xC82220
+  Entries:
+  - Type: pointer
+    Size: 2
+    Base: 0xCA0000
+0xCA0000: &TEXT
+  Name: TEXT
+  Size: 0x10000
+  Type: data
+  Offset: 0xCA0000
+  Entries:
+  - Type: script
+    Charset: text
+    Terminator: 0x00
+0xD00000: &ENEMY_STATS
+  Name: ENEMY_STATS
+  Offset: 0xD00000
+  Type: data
+  Size: 0x3000
+  Entries:
+  - Name: Speed
+    Type: int
+    Size: 1
+  - Name: Strength
+    Type: int
+    Size: 1
+  - Name: Strength_Multiplier
+    Type: int
+    Size: 1
+  - Name: Evasion
+    Type: int
+    Size: 1
+  - Name: Defense
+    Type: int
+    Size: 1
+  - Name: Magic
+    Type: int
+    Size: 1
+  - Name: Magic_Defense
+    Type: int
+    Size: 1
+  - Name: Magic_Evade
+    Type: int
+    Size: 1
+  - Name: HP
+    Type: int
+    Size: 2
+  - Name: MP
+    Type: int
+    Size: 2
+  - Name: EXP
+    Type: int
+    Size: 2
+  - Name: GP
+    Type: int
+    Size: 2
+  - Name: AttackType
+    Type: int
+    Size: 1
+  - Name: Elemental_Immunities
+    Type: int
+    Size: 1
+    Bit Values: &ELEMENTAL_TYPES [Fire,Ice,Lightning,Poison,Holy,Earth,Wind,Water]
+  - Name: Status_Immunities
+    Type: int
+    Size: 3
+    Bit Values: &STATUS_EFFECTS [Darkness,Zombie,Poison,Stop,Mini,Toad,Petrify,Death,Image (1),Image (2),Silence,Berserk,Confuse,Paralyze,Sleep,Old,Regen,Invulnerability,Slow,Haste,Stop,Shell,Armor,Wall,Hidden,N Dead,Singing,HP Leak,Countdown,Controlled,F. Image,Erased]
+  - Name: Elemental_Absorption
+    Type: int
+    Size: 1
+    Bit Values: *ELEMENTAL_TYPES
+  - Name: Cannot_Evade
+    Type: int
+    Size: 1
+  - Name: Elemental_Weakness
+    Type: int
+    Size: 1
+    Bit Values: *ELEMENTAL_TYPES
+  - Name: Type
+    Type: int
+    Size: 1
+    Bit Values:
+    - Undead
+    - Toad
+    - Beast
+    - Aevis
+    - Dragon
+    - Heavy
+    - Desert
+    - Humanoid
+  - Name: Command_Immunity
+    Type: int
+    Size: 1
+  - Name: Initial_Status
+    Type: int
+    Size: 4
+    Bit Values: *STATUS_EFFECTS
+  - Name: Internal_ID
+    Type: int
+    Size: 1
+  - Name: Level
+    Type: int
+    Size: 1
+0xD03000: &ENEMY_FORMATIONS
+  Name: ENEMY_FORMATIONS
+  Offset: 0xD03000
+  Type: data
+  Size: 8192
+  Entries:
+  - Type: int
+    Size: 1
+    Name: Visual Effects
+  - Type: int
+    Size: 1
+    Name: Escape Chance
+  - Type: int
+    Size: 1
+    Name: AP
+  - Type: int
+    Size: 1
+    Name: Visibility
+  - Type: bytearray
+    Size: 8
+    Name: Enemies
+  - Type: int
+    Size: 2
+    Name: Palette
+  - Type: int
+    Size: 2
+    Name: Flags
+0xD05000: &ENEMY_ITEMS
+  Name: ENEMY_ITEMS
+  Offset: 0xD05000
+  Type: data
+  Size: 0x600
+  Entries:
+  - Type: int
+    Size: 1
+    Name: Stolen Item A
+  - Type: int
+    Size: 1
+    Name: Stolen Item B
+  - Type: int
+    Size: 1
+    Name: Dropped Item A
+  - Type: int
+    Size: 1
+    Name: Dropped Item B
+0xD05600: &ENEMY_CONTROL_ABILITIES
+  Name: ENEMY_CONTROL_ABILITIES
+  Offset: 0xD05600
+  Type: data
+  Size: 0x600
+  Entries:
+  - Type: bytearray
+    Size: 4
+    Name: Abilities
+0xD05C00: &ENEMY_NAMES
+  Name: ENEMY_NAMES
+  Offset: 0xD05C00
+  Type: data
+  Size: 3072
+0xD08600: &RELEASE_ABILITIES
+  Name: RELEASE_ABILITIES
+  Offset: 0xD08600
+  Type: data
+  Size: 256
+  Entries:
+  - Name: ID
+    Type: int
+    Size: 1
+0xD08900: &COORDINATE_BASE
+  Name: COORDINATE_BASE
+  Size: 0x1000
+  Offset: 0xD08900
+  Type: data
+  Entries:
+  - Type: int
+    Name: Enemy 1
+    Size: 1
+  - Type: int
+    Name: Enemy 2
+    Size: 1
+  - Type: int
+    Name: Enemy 3
+    Size: 1
+  - Type: int
+    Name: Enemy 4
+    Size: 1
+  - Type: int
+    Name: Enemy 5
+    Size: 1
+  - Type: int
+    Name: Enemy 6
+    Size: 1
+  - Type: int
+    Name: Enemy 7
+    Size: 1
+  - Type: int
+    Name: Enemy 8
+    Size: 1
+0xD09900: &SPECIAL_ABILITY_TABLE
+  Name: SPECIAL_ABILITY_TABLE
+  Size: 0x300
+  Offset: 0xD09900
+  Type: data
+  Entries:
+  - Type: bytearray
+    Size: 3
+0xD09C00: &SCRIPT_TABLE
+  Name: SCRIPT_TABLE
+  Offset: 0xD09C00
+  Type: data
+  Size: 768
+  Entries:
+  - Type: pointer
+    Size: 2
+    Base: 0xD00000
+0xD09F00: &BATTLE_SCRIPTS
+  Name: BATTLE_SCRIPTS
+  Offset: 0xD09F00
+  Type: data
+  Size: 0x28F0
+  Entries:
+  - Type: bytearray
+    Size: 5
+    Name: UNKNOWN
+  - Type: script
+    Charset: battle
+    Terminator: 0xFF
+    Name: NORMAL_ROUTINE
+  - Type: script
+    Charset: battle
+    Terminator: 0xFF
+    Name: COUNTER_ROUTINE
+0xD0C7F0:
+  Offset: 0xD0C7F0
+  Size: 0x10
+  Type: empty
+0xD11380: &ITEM_NAMES
+  Name: ITEM_NAMES
+  Offset: 0xD11380
+  Type: data
+  Size: 2304
+  Entries:
+  - Type: script
+    Charset: text
+    Size: 9
+0xD11C80: &SPELL_NAMES
+  Name: SPELL_NAMES
+  Offset: 0xD11C80
+  Type: data
+  Size: 2043
+  Entries:
+  - Type: struct
+    Size: 522
+    Entries:
+    - Type: script
+      Charset: text
+      Size: 6
+  - Type: struct
+    Size: 1521
+    Entries:
+    - Type: script
+      Charset: text
+      Size: 9
+0xD12D00: &SHOP_DATA
+  Name: SHOP_DATA
+  Offset: 0xD12D00
+  Type: data
+  Size: 0x300
+0xD139A9: 
+  Offset: 0xD139A9
+  Type: data
+  Size: 512
+  Entries:
+  - Type: pointer
+    Size: 2
+0xD14000: 
+  Offset: 0xD14000
+  Type: data
+  Size: 256
+  Entries:
+  - Type: pointer
+    Size: 2
+    Base: 0xD10000
+0xD14100:
+  Offset: 0xD14100
+  Type: data
+  Size: 0x4B6
+  Entries:
+  - Type: script
+    Terminator: 0
+    Charset: text
+0xD152EA: &ABILITY_COUNT
+  Name: ABILITY_COUNT
+  Offset: 0xD152EA
+  Type: data
+  Size: 22
+  Entries:
+  - Type: int
+    Size: 1
+    Name: Count
+0xD15300: &JOB_ABILITIES
+  Name: JOB_ABILITIES
+  Offset: 0xD15300
+  Type: data
+  Size: 0x12D
+  Entries:
+  - Type: table
+    Terminator: 0
+    Name: Abilities
+    Entries:
+    - Type: int
+      Size: 1
+      Name: Ability ID
+ENEMY_FORMATIONS: *ENEMY_FORMATIONS
+ENEMY_ITEMS: *ENEMY_ITEMS
+ENEMY_CONTROL_ABILITIES: *ENEMY_CONTROL_ABILITIES
+ENEMY_NAMES: *ENEMY_NAMES
+ABILITY_COUNT: *ABILITY_COUNT
+JOB_ABILITIES: *JOB_ABILITIES
+...
