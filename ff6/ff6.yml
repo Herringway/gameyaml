@@ -252,650 +252,592 @@ ACTORS: !array
   Offset: 0x7E1600
   Size: 0x24F
   Item Type: !struct
-  Entries:
-    ID: !int
-      Size: 1
-    GFXID: !int
-      Size: 1
-    NAME: !script
-      Size: 6
-    LEVEL: !int
-      Size: 1
-    CURRENT_HP: !int
-      Size: 2
-    MAX_HP: !int
-      Size: 2
-    CURRENT_MP: !int
-      Size: 2
-    MAX_MP: !int
-      Size: 2
-    EXP: !int
-      Size: 4
-    STATUS_EFFECTS:
-      Size: 2
-    BATTLE_COMMANDS: !array
-      Item Type: !int
+    Entries:
+      ID: !int
         Size: 1
-      Size: 4
-    VIGOR: !int
-      Size: 1
-    SPEED: !int
-      Size: 1
-    STAMINA: !int
-      Size: 1
-    MAGIC_POWER: !int
-      Size: 1
-    ESPER_EQUIPPED: !int
-      Size: 1
-    RIGHT_HAND_EQUIPPED: !int
-      Size: 1
-    LEFT_HAND_EQUIPPED: !int
-      Size: 1
-    HEAD_EQUIPPED: !int
-      Size: 1
-    BODY_EQUIPPED: !int
-      Size: 1
-    RELIC_1_EQUIPPED: !int
-      Size: 1
-    RELIC_2_EQUIPPED: !int
-      Size: 1
-RESET_VECTOR:
+      GFXID: !int
+        Size: 1
+      NAME: !script
+        Size: 6
+      LEVEL: !int
+        Size: 1
+      CURRENT_HP: !int
+        Size: 2
+      MAX_HP: !int
+        Size: 2
+      CURRENT_MP: !int
+        Size: 2
+      MAX_MP: !int
+        Size: 2
+      EXP: !int
+        Size: 4
+      STATUS_EFFECTS: !int
+        Size: 2
+      BATTLE_COMMANDS: !array
+        Item Type: !int
+          Size: 1
+        Size: 4
+      VIGOR: !int
+        Size: 1
+      SPEED: !int
+        Size: 1
+      STAMINA: !int
+        Size: 1
+      MAGIC_POWER: !int
+        Size: 1
+      ESPER_EQUIPPED: !int
+        Size: 1
+      RIGHT_HAND_EQUIPPED: !int
+        Size: 1
+      LEFT_HAND_EQUIPPED: !int
+        Size: 1
+      HEAD_EQUIPPED: !int
+        Size: 1
+      BODY_EQUIPPED: !int
+        Size: 1
+      RELIC_1_EQUIPPED: !int
+        Size: 1
+      RELIC_2_EQUIPPED: !int
+        Size: 1
+RESET_VECTOR: !assembly
   Offset: 0xC0FF00
   Description: Entry point for execution
-  Type: assembly
   Size: 7
-  accumsize: 8
-  indexsize: 8
-UNKNOWN_C00525:
+  Initial State:
+    8 Bit Accum: y
+    8 Bit Index: y
+UNKNOWN_C00525: !assembly
   Offset: 0xC00525
-  Type: assembly
   Size: 63
   Labels:
-    1328: UNKNOWN0
-UNKNOWN_C34EDD:
+    0xB: UNKNOWN0
+UNKNOWN_C34EDD: !assembly
   Offset: 0xC34EDD
   Size: 8
-  Type: assembly
-SPELL_DATA:
+SPELL_DATA: !array
   Offset: 0xC46AC0
   Size: 0xE00
-  Type: data
-  Entries:
-  - Name: TARGETTING
-    Size: 1
-    Bit Values:
-    - Can move cursor
-    - Selects one side
-    - Auto-selects everyone
-    - Auto-selects party
-    - Auto-confirm
-    - Can select party
-    - Cursor starts on enemy
-    - Random (Roulette)
-  - Name: ELEMENT
-    Size: 1
-    Bit Values: &ELEMENTS
-      - Fire
-      - Ice
-      - Thunder
-      - Poison
-      - Wind
-      - Holy
-      - Earth
-      - Water
-  - Name: SPECIAL
-    Size: 3
-    Bit Values:
-    - Physical damage
-    - Misses if immune to death
-    - Can only target dead allies
-    - Effects reversed on undead
-    - Random Target
-    - Ignore Defense
-    - Damage is not split between targets
-    - Fail on allies?
-    - Usable outside battle
-    - Not reflectable
-    - Learnable
-    - Absorbable
-    - Unknown (warp, quick)
-    - Change target if target is dead
-    - Caster dies
-    - Affects MP instead of HP
-    - Heal
-    - Heals user
-    - Lift Status
-    - Toggle Status
-    - Target's stamina affects damage
-    - Undodgable
-    - Affects targets of level (success rate)x
-    - Damage = (power*6.25)% of health
-  - Size: 1
-    Name: MPCOST
-    Description: MP cost of spell
-  - Size: 1
-    Name: POWER
-    Description: Power of spell
-  - Size: 1
-    Name: SPECIAL2
-    Bit Values:
-    - Misses if immune to status
-    - Display text if successful (monster only)
-    - Unknown 1
-    - Unknown 2
-    - Unknown 3
-    - Unknown 4
-    - Unknown 5
-    - Unknown 6
-  - Size: 1
-    Name: SUCCESSRATE
-    Description: Success rate of spell
-  - Size: 1
-    Name: SPECIALEFFECT
-    Values:
-      255: Nothing
-  - Name: STATUSEFFECTS
-    Size: 4
-    Bit Values:
-    - Blind
-    - Zombie
-    - Poison
-    - Magitek
-    - Invisible
-    - Imp
-    - Petrify
-    - Death
-    - Condemned
-    - Near Fatal
-    - Image
-    - Mute
-    - Berserk
-    - Muddle
-    - Seizure
-    - Sleep
-    - Dancing
-    - Regen
-    - Slow
-    - Haste
-    - Stop
-    - Shell
-    - Safe
-    - Reflect
-    - Rage
-    - Freeze
-    - Reraise
-    - Morph
-    - Chant?
-    - Hidden
-    - Interceptor
-    - Float
-DIALOGUE_TEXT_PTR_TABLE:
+  Item Type: !struct
+    Entries:
+      TARGETTING: !int
+        Size: 1
+        Bit Values:
+        - Can move cursor
+        - Selects one side
+        - Auto-selects everyone
+        - Auto-selects party
+        - Auto-confirm
+        - Can select party
+        - Cursor starts on enemy
+        - Random (Roulette)
+      ELEMENT: !int
+        Size: 1
+        Bit Values: &ELEMENTS
+          - Fire
+          - Ice
+          - Thunder
+          - Poison
+          - Wind
+          - Holy
+          - Earth
+          - Water
+      SPECIAL: !int
+        Size: 3
+        Bit Values:
+        - Physical damage
+        - Misses if immune to death
+        - Can only target dead allies
+        - Effects reversed on undead
+        - Random Target
+        - Ignore Defense
+        - Damage is not split between targets
+        - Fail on allies?
+        - Usable outside battle
+        - Not reflectable
+        - Learnable
+        - Absorbable
+        - Unknown (warp, quick)
+        - Change target if target is dead
+        - Caster dies
+        - Affects MP instead of HP
+        - Heal
+        - Heals user
+        - Lift Status
+        - Toggle Status
+        - Target's stamina affects damage
+        - Undodgable
+        - Affects targets of level (success rate)x
+        - Damage = (power*6.25)% of health
+      MP_COST: !int
+        Size: 1
+        Description: MP cost of spell
+      POWER: !int
+        Size: 1
+        Description: Power of spell
+      SPECIAL2: !int
+        Size: 1
+        Bit Values:
+        - Misses if immune to status
+        - Display text if successful (monster only)
+        - Unknown 1
+        - Unknown 2
+        - Unknown 3
+        - Unknown 4
+        - Unknown 5
+        - Unknown 6
+      SUCCESS_RATE: !int
+        Size: 1
+        Description: Success rate of spell
+      SPECIAL_EFFECT: !int
+        Size: 1
+        Values:
+          255: Nothing
+      STATUS_EFFECTS: !int
+        Size: 4
+        Bit Values:
+        - Blind
+        - Zombie
+        - Poison
+        - Magitek
+        - Invisible
+        - Imp
+        - Petrify
+        - Death
+        - Condemned
+        - Near Fatal
+        - Image
+        - Mute
+        - Berserk
+        - Muddle
+        - Seizure
+        - Sleep
+        - Dancing
+        - Regen
+        - Slow
+        - Haste
+        - Stop
+        - Shell
+        - Safe
+        - Reflect
+        - Rage
+        - Freeze
+        - Reraise
+        - Morph
+        - Chant?
+        - Hidden
+        - Interceptor
+        - Float
+DIALOGUE_TEXT_PTR_TABLE: !array
   Offset: 0xCCE604
   Size: 0x19FC
-  Type: data
-  Entries:
-  - Size: 2
-    Type: pointer
+  Item Type: !pointer
+    Size: 2
     Base: 0xCD0000
-DIALOGUE_TEXT:
+DIALOGUE_TEXT: !array
   Offset: 0xCD0000
   Size: 0x1EFBB
-  Type: data
-  Entries:
-  - Type: script
+  Item Type: !script
     Terminator: 0x00
-PLACE_NAMES:
+PLACE_NAMES: !array
   Offset: 0xCEF100
   Size: 0x363
-  Type: data
-  Entries:
-  - Type: script
+  Item Type: !script
     Terminator: 0x00
-EMPTY_CEF463:
+EMPTY_CEF463: !empty
   Offset: 0xCEF463
-  Type: empty
   Size: 0x19D
-MONSTER_CONFIGURATION_TABLE:
+MONSTER_CONFIGURATION_TABLE: !array
   Offset: 0xCF0000
   Size: 0x2FE0
-  Type: data
-  Entries:
-  - Size: 1
-    Name: SPEED
-  - Size: 1
-    Name: ATTACKPOWER
-  - Size: 1
-    Name: HITRATE
-  - Size: 1
-    Name: EVASION
-  - Size: 1
-    Name: MAGICEVASION
-  - Size: 1
-    Name: DEFENSE
-  - Size: 1
-    Name: MAGICDEFENSE
-  - Size: 1
-    Name: MAGICPOWER
-  - Size: 2
-    Name: HP
-  - Size: 2
-    Name: MP
-  - Size: 2
-    Name: EXP
-  - Size: 2
-    Name: GP
-  - Size: 1
-    Name: LEVEL
-  - Size: 3
-    Name: UNKNOWN
-    Type: bytearray
-  - Size: 3
-    Name: STATUSIMMUNITIES
-    Bit Values:
-    - Blind
-    - Zombie
-    - Poison
-    - Magitek
-    - Invisible
-    - Imp
-    - Petrify
-    - Death
-    - Condemned
-    - Near Fatal
-    - Image
-    - Mute
-    - Berserk
-    - Confusion
-    - Sap
-    - Sleep
-    - Float
-    - Regen
-    - Slow
-    - Haste
-    - Stop
-    - Shell
-    - Safe
-    - Reflect
-  - Size: 3
-    Name: ELEMENTALRESISTANCE
-    Type: struct
+  Item Type: !struct
     Entries:
-    - Size: 1
-      Name: ABSORBS
-      Bit Values: *ELEMENTS
-    - Size: 1
-      Name: NULLIFIES
-      Bit Values: *ELEMENTS
-    - Size: 1
-      Name: WEAKNESSES
-      Bit Values: *ELEMENTS
-  - Size: 1
-    Name: ATTACKANIMATION
-  - Size: 4
-    Name: INITIALSTATUS
-    Bit Values:
-    - Blind
-    - Zombie
-    - Poison
-    - Magitek
-    - Invisible
-    - Imp
-    - Petrify
-    - Death
-    - Condemned
-    - Near Fatal
-    - Image
-    - Mute
-    - Berserk
-    - Confusion
-    - Sap
-    - Sleep
-    - Float
-    - Regen
-    - Slow
-    - Haste
-    - Stop
-    - Shell
-    - Safe
-    - Reflect
-    - UNKNOWN1
-    - Runic
-    - Reraise
-    - UNKNOWN3
-    - UNKNOWN4
-    - UNKNOWN5
-    - UNKNOWN6
-    - UNKNOWN7
-  - Size: 1
-    Name: SPECIALABILITY
-    Bit Values:
-    - Effect ID 1
-    - Effect ID 2
-    - Effect ID 3
-    - Effect ID 4
-    - Effect ID 5
-    - Effect ID 6
-    - No Damage
-    - Unavoidable
-MONSTER_ITEMS:
+      SPEED: !int
+        Size: 1
+      ATTACK_POWER: !int
+        Size: 1
+      HIT_RATE: !int
+        Size: 1
+      EVASION: !int
+        Size: 1
+      MAGIC_EVASION: !int
+        Size: 1
+      DEFENSE: !int
+        Size: 1
+      MAGIC_DEFENSE: !int
+        Size: 1
+      MAGIC_POWER: !int
+        Size: 1
+      HP: !int
+        Size: 2
+      MP: !int
+        Size: 2
+      EXP: !int
+        Size: 2
+      GP: !int
+        Size: 2
+      LEVEL: !int
+        Size: 1
+      UNKNOWN: !unknown
+        Size: 3
+      STATUS_IMMUNITIES: !int
+        Size: 3
+        Bit Values:
+        - Blind
+        - Zombie
+        - Poison
+        - Magitek
+        - Invisible
+        - Imp
+        - Petrify
+        - Death
+        - Condemned
+        - Near Fatal
+        - Image
+        - Mute
+        - Berserk
+        - Confusion
+        - Sap
+        - Sleep
+        - Float
+        - Regen
+        - Slow
+        - Haste
+        - Stop
+        - Shell
+        - Safe
+        - Reflect
+      ELEMENTAL_RESISTANCE: !struct
+        Size: 3
+        Entries:
+          ABSORBS: !int
+            Size: 1
+            Bit Values: *ELEMENTS
+          NULLIFIES: !int
+            Size: 1
+            Bit Values: *ELEMENTS
+          WEAKNESSES: !int
+            Size: 1
+            Bit Values: *ELEMENTS
+      ATTACK_ANIMATION: !int
+        Size: 1
+      INITIAL_STATUS: !int
+        Size: 4
+        Bit Values:
+        - Blind
+        - Zombie
+        - Poison
+        - Magitek
+        - Invisible
+        - Imp
+        - Petrify
+        - Death
+        - Condemned
+        - Near Fatal
+        - Image
+        - Mute
+        - Berserk
+        - Confusion
+        - Sap
+        - Sleep
+        - Float
+        - Regen
+        - Slow
+        - Haste
+        - Stop
+        - Shell
+        - Safe
+        - Reflect
+        - UNKNOWN1
+        - Runic
+        - Reraise
+        - UNKNOWN3
+        - UNKNOWN4
+        - UNKNOWN5
+        - UNKNOWN6
+        - UNKNOWN7
+      SPECIAL_ABILITY: !int
+        Size: 1
+        Bit Values:
+        - Effect ID 1
+        - Effect ID 2
+        - Effect ID 3
+        - Effect ID 4
+        - Effect ID 5
+        - Effect ID 6
+        - No Damage
+        - Unavoidable
+MONSTER_ITEMS: !array
   Offset: 0xCF3000
   Size: 0x600
-  Type: data
-  Entries:
-  - Size: 1
-    Name: RARESTEAL
-    Description: Rare Steal
-  - Size: 1
-    Name: COMMONSTEAL
-    Description: Common Steal
-  - Size: 1
-    Name: RAREDROP
-    Description: Rare Drop
-  - Size: 1
-    Name: COMMONDROP
-    Description: Common Drop
-UNKNOWN_DATA_CF3600:
+  Item Type: !struct
+    Entries:
+      RARE_STEAL: !int
+        Size: 1
+        Pretty Name: Rare Steal
+      COMMON_STEAL: !int
+        Size: 1
+        Pretty Name: Common Steal
+      RARE_DROP: !int
+        Size: 1
+        Pretty Name: Rare Drop
+      COMMON_DROP: !int
+        Size: 1
+        Pretty Name: Common Drop
+UNKNOWN_DATA_CF3600: !unknown
   Offset: 0xCF3600
-  Type: data
   Size: 0x700
-CONTROL_DATA:
+CONTROL_DATA: !array
   Offset: 0xCF3D00
-  Type: data
   Size: 0x600
-  Entries:
-  - Size: 1
-    Name: ABIL1
-    Values:
-      255: Empty
-  - Size: 1
-    Name: ABIL2
-    Values:
-      255: Empty
-  - Size: 1
-    Name: ABIL3
-    Values:
-      255: Empty
-  - Size: 1
-    Name: ABIL4
-    Values:
-      255: Empty
-MONSTER_SKETCH_MOVES:
+  Item Type: !array
+    Size: 4
+    Item Type: !int
+      Size: 1
+      Values: 
+        255: Empty
+MONSTER_SKETCH_MOVES: !array
   Offset: 0xCF4300
-  Type: data
   Size: 0x300
-  Entries:
-  - Size: 1
-    Name: ABIL1
-  - Size: 1
-    Name: ABIL2
-MONSTER_RAGE_MOVES:
+  Item Type: !array
+    Size: 2
+    Item Type: !int
+      Size: 1
+MONSTER_RAGE_MOVES: !array
   Offset: 0xCF4600
-  Type: data
   Size: 0x200
-  Entries:
-  - Size: 1
-    Name: ABIL1
-  - Size: 1
-    Name: ABIL2
-MONSTER_PACK_TABLE:
+  Item Type: !array
+    Size: 2
+    Item Type: !int
+      Size: 1
+MONSTER_PACK_TABLE: !array
   Offset: 0xCF4800
-  Type: data
   Size: 0x800
-  Entries:
-  - Size: 2
-    Name: FORMATION_ONE
-  - Size: 2
-    Name: FORMATION_TWO
-  - Size: 2
-    Name: FORMATION_THREE
-  - Size: 2
-    Name: FORMATION_FOUR
-UNKNOWN_DATA_CF5000:
+  Item Type: !array
+    Size: 8
+    Item Type: !int
+      Size: 2
+UNKNOWN_DATA_CF5000: !array
   Offset: 0xCF5000
-  Type: data
   Size: 0x400
-  Entries:
-  - Size: 2
-SECTOR_FORMATION_TABLE:
+  Item Type: !unknown
+    Size: 2
+SECTOR_FORMATION_TABLE: !array
   Offset: 0xCF5400
-  Type: data
   Size: 1024
-  Entries:
-  - Size: 1
-    Name: FORMATION_ONE
-    Description: First formation
-  - Size: 1
-    Name: FORMATION_TWO
-    Description: Second formation
-  - Size: 1
-    Name: FORMATION_THREE
-    Description: Third formation
-  - Size: 1
-    Name: FORMATION_FOUR
-    Description: Fourth formation
-MONSTER_FORMATION_ATTRIBUTES_TABLE:
+  Item Type: !array
+    Size: 4
+    Item Type: !int
+      Size: 1
+MONSTER_FORMATION_ATTRIBUTES_TABLE: !array
   Offset: 0xCF5900
   Size: 0x900
-  Type: data
-  Entries:
-  - Size: 1
-    Bit Values:
-    - APPEARANCE1
-    - APPEARANCE2
-    - APPEARANCE3
-    - APPEARANCE4
-    - No Normal Attacks
-    - No Back Attacks
-    - No Pincer Attacks
-    - No Side Attacks
-  - Size: 1
-    Bit Values:
-    - UNKNOWN_1
-    - No Victory Stance
-    - Block Joker Doom
-    - UNKNOWN_4
-    - UNKNOWN_5
-    - UNKNOWN_6
-    - UNKNOWN_7
-    - Event Battle
-  - Size: 1
-    Name: EVENT
-  - Size: 1
-    Bit Values:
-    - Running Disabled
-    - Cannot Appear on Veldt
-    - Hide Start Messages
-    - MUSIC1
-    - MUSIC2
-    - MUSIC3
-    - UNKNOWN
-    - No Music Change
-MONSTER_FORMATION_TABLE:
+  Item Type: !struct
+    Entries:
+      FLAGS: !int
+        Size: 2
+        Bit Values:
+        - APPEARANCE1
+        - APPEARANCE2
+        - APPEARANCE3
+        - APPEARANCE4
+        - No Normal Attacks
+        - No Back Attacks
+        - No Pincer Attacks
+        - No Side Attacks
+        - UNKNOWN_1
+        - No Victory Stance
+        - Block Joker Doom
+        - UNKNOWN_4
+        - UNKNOWN_5
+        - UNKNOWN_6
+        - UNKNOWN_7
+        - Event Battle
+      EVENT: !int
+        Size: 1
+      FLAGS2: !int
+        Size: 1
+        Bit Values:
+        - Running Disabled
+        - Cannot Appear on Veldt
+        - Hide Start Messages
+        - MUSIC1
+        - MUSIC2
+        - MUSIC3
+        - UNKNOWN
+        - No Music Change
+MONSTER_FORMATION_TABLE: !array
   Offset: 0xCF6200
   Size: 0x21C0
-  Type: data
-  Entries:
-  - Size: 1
-    Name: UNKNOWN_1
-  - Size: 1
-    Name: VISIBILITY
-    Bit Values:
-    - Enemy 1
-    - Enemy 2
-    - Enemy 3
-    - Enemy 4
-    - Enemy 5
-    - Enemy 6
-    - Unused
-    - Unused2
-  - Size: 6
-    Type: bytearray
-    Name: ENEMIES
-  - Size: 6
-    Type: bytearray
-    Name: ENEMY_POSITIONS
-  - Size: 1
-    Name: BOSS_FLAGS
-    Bit Values:
-    - Enemy 1
-    - Enemy 2
-    - Enemy 3
-    - Enemy 4
-    - Enemy 5
-    - Enemy 6
-    - Unused
-    - Unused2
-AI_OFFSET_TABLE:
+  Item Type: !struct
+    Entries:
+      UNKNOWN1: !unknown
+        Size: 1
+      VISIBILITY: !int
+        Size: 1
+        Bit Values:
+        - Enemy 1
+        - Enemy 2
+        - Enemy 3
+        - Enemy 4
+        - Enemy 5
+        - Enemy 6
+        - Unused
+        - Unused2
+      ENEMIES: !array
+        Size: 6
+        Item Type: !int
+          Size: 1
+      ENEMY_POSITIONS: !array
+        Size: 6
+        Item Type: !int
+          Size: 1
+      BOSS_FLAGS: !int
+        Size: 1
+        Bit Values:
+        - Enemy 1
+        - Enemy 2
+        - Enemy 3
+        - Enemy 4
+        - Enemy 5
+        - Enemy 6
+        - Unused
+        - Unused2
+AI_OFFSET_TABLE: !array
   Offset: 0xCF8400
   Size: 768
-  Type: data
-  Entries:
-  - Type: pointer
+  Item Type: !pointer
     Size: 2
     Base: 0xCF8700
-AI_SCRIPT_DATA:
+AI_SCRIPT_DATA: !unknown
   Offset: 0xCF8700
   Size: 0x394A
-  Type: data
-SPELL_EFFECT_DATA:
+SPELL_EFFECT_DATA: !array
   Offset: 0xD07FB2
   Size: 0xE00
-  Type: data
-  Entries:
-  - Type: struct
-    Size: 6
-    Name: UNKNOWNOFFSETS
+  Item Type: !struct
     Entries:
-    - Size: 2
-      Type: pointer
-  - Type: struct
-    Size: 3
-    Name: PALETTES
-    Options:
-      Use Offset as Key: n
-    Entries:
-    - Name: PALETTEID
-      Size: 1
-  - Name: SOUNDEFFECT
-    Size: 1
-  - Type: bytearray
-    Size: 3
-  - Name: ANIMATIONSPEED
-    Size: 1
-SPELL_PALETTES:
+      UNKNOWNOFFSETS: !array
+        Size: 6
+        Item Type: !pointer
+          Size: 2
+      PALETTES: !array
+        Size: 3
+        Item Type: !int
+          Size: 1
+      SOUNDEFFECT: !int
+        Size: 1
+      UNKNOWN: !unknown
+        Size: 3
+      ANIMATIONSPEED: !int
+        Size: 1
+SPELL_PALETTES: !array
   Offset: 0xD26000
   Size: 0xF00
-  Type: data
-  Entries:
-  - Type: palette
+  Item Type: !array
     Size: 16
-ITEM_DATA:
+    Item Type: !color
+      Size: 2
+ITEM_DATA: !array
   Offset: 0xD85000
   Size: 0x1E00
-  Type: data
-  Entries:
-  - Size: 1
-    Name: ITEMTYPE
-  - Size: 2
-    Name: USABLEBY
-    Bit Values:
-    - Terra
-    - Locke
-    - Cyan
-    - Shadow
-    - Edgar
-    - Sabin
-    - Celes
-    - Strago
-    - Relm
-    - Setzer
-    - Mog
-    - Gau
-    - Gogo
-    - Umaro
-    - Imp Special
-    - Merit Award
-  - Size: 1
-    Name: SPELLLEARNRATE
-  - Size: 1
-    Name: SPELLLEARNED
-  - Type: bytearray
-    Size: 25
-CHARACTER_DATA:
+  Item Type: !struct
+    Entries:
+      ITEMTYPE: !int
+        Size: 1
+      USABLE_BY: !int
+        Size: 2
+        Bit Values:
+        - Terra
+        - Locke
+        - Cyan
+        - Shadow
+        - Edgar
+        - Sabin
+        - Celes
+        - Strago
+        - Relm
+        - Setzer
+        - Mog
+        - Gau
+        - Gogo
+        - Umaro
+        - Imp Special
+        - Merit Award
+      SPELL_LEARN_RATE: !int
+        Size: 1
+      SPELL_LEARNED: !int
+        Size: 1
+      UNKNOWN: !unknown
+        Size: 25
+CHARACTER_DATA: !array
   Offset: 0xED7CA0
   Size: 0x580
-  Type: data
-  Entries:
-  - Size: 1
-    Name: BONUSHP
-  - Size: 1
-    Name: BONUSMP
-  - Size: 4
-    Type: struct
-    Name: COMMANDS
-    Options:
-      Use Offset as Key: n
+  Item Type: !struct
     Entries:
-    - Size: 1
-      Values:
-        0: Fight
-        1: Items
-        2: Magic
-        3: Trance
-        4: Revert
-        5: Steal
-        6: Mug
-        7: Bushido
-        8: Throw
-        9: Tools
-        10: Blitz
-        11: Runic
-        12: Lore
-        13: Sketch
-        14: Control
-        15: Slot
-        16: Rage
-        17: Leap
-        18: Mimic
-        19: Dance
-        20: Row
-        21: Defend
-        22: Jump
-        23: Dualcast
-        24: Gil Toss
-        25: Summon
-        26: Pray
-        27: Shock
-        28: Possess
-        29: Magitek
-        255: None
-  - Size: 1
-    Name: VIGOR
-  - Size: 1
-    Name: SPEED
-  - Size: 1
-    Name: STAMINA
-  - Size: 1
-    Name: MAGICPOWER
-  - Size: 1
-    Name: ATTACKPOWER
-  - Size: 1
-    Name: DEFENSE
-  - Size: 1
-    Name: MAGICDEFENSE
-  - Size: 1
-    Name: EVASION
-  - Size: 1
-    Name: MAGICEVASION
-  - Size: 6
-    Type: struct
-    Name: EQUIPMENT
-    Options:
-      Use Offset as Key: n
-    Entries:
-    - Size: 1
-      Values:
-        255: Empty
-  - Size: 1
-    Name: UNKNOWN
+      BONUSHP: !int
+        Size: 1
+      BONUSMP: !int
+        Size: 1
+      COMMANDS: !array
+        Size: 4
+        Item Type: !int
+          Size: 1
+          Values:
+            0: Fight
+            1: Items
+            2: Magic
+            3: Trance
+            4: Revert
+            5: Steal
+            6: Mug
+            7: Bushido
+            8: Throw
+            9: Tools
+            10: Blitz
+            11: Runic
+            12: Lore
+            13: Sketch
+            14: Control
+            15: Slot
+            16: Rage
+            17: Leap
+            18: Mimic
+            19: Dance
+            20: Row
+            21: Defend
+            22: Jump
+            23: Dualcast
+            24: Gil Toss
+            25: Summon
+            26: Pray
+            27: Shock
+            28: Possess
+            29: Magitek
+            255: None
+      VIGOR: !int
+        Size: 1
+      SPEED: !int
+        Size: 1
+      STAMINA: !int
+        Size: 1
+      MAGIC_POWER: !int
+        Size: 1
+      BATTLE_POWER: !int
+        Size: 1
+      DEFENSE: !int
+        Size: 1
+      MAGIC_DEFENSE: !int
+        Size: 1
+      EVASION: !int
+        Size: 1
+      MAGIC_EVASION: !int
+        Size: 1
+      EQUIPMENT: !array
+        Size: 6
+        Item Type: !int
+          Size: 1
+          Values:
+            255: Empty
+      UNKNOWN: !unknown
+        Size: 1
 ...
