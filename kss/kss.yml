@@ -77,15 +77,18 @@ Script Tables:
 ---
 ENTRY_POINT: !assembly
   Offset: 0x008004
+  Size: 0x1AC
   Label States:
     398:
       8 Bit Accum: false
 DECOMP: !assembly
   Offset: 0x00889A
+  Size: 0x16B
   Initial State:
      8 Bit Index: n
 UNKNOWN_DECOMP: !assembly
   Offset: 0x008C92
+  Size: 0x8C
   Initial State:
     8 Bit Accum: n
 SNES_HEADER: !struct
