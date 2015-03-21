@@ -1,0 +1,87 @@
+---
+CPU:
+  Architecture: z80g
+Title: Dragon Warrior Monsters 2: Cobi's Journey
+Country: US
+Platform: gbc
+...
+---
+UNKNOWN_1A00D4: !array
+  Size: 0xF24
+  Offset: 0x1A00D4
+  Item Type: !unknown
+    Size: 17
+ABILITY_REQS: !array
+  Size: 0xBE2
+  Offset: 0x1A0FF8
+  Item Type: !struct
+    Entries:
+      LEVEL: !int
+        Size: 1
+      HP: !int
+        Size: 2
+      MP: !int
+        Size: 2
+      ATTACK: !int
+        Size: 2
+      DEFENSE: !int
+        Size: 2
+      AGILITY: !int
+        Size: 2
+      INTELLIGENCE: !int
+        Size: 2
+      REQUIRED_ABILITIES: !array
+        Size: 5
+        Item Type: !int
+          Size: 1
+STAT_GROWTH_TABLES: !unknown
+  Size: 0xC5F
+  Offset: 0x1A2616
+MONSTER_BASE_STATS: !array
+  Size: 0x3CC5
+  Offset: 0x35033B
+  Item Type: !struct
+    Entries:
+      FAMILY: !int
+        Size: 1
+        Values: &FAMILIES
+          0: Slime
+          1: Dragon
+          2: Beast
+          3: Wing
+          4: Plant
+          5: Bug
+          6: Devil
+          7: Zombie
+          8: Material
+          9: Water
+          10: Boss
+      UNKNOWN: !unknown
+        Size: 5
+      MAX_LEVEL: !int
+        Size: 1
+      GROWTH_RATE: !int
+        Size: 1
+      ABILITIES: !array
+        Size: 3
+        Item Type: !int
+          Size: 1
+      UNKNOWN2: !unknown
+        Size: 1
+      HP: !int
+        Size: 1
+      MP: !int
+        Size: 1
+      ATTACK: !int
+        Size: 1
+      DEFENSE: !int
+        Size: 1
+      AGILITY: !int
+        Size: 1
+      INTELLIGENCE: !int
+        Size: 1
+      RESISTANCES: !unknown
+        Size: 27
+      UNKNOWN3: !unknown
+        Size: 2
+...
