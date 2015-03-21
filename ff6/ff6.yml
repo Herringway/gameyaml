@@ -248,6 +248,118 @@ Script Tables:
       255: e...
 ...
 ---
+ATTACK_ELEMENTAL_TYPE: !int
+  Offset: 0x7E11A1
+  Size: 1
+  Bit Values:
+  - Fire
+  - Ice
+  - Bolt
+  - Poison
+  - Wind
+  - Holy
+  - Earth
+  - Water
+ATTACK_FLAGS: !int
+  Offset: 0x7E11A2
+  Size: 3
+  Bit Values:
+  - Physical or magical damage
+  - Miss if target immune to death
+  - Only target dead or undead targets
+  - Make heal spells damage undead
+  - Randomize target
+  - Ignore defense
+  - Don't split damage in multi-target spells
+  - Abort on allies
+  - Spell is usable outside battle
+  - Ignore reflect
+  - Can learn as Lore
+  - Enable Runic
+  - Quick/Warp flag
+  - Re-target if target is dead
+  - Caster dies after attack
+  - Concern MP
+  - Heal damage
+  - Redirection
+  - Lift status
+  - Toggle status
+  - Stamina used in defense
+  - Can't dodge attack
+  - Use evasion as Lv X Spells
+  - Use HP fraction
+ATTACK_MP_COST: !int
+  Offset: 0x7E11A5
+  Size: 1
+ATTACK_POWER: !int
+  Offset: 0x7E11A6
+  Size: 1
+ATTACK_FLAGS2: !int
+  Offset: 0x7E11A7
+  Size: 1
+  Bit Values:
+  - Miss if immune
+  - Show text
+ATTACK_HIT_RATE: !int
+  Offset: 0x7E11A8
+  Size: 1
+ATTACK_SPECIAL: !int
+  Offset: 0x7E11A9
+  Size: 1
+ATTACK_STATUS: !int
+  Offset: 0x7E11AA
+  Size: 4
+  Bit Values:
+  - Dark
+  - Zombie
+  - Poison
+  - Magitek
+  - Clear
+  - Imp
+  - Petrify
+  - Death
+  - Condemned
+  - Near fatal
+  - Image
+  - Mute
+  - Berserk
+  - Muddle
+  - Seizure
+  - Sleep
+  - Dance
+  - Regen
+  - Slow
+  - Haste
+  - Stop
+  - Shell
+  - Safe
+  - Reflect
+  - Rage
+  - Freeze
+  - Life 3
+  - Morph
+  - Chant
+  - Disappear
+  - Dog block
+  - Float
+ATTACK_STAT_FACTOR: !int
+  Offset: 0x7E11AE
+  Size: 1
+ATTACK_LEVEL_FACTOR: !int
+  Offset: 0x7E11AF
+  Size: 1
+ATTACK_DAMAGE: !int
+  Offset: 0x7E11B0
+  Size: 2
+ACTIVE_BATTLE_FORMATION: !int
+  Offset: 0x7E11E0
+  Size: 2
+BATTLE_BACKGROUND: !int
+  Offset: 0x7E11E2
+  Size: 1
+VELDT_AVAILABLE: !unknown
+  Offset: 0x7E1DDD
+  Size: 0x40
 ACTORS: !array
   Offset: 0x7E1600
   Size: 0x24F
@@ -299,6 +411,88 @@ ACTORS: !array
         Size: 1
       RELIC_2_EQUIPPED: !int
         Size: 1
+GP: !int
+  Offset: 0x7E1860
+  Size: 3
+PLAY_TIME: !struct
+  Offset: 0x7E1863
+  Size: 3
+  Entries:
+    HOURS: !int
+      Size: 1
+    MINUTES: !int
+      Size: 1
+    SECONDS: !int
+      Size: 1
+STEPS_TAKEN: !int
+  Offset: 0x7E1866
+  Size: 3
+ITEM_LIST: !array
+  Size: 0x100
+  Offset: 0x7E1869
+  Item Type: !int
+    Size: 1
+ITEM_QUANTITIES: !array
+  Size: 0x100
+  Offset: 0x7E1969
+  Item Type: !int
+    Size: 1
+# PARTY_MEMBERS: !array
+#   Size: 4
+#   Offset: 0x7E1A69
+#   Item Type: !int
+#     Size: 1
+OBTAINED_ESPERS: !unknown
+  Size: 4
+  Offset: 0x7E1A69
+ACTIVE_PARTY_ID: !int
+  Size: 1
+  Offset: 0x7E1A6D
+  Description: The currently-active party (for multi-party scenarios)
+LEARNED_SPELLS: !unknown
+  Size: 0x288
+  Offset: 0x7E1A6E
+MORPH_TIME_AVAILABLE: !int
+  Size: 1
+  Offset: 0x7E1CF6
+AVAILABLE_SWORD_TECH: !int
+  Size: 1
+  Offset: 0x7E1CF7
+SWORD_TECH_NAMES: !array
+  Size: 0x30
+  Offset: 0x7E1CF8
+  Item Type: !unknown
+    Size: 6
+AVAILABLE_BLITZ: !int
+  Size: 1
+  Offset: 0x7E1D28
+AVAILABLE_LORE: !int
+  Size: 3
+  Offset: 0x7E1D29
+AVAILABLE_RAGE: !unknown
+  Size: 0x20
+  Offset: 0x7E1D2C
+AVAILABLE_DANCE: !int
+  Size: 1
+  Offset: 0x7E1D4C
+RARE_ITEMS: !unknown
+  Size: 4
+  Offset: 0x7E1EBA
+AVAILABLE_CHARACTERS: !unknown
+  Size: 2
+  Offset: 0x7E1EDE
+FLASHBACK_FLAG: !int
+  Size: 1
+  Offset: 0x7E628A
+  Values:
+    0: 'No'
+    1: 'Yes'
+PAUSED_FLAG: !int
+  Size: 1
+  Offset: 0x7E628A
+  Values:
+    0: 'No'
+    1: 'Yes'
 RESET_VECTOR: !assembly
   Offset: 0xC0FF00
   Description: Entry point for execution
