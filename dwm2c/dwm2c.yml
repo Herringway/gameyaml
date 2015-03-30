@@ -34,6 +34,8 @@ ABILITY_REQS: !array
         Size: 5
         Item Type: !int
           Size: 1
+          Values:
+            255: Empty
 STAT_GROWTH_TABLES: !unknown
   Size: 0xC5F
   Offset: 0x1A2616
