@@ -6,14 +6,91 @@ Country: US
 Platform: gbc
 ...
 ---
-UNKNOWN_1A00D4: !array
+MONSTER_MONSTER_COMBO_OFFSETS: !array
+  Size: 1536
+  Item Type: !unknown
+    Size: 2
+  Offset: 0x0E6208
+MONSTER_MONSTER_MATES: !array
+  Size: 2316
+  Item Type: !int
+    Size: 2
+    Values:
+      0xFBFB: Set delimiter + link cable flag
+      0xFDFD: Set delimiter
+      0xFFFF: End of List
+  Offset: 0x0E6508
+MONSTER_MONSTER_RESULTS_OFFSETS: !array
+  Size: 0x300
+  Item Type: !pointer
+    Size: 2
+  Offset: 0x0E6E14
+MONSTER_MONSTER_RESULTS: !array
+  Size: 0x23A
+  Item Type: !int
+    Size: 2
+  Offset: 0x0E7114
+MONSTER_FAMILY_COMBO_OFFSETS: !array
+  Size: 0x300
+  Item Type: !pointer
+    Size: 2
+  Offset: 0x0E734E
+MONSTER_FAMILY_MATES: !array
+  Size: 0x101
+  Item Type: !int
+    Size: 1
+    Values:
+      0xFF: End of List
+  Offset: 0x0E764E
+MONSTER_FAMILY_RESULTS_OFFSETS: !array
+  Size: 0x300
+  Item Type: !pointer
+    Size: 2
+  Offset: 0x0E774F
+MONSTER_FAMILY_RESULTS: !array
+  Size: 0x134
+  Item Type: !int
+    Size: 2
+  Offset: 0x0E7A4F
+FAMILY_MONSTER_COMBO_OFFSETS: !array
+  Size: 22
+  Item Type: !int
+    Size: 2
+  Offset: 0x0E7B83
+FAMILY_MONSTER_MATES: !array
+  Size: 0x226
+  Item Type: !int
+    Size: 2
+  Offset: 0x0E7B99
+FAMILY_MONSTER_RESULTS_OFFSETS: !array
+  Size: 0x16
+  Item Type: !pointer
+    Size: 2
+  Offset: 0x0E7DBF
+FAMILY_MONSTER_RESULTS: !array
+  Size: 0xAE
+  Item Type: !int
+    Size: 2
+  Offset: 0x0E7DD5
+MONSTER_BREEDING_DEFAULTS_POINTERS: !array
+  Size: 22
+  Item Type: !pointer
+    Size: 2
+  Offset: 0x0E7E84
+MONSTER_BREEDING_DEFAULTS: !array
+  Size: 242
+  Item Type: !array
+    Size: 22
+    Item Type: !int
+      Size: 2
+  Offset: 0x0E7E99
+UNKNOWN_1A40D4: !array
   Size: 0xF24
-  Offset: 0x1A00D4
   Item Type: !unknown
     Size: 17
+  Offset: 0x1A40D4
 ABILITY_REQS: !array
   Size: 0xBE2
-  Offset: 0x1A0FF8
   Item Type: !struct
     Entries:
       LEVEL: !int
@@ -44,7 +121,6 @@ UNKNOWN_1A3276: !unknown
   Offset: 0x1A3276
 MONSTER_BASE_STATS: !array
   Size: 0x3CC5
-  Offset: 0x35033B
   Item Type: !struct
     Entries:
       FAMILY: !int
@@ -89,4 +165,5 @@ MONSTER_BASE_STATS: !array
         Size: 27
       UNKNOWN3: !unknown
         Size: 2
+  Offset: 0x35433B
 ...
