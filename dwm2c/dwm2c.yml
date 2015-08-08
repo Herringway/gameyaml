@@ -37,8 +37,11 @@ ABILITY_REQS: !array
           Values:
             255: Empty
 STAT_GROWTH_TABLES: !unknown
-  Size: 0xC5F
+  Size: 0xC60
   Offset: 0x1A2616
+UNKNOWN_1A3276: !unknown
+  Size: 0x80E
+  Offset: 0x1A3276
 MONSTER_BASE_STATS: !array
   Size: 0x3CC5
   Offset: 0x35033B
