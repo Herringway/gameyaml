@@ -6,6 +6,22 @@ Country: US
 Platform: gbc
 ...
 ---
+OASIS_ENCOUNTER_POINTERS: !array
+  Size: 0x80
+  Item Type: !pointer
+    Size: 2
+  Offset: 0x0A5773
+OASIS_ENCOUNTER_DATA: !unknown
+  Size: 0x63
+  Offset: 0x0A57F3
+WELL_ENCOUNTER_POINTERS: !array
+  Size: 0x20
+  Item Type: !pointer
+    Size: 2
+  Offset: 0x0A5856
+WELL_ENCOUNTER_DATA: !unknown
+  Size: 0x63
+  Offset: 0x0A5876
 MONSTER_MONSTER_COMBO_OFFSETS: !array
   Size: 1536
   Item Type: !unknown
