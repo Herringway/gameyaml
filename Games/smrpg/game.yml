@@ -1,0 +1,952 @@
+---
+RESET_VECTOR:
+  Description: "Execution entry point."
+  Type: assembly
+  Offset: 0x00FF90
+  Size: 7
+WAIT_3001:
+  Description: ""
+  Type: assembly
+  Offset: 0x7FF760
+  Size: 6
+UNKNOWN_C00088:
+  Description: ""
+  Type: assembly
+  Offset: 0xC00088
+  Size: 0xB2
+UNKNOWN_C0013A:
+  Description: ""
+  Type: assembly
+  Offset: 0xC0013A
+  Size: 206
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_C00208:
+  Description: ""
+  Type: assembly
+  Offset: 0xC00208
+  Size: 90
+  Initial State:
+    8 Bit Index: false
+UNKNOWN_C00262:
+  Description: ""
+  Type: assembly
+  Offset: 0xC00262
+  Size: 5
+UNKNOWN_C00267:
+  Description: ""
+  Type: assembly
+  Offset: 0xC00267
+  Size: 15
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_C002C3:
+  Description: ""
+  Type: assembly
+  Offset: 0xC002C3
+  Size: 975
+  Initial State:
+    8 Bit Accum: true
+  Labels:
+    - Offset: 0x011
+      Name: UNKNOWN0
+    - Offset: 0x030
+      Name: UNKNOWN1
+    - Offset: 0x03B
+      Name: UNKNOWN2
+    - Offset: 0x07D
+      Name: UNKNOWN3
+    - Offset: 0x083
+      Name: UNKNOWN4
+    - Offset: 0x0DA
+      Name: UNKNOWN5
+    - Offset: 0x118
+      Name: UNKNOWN6
+    - Offset: 0x169
+      Name: UNKNOWN7
+    - Offset: 0x1B1
+      Name: UNKNOWN8
+    - Offset: 0x1DA
+      Name: UNKNOWN9
+    - Offset: 0x1EB
+      Name: UNKNOWN10
+    - Offset: 0x1F0
+      Name: UNKNOWN11
+    - Offset: 0x1F1
+      Name: UNKNOWN12
+    - Offset: 0x1FE
+      Name: UNKNOWN13
+    - Offset: 0x217
+      Name: UNKNOWN14
+    - Offset: 0x21B
+      Name: UNKNOWN15
+    - Offset: 0x21C
+      Name: UNKNOWN16
+    - Offset: 0x239
+      Name: UNKNOWN17
+    - Offset: 0x24F
+      Name: UNKNOWN18
+    - Offset: 0x255
+      Name: UNKNOWN19
+    - Offset: 0x260
+      Name: UNKNOWN20
+    - Offset: 0x268
+      Name: UNKNOWN21
+    - Offset: 0x287
+      Name: UNKNOWN22
+    - Offset: 0x290
+      Name: UNKNOWN23
+    - Offset: 0x29B
+      Name: UNKNOWN24
+    - Offset: 0x2A1
+      Name: UNKNOWN25
+    - Offset: 0x2A7
+      Name: UNKNOWN26
+    - Offset: 0x2B6
+      Name: UNKNOWN27
+    - Offset: 0x320
+      Name: UNKNOWN28
+    - Offset: 0x323
+      Name: UNKNOWN29
+    - Offset: 0x33E
+      Name: UNKNOWN30
+    - Offset: 0x34B
+      Name: UNKNOWN31
+    - Offset: 0x388
+      Name: UNKNOWN32
+    - Offset: 0x389
+      Name: UNKNOWN33
+    - Offset: 0x393
+      Name: UNKNOWN34
+    - Offset: 0x397
+      Name: UNKNOWN35
+    - Offset: 0x39D
+      Name: UNKNOWN36
+    - Offset: 0x3B3
+      Name: UNKNOWN37
+UNKNOWN_C00692:
+  Description: ""
+  Type: assembly
+  Offset: 0xC00692
+  Size: 31
+  Labels:
+    - Offset: 0x1E
+      Name: UNKNOWN0
+UNKNOWN_C00817:
+  Description: ""
+  Type: assembly
+  Offset: 0xC00817
+  Size: 197
+  Initial State:
+    8 Bit Accum: true
+  Labels:
+    - Offset: 0x5E
+      Name: UNKNOWN0
+    - Offset: 0x77
+      Name: UNKNOWN1
+UNKNOWN_C0084D:
+  Description: ""
+  Type: assembly
+  Offset: 0xC0084D
+  Size: 41
+  Initial State:
+    8 Bit Accum: true
+  Labels:
+    - Offset: 0x28
+      Name: UNKNOWN0
+UNKNOWN_C00936:
+  Description: ""
+  Type: assembly
+  Offset: 0xC00936
+  Size: 25
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_C0096C:
+  Description: ""
+  Type: assembly
+  Offset: 0xC0096C
+  Size: 43
+UNKNOWN_C009B4:
+  Description: ""
+  Type: assembly
+  Offset: 0xC009B4
+  Size: 43
+UNKNOWN_C009F2:
+  Description: ""
+  Type: assembly
+  Offset: 0xC009F2
+  Size: 6
+UNKNOWN_C00A88:
+  Description: ""
+  Type: assembly
+  Offset: 0xC00A88
+  Size: 52
+  Initial State:
+    8 Bit Accum: true
+  Labels:
+    - Offset: 0xC
+      Name: UNKNOWN0
+UNKNOWN_C02FBB:
+  Description: ""
+  Type: assembly
+  Offset: 0xC02FBB
+  Size: 59
+UNKNOWN_C02FF6:
+  Description: ""
+  Type: assembly
+  Offset: 0xC02FF6
+  Size: 81
+UNKNOWN_C0359F:
+  Description: ""
+  Type: assembly
+  Offset: 0xC0359F
+  Size: 198
+  Initial State:
+    8 Bit Accum: true
+  Labels:
+    - Offset: 0x11
+      Name: UNKNOWN0
+UNKNOWN_C0656E:
+  Description: ""
+  Type: assembly
+  Offset: 0xC0656E
+  Size: 39
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_C06595:
+  Description: ""
+  Type: assembly
+  Offset: 0xC06595
+  Size: 51
+  Initial State:
+    8 Bit Accum: true
+  Labels:
+    - Offset: 0x12
+      Name: UNKNOWN0
+UNKNOWN_C06671:
+  Description: ""
+  Type: assembly
+  Offset: 0xC06671
+  Size: 69
+  Initial State:
+    8 Bit Accum: true
+    8 Bit Index: false
+UNKNOWN_C06C60:
+  Description: ""
+  Type: assembly
+  Offset: 0xC06C60
+  Size: 39
+  Initial State:
+    8 Bit Accum: true
+    8 Bit Index: false
+UNKNOWN_C07347:
+  Description: ""
+  Type: assembly
+  Offset: 0xC07347
+  Size: 150
+  Labels:
+    - Offset: 0x56
+      Name: UNKNOWN0
+    - Offset: 0x5D
+      Name: UNKNOWN1
+    - Offset: 0x6E
+      Name: UNKNOWN2
+    - Offset: 0x7D
+      Name: UNKNOWN3
+    - Offset: 0x84
+      Name: UNKNOWN4
+    - Offset: 0x8E
+      Name: UNKNOWN5
+UNKNOWN_C0F45F:
+  Description: ""
+  Type: assembly
+  Offset: 0xC0F45F
+  Size: 34
+  Initial State:
+    8 Bit Accum: true
+  Labels:
+    - Offset: 0x21
+      Name: UNKNOWN0
+UNKNOWN_C0F53B:
+  Description: ""
+  Type: assembly
+  Offset: 0xC0F53B
+  Size: 51
+  Initial State:
+    8 Bit Accum: true
+  Labels:
+    - Offset: 0x28
+      Name: UNKNOWN0
+UNKNOWN_C0F54C:
+  Description: ""
+  Type: assembly
+  Offset: 0xC0F54C
+  Size: 34
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_C10658:
+  Description: ""
+  Type: assembly
+  Offset: 0xC10658
+  Size: 100
+BATTLE_FONT_GFX:
+  Type: array
+  Offset: 0xC3F000
+  Description: Battle Numeral/Cursor GFX
+  Size: 3072
+  Item Type:
+    Type: tile
+    Size: 32
+    Format: 4BPPSNES
+BATTLE_FONT_PAL:
+  Type: array
+  Offset: 0xC3FC00
+  Description: Battle Numeral/Cursor GFX Palette
+  Size: 1024
+  Item Type:
+    Type: array
+    Size: 32
+    Item Type:
+      Type: int
+      Size: 2
+UNKNOWN_C40008:
+  Description: ""
+  Type: assembly
+  Offset: 0xC40008
+  Size: 3
+UNKNOWN_C4000B:
+  Description: ""
+  Type: assembly
+  Offset: 0xC4000B
+  Size: 273
+  Labels:
+    - Offset: 0x25
+      Name: UNKNOWN0
+    - Offset: 0x33
+      Name: UNKNOWN1
+    - Offset: 0x52
+      Name: UNKNOWN2
+    - Offset: 0x6A
+      Name: UNKNOWN3
+    - Offset: 0x76
+      Name: UNKNOWN4
+    - Offset: 0x99
+      Name: UNKNOWN5
+    - Offset: 0xB3
+      Name: UNKNOWN6
+    - Offset: 0xC5
+      Name: UNKNOWN7
+    - Offset: 0xF5
+      Name: UNKNOWN8
+UNKNOWN_C4072A:
+  Description: ""
+  Type: assembly
+  Offset: 0xC4072A
+  Size: 0x65
+  Initial State:
+    DBR: 0
+    8 Bit Index: false
+UNKNOWN_C407EC:
+  Description: ""
+  Type: assembly
+  Offset: 0xC407EC
+  Size: 162
+  Initial State:
+    DBR: 0x00
+  Labels:
+    - Offset: 0x15
+      Name: WAIT_APU_BOOT
+    - Offset: 0x23
+      Name: APU_NOT_READY
+    - Offset: 0x2A
+      Name: APU_READY
+    - Offset: 0x3E
+      Name: WAIT_APU_READY
+    - Offset: 0x54
+      Name: TRANSFER_BYTE
+    - Offset: 0x64
+      Name: WAIT_FOR_BYTE_TRANSFER
+    - Offset: 0x82
+      Name: WAIT_APU_FINISHED
+UNKNOWN_C95B39:
+  Description: ""
+  Type: assembly
+  Offset: 0xC95B39
+  Size: 40
+  Initial State:
+    8 Bit Accum: true
+  Labels:
+    - Offset: 0x0D
+      Name: UNKNOWN0
+    - Offset: 0x1A
+      Name: UNKNOWN1
+    - Offset: 0x27
+      Name: UNKNOWN2
+UNKNOWN_C97450:
+  Description: ""
+  Type: assembly
+  Offset: 0xC97450
+  Size: 27
+  Initial State:
+    8 Bit Accum: true
+DIALOGUE:
+  Type: struct
+  Offset: 0xE20000
+  Description: Dialogue
+  Size: 168192
+  Entries:
+    HEADER:
+      Description: "Dialogue header."
+      Type: unknown
+      Size: 8
+    TEXT:
+      Description: "Raw text data."
+      Type: array
+      Item Type:
+        Type: script
+        Terminator: [0]
+UNCOMPRESSED_OBJECT_GFX:
+  Type: array
+  Offset: 0xE80000
+  Description: Uncompressed Object Graphics
+  Size: 720896
+  Item Type:
+    Type: tile
+    Size: 32
+    Format: 4BPPSNES
+UNKNOWN_F90000:
+  Description: ""
+  Type: unknown
+  Offset: 0xF90000
+  Size: 0x26
+ENEMY_STATS_PTRS:
+  Type: array
+  Offset: 0xF90026
+  Description: Pointers to enemy stats entries
+  Size: 0x200
+  Item Type:
+    Type: pointer
+    Size: 2
+    Base: 0xF90000
+ENEMY_STATS:
+  Type: array
+  Offset: 0xF90226
+  Description: Enemy Statistics
+  Size: 4096
+  Item Type:
+    Type: struct
+    Entries:
+      HP:
+        Description: "Enemy's HP."
+        Type: int
+        Size: 2
+      SPEED:
+        Description: "Enemy's speed."
+        Type: int
+        Size: 1
+      ATTACK:
+        Description: "Enemy's attack."
+        Type: int
+        Size: 1
+      DEFENSE:
+        Description: "Enemy's defense."
+        Type: int
+        Size: 1
+      MAGIC_ATTACK:
+        Description: "Enemy's magic attack."
+        Type: int
+        Size: 1
+      MAGIC_DEFENSE:
+        Description: "Enemy's magic defense."
+        Type: int
+        Size: 1
+      FP:
+        Description: "Enemy's flower points."
+        Type: int
+        Size: 1
+      EVADE:
+        Description: "Enemy's evasion."
+        Type: int
+        Size: 1
+      MAGIC_EVADE:
+        Description: "Enemy's magic evasion."
+        Type: int
+        Size: 1
+      SPECIAL_ATTRIBUTES:
+        Description: "Enemy's special attributes."
+        Type: int
+        Size: 2
+        Bit Values:
+          - Enemy Removed By Script
+          - Unknown
+          - Invincible
+          - Instant Death Protection
+          - Unknown2
+          - Unknown3
+          - Unknown4
+          - Unknown5
+          - Unknown6
+          - Unknown7
+          - Morph Chance Bit 1
+          - Morph Chance Bit 2
+          - Attack Sound Bit 1
+          - Attack Sound Bit 2
+          - Attack Sound Bit 3
+          - Attack Sound Bit 4
+      ELEMENTAL_RESISTANCES:
+        Description: "Enemy's elemental resistances."
+        Type: int
+        Size: 1
+        Bit Values:
+          - Unknown1
+          - Unknown2
+          - Unknown3
+          - Unknown4
+          - Ice
+          - Thunder
+          - Fire
+          - Earth
+      ELEMENTAL_WEAKNESSES:
+        Description: "Enemy's elemental weaknesses."
+        Type: int
+        Size: 1
+        Bit Values:
+          - Unknown1
+          - Unknown2
+          - Unknown3
+          - Unknown4
+          - Ice
+          - Thunder
+          - Fire
+          - Earth
+      STATUS_RESISTANCES:
+        Description: "Enemy's status resistances."
+        Type: int
+        Size: 1
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 1
+ENEMY_SCRIPT_PTRS:
+  Description: "Pointers to enemy AI scripts."
+  Type: array
+  Offset: 0xF930AA
+  Size: 512
+  Item Type:
+    Type: pointer
+    Size: 2
+    Base: 0xF90000
+ENEMY_SCRIPTS:
+  Description: "Raw AI script data."
+  Type: array
+  Offset: 0xF932AA
+  Size: 0x274A
+  Item Type:
+    Type: struct
+    Entries:
+      NORMAL_SCRIPT:
+        Description: "Script run when enemy's turn comes up."
+        Type: script
+        Terminator: [0xFF]
+        Charset: battlescript
+      COUNTER_SCRIPT:
+        Description: "Script run in response to attacks."
+        Type: script
+        Terminator: [0xFF]
+        Charset: battlescript
+ABILITY_NAMES:
+  Type: array
+  Offset: 0xF959F4
+  Description: Enemy Ability Names
+  Size: 2912
+  Item Type:
+    Type: script
+    Size: 13
+BATTLE_DIALOGUE_PTRS:
+  Type: array
+  Offset: 0xF96554
+  Description: Pointers to Enemy Battle Dialogue
+  Size: 512
+  Item Type:
+    Type: pointer
+    Base: 0xF90000
+    Size: 2
+BATTLE_DIALOGUE:
+  Type: array
+  Offset: 0xF96754
+  Description: Enemy Battle Dialogue
+  Size: 11133
+  Item Type:
+    Type: script
+    Terminator: [0]
+ENEMY_NAMES:
+  Type: array
+  Offset: 0xF992D1
+  Description: Enemy Names
+  Size: 3328
+  Item Type:
+    Type: script
+    Size: 13
+PSYCHO_PTRS:
+  Type: array
+  Offset: 0xF99FD1
+  Description: Psychopath Message Pointers
+  Size: 512
+  Item Type:
+    Type: pointer
+    Size: 2
+PSYCHO_MESSAGES:
+  Type: array
+  Offset: 0xF9A1D1
+  Description: Psychopath Messages
+  Size: 5235
+  Item Type:
+    Type: script
+    Terminator: [0x02, 0x00]
+BATTLEFIELD_LAYOUT:
+  Type: array
+  Offset: 0xF9B644
+  Description: Layout data for each battlefield
+  Size: 768
+  Item Type:
+    Type: struct
+    Entries:
+      GFX_SETS:
+        Description: "Sets of graphics to load."
+        Type: array
+        Size: 5
+        Item Type:
+          Type: int
+          Size: 1
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 1
+      BG1_TILESET:
+        Description: "Tileset to use for the BG1 layer."
+        Type: int
+        Size: 1
+      PALETTE_ID:
+        Description: "Palette to load."
+        Type: int
+        Size: 1
+MONSTER_TARGETTING_COORDS:
+  Type: unknown
+  Offset: 0xF9B944
+  Description: Coordinates for targetting each monster
+  Size: 256
+MAP_BATTLEFIELDS:
+  Type: array
+  Offset: 0xF9BA44
+  Description: Battlefields for each area map
+  Size: 256
+  Item Type:
+    Type: array
+    Size: 4
+    Item Type:
+      Type: int
+      Size: 1
+FLOWER_BONUSES:
+  Type: unknown
+  Offset: 0xF9BB44
+  Description: Flower bonuses for each monster
+  Size: 256
+UNKNOWN_F9BC44:
+  Description: ""
+  Type: unknown
+  Offset: 0xF9BC44
+  Size: 19
+NULL_F9BC57:
+  Description: ""
+  Type: empty
+  Offset: 0xF9BC57
+  Size: 937
+MONSTER_FORMATIONS:
+  Type: array
+  Offset: 0xF9C000
+  Description: Monster Formations
+  Size: 13312
+  Item Type:
+    Type: unknown
+    Size: 26
+NULL_F9F400:
+  Description: "Nothing"
+  Type: empty
+  Offset: 0xF9F400
+  Size: 3072
+INITIAL_STATS_PTR:
+  Description: "Pointer to initial stats."
+  Type: pointer
+  Offset: 0xFA0000
+  Size: 2
+FA0002_PTR:
+  Description: ""
+  Type: pointer
+  Offset: 0xFA0002
+  Size: 2
+ITEM_STATS_PTR:
+  Description: "Pointer to item stats table."
+  Type: pointer
+  Offset: 0xFA0004
+  Size: 2
+CHARACTER_NAME_PTR:
+  Description: "Pointer to character names."
+  Type: pointer
+  Offset: 0xFA0006
+  Size: 2
+SPELL_NAME_PTR:
+  Description: "Pointer to spell names."
+  Type: pointer
+  Offset: 0xFA0008
+  Size: 2
+ITEM_NAME_PTR:
+  Description: "Pointer to item names."
+  Type: pointer
+  Offset: 0xFA000A
+  Size: 2
+LEVEL_UP_XP_PTR:
+  Description: "Pointer to level-up EXP table."
+  Type: pointer
+  Offset: 0xFA000C
+  Size: 2
+LEVEL_UP_STATUS_PTR:
+  Description: "Pointer"
+  Type: pointer
+  Offset: 0xFA000E
+  Size: 2
+LEVEL_UP_BONUSES_PTR:
+  Description: "Pointer to level-up bonuses table."
+  Type: pointer
+  Offset: 0xFA0010
+  Size: 2
+MAGIC_STATS_PTR:
+  Description: "Pointer to magic stats."
+  Type: pointer
+  Offset: 0xFA0012
+  Size: 2
+BATTLE_MESSAGES_PTR:
+  Description: "Pointer to battle messages."
+  Type: pointer
+  Offset: 0xFA0014
+  Size: 2
+FA0016_PTR:
+  Description: ""
+  Type: pointer
+  Offset: 0xFA0016
+  Size: 2
+MAGIC_DESCRIPTIONS_PTR:
+  Description: "Pointer to magic descriptions."
+  Type: pointer
+  Offset: 0xFA0018
+  Size: 2
+ITEM_DESCRIPTIONS_PTR:
+  Description: "Pointer to item descriptions."
+  Type: pointer
+  Offset: 0xFA001A
+  Size: 2
+SHOP_PRICES_PTR:
+  Description: "Pointer to shop price table."
+  Type: pointer
+  Offset: 0xFA001C
+  Size: 2
+FA001E_PTR:
+  Description: ""
+  Type: pointer
+  Offset: 0xFA001E
+  Size: 2
+LEVEL_UP_SPELLS_PTR:
+  Description: "Pointer to level-up spell table."
+  Type: pointer
+  Offset: 0xFA0020
+  Size: 2
+FA0022_PTR:
+  Description: ""
+  Type: pointer
+  Offset: 0xFA0022
+  Size: 2
+FA0024_PTR:
+  Description: ""
+  Type: pointer
+  Offset: 0xFA0024
+  Size: 2
+WEAPON_TIMING_PTR:
+  Description: "Pointer to weapon timing data."
+  Type: pointer
+  Offset: 0xFA0026
+  Size: 2
+FA0028_PTR:
+  Description: ""
+  Type: pointer
+  Offset: 0xFA0028
+  Size: 2
+SHOP_STATS_PTR:
+  Description: "Pointer to shop stats."
+  Type: pointer
+  Offset: 0xFA002A
+  Size: 2
+INITIAL_STATS:
+  Type: array
+  Offset: 0xFA002C
+  Description: Characters' initial stats.
+  Size: 96
+  Item Type:
+    Type: unknown
+    Size: 16
+UNKNOWN_FA008C:
+  Description: ""
+  Type: unknown
+  Offset: 0xFA008C
+  Size: 4
+STARTING_ITEMS:
+  Type: array
+  Offset: 0xFA0090
+  Description: Items Mario's party begins the game with.
+  Size: 75
+  Item Type:
+    Type: unknown
+    Size: 75
+STARTING_MISC:
+  Type: struct
+  Offset: 0xFA00DB
+  Description: Miscellaneous things Mario's party begins the game with.
+  Size: 5
+  Entries:
+    COINS:
+      Description: "Coins Mario's party begins with."
+      Type: int
+      Size: 2
+    FP:
+      Description: "FP Mario's party begins with."
+      Type: int
+      Size: 1
+    FP_MAX:
+      Description: "Maximum FP Mario's party begins with."
+      Type: int
+      Size: 1
+    FROG_COINS:
+      Description: "Frog coins Mario's party begins with."
+      Type: int
+      Size: 1
+UNKNOWN_FA00E0:
+  Description: ""
+  Type: unknown
+  Offset: 0xFA00E0
+  Size: 109
+ITEM_STATS:
+  Type: array
+  Offset: 0xFA014D
+  Description: Item Stats.
+  Size: 4608
+  Item Type:
+    Type: unknown
+    Size: 18
+CHARACTER_NAMES:
+  Description: "Names of playable characters."
+  Type: array
+  Offset: 0xFA134D
+  Size: 50
+  Item Type:
+    Type: script
+    Size: 10
+SPELL_NAMES:
+  Description: "Names of spells."
+  Type: array
+  Offset: 0xFA137F
+  Size: 1920
+  Item Type:
+    Type: script
+    Size: 15
+EXPERIENCE_TABLE:
+  Type: struct
+  Offset: 0xFA1AFF
+  Description: Experience needed to level up.
+  Size: 58
+  Entries:
+    UNKNOWN:
+      Description: ""
+      Type: int
+      Size: 2
+STAT_MODS:
+  Description: "Stat modifiers?"
+  Type: array
+  Offset: 0xFA1B39
+  Size: 435
+  Item Type:
+    Type: array
+    Size: 15
+    Item Type:
+      Type: unknown
+      Size: 3
+  Labels:
+    - Offset: 0
+      Name: MARIO
+    - Offset: 3
+      Name: TOADSTOOL
+    - Offset: 6
+      Name: BOWSER
+    - Offset: 9
+      Name: GENO
+    - Offset: 12
+      Name: MALLOW
+# 0000HHHH MMMMNNNN AAAADDDD
+# H - HP, M - MAG ATK, N - MAG DEF, A - ATK, D - DEF
+SPELL_DESCRIPTIONS_PTRS:
+  Description: "Pointers to spell descriptions."
+  Type: array
+  Offset: 0xFA2B80
+  Size: 0x36
+  Item Type:
+    Type: pointer
+    Base: 0xFA0000
+    Size: 2
+SPELL_DESCRIPTIONS:
+  Description: "Descriptions of spells."
+  Type: array
+  Offset: 0xFA2BB6
+  Size: 874
+  Item Type:
+    Type: script
+    Terminator: [0]
+ITEM_DESCRIPTIONS_PTRS:
+  Description: "Pointers to item descriptions."
+  Type: array
+  Offset: 0xFA2F20
+  Size: 0x200
+  Item Type:
+    Type: pointer
+    Base: 0xFA0000
+    Size: 2
+ITEM_DESCRIPTIONS:
+  Description: "Text data describing items."
+  Type: array
+  Offset: 0xFA3120
+  Size: 0xFD2
+  Item Type:
+    Type: script
+    Terminator: [0]
+ITEM_NAMES:
+  Description: "Names of items."
+  Type: array
+  Offset: 0xFA46EF
+  Size: 0xF00
+  Item Type:
+    Type: script
+    Size: 0xF
+MAP_STRING_PTRS:
+  Description: "Pointers to map strings."
+  Type: array
+  Offset: 0xFEFD00
+  Size: 0x80
+  Item Type:
+    Type: pointer
+    Base: 0xFEFD80
+    Size: 2
+MAP_STRINGS:
+  Description: "Map strings."
+  Type: array
+  Offset: 0xFEFD80
+  Size: 0x1A1
+  Item Type:
+    Type: script
+    Terminator: [6]
+...

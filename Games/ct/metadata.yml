@@ -1,0 +1,156 @@
+---
+Platform: snes
+Title: Chrono Trigger
+Country: US
+Version: v1.0
+SHA256: 06D1C2B06B716052C5596AAA0C2E5632A027FEE1A9A28439E509F813C30829A9
+Default Script: Text
+Script Tables:
+  Text:
+    - Sequence: [0x00]
+      Replacement: ''
+    - Sequence: [0x2F]
+      Replacement: ★
+    - Sequence: [0xA0]
+      Replacement: A
+    - Sequence: [0xA1]
+      Replacement: B
+    - Sequence: [0xA2]
+      Replacement: C
+    - Sequence: [0xA3]
+      Replacement: D
+    - Sequence: [0xA4]
+      Replacement: E
+    - Sequence: [0xA5]
+      Replacement: F
+    - Sequence: [0xA6]
+      Replacement: G
+    - Sequence: [0xA7]
+      Replacement: H
+    - Sequence: [0xA8]
+      Replacement: I
+    - Sequence: [0xA9]
+      Replacement: J
+    - Sequence: [0xAA]
+      Replacement: K
+    - Sequence: [0xAB]
+      Replacement: L
+    - Sequence: [0xAC]
+      Replacement: M
+    - Sequence: [0xAD]
+      Replacement: 'N'
+    - Sequence: [0xAE]
+      Replacement: O
+    - Sequence: [0xAF]
+      Replacement: P
+    - Sequence: [0xB0]
+      Replacement: Q
+    - Sequence: [0xB1]
+      Replacement: R
+    - Sequence: [0xB2]
+      Replacement: S
+    - Sequence: [0xB3]
+      Replacement: T
+    - Sequence: [0xB4]
+      Replacement: U
+    - Sequence: [0xB5]
+      Replacement: V
+    - Sequence: [0xB6]
+      Replacement: W
+    - Sequence: [0xB7]
+      Replacement: X
+    - Sequence: [0xB8]
+      Replacement: 'Y'
+    - Sequence: [0xB9]
+      Replacement: Z
+    - Sequence: [0xBA]
+      Replacement: a
+    - Sequence: [0xBB]
+      Replacement: b
+    - Sequence: [0xBC]
+      Replacement: c
+    - Sequence: [0xBD]
+      Replacement: d
+    - Sequence: [0xBE]
+      Replacement: e
+    - Sequence: [0xBF]
+      Replacement: f
+    - Sequence: [0xC0]
+      Replacement: g
+    - Sequence: [0xC1]
+      Replacement: h
+    - Sequence: [0xC2]
+      Replacement: i
+    - Sequence: [0xC3]
+      Replacement: j
+    - Sequence: [0xC4]
+      Replacement: k
+    - Sequence: [0xC5]
+      Replacement: l
+    - Sequence: [0xC6]
+      Replacement: m
+    - Sequence: [0xC7]
+      Replacement: 'n'
+    - Sequence: [0xC8]
+      Replacement: o
+    - Sequence: [0xC9]
+      Replacement: p
+    - Sequence: [0xCA]
+      Replacement: q
+    - Sequence: [0xCB]
+      Replacement: r
+    - Sequence: [0xCC]
+      Replacement: s
+    - Sequence: [0xCD]
+      Replacement: t
+    - Sequence: [0xCE]
+      Replacement: u
+    - Sequence: [0xCF]
+      Replacement: v
+    - Sequence: [0xD0]
+      Replacement: w
+    - Sequence: [0xD1]
+      Replacement: x
+    - Sequence: [0xD2]
+      Replacement: 'y'
+    - Sequence: [0xD3]
+      Replacement: z
+    - Sequence: [0xD4]
+      Replacement: "0"
+    - Sequence: [0xD5]
+      Replacement: "1"
+    - Sequence: [0xD6]
+      Replacement: "2"
+    - Sequence: [0xD7]
+      Replacement: "3"
+    - Sequence: [0xD8]
+      Replacement: "4"
+    - Sequence: [0xD9]
+      Replacement: "5"
+    - Sequence: [0xDA]
+      Replacement: "6"
+    - Sequence: [0xDB]
+      Replacement: "7"
+    - Sequence: [0xDC]
+      Replacement: "8"
+    - Sequence: [0xDD]
+      Replacement: "9"
+    - Sequence: [0xDE]
+      Replacement: '!'
+    - Sequence: [0xDF]
+      Replacement: '?'
+    - Sequence: [0xE0]
+      Replacement: /
+    - Sequence: [0xE4]
+      Replacement: '&'
+    - Sequence: [0xE7]
+      Replacement: "'"
+    - Sequence: [0xE8]
+      Replacement: '.'
+    - Sequence: [0xEB]
+      Replacement: '-'
+    - Sequence: [0xEF]
+      Replacement: ' '
+    - Sequence: [0xFF]
+      Replacement: ' '
+...

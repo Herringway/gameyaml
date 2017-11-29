@@ -1,0 +1,706 @@
+---
+CPU:
+  Localvars: directpage
+  Coprocessor: SA-1
+Platform: snes
+Title: Super Mario RPG
+Country: US
+Default Script: dialoguetext
+Version: v1.0
+SHA256: 740646F3535BFB365CA44E70D46AB433467B142BD84010393070BD0B141AF853
+Script Tables:
+  battlescript:
+    - Sequence: [0x00]
+      Replacement: "Stationary attack\n"
+    - Sequence: [0x01]
+      Replacement: "Normal attack\n"
+    - Sequence: [0x02]
+      Replacement: "High jump attack\n"
+    - Sequence: [0x03]
+      Replacement: "Normal attack\n"
+    - Sequence: [0x04]
+      Replacement: "Normal attack\n"
+    - Sequence: [0x05]
+      Replacement: "After-images\n"
+    - Sequence: [0x06]
+      Replacement: "Spin attack\n"
+    - Sequence: [0x07]
+      Replacement: "Don't move\n"
+    - Sequence: [0x08]
+      Replacement: "Dive underground\n"
+    - Sequence: [0x09]
+      Replacement: "Charge\n"
+    - Sequence: [0x0A]
+      Replacement: "Levitate attack\n"
+    - Sequence: [0x0B]
+      Replacement: "High jump attack\n"
+    - Sequence: [0x0C]
+      Replacement: "Teleport attack\n"
+    - Sequence: [0x0D]
+      Replacement: "Short jump attack\n"
+    - Sequence: [0x0E]
+      Replacement: "Croco charge\n"
+    - Sequence: [0x0F]
+      Replacement: "Shoulder charge\n"
+    - Sequence: [0x10]
+      Replacement: "Small spike shot\n"
+    - Sequence: [0x11]
+      Replacement: "Thornet\n"
+    - Sequence: [0x12]
+      Replacement: "Large spike shot\n"
+    - Sequence: [0x13]
+      Replacement: "Funguspike\n"
+    - Sequence: [0x14]
+      Replacement: "Knife throw\n"
+    - Sequence: [0x15]
+      Replacement: "Shuriken throw\n"
+    - Sequence: [0x16]
+      Replacement: "Full House\n"
+    - Sequence: [0x17]
+      Replacement: "Wild Card\n"
+    - Sequence: [0x18]
+      Replacement: "Royal Flush\n"
+    - Sequence: [0x19]
+      Replacement: "Bomb throw\n"
+    - Sequence: [0x1A]
+      Replacement: "Spritz Bomb\n"
+    - Sequence: [0x1B]
+      Replacement: "Black rock throw\n"
+    - Sequence: [0x1C]
+      Replacement: "Black rock throw, approach\n"
+    - Sequence: [0x1D]
+      Replacement: "Bullet bill shot\n"
+    - Sequence: [0x1E]
+      Replacement: "Blazer\n"
+    - Sequence: [0x1F]
+      Replacement: "Raspberry orb shot\n"
+    - Sequence: [0x20]
+      Replacement: "Smithy's finger shot\n"
+    - Sequence: [0x21]
+      Replacement: "Echofinder\n"
+    - Sequence: [0x22]
+      Replacement: "S'crow Bell\n"
+    - Sequence: [0x23]
+      Replacement: "Doom Reverb\n"
+    - Sequence: [0x24]
+      Replacement: "Spore Chimes\n"
+    - Sequence: [0x25]
+      Replacement: "Ink Blast\n"
+    - Sequence: [0x26]
+      Replacement: "Gunk Ball\n"
+    - Sequence: [0x27]
+      Replacement: "Endobubble\n"
+    - Sequence: [0x28]
+      Replacement: "Water drop\n"
+    - Sequence: [0x29]
+      Replacement: "Sleep-Sauce\n"
+    - Sequence: [0x2A]
+      Replacement: "Venom Drool\n"
+    - Sequence: [0x2B]
+      Replacement: "Mush Funk\n"
+    - Sequence: [0x2C]
+      Replacement: "S'crow Funk\n"
+    - Sequence: [0x2D]
+      Replacement: "Stench\n"
+    - Sequence: [0x2E]
+      Replacement: "Throw hammer\n"
+    - Sequence: [0x2F]
+      Replacement: "Throw hammer (Fear)\n"
+    - Sequence: [0x30]
+      Replacement: "Viro Plasm\n"
+    - Sequence: [0x31]
+      Replacement: "Psycho Plasm\n"
+    - Sequence: [0x32]
+      Replacement: "Light ball (Mute)\n"
+    - Sequence: [0x33]
+      Replacement: "Light ball (Sleep)\n"
+    - Sequence: [0x34]
+      Replacement: "Pollen Nap\n"
+    - Sequence: [0x35]
+      Replacement: "S'crow Dust\n"
+    - Sequence: [0x36]
+      Replacement: "Sporocyst\n"
+    - Sequence: [0x37]
+      Replacement: "Toxicyst\n"
+    - Sequence: [0x38]
+      Replacement: "Throw bone, approach\n"
+    - Sequence: [0x39]
+      Replacement: "Throw bone\n"
+    - Sequence: [0x3A]
+      Replacement: "Lulla-Bye\n"
+    - Sequence: [0x3B]
+      Replacement: "Elegy\n"
+    - Sequence: [0x3C]
+      Replacement: "Backfire\n"
+    - Sequence: [0x3D]
+      Replacement: "Va Va Voom\n"
+    - Sequence: [0x3E]
+      Replacement: "Fun'n'Run\n"
+    - Sequence: [0x3F]
+      Replacement: "Body Slam\n"
+    - Sequence: [0x40]
+      Replacement: "Howl\n"
+    - Sequence: [0x41]
+      Replacement: "Scream\n"
+    - Sequence: [0x42]
+      Replacement: "Iron Maiden\n"
+    - Sequence: [0x43]
+      Replacement: "Fangs\n"
+    - Sequence: [0x44]
+      Replacement: "Poison\n"
+    - Sequence: [0x45]
+      Replacement: "Carni-Kiss\n"
+    - Sequence: [0x46]
+      Replacement: "Claw\n"
+    - Sequence: [0x47]
+      Replacement: "Grinder\n"
+    - Sequence: [0x48]
+      Replacement: "Dark Claw\n"
+    - Sequence: [0x49]
+      Replacement: "Scythe\n"
+    - Sequence: [0x4A]
+      Replacement: "Sickle\n"
+    - Sequence: [0x4B]
+      Replacement: "Deathsickle\n"
+    - Sequence: [0x4C]
+      Replacement: "Eerie Jig\n"
+    - Sequence: [0x4D]
+      Replacement: "Somnus Waltz\n"
+    - Sequence: [0x4E]
+      Replacement: "Dahlia Dance\n"
+    - Sequence: [0x4F]
+      Replacement: "Skewer\n"
+    - Sequence: [0x50]
+      Replacement: "Pierce\n"
+    - Sequence: [0x51]
+      Replacement: "Smithy Tank Head bullet\n"
+    - Sequence: [0x52]
+      Replacement: "Magnum\n"
+    - Sequence: [0x53]
+      Replacement: "Psyche!\n"
+    - Sequence: [0x54]
+      Replacement: "Migraine\n"
+    - Sequence: [0x55]
+      Replacement: "Bob-omb self-destruct\n"
+    - Sequence: [0x56]
+      Replacement: "Microbomb self-destruct\n"
+    - Sequence: [0x57]
+      Replacement: "Multistrike\n"
+    - Sequence: [0x58]
+      Replacement: "Flutter Hush\n"
+    - Sequence: [0x59]
+      Replacement: "Geno Clone attack\n"
+    - Sequence: [0x5A]
+      Replacement: "Mario Clone attack\n"
+    - Sequence: [0x5B]
+      Replacement: "Toadstool 2 sleep attack\n"
+    - Sequence: [0x5C]
+      Replacement: "Fear Roulette\n"
+    - Sequence: [0x5D]
+      Replacement: "Smithy Form 1 hammer attack\n"
+    - Sequence: [0x5E]
+      Replacement: "Attack\n"
+    - Sequence: [0x5F]
+      Replacement: "Smithy Body hammer attack\n"
+    - Sequence: [0x60]
+      Replacement: "Hammer Time\n"
+    - Sequence: [0x61]
+      Replacement: "Valor Up\n"
+    - Sequence: [0x62]
+      Replacement: "Terrapin attack\n"
+    - Sequence: [0x63]
+      Replacement: "Last Shot!\n"
+    - Sequence: [0x64]
+      Replacement: "Bowser claw strike\n"
+    - Sequence: [0x65]
+      Replacement: "Bowser spike shot\n"
+    - Sequence: [0x66]
+      Replacement: "Bowyer Button A lock\n"
+    - Sequence: [0x67]
+      Replacement: "Bowyer Button Y lock\n"
+    - Sequence: [0x68]
+      Replacement: "Bowyer Button X lock\n"
+    - Sequence: [0x69]
+      Replacement: "Bowyer arrow shot\n"
+    - Sequence: [0x6A]
+      Replacement: "G'night\n"
+    - Sequence: [0x6B]
+      Replacement: "Shyguy slingshot\n"
+    - Sequence: [0x6C]
+      Replacement: "Heavy Troopa launch\n"
+    - Sequence: [0x6D]
+      Replacement: "Chomp\n"
+    - Sequence: [0x6E]
+      Replacement: "Get Tough!\n"
+    - Sequence: [0x6F]
+      Replacement: "Mukumuku attack\n"
+    - Sequence: [0x70]
+      Replacement: "Missed Me!\n"
+    - Sequence: [0x71]
+      Replacement: "Mukumuku attack\n"
+    - Sequence: [0x72]
+      Replacement: "Loco Express\n"
+    - Sequence: [0x73]
+      Replacement: "3 egg shot\n"
+    - Sequence: [0x74]
+      Replacement: "1 egg shot, ricochet\n"
+    - Sequence: [0x75]
+      Replacement: "Self-destruct, slow\n"
+    - Sequence: [0x76]
+      Replacement: "Eggbert self-destruct\n"
+    - Sequence: [0x77]
+      Replacement: "Jinxed\n"
+    - Sequence: [0x78]
+      Replacement: "Triple Kick\n"
+    - Sequence: [0x79]
+      Replacement: "Quicksilver\n"
+    - Sequence: [0x7A]
+      Replacement: "Bombs Away\n"
+    - Sequence: [0x7B]
+      Replacement: "Vigor Up\n"
+    - Sequence: [0x7C]
+      Replacement: "Intro Goomba attack\n"
+    - Sequence: [0x7D]
+      Replacement: "Silver Bullet\n"
+    - Sequence: [0x7E]
+      Replacement: "Terrapunch\n"
+    - Sequence: [0x7F]
+      Replacement: "S'crow Fangs\n"
+    - Sequence: [0x80]
+      Replacement: "Shaker\n"
+    - Sequence: [0xE0, "XX", "XX", "XX"]
+      Replacement: "Use Random Attack: [01]/[02]/[03]\n"
+    - Sequence: [0xE1, "XX"]
+      Replacement: "Unknown (E1)\n"
+    - Sequence: [0xE2, "XX"]
+      Replacement: "Targetting: [01]\n"
+    - Sequence: [0xE3, "XX"]
+      Replacement: "Battle Dialogue: [01]\n"
+    - Sequence: [0xE4, "XX"]
+      Replacement: "Unknown (E4)\n"
+    - Sequence: [0xE5, "XX"]
+      Replacement: "Event: [01]\n"
+    - Sequence: [0xE6, "XX"]
+      Replacement: "[01] $[02]\n"
+    - Sequence: [0xE7, "XX", "XX", "XX"]
+      Replacement: "[01] Var [02]: [03]\n"
+    - Sequence: [0xE8, "XX"]
+      Replacement: "Unset [01]\n"
+    - Sequence: [0xE9, "XX"]
+      Replacement: "Unknown (E9)\n"
+    - Sequence: [0xEA, "XX", "XX"]
+      Replacement: "[01] target: [02]\n"
+    - Sequence: [0xEB, "XX", "XX"]
+      Replacement: "Set invincibility for: [01]\n"
+    - Sequence: [0xEC]
+      Replacement: "Exit Battle\n"
+    - Sequence: [0xED, "XX"]
+      Replacement: "rand(0,[01])\n"
+    - Sequence: [0xEF, "XX"]
+      Replacement: "Use Spell: [01]\n"
+    - Sequence: [0xF0, "XX", "XX", "XX"]
+      Replacement: "Use Random Spell: [01]/[02]/[03]\n"
+    - Sequence: [0xF1, "XX"]
+      Replacement: "Animation: [01]\n"
+    - Sequence: [0xF2, "XX", "XX"]
+      Replacement: "[02] becomes [01]\n"
+    - Sequence: [0xF3, "XX", "XX"]
+      Replacement: "[01] command [02]\n"
+    - Sequence: [0xF4, "XX", "XX", "XX"]
+      Replacement: "[01] inventory\n"
+    - Sequence: [0xF5, "XX"]
+      Replacement: "Unknown (F5)\n"
+    - Sequence: [0xF6, "XX"]
+      Replacement: "Unknown (F6)\n"
+    - Sequence: [0xF7, "XX"]
+      Replacement: "Unknown (F7)\n"
+    - Sequence: [0xF8, "XX"]
+      Replacement: "Unknown (F8)\n"
+    - Sequence: [0xF9, "XX"]
+      Replacement: "Unknown (F9)\n"
+    - Sequence: [0xFA, "XX"]
+      Replacement: "Unknown (FA)\n"
+    - Sequence: [0xFB, "XX"]
+      Replacement: "Unknown (FB)\n"
+    - Sequence: [0xFC, "XX", "XX", "XX"]
+      Replacement: "If ([01] [02] [03])\n"
+    - Sequence: [0xFD]
+      Replacement: "Wait until next turn\n"
+    - Sequence: [0xFE]
+      Replacement: "End if, Return to beginning\n"
+    - Sequence: [0xFF]
+      Replacement: "\n\n"
+  dialoguetext:
+    - Sequence: [0x00]
+      Replacement: ""
+    - Sequence: [0x01]
+      Replacement: "\n"
+    - Sequence: [0x04]
+      Replacement: ""
+    - Sequence: [0x06]
+      Replacement: "\n"
+    - Sequence: [0x08]
+      Replacement: "\n"
+    - Sequence: [0x09, "XX"]
+    - Sequence: [0x0B, "XX"]
+    - Sequence: [0x0C]
+      Replacement: ""
+    - Sequence: [0x0D, "XX"]
+    - Sequence: [0x0E]
+      Replacement: ' the'
+    - Sequence: [0x0F]
+      Replacement: ' you'
+    - Sequence: [0x10]
+      Replacement: in
+    - Sequence: [0x11]
+      Replacement: ' to '
+    - Sequence: [0x12]
+      Replacement: '''s '
+    - Sequence: [0x13]
+      Replacement: Mario
+    - Sequence: [0x14]
+      Replacement: ' I '
+    - Sequence: [0x15]
+      Replacement: ' and '
+    - Sequence: [0x16]
+      Replacement: 'is '
+    - Sequence: [0x17]
+      Replacement: ' so'
+    - Sequence: [0x1C, "XX"]
+    - Sequence: [0x20]
+      Replacement: ' '
+    - Sequence: [0x21]
+      Replacement: '!'
+    - Sequence: [0x22]
+      Replacement: '"'
+    - Sequence: [0x23]
+      Replacement: '"'
+    - Sequence: [0x24]
+      Replacement: "~"
+    - Sequence: [0x25]
+      Replacement: "\u266A"
+    - Sequence: [0x27]
+      Replacement: ''''
+    - Sequence: [0x28]
+      Replacement: (
+    - Sequence: [0x29]
+      Replacement: )
+    - Sequence: [0x2B]
+      Replacement: "\u2026"
+    - Sequence: [0x2C]
+      Replacement: ','
+    - Sequence: [0x2E]
+      Replacement: .
+    - Sequence: [0x2D]
+      Replacement: '-'
+    - Sequence: [0x30]
+      Replacement: "0"
+    - Sequence: [0x31]
+      Replacement: "1"
+    - Sequence: [0x32]
+      Replacement: "2"
+    - Sequence: [0x33]
+      Replacement: "3"
+    - Sequence: [0x34]
+      Replacement: "4"
+    - Sequence: [0x35]
+      Replacement: "5"
+    - Sequence: [0x36]
+      Replacement: "6"
+    - Sequence: [0x37]
+      Replacement: "7"
+    - Sequence: [0x38]
+      Replacement: "8"
+    - Sequence: [0x39]
+      Replacement: "9"
+    - Sequence: [0x3F]
+      Replacement: '?'
+    - Sequence: [0x40]
+      Replacement: ★
+    - Sequence: [0x41]
+      Replacement: A
+    - Sequence: [0x42]
+      Replacement: B
+    - Sequence: [0x43]
+      Replacement: C
+    - Sequence: [0x44]
+      Replacement: D
+    - Sequence: [0x45]
+      Replacement: E
+    - Sequence: [0x46]
+      Replacement: F
+    - Sequence: [0x47]
+      Replacement: G
+    - Sequence: [0x48]
+      Replacement: H
+    - Sequence: [0x49]
+      Replacement: I
+    - Sequence: [0x4A]
+      Replacement: J
+    - Sequence: [0x4B]
+      Replacement: K
+    - Sequence: [0x4C]
+      Replacement: L
+    - Sequence: [0x4D]
+      Replacement: M
+    - Sequence: [0x4E]
+      Replacement: "N"
+    - Sequence: [0x4F]
+      Replacement: O
+    - Sequence: [0x50]
+      Replacement: P
+    - Sequence: [0x51]
+      Replacement: Q
+    - Sequence: [0x52]
+      Replacement: R
+    - Sequence: [0x53]
+      Replacement: S
+    - Sequence: [0x54]
+      Replacement: T
+    - Sequence: [0x55]
+      Replacement: U
+    - Sequence: [0x56]
+      Replacement: V
+    - Sequence: [0x57]
+      Replacement: W
+    - Sequence: [0x58]
+      Replacement: X
+    - Sequence: [0x59]
+      Replacement: "Y"
+    - Sequence: [0x5A]
+      Replacement: Z
+    - Sequence: [0x61]
+      Replacement: a
+    - Sequence: [0x62]
+      Replacement: b
+    - Sequence: [0x63]
+      Replacement: c
+    - Sequence: [0x64]
+      Replacement: d
+    - Sequence: [0x65]
+      Replacement: e
+    - Sequence: [0x66]
+      Replacement: f
+    - Sequence: [0x67]
+      Replacement: g
+    - Sequence: [0x68]
+      Replacement: h
+    - Sequence: [0x69]
+      Replacement: i
+    - Sequence: [0x6A]
+      Replacement: j
+    - Sequence: [0x6B]
+      Replacement: k
+    - Sequence: [0x6C]
+      Replacement: l
+    - Sequence: [0x6D]
+      Replacement: m
+    - Sequence: [0x6E]
+      Replacement: "n"
+    - Sequence: [0x6F]
+      Replacement: o
+    - Sequence: [0x70]
+      Replacement: p
+    - Sequence: [0x71]
+      Replacement: q
+    - Sequence: [0x72]
+      Replacement: r
+    - Sequence: [0x73]
+      Replacement: s
+    - Sequence: [0x74]
+      Replacement: t
+    - Sequence: [0x75]
+      Replacement: u
+    - Sequence: [0x76]
+      Replacement: v
+    - Sequence: [0x77]
+      Replacement: w
+    - Sequence: [0x78]
+      Replacement: x
+    - Sequence: [0x79]
+      Replacement: "y"
+    - Sequence: [0x7A]
+      Replacement: z
+    - Sequence: [0x7D]
+      Replacement: '-'
+    - Sequence: [0x7E]
+      Replacement: "'"
+    - Sequence: [0x83, "XX"]
+    - Sequence: [0x8E]
+      Replacement: ':'
+    - Sequence: [0x90, "XX"]
+    - Sequence: [0x96]
+      Replacement: '%'
+    - Sequence: [0x9B]
+      Replacement: ''''
+    - Sequence: [0x9C]
+      Replacement: '&'
+  script:
+    - Sequence: [0x00]
+      Replacement: ""
+    - Sequence: [0x01]
+      Replacement: "\n\n"
+    - Sequence: [0x02, 0x00]
+      Replacement: ""
+    - Sequence: [0x02, 0x01]
+      Replacement: "\n\n"
+    - Sequence: [0x02, "XX"]
+    - Sequence: [0x0C]
+      Replacement: "\n\n"
+    - Sequence: [0x20]
+      Replacement: ' '
+    - Sequence: [0x21]
+      Replacement: '!'
+    - Sequence: [0x22]
+      Replacement: '"'
+    - Sequence: [0x23]
+      Replacement: '"'
+    - Sequence: [0x0024]
+      Replacement: "~"
+    - Sequence: [0x27]
+      Replacement: ''''
+    - Sequence: [0x2C]
+      Replacement: ','
+    - Sequence: [0x2E]
+      Replacement: .
+    - Sequence: [0x2D]
+      Replacement: '-'
+    - Sequence: [0x30]
+      Replacement: "0"
+    - Sequence: [0x31]
+      Replacement: "1"
+    - Sequence: [0x32]
+      Replacement: "2"
+    - Sequence: [0x33]
+      Replacement: "3"
+    - Sequence: [0x34]
+      Replacement: "4"
+    - Sequence: [0x35]
+      Replacement: "5"
+    - Sequence: [0x36]
+      Replacement: "6"
+    - Sequence: [0x37]
+      Replacement: "7"
+    - Sequence: [0x38]
+      Replacement: "8"
+    - Sequence: [0x39]
+      Replacement: "9"
+    - Sequence: [0x3F]
+      Replacement: '?'
+    - Sequence: [0x41]
+      Replacement: A
+    - Sequence: [0x42]
+      Replacement: B
+    - Sequence: [0x43]
+      Replacement: C
+    - Sequence: [0x44]
+      Replacement: D
+    - Sequence: [0x45]
+      Replacement: E
+    - Sequence: [0x46]
+      Replacement: F
+    - Sequence: [0x47]
+      Replacement: G
+    - Sequence: [0x48]
+      Replacement: H
+    - Sequence: [0x49]
+      Replacement: I
+    - Sequence: [0x4A]
+      Replacement: J
+    - Sequence: [0x4B]
+      Replacement: K
+    - Sequence: [0x4C]
+      Replacement: L
+    - Sequence: [0x4D]
+      Replacement: M
+    - Sequence: [0x4E]
+      Replacement: "N"
+    - Sequence: [0x4F]
+      Replacement: O
+    - Sequence: [0x50]
+      Replacement: P
+    - Sequence: [0x51]
+      Replacement: Q
+    - Sequence: [0x52]
+      Replacement: R
+    - Sequence: [0x53]
+      Replacement: S
+    - Sequence: [0x54]
+      Replacement: T
+    - Sequence: [0x55]
+      Replacement: U
+    - Sequence: [0x56]
+      Replacement: V
+    - Sequence: [0x57]
+      Replacement: W
+    - Sequence: [0x58]
+      Replacement: X
+    - Sequence: [0x59]
+      Replacement: "Y"
+    - Sequence: [0x5A]
+      Replacement: Z
+    - Sequence: [0x61]
+      Replacement: a
+    - Sequence: [0x62]
+      Replacement: b
+    - Sequence: [0x63]
+      Replacement: c
+    - Sequence: [0x64]
+      Replacement: d
+    - Sequence: [0x65]
+      Replacement: e
+    - Sequence: [0x66]
+      Replacement: f
+    - Sequence: [0x67]
+      Replacement: g
+    - Sequence: [0x68]
+      Replacement: h
+    - Sequence: [0x69]
+      Replacement: i
+    - Sequence: [0x6A]
+      Replacement: j
+    - Sequence: [0x6B]
+      Replacement: k
+    - Sequence: [0x6C]
+      Replacement: l
+    - Sequence: [0x6D]
+      Replacement: m
+    - Sequence: [0x6E]
+      Replacement: "n"
+    - Sequence: [0x6F]
+      Replacement: o
+    - Sequence: [0x70]
+      Replacement: p
+    - Sequence: [0x71]
+      Replacement: q
+    - Sequence: [0x72]
+      Replacement: r
+    - Sequence: [0x73]
+      Replacement: s
+    - Sequence: [0x74]
+      Replacement: t
+    - Sequence: [0x75]
+      Replacement: u
+    - Sequence: [0x76]
+      Replacement: v
+    - Sequence: [0x77]
+      Replacement: w
+    - Sequence: [0x78]
+      Replacement: x
+    - Sequence: [0x79]
+      Replacement: "y"
+    - Sequence: [0x7A]
+      Replacement: z
+    - Sequence: [0x7D]
+      Replacement: '-'
+    - Sequence: [0x7E]
+      Replacement: "~"
+    - Sequence: [0x8E]
+      Replacement: ':'
+    - Sequence: [0x96]
+      Replacement: '%'
+    - Sequence: [0x9B]
+      Replacement: ''''
+    - Sequence: [0x9C]
+      Replacement: '&'
+...

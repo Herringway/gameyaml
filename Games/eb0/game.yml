@@ -1,0 +1,41 @@
+---
+UNKNOWN_CED3:
+  Description: ""
+  Type: assembly
+  Offset: 0xCED3
+  Size: 41
+  Labels:
+    - Offset: 0x1D
+      Name: UNKNOWN0
+    - Offset: 0x24
+      Name: UNKNOWN1
+UNKNOWN_FD14:
+  Description: ""
+  Type: assembly
+  Offset: 0xFD14
+  Size: 38
+  Labels:
+    - Offset: 0x08
+      Name: UNKNOWN0
+    - Offset: 0x1C
+      Name: UNKNOWN1
+    - Offset: 0x1F
+      Name: UNKNOWN2
+RESET:
+  Type: assembly
+  Offset: 0xFF40
+  Description: Execution Entry Point
+  Size: 160
+  Labels:
+    - Offset: 0x1F
+      Name: UNKNOWN1
+    - Offset: 0x38
+      Name: UNKNOWN2
+    - Offset: 0x55
+      Name: UNKNOWN3
+BANK_SWAP:
+  Type: assembly
+  Offset: 0xFFD0
+  Description: Swaps PRG-ROM banks
+  Size: 16
+...

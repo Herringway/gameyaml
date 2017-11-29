@@ -1,0 +1,22 @@
+---
+EMPTY_80FD5F:
+  Description: ""
+  Type: empty
+  Offset: 0x80FD5F
+  Size: 0x23F
+ENTRY_POINT:
+  Description: "Routine executed upon boot/reset"
+  Type: assembly
+  Offset: 0x80FF9E
+  Size: 7
+SPARKSTER_SPRITES:
+  Description: Sparkster's sprites
+  Type: unknown
+  Offset: 0x8B8000
+  Size: 0x15280
+EMPTY_8FCB70:
+  Description: ""
+  Type: empty
+  Offset: 0x8FCB70
+  Size: 0x3490
+...

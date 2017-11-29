@@ -1,0 +1,163 @@
+schema;recursivedata:
+  type: map
+  mapping:
+    Type: &Type
+      type: str
+      required: true
+      enum:
+      - unknown
+      - int
+      - struct
+      - array
+      - assembly
+      - empty
+      - pointer
+      - script
+      - tile
+    Pretty Name: &PrettyName
+      type: str
+    Indexes: &Indexes
+      type: str
+    Size: &Size
+      type: int
+    Calculated Size: &CalcSize
+      type: str
+    Terminator: &Terminator
+      type: seq
+      sequence:
+      - type: int
+    Notes: &Notes
+      type: str
+    Bit Values: &BitValues
+      type: seq
+      sequence:
+      - type: str
+    Base: &Base
+      type: int
+    Format: &Format
+      type: str
+    Signed: &Signed
+      type: bool
+    Item Type: &ItemType
+      include: recursivedata
+    Charset: &Charset
+      type: str
+    Entries: &Entries
+      type: map
+      mapping:
+        regex;([A-Z0-9_]+):
+          Description: &Description
+            type: str
+            required: true
+          include: recursivedata1
+    Values: &Values
+      type: map
+      mapping:
+        regex;(.+):
+          type: str
+schema;recursivedata1:
+  type: map
+  mapping:
+    Description: *Description
+    Type: *Type
+    Pretty Name: *PrettyName
+    Size: *Size
+    Terminator: *Terminator
+    Base: *Base
+    Notes: *Notes
+    Bit Values: *BitValues
+    Item Type: *ItemType
+    Charset: *Charset
+    Entries: *Entries
+    Indexes: *Indexes
+    Calculated Size: *CalcSize
+    Format: *Format
+    Signed: *Signed
+    Values: *Values
+
+type: map
+mapping:
+  regex;([A-Z0-9_]+):
+    type: map
+    mapping:
+      Pretty Name:
+        type: str
+      Type: *Type
+      Size:
+        type: int
+        required: true
+      Labels:
+        type: seq
+        sequence:
+        - type: map
+          mapping:
+            Name:
+              type: str
+              required: true
+            Offset:
+              type: int
+              required: true
+      Locals:
+        type: seq
+        sequence:
+        - type: map
+          mapping:
+            Name:
+              type: str
+              required: true
+            Offset:
+              type: int
+              required: true
+      Label States:
+        type: seq
+        sequence:
+        - type: map
+          mapping:
+            Offset:
+              type: int
+              required: true
+            8 Bit Accum:
+              type: bool
+            8 Bit Index:
+              type: bool
+            DBR:
+              type: int
+      Offset:
+        required: true
+        type: int
+      Base:
+        type: int
+      Description: *Description
+      Initial State:
+        type: map
+        mapping: &CPUState
+          8 Bit Accum:
+            type: bool
+          8 Bit Index:
+            type: bool
+          DBR:
+            type: int
+          DP:
+            type: int
+      Final State:
+        type: map
+        mapping: *CPUState
+      Item Type: *ItemType
+      Notes: *Notes
+      Charset: *Charset
+      Arguments:
+        type: map
+        mapping:
+          regex;(.+):
+            type: str
+      Return Values:
+        type: map
+        mapping:
+          regex;(.+):
+            type: str
+      Bit Values: *BitValues
+      Indexes: *Indexes
+      Signed: *Signed
+      Values: *Values
+      Entries: *Entries
+      Format: *Format

@@ -1,0 +1,446 @@
+---
+Platform: snes
+Title: Final Fantasy 5
+Country: JPN
+SHA256: D893DCC82D601887E2B3DD4AB8AA140A0BB032E4AFCA4721BFF645BC7949FEB1
+Version: v1.0
+Script Tables:
+  battle:
+    - Sequence: [0xF1, "XX"]
+    - Sequence: [0xF2, "XX"]
+    - Sequence: [0xF3, "XX"]
+    - Sequence: [0xF4, "XX"]
+    - Sequence: [0xF5, "XX"]
+    - Sequence: [0xF6, "XX"]
+    - Sequence: [0xF7, "XX"]
+    - Sequence: [0xF8, "XX"]
+    - Sequence: [0xF9, "XX"]
+    - Sequence: [0xFA, "XX"]
+    - Sequence: [0xFB, "XX"]
+    - Sequence: [0xFC, "XX", "XX", "XX"]
+    - Sequence: [0xFD, "XX", "XX", "XX"]
+    - Sequence: [0xFE]
+    - Sequence: [0xFF]
+  text:
+    - Sequence: [0x01]
+      Replacement: "\n"
+    - Sequence: [0x1E, "XX"]
+    - Sequence: [0x20]
+      Replacement: バ
+    - Sequence: [0x21]
+      Replacement: ば
+    - Sequence: [0x22]
+      Replacement: ビ
+    - Sequence: [0x23]
+      Replacement: び
+    - Sequence: [0x24]
+      Replacement: ブ
+    - Sequence: [0x25]
+      Replacement: ぶ
+    - Sequence: [0x26]
+      Replacement: ベ
+    - Sequence: [0x27]
+      Replacement: べ
+    - Sequence: [0x28]
+      Replacement: ボ
+    - Sequence: [0x29]
+      Replacement: ぼ
+    - Sequence: [0x2A]
+      Replacement: ガ
+    - Sequence: [0x2B]
+      Replacement: が
+    - Sequence: [0x2C]
+      Replacement: ギ
+    - Sequence: [0x2D]
+      Replacement: ぎ
+    - Sequence: [0x2E]
+      Replacement: グ
+    - Sequence: [0x2F]
+      Replacement: ぐ
+    - Sequence: [0x30]
+      Replacement: ゲ
+    - Sequence: [0x31]
+      Replacement: げ
+    - Sequence: [0x32]
+      Replacement: ゴ
+    - Sequence: [0x33]
+      Replacement: ご
+    - Sequence: [0x34]
+      Replacement: ザ
+    - Sequence: [0x35]
+      Replacement: ざ
+    - Sequence: [0x36]
+      Replacement: ジ
+    - Sequence: [0x37]
+      Replacement: じ
+    - Sequence: [0x38]
+      Replacement: ズ
+    - Sequence: [0x39]
+      Replacement: ず
+    - Sequence: [0x3A]
+      Replacement: ゼ
+    - Sequence: [0x3B]
+      Replacement: ぜ
+    - Sequence: [0x3C]
+      Replacement: ゾ
+    - Sequence: [0x3D]
+      Replacement: ぞ
+    - Sequence: [0x3E]
+      Replacement: ダ
+    - Sequence: [0x3F]
+      Replacement: だ
+    - Sequence: [0x41]
+      Replacement: ぢ
+    - Sequence: [0x43]
+      Replacement: づ
+    - Sequence: [0x44]
+      Replacement: デ
+    - Sequence: [0x45]
+      Replacement: で
+    - Sequence: [0x46]
+      Replacement: ド
+    - Sequence: [0x47]
+      Replacement: ど
+    - Sequence: [0x48]
+      Replacement: ヴ
+    - Sequence: [0x49]
+      Replacement: パ
+    - Sequence: [0x4A]
+      Replacement: ぱ
+    - Sequence: [0x4B]
+      Replacement: ピ
+    - Sequence: [0x4D]
+      Replacement: プ
+    - Sequence: [0x4E]
+      Replacement: ぷ
+    - Sequence: [0x4F]
+      Replacement: ペ
+    - Sequence: [0x50]
+      Replacement: ぺ
+    - Sequence: [0x51]
+      Replacement: ポ
+    - Sequence: [0x52]
+      Replacement: ぽ
+    - Sequence: [0x53]
+      Replacement: "0"
+    - Sequence: [0x54]
+      Replacement: "1"
+    - Sequence: [0x55]
+      Replacement: "2"
+    - Sequence: [0x56]
+      Replacement: "3"
+    - Sequence: [0x57]
+      Replacement: "4"
+    - Sequence: [0x58]
+      Replacement: "5"
+    - Sequence: [0x59]
+      Replacement: "6"
+    - Sequence: [0x5A]
+      Replacement: "7"
+    - Sequence: [0x5B]
+      Replacement: "8"
+    - Sequence: [0x5C]
+      Replacement: "9"
+    - Sequence: [0x5D]
+      Replacement: M
+    - Sequence: [0x5E]
+      Replacement: H
+    - Sequence: [0x5F]
+      Replacement: P
+    - Sequence: [0x60]
+      Replacement: ハ
+    - Sequence: [0x61]
+      Replacement: は
+    - Sequence: [0x62]
+      Replacement: ヒ
+    - Sequence: [0x63]
+      Replacement: ひ
+    - Sequence: [0x64]
+      Replacement: フ
+    - Sequence: [0x65]
+      Replacement: ふ
+    - Sequence: [0x66]
+      Replacement: ヘ
+    - Sequence: [0x67]
+      Replacement: へ
+    - Sequence: [0x68]
+      Replacement: ホ
+    - Sequence: [0x69]
+      Replacement: ほ
+    - Sequence: [0x6A]
+      Replacement: カ
+    - Sequence: [0x6B]
+      Replacement: か
+    - Sequence: [0x6C]
+      Replacement: キ
+    - Sequence: [0x6D]
+      Replacement: き
+    - Sequence: [0x6E]
+      Replacement: ク
+    - Sequence: [0x6F]
+      Replacement: く
+    - Sequence: [0x70]
+      Replacement: ケ
+    - Sequence: [0x71]
+      Replacement: け
+    - Sequence: [0x72]
+      Replacement: コ
+    - Sequence: [0x73]
+      Replacement: こ
+    - Sequence: [0x74]
+      Replacement: サ
+    - Sequence: [0x75]
+      Replacement: さ
+    - Sequence: [0x76]
+      Replacement: シ
+    - Sequence: [0x77, "XX"]
+      Replacement: し
+    - Sequence: [0x78]
+      Replacement: ス
+    - Sequence: [0x79]
+      Replacement: す
+    - Sequence: [0x7A]
+      Replacement: セ
+    - Sequence: [0x7B]
+      Replacement: せ
+    - Sequence: [0x7C]
+      Replacement: ソ
+    - Sequence: [0x7D]
+      Replacement: そ
+    - Sequence: [0x7E]
+      Replacement: タ
+    - Sequence: [0x7F]
+      Replacement: た
+    - Sequence: [0x80]
+      Replacement: チ
+    - Sequence: [0x81]
+      Replacement: ち
+    - Sequence: [0x82]
+      Replacement: ツ
+    - Sequence: [0x83]
+      Replacement: つ
+    - Sequence: [0x84]
+      Replacement: テ
+    - Sequence: [0x85]
+      Replacement: て
+    - Sequence: [0x86]
+      Replacement: ト
+    - Sequence: [0x87]
+      Replacement: と
+    - Sequence: [0x88]
+      Replacement: ウ
+    - Sequence: [0x89]
+      Replacement: う
+    - Sequence: [0x8A]
+      Replacement: ア
+    - Sequence: [0x8B]
+      Replacement: あ
+    - Sequence: [0x8C]
+      Replacement: イ
+    - Sequence: [0x8D]
+      Replacement: い
+    - Sequence: [0x8E]
+      Replacement: エ
+    - Sequence: [0x8F]
+      Replacement: え
+    - Sequence: [0x90]
+      Replacement: オ
+    - Sequence: [0x91]
+      Replacement: お
+    - Sequence: [0x92]
+      Replacement: ナ
+    - Sequence: [0x93]
+      Replacement: な
+    - Sequence: [0x94]
+      Replacement: ニ
+    - Sequence: [0x95]
+      Replacement: に
+    - Sequence: [0x96]
+      Replacement: ヌ
+    - Sequence: [0x97]
+      Replacement: ぬ
+    - Sequence: [0x98]
+      Replacement: ネ
+    - Sequence: [0x99]
+      Replacement: ね
+    - Sequence: [0x9A]
+      Replacement: ノ
+    - Sequence: [0x9B]
+      Replacement: の
+    - Sequence: [0x9C]
+      Replacement: マ
+    - Sequence: [0x9D]
+      Replacement: ま
+    - Sequence: [0x9E]
+      Replacement: ミ
+    - Sequence: [0x9F]
+      Replacement: み
+    - Sequence: [0xA0]
+      Replacement: ム
+    - Sequence: [0xA1]
+      Replacement: む
+    - Sequence: [0xA2]
+      Replacement: メ
+    - Sequence: [0xA3]
+      Replacement: め
+    - Sequence: [0xA4]
+      Replacement: モ
+    - Sequence: [0xA5]
+      Replacement: も
+    - Sequence: [0xA6]
+      Replacement: ラ
+    - Sequence: [0xA7]
+      Replacement: ら
+    - Sequence: [0xA8]
+      Replacement: リ
+    - Sequence: [0xA9]
+      Replacement: り
+    - Sequence: [0xAA]
+      Replacement: ル
+    - Sequence: [0xAB]
+      Replacement: る
+    - Sequence: [0xAC]
+      Replacement: レ
+    - Sequence: [0xAD]
+      Replacement: れ
+    - Sequence: [0xAE]
+      Replacement: ロ
+    - Sequence: [0xAF]
+      Replacement: ろ
+    - Sequence: [0xB0]
+      Replacement: ヤ
+    - Sequence: [0xB1]
+      Replacement: や
+    - Sequence: [0xB3]
+      Replacement: ゆ
+    - Sequence: [0xB5]
+      Replacement: よ
+    - Sequence: [0xB6]
+      Replacement: ワ
+    - Sequence: [0xB7]
+      Replacement: わ
+    - Sequence: [0xB8]
+      Replacement: ン
+    - Sequence: [0xB9]
+      Replacement: ん
+    - Sequence: [0xBB]
+      Replacement: を
+    - Sequence: [0xBC]
+      Replacement: ッ
+    - Sequence: [0xBD]
+      Replacement: っ
+    - Sequence: [0xBE]
+      Replacement: ャ
+    - Sequence: [0xBF]
+      Replacement: ゃ
+    - Sequence: [0xC0]
+      Replacement: ュ
+    - Sequence: [0xC1]
+      Replacement: ゅ
+    - Sequence: [0xC2, "XX"]
+      Replacement: ョ
+    - Sequence: [0xC3, "XX"]
+      Replacement: ょ
+    - Sequence: [0xC4, "XX"]
+      Replacement: ァ
+    - Sequence: [0xC5, "XX"]
+      Replacement: ー
+    - Sequence: [0xC6, "XX"]
+      Replacement: ス
+    - Sequence: [0xC7, "XX"]
+      Replacement: …
+    - Sequence: [0xC8, "XX"]
+      Replacement: ゥ
+    - Sequence: [0xC9, "XX"]
+      Replacement: "!"
+    - Sequence: [0xCA, "XX"]
+      Replacement: ェ
+    - Sequence: [0xCB, "XX"]
+      Replacement: "?"
+    - Sequence: [0xCC, "XX"]
+      Replacement: ォ
+    - Sequence: [0xCD]
+      Replacement: "%"
+    - Sequence: [0xCE]
+      Replacement: /
+    - Sequence: [0xCF]
+      Replacement: ":"
+    - Sequence: [0xD0]
+      Replacement: 「
+    - Sequence: [0xD1]
+      Replacement: 」
+    - Sequence: [0xD2]
+      Replacement: "."
+    - Sequence: [0xD3, "XX"]
+      Replacement: A
+    - Sequence: [0xD4, "XX"]
+      Replacement: B
+    - Sequence: [0xD5]
+      Replacement: X
+    - Sequence: [0xD6]
+      Replacement: Y
+    - Sequence: [0xD7]
+      Replacement: L
+    - Sequence: [0xD8]
+      Replacement: R
+    - Sequence: [0xD9]
+      Replacement: E
+    - Sequence: [0xDA]
+      Replacement: H
+    - Sequence: [0xDB]
+      Replacement: M
+    - Sequence: [0xDC]
+      Replacement: P
+    - Sequence: [0xDD]
+      Replacement: S
+    - Sequence: [0xDE]
+      Replacement: C
+    - Sequence: [0xDF]
+      Replacement: T
+    - Sequence: [0xE0]
+      Replacement: ↑
+    - Sequence: [0xE1]
+      Replacement: →
+    - Sequence: [0xE2]
+      Replacement: +
+    - Sequence: [0xE3]
+      Replacement: '[SWORD]'
+    - Sequence: [0xE4]
+      Replacement: '[WHITE]'
+    - Sequence: [0xE5]
+      Replacement: '[BLACK]'
+    - Sequence: [0xE6]
+      Replacement: '[TIME]'
+    - Sequence: [0xE7]
+      Replacement: '[KNIFE]'
+    - Sequence: [0xE8]
+      Replacement: '[SPEAR]'
+    - Sequence: [0xE9]
+      Replacement: '[AXE]'
+    - Sequence: [0xEA]
+      Replacement: '[KATANA]'
+    - Sequence: [0xEB]
+      Replacement: '[ROD]'
+    - Sequence: [0xEC]
+      Replacement: '[STAFF]'
+    - Sequence: [0xED]
+      Replacement: '[BOW]'
+    - Sequence: [0xEE]
+      Replacement: '[HARP]'
+    - Sequence: [0xEF]
+      Replacement: '[WHIP]'
+    - Sequence: [0xF0]
+      Replacement: '[BELL]'
+    - Sequence: [0xF1]
+      Replacement: '[SHIELD]'
+    - Sequence: [0xF2]
+      Replacement: '[HELM]'
+    - Sequence: [0xF3]
+      Replacement: '[ARMOUR]'
+    - Sequence: [0xF4]
+      Replacement: '[ACCESSORY]'
+    - Sequence: [0xF5]
+      Replacement: U
+    - Sequence: [0xFF]
+      Replacement: " "
+...

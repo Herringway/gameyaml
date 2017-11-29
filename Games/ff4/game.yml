@@ -1,0 +1,7 @@
+---
+ITEM_PRICES:
+  Description: Amount of GP/Gil each item is worth
+  Type: unknown
+  Size: 0x100
+  Offset: 0x0FA450
+...

@@ -1,0 +1,274 @@
+---
+TEXT_PTR_TABLE:
+  Description: "Pointers to text data"
+  Type: array
+  Offset: 0x080736B8
+  Size: 0x150
+  Item Type:
+    Type: pointer
+    Size: 4
+ABILITY_TABLE:
+  Description: "Ability configuration"
+  Type: array
+  Offset: 0x0807EE58
+  Size: 0x2070
+  Item Type:
+    Type: struct
+    Entries:
+      UNKNOWN1:
+        Description: ""
+        Type: unknown
+        Size: 8
+      RANGE:
+        Description: "Number of targets affected by this ability"
+        Type: int
+        Size: 1
+        Values:
+          0: "0"
+          1: "1"
+          2: "3"
+          3: "5"
+          4: "7"
+          5: "9"
+          6: "11"
+          255: all
+      PP_COST:
+        Description: "Amount of PP required to use this ability"
+        Type: int
+        Size: 1
+      POWER:
+        Description: "Ability strength"
+        Type: int
+        Size: 1
+      UNKNOWN2:
+        Description: ""
+        Type: unknown
+        Size: 5
+ENEMY_CONFIGURATION_TABLE:
+  Description: "Enemy statistics"
+  Type: array
+  Offset: 0x08080EC8
+  Size: 13776
+  Item Type:
+    Type: struct
+    Entries:
+      NAME:
+        Description: "Enemy's name"
+        Type: script
+        Charset: ascii
+        Size: 15
+      LEVEL:
+        Description: "Enemy's level"
+        Type: int
+        Size: 1
+      HP:
+        Description: "Enemy's HP"
+        Type: int
+        Size: 2
+      PP:
+        Description: "Enemy's PP"
+        Type: int
+        Size: 2
+      ATTACK:
+        Description: "Enemy's attack"
+        Type: int
+        Size: 2
+      DEFENSE:
+        Description: "Enemy's defense"
+        Type: int
+        Size: 2
+      AGILITY:
+        Description: "Enemy's agility"
+        Type: int
+        Size: 2
+      LUCK:
+        Description: "Enemy's luck"
+        Type: int
+        Size: 1
+      TURNS:
+        Description: "Number of attacks this enemy gets per turn"
+        Type: int
+        Size: 1
+      HP_REGEN:
+        Description: "Amount of HP regenerated at end of turn"
+        Type: int
+        Size: 1
+      UNKNOWN1:
+        Description: ""
+        Type: unknown
+        Size: 25
+      ATTACK_PATTERN:
+        Description: "Pattern the enemy uses to attack"
+        Type: int
+        Size: 2
+        Values:
+          0: Equal Distribution
+          1: Earlier Linearly More Likely
+          2: Earlier Exponentially More Likely
+          3: Unknown A
+          4: Unknown B
+          5: Only Use First Ability
+          6: Always Defend
+      MOVES:
+        Description: "Moves available to this enemy"
+        Type: array
+        Size: 16
+        Item Type:
+          Type: int
+          Size: 2
+      UNKNOWN2:
+        Description: ""
+        Type: unknown
+        Size: 4
+      COINS:
+        Description: "Amount of money rewarded for killing this enemy"
+        Type: int
+        Size: 2
+      ITEM_DROPPED:
+        Description: "Item dropped by the enemy"
+        Type: int
+        Size: 2
+      ITEM_DROPPED_CHANCE:
+        Description: "Chance of this enemy dropping its item"
+        Type: int
+        Size: 2
+        Values:
+          0: never
+          1: 1/1
+          2: 1/2
+          3: 1/4
+          4: 1/8
+          5: 1/16
+          6: 1/32
+          7: 1/64
+          8: 1/128
+          9: 1/256
+      EXP:
+        Description: "Amount of experience points rewarded for killing this enemy"
+        Type: int
+        Size: 2
+CLASS_CONFIG_TABLE:
+  Description: "Class configuration table"
+  Type: array
+  Offset: 0x08084B1C
+  Size: 0x429C
+  Item Type:
+    Type: struct
+    Entries:
+      TYPE:
+        Description: "Type of class"
+        Type: int
+        Size: 1
+      UNKNOWN1:
+        Description: ""
+        Type: unknown
+        Size: 3
+      VENUS_DJINNI:
+        Description: "Number of venus djinn required to qualify for this class"
+        Type: int
+        Size: 1
+      MERCURY_DJINNI:
+        Description: "Number of mercury djinn required to qualify for this class"
+        Type: int
+        Size: 1
+      MARS_DJINNI:
+        Description: "Number of mars djinn required to qualify for this class"
+        Type: int
+        Size: 1
+      JUPITER_DJINNI:
+        Description: "Number of jupiter djinn required to qualify for this class"
+        Type: int
+        Size: 1
+      HP_MOD:
+        Description: "HP modifier"
+        Type: int
+        Size: 1
+      PP_MOD:
+        Description: "PP modifier"
+        Type: int
+        Size: 1
+      ATK_MOD:
+        Description: "Attack modifier"
+        Type: int
+        Size: 1
+      DEF_MOD:
+        Description: "Defense modifier"
+        Type: int
+        Size: 1
+      AGI_MOD:
+        Description: "Agility modifier"
+        Type: int
+        Size: 1
+      LUK_MOD:
+        Description: "Luck modifier"
+        Type: int
+        Size: 1
+      PSYNERGY_LEARNED:
+        Description: "Psynergy learned by this class"
+        Type: array
+        Size: 64
+        Item Type:
+          Type: struct
+          Entries:
+            UNKNOWN1:
+              Description: ""
+              Type: int
+              Size: 1
+            UNKNOWN2:
+              Description: ""
+              Type: int
+              Size: 1
+            ID:
+              Description: "Learned psynergy's unique ID"
+              Type: int
+              Size: 1
+            LEVEL:
+              Description: "Level at which the psynergy is learned"
+              Type: int
+              Size: 1
+      UNKNOWN2:
+        Description: ""
+        Type: unknown
+        Size: 6
+ABILITY_ANIMATION_TABLE:
+  Description: "Ability animation table"
+  Type: array
+  Offset: 0x080C2DA0
+  Size: 2072
+  Item Type:
+    Type: struct
+    Entries:
+      ANIMATION_GROUP_ID:
+        Description: "Animation group ID?"
+        Type: int
+        Size: 1
+      ANIMATION_ARGS:
+        Description: "Arguments for this animation"
+        Type: int
+        Size: 1
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 2
+UNKNOWN_ABILITY_TYPES:
+  Description: "Ability types?"
+  Type: array
+  Offset: 0x08128972
+  Size: 733
+  Item Type:
+    Type: int
+    Size: 1
+INDIVIDUAL_ENEMY_TABLE:
+  Description: "Individual enemy table?"
+  Type: array
+  Offset: 0x08130D0C
+  Size: 1000
+  Item Type:
+    Type: unknown
+    Size: 8
+MENU_TILES:
+  Description: "Menu tiles?"
+  Type: unknown
+  Offset: 0x08682010
+  Size: 0x2000
+...

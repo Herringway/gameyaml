@@ -1,0 +1,151 @@
+---
+UNKNOWN_008000:
+  Type: assembly
+  Description: ""
+  Offset: 0x008000
+  Size: 320
+  Labels:
+    - Offset: 0x062
+      Name: UNKNOWN0
+    - Offset: 0x08C
+      Name: UNKNOWN1
+    - Offset: 0x0C9
+      Name: UNKNOWN2
+    - Offset: 0x0F0
+      Name: UNKNOWN3
+    - Offset: 0x0F1
+      Name: UNKNOWN4
+    - Offset: 0x107
+      Name: UNKNOWN5
+    - Offset: 0x121
+      Name: UNKNOWN6
+    - Offset: 0x12B
+      Name: UNKNOWN7
+    - Offset: 0x12D
+      Name: UNKNOWN8
+    - Offset: 0x130
+      Name: UNKNOWN9
+    - Offset: 0x13A
+      Name: UNKNOWN10
+YOSHI_LEVEL_COLOUR:
+  Type: array
+  Offset: 0x028000
+  Description: Stage -> Yoshi colour mapping
+  Size: 72
+  Item Type:
+    Type: int
+    Size: 1
+# UNKNOWN_088000: !assembly
+#   Offset: 0x088000
+# UNKNOWN_1681C7:
+#   Offset: 0x1681C7
+#   Size:
+# UNKNOWN_168583:
+#   Offset: 0x168583
+#   Size:
+LEVEL_ENTRANCES_PTRS:
+  Description: Pointers to level entrances
+  Type: array
+  Offset: 0x17F3E7
+  Size: 138
+  Item Type:
+    Type: pointer
+    Size: 2
+    Base: 0x17F471
+LEVEL_ENTRANCES:
+  Description: Level entrances for the world map
+  Type: array
+  Offset: 0x17F471
+  Size: 224
+  Item Type:
+    Type: struct
+    Entries:
+      ID:
+        Description: Unique ID for entrance
+        Type: int
+        Size: 1
+      X:
+        Description: X coordinate to start at
+        Type: int
+        Size: 1
+      'Y':
+        Description: Y coordinate to start at
+        Type: int
+        Size: 1
+      MAP_ICON:
+        Description: Map icon to use for this level
+        Type: int
+        Size: 1
+MIDWAY_ENTRANCES_PTRS:
+  Description: Pointers to midway level entrances
+  Type: array
+  Offset: 0x17F551
+  Size: 138
+  Item Type:
+    Type: pointer
+    Size: 2
+    Base: 0x17F5DB
+MIDWAY_ENTRANCES:
+  Description: Where the player begins if a midway point has been reached
+  Type: array
+  Offset: 0x17F5DB
+  Size: 488
+  Item Type:
+    Type: struct
+    Entries:
+      ID:
+        Description: Unique ID for entrance
+        Type: int
+        Size: 1
+      X:
+        Description: X coordinate to spawn at
+        Type: int
+        Size: 1
+      'Y':
+        Description: Y coordinate to spawn at
+        Type: int
+        Size: 1
+      ENTRANCE_TYPE:
+        Description: Type of entrance
+        Type: int
+        Size: 1
+UNKNOWN_17F7C3:
+  Type: array
+  Description: ""
+  Offset: 0x17F7C3
+  Size: 1332
+  Item Type:
+    Type: struct
+    Entries:
+      OBJECT_DATA:
+        Description: ""
+        Type: pointer
+        Size: 3
+      SPRITE_DATA:
+        Description: ""
+        Type: pointer
+        Size: 3
+TEXT_DATA:
+  Type: array
+  Description: Text data
+  Offset: 0x229334
+  Size: 0x4014
+  Item Type:
+    Type: script
+    Terminator: [0xFF]
+UNKNOWN_22D349:
+  Description: ""
+  Type: empty
+  Offset: 0x22D349
+  Size: 0x2CB7
+UNKNOWN_238000:
+  Description: ""
+  Type: empty
+  Offset: 0x238000
+  Size: 0x8000
+GFX_DATA:
+  Type: unknown
+  Offset: 0x248000
+  Description: Compressed graphics data
+  Size: 887350
+...

@@ -1,0 +1,159 @@
+---
+UNKNOWN_008000:
+  Description: ""
+  Type: assembly
+  Offset: 0x008000
+  Size: 320
+  Labels:
+    - Offset: 0x062
+      Name: UNKNOWN0
+    - Offset: 0x08C
+      Name: UNKNOWN1
+    - Offset: 0x0C9
+      Name: UNKNOWN2
+    - Offset: 0x0F0
+      Name: UNKNOWN3
+    - Offset: 0x0F1
+      Name: UNKNOWN4
+    - Offset: 0x107
+      Name: UNKNOWN5
+    - Offset: 0x121
+      Name: UNKNOWN6
+    - Offset: 0x12B
+      Name: UNKNOWN7
+    - Offset: 0x12D
+      Name: UNKNOWN8
+    - Offset: 0x130
+      Name: UNKNOWN9
+    - Offset: 0x13A
+      Name: UNKNOWN10
+UNKNOWN_008239:
+  Description: ""
+  Type: assembly
+  Offset: 0x008239
+  Size: 12
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_008288:
+  Description: ""
+  Type: assembly
+  Offset: 0x008288
+  Size: 35
+  Initial State:
+    8 Bit Index: true
+UNKNOWN_0082AB:
+  Description: ""
+  Type: assembly
+  Offset: 0x0082AB
+  Size: 37
+  Initial State:
+    8 Bit Index: true
+UNKNOWN_0082D0:
+  Description: ""
+  Type: assembly
+  Offset: 0x0082D0
+  Size: 76
+UNKNOWN_008543:
+  Description: ""
+  Type: assembly
+  Offset: 0x008543
+  Size: 143
+  Initial State:
+    8 Bit Accum: true
+    8 Bit Index: true
+  Labels:
+    - Offset: 0x0F
+      Name: UNKNOWN0
+    - Offset: 0x16
+      Name: UNKNOWN1
+    - Offset: 0x29
+      Name: UNKNOWN2
+    - Offset: 0x5C
+      Name: UNKNOWN3
+    - Offset: 0x70
+      Name: UNKNOWN4
+    - Offset: 0x72
+      Name: UNKNOWN5
+LEVEL_ENTRANCES_PTRS:
+  Description: Pointers to level entrances
+  Type: array
+  Offset: 0x0FE446
+  Size: 138
+  Item Type:
+    Type: pointer
+    Size: 2
+    Base: 0x0FE4D0
+LEVEL_ENTRANCES:
+  Description: Level entrances for the world map
+  Type: array
+  Offset: 0x0FE4D0
+  Size: 224
+  Item Type:
+    Type: struct
+    Entries:
+      ID:
+        Description: Unique ID for entrance
+        Type: int
+        Size: 1
+      X:
+        Description: X coordinate to start at
+        Type: int
+        Size: 1
+      'Y':
+        Description: Y coordinate to start at
+        Type: int
+        Size: 1
+      MAP_ICON:
+        Description: Map icon to use for this level
+        Type: int
+        Size: 1
+MIDWAY_ENTRANCES_PTRS:
+  Description: Pointers to midway level entrances
+  Type: array
+  Offset: 0x0FE5B0
+  Size: 138
+  Item Type:
+    Type: pointer
+    Size: 2
+    Base: 0x0FE63A
+MIDWAY_ENTRANCES:
+  Description: Where the player begins if a midway point has been reached
+  Type: array
+  Offset: 0x0FE63A
+  Size: 488
+  Item Type:
+    Type: struct
+    Entries:
+      ID:
+        Description: Unique ID for entrance
+        Type: int
+        Size: 1
+      X:
+        Description: X coordinate to spawn at
+        Type: int
+        Size: 1
+      'Y':
+        Description: Y coordinate to spawn at
+        Type: int
+        Size: 1
+      ENTRANCE_TYPE:
+        Description: Type of entrance
+        Type: int
+        Size: 1
+UNKNOWN_0FE822:
+  Description: ""
+  Type: array
+  Offset: 0x0FE822
+  Size: 1332
+  Item Type:
+    Type: struct
+    Entries:
+      OBJECT_DATA:
+        Description: ""
+        Type: pointer
+        Size: 3
+      SPRITE_DATA:
+        Description: ""
+        Type: pointer
+        Size: 3
+...

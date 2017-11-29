@@ -1,0 +1,1223 @@
+---
+RANDOM_ENCOUNTER:
+  Description: ""
+  Type: assembly
+  Size: 141
+  Offset: 0xC0CA7C
+RAND:
+  Description: Generates a random number
+  Type: assembly
+  Size: 27
+  Offset: 0xC0CC6D
+RAND_X_A:
+  Description: Generates a random number (uses A, X registers?)
+  Type: assembly
+  Size: 86
+  Offset: 0xC2007C
+MULT_32:
+  Description: Multiplication?
+  Type: assembly
+  Size: 31
+  Offset: 0xC200D2
+MULT_16:
+  Description: 16-bit multiplication
+  Type: assembly
+  Size: 27
+  Offset: 0xC200F1
+DIVIDE:
+  Description: Divide a number by another
+  Type: assembly
+  Size: 60
+  Offset: 0xC2010C
+MULT_BY_256:
+  Description: Multiplies a number by 2^(1..8), depending on entry point.
+  Type: assembly
+  Size: 9
+  Labels:
+    - Offset: 1
+      Name: MULT_BY_128
+    - Offset: 2
+      Name: MULT_BY_64
+    - Offset: 3
+      Name: MULT_BY_32
+    - Offset: 4
+      Name: MULT_BY_16
+    - Offset: 5
+      Name: MULT_BY_8
+    - Offset: 6
+      Name: MULT_BY_4
+    - Offset: 7
+      Name: MULT_BY_2
+  Offset: 0xC201B1
+DIV_BY_256:
+  Description: Divides a number by 2^(1..8), depending on entry point.
+  Type: assembly
+  Size: 9
+  Labels:
+    - Offset: 1
+      Name: DIV_BY_128
+    - Offset: 2
+      Name: DIV_BY_64
+    - Offset: 3
+      Name: DIV_BY_32
+    - Offset: 4
+      Name: DIV_BY_16
+    - Offset: 5
+      Name: DIV_BY_8
+    - Offset: 6
+      Name: DIV_BY_4
+    - Offset: 7
+      Name: DIV_BY_2
+  Offset: 0xC201BA
+COUNT_BITS:
+  Description: Count number of set bits in value.
+  Type: assembly
+  Size: 14
+  Initial State:
+    8 Bit Index: false
+  Arguments:
+    A: Value to count bits in
+  Offset: 0xC201C3
+ADD_128:
+  Description: Adds 128 to a number.
+  Type: assembly
+  Size: 12
+  Arguments:
+    X: Value to add 128 to
+  Offset: 0xC201E0
+MULT_128:
+  Description: Multiplies a number by 128
+  Type: assembly
+  Size: 12
+  Arguments:
+    A: Number to multiply by 128
+  Return Values:
+    $32: Product
+  Offset: 0xC201EC
+HERO_POWER_SONG:
+  Description: Shared code for hero and power songs.
+  Type: assembly
+  Offset: 0xC20248
+  Size: 46
+RAND_99:
+  Description: Generates a random number < 100
+  Type: assembly
+  Offset: 0xC202A2
+  Size: 32
+CAST_SPELL:
+  Description: Unsure. Related to spellcasting?
+  Type: assembly
+  Size: 50
+  Offset: 0xC20324
+COMMAND_ITEM:
+  Description: Routine for the !Item action
+  Type: assembly
+  Size: 309
+  Offset: 0xC20632
+COMMAND_ROW:
+  Description: Routine for the !Row action
+  Type: assembly
+  Offset: 0xC20767
+  Size: 42
+COMMAND_DEFEND:
+  Description: Routine for the !Defend action
+  Type: assembly
+  Offset: 0xC20791
+  Size: 19
+COMMAND_FIGHT:
+  Description: Routine for the !Fight action
+  Type: assembly
+  Offset: 0xC207A4
+  Size: 5
+COMMAND_GUARD:
+  Description: Routine for the !Guard action
+  Type: assembly
+  Offset: 0xC207A9
+  Size: 5
+COMMAND_KICK:
+  Description: Routine for the !Kick action
+  Type: assembly
+  Offset: 0xC207AE
+  Size: 33
+COMMAND_BUILDUP:
+  Description: Routine for the !Buildup action
+  Type: assembly
+  Offset: 0xC207CF
+  Size: 69
+STEAL:
+  Description: Steal helper routine
+  Type: assembly
+  Offset: 0xC20814
+  Size: 41
+COMMAND_MANTRA:
+  Description: Routine for the !Mantra action
+  Type: assembly
+  Offset: 0xC2090B
+  Size: 40
+COMMAND_ESCAPE:
+  Description: Routine for the !Escape action
+  Type: assembly
+  Offset: 0xC20933
+  Size: 27
+COMMAND_STEAL:
+  Description: Routine for the !Steal action
+  Type: assembly
+  Offset: 0xC2094E
+  Size: 33
+COMMAND_CAPTURE:
+  Description: Routine for the !Capture action
+  Type: assembly
+  Offset: 0xC2096F
+  Size: 33
+COMMAND_JUMP:
+  Description: Routine for the !Jump action
+  Type: assembly
+  Offset: 0xC20990
+  Size: 77
+COMMAND_DRAGONSWORD:
+  Description: Routine for the !DrgnSwrd action
+  Type: assembly
+  Offset: 0xC20AA4
+  Size: 56
+COMMAND_SMOKE:
+  Description: Routine for the !Smoke action
+  Type: assembly
+  Offset: 0xC20ADC
+  Size: 30
+COMMAND_IMAGE:
+  Description: Routine for the !Image action
+  Type: assembly
+  Offset: 0xC20AFA
+  Size: 21
+COMMAND_THROW:
+  Description: Routine for the !Throw action
+  Type: assembly
+  Offset: 0xC20B4E
+  Size: 33
+COMMAND_SWORDSLAP:
+  Description: Routine for the !Swdslap action
+  Type: assembly
+  Offset: 0xC20B6F
+  Size: 11
+COMMAND_GILTOSS:
+  Description: Routine for the !Giltoss action
+  Type: assembly
+  Offset: 0xC20B7A
+  Size: 33
+COMMAND_SLASH:
+  Description: Routine for the !Slash action
+  Type: assembly
+  Offset: 0xC20B9B
+  Size: 36
+COMMAND_ANIMALS:
+  Description: Routine for the !Animals action
+  Type: assembly
+  Offset: 0xC20BBF
+  Size: 168
+COMMAND_AIM:
+  Description: Routine for the !Aim action
+  Type: assembly
+  Offset: 0xC20C67
+  Size: 8
+COMMAND_XFIGHT:
+  Description: Routine for the !XFight action
+  Type: assembly
+  Offset: 0xC20C6F
+  Size: 97
+COMMAND_OBSERVE:
+  Description: Routine for the !Observe action
+  Type: assembly
+  Offset: 0xC20DA2
+  Size: 33
+COMMAND_ANALYZE:
+  Description: Routine for the !Analyze action
+  Type: assembly
+  Offset: 0xC20DC3
+  Size: 33
+COMMAND_CONJURE:
+  Description: Routine for the !Conjure action
+  Type: assembly
+  Offset: 0xC20DE4
+  Size: 53
+COMMAND_TAME:
+  Description: Routine for the !Tame action
+  Type: assembly
+  Offset: 0xC20EE0
+  Size: 30
+COMMAND_CONTROL:
+  Description: Routine for the !Control action
+  Type: assembly
+  Offset: 0xC20EFE
+  Size: 33
+COMMAND_CATCH:
+  Description: Routine for the !Catch action
+  Type: assembly
+  Offset: 0xC20F1F
+  Size: 33
+COMMAND_RELEASE:
+  Description: Routine for the !Release action
+  Type: assembly
+  Offset: 0xC20F40
+  Size: 485
+COMMAND_COMBINE:
+  Description: Routine for the !Combine action
+  Type: assembly
+  Offset: 0xC21125
+  Size: 68
+COMMAND_PRAY:
+  Description: Routine for the !Pray action
+  Type: assembly
+  Offset: 0xC21169
+  Size: 33
+COMMAND_REVIVE:
+  Description: Routine for the !Revive action
+  Type: assembly
+  Offset: 0xC2118A
+  Size: 40
+COMMAND_TERRAIN:
+  Description: Routine for the !Terrain action
+  Type: assembly
+  Offset: 0xC211B2
+  Size: 172
+COMMAND_HIDE:
+  Description: Routine for the !Hide action
+  Type: assembly
+  Offset: 0xC2125E
+  Size: 85
+COMMAND_SHOW:
+  Description: Routine for the !Show action
+  Type: assembly
+  Offset: 0xC212B3
+  Size: 83
+COMMAND_FLIRT:
+  Description: Routine for the !Flirt action
+  Type: assembly
+  Offset: 0xC21306
+  Size: 45
+COMMAND_DANCE:
+  Description: Routine for the !Dance action
+  Type: assembly
+  Offset: 0xC21333
+  Size: 105
+DISPLAY_MESSAGE:
+  Description: Displays a message.
+  Type: assembly
+  Offset: 0xC216FA
+  Size: 11
+BERSERK_ABILITY_INIT:
+  Description: Initializes berserk ability in battle
+  Type: assembly
+  Offset: 0xC21C9A
+  Size: 16
+INCREASE_ATB:
+  Description: Increases an entity's ATB bar in battle
+  Type: assembly
+  Offset: 0xC22482
+  Size: 98
+LOAD_MONSTER_AI:
+  Description: Sets up monster AI in battle
+  Type: assembly
+  Offset: 0xC2313B
+  Size: 44
+AI_CHOOSE_RANDOM:
+  Description: ""
+  Type: assembly
+  Offset: 0xC2334D
+  Size: 33
+SET_TARGET:
+  Description: Sets a target
+  Type: assembly
+  Offset: 0xC233EC
+  Size: 131
+  Initial State:
+    8 Bit Index: false
+ENCOUNTER_TYPE:
+  Description: ""
+  Type: assembly
+  Size: 112
+  Offset: 0xC24F7A
+  Initial State:
+    8 Bit Accum: true
+    8 Bit Index: false
+ITEM_DROP:
+  Description: Get item dropped from enemy
+  Type: assembly
+  Size: 38
+  Offset: 0xC25674
+  Initial State:
+    8 Bit Accum: true
+    8 Bit Index: false
+SUMMON:
+  Description: Summoning?
+  Type: assembly
+  Size: 24
+  Offset: 0xC260A3
+  Initial State:
+    8 Bit Accum: true
+HASTE_SLOW_MODIFIER:
+  Description: Modifies speed by haste/slow statuses
+  Type: assembly
+  Size: 39
+  Offset: 0xC26163
+  Initial State:
+    8 Bit Accum: true
+# C26870  Attack type 01h (Monster Fight)
+# C26898  Attack type 02h (Monster Specialty)
+# C268E2  Attack type 03h (Magic Sword Level 1)
+# C268F7  Attack type 04h (Magic Sword Level 2)
+# C2690C  Attack type 05h (Magic Sword Level 3)
+# C26921  Attack type 06h (Magic attack)
+# C2694A  Attack type 07h (Gravity)
+# C26971  Attack type 08h (Flare)
+# C26993  Attack type 09h (Random)
+# C269B5  Attack type 0Ah (Physical Magic)
+# C269DB  Attack type 0Bh (Level Based Damage)
+# C26A07  Attack type 0Ch (HP Leak)
+# C26A3C  Attack type 0Dh (Drain)
+# C26A65  Attack type 0Eh (Psyche)
+# C26A76  Attack type 0Fh (Reduce HP to Critical)
+# C26A81  Attack type 10h (Heal)
+# C26A8E  Attack type 11h (Fully Heal)
+# C26AC4  Attack type 12h (Status Effect 1)
+# C26ACF  Attack type 13h (Status Effect 2)
+# C26ADD  Attack type 14h (Status Effect 3)
+# C26AEB  Attack type 15h (Status Effect 1 Toggle)
+# C26AF6  Attack type 16h (Status Effect 3, Mutually exclusive statuses))
+# C26B01  Attack type 17h (Status Effect 1, Life2 to Undead)
+# C26B32  Attack type 18h (Kill, Miss vs. Heavy)
+# C26B35  Attack type 19h (Remove Statuses)
+# C26B52  Attack type 1Ah (Revive)
+# C26B7D  Attack type 1Bh (Drain to party)
+# C26BFC  Attack type 1Ch (Grant Elemental Absorption, Immunity, or Weakness)
+# C26C17  Attack type 1Dh (Scan)
+# C26CE4  Attack type 1Eh (Drag)
+# C26CEF  Attack type 1Fh (Void)
+# C26D2E  Attack type 20h (Exit)
+# C26D4B  Attack type 21h (Reset)
+# C26D5B  Attack type 22h (Quick)
+# C26D83  Attack type 23h (Earth Wall)
+# C26DAB  Attack type 24h (Potions)
+# C26DB4  Attack type 25h (Ethers)
+# C26DBD  Attack type 26h (Full Heal)
+# C26DD7  Attack type 27h (Status Effects)
+# C26DED  Attack type 28h (Ignore Defense)
+# C26E12  Attack type 29h (Kill, not Heavy)
+# C26E2D  Attack type 2Ah (% on Max HP)
+# C26E4C  Attack type 2Bh (Damage % on Attacker Current HP)
+# C26E5E  Attack type 2Ch (50/50 chance of Status 1 or Status 2)
+# C26E72  Attack type 2Dh (Ground Attack)
+# C26E9B  Attack type 2Eh (Reaper's Sword)
+# C26EB1  Attack type 2Fh (Not Used?)
+# C26EBC  Attack type 30h (Fists)
+# C26EE1  Attack Type 31h (Swords)
+# C26F1E  Attack Type 32h (Knives)
+# C26F58  Attack Type 33h (Spears)
+# C26F84  Attack Type 34h (Axes)
+# C26FA8  Attack Type 35h (Bows)
+# C26FC9  Attack Type 36h (Bows with Elemental)
+# C26FF9  Attack Type 37h (Katanas)
+# C27020  Attack Type 38h (Whips)
+# C2703E  Attack Type 39h (Bells)
+# C27053  Attack Type 3Ah (Long Reach Axes)
+# C27074  Attack Type 3Bh (Rods)
+# C2709D  Attack Type 3Ch (Rune Weapons)
+# C270C4  Attack Type 3Dh (Death Claw)
+# C270DB  Attack Type 3Eh (Failure)
+# C270EC  Attack Type 3Fh (Zombie Breath)
+# C27119  Attack type 40h (Change Row)
+# C27134  Attack type 41h (Unused??)
+# C27140  Attack type 42h (Heal HP & Status)
+# C27150  Attack type 43h (Steal)
+# C271B9  Attack type 44h (Escape)
+# C271D7  Attack type 45h (Throw)
+# C271F5  Attack type 46h (GilToss)
+# C271FB  Attack type 47h (Tame)
+# C2720D  Attack type 48h (Catch)
+# C27255  Attack type 49h (Flirt, Lilith Rod)
+# C27266  Attack type 4Bh (L5 Doom)
+# C2728D  Attack type 4Ch (L2 Old)
+# C2729B  Attack type 4Dh (L4 Qrter)
+# C272B2  Attack type 4Eh (L3 Flare)
+# C272DB  Attack type 4Fh (Spirit)
+# C27300  Attack type 50h (Goblin Punch)
+# C27319  Attack type 51h (Modify Level or Defense)
+# C2735E  Attack type 52h (Mucus)
+# C27379  Attack type 53h (Damage % MP)
+# C27384  Attack type 54h (Damage = Max HP - Current HP)
+# C2738F  Attack type 55h (Fusion)
+# C27398  Attack type 56h (Unused?)
+# C273A3  Attack type 57h (HP Leak + Status)
+# C273C0  Attack type 58h (Mind Blast)
+# C273F0  Attack type 59h (Giant Drink)
+# C27407  Attack type 5Ah (White Wind)
+# C2740E  Attack type 5Bh (Unused??)
+# C27419  Attack type 5Ch (Hug)
+# C27427  Attack type 5Dh (Dance of the Dead, Zombie Powder)
+# C2743D  Attack type 5Eh (Song magic)
+# C2745C  Attack type 5Fh (Requiem)
+# C27476  Attack type 60h (]Item)
+# C27562  Attack type 61h (Stalker Attacker)
+# C27662  Attack type 62h (Byblos Attack)
+# C276CE  Attack type 63h (Grand Cross)
+# C27774  Attack type 64h (Chicken Knife)
+# C277A4  Attack type 65h (Interceptor Rocket)
+# C277B6  Attack type 66h (Targetting)
+# C277D3  Attack type 67h (Pull)
+# C277E0  Attack type 68h (Terminate)
+# C277E9  Attack type 69h (Control)
+# C278BC  Attack type 6Ah (]Item)
+# C278DD  Attack type 6Bh (Grant Immunity or Creature Type)
+# C278EE  Attack type 6Ch (Strong vs. Creature Type)
+# C278FA  Attack type 6Dh (Vampire)
+# C2791B  Attack type 6Eh (Brave Blade)
+# C2794D  Attack type 6Fh (Strong Fight)
+# C27964  Attack type 70h (Wormhole)
+# C27AD9  Attack type 72h (Bows Strong vs. Creature)
+# C27AFA  Attack type 73h (Spears Strong vs. Creature)
+# C27B1E  Attack type 7Fh (No Action)
+# C27C0D  Hit = Attacker Level + Hit - Target Level, Evade = Magic Evade
+# C27C3B  Hit = 1st Parameter, Evade = Evade
+# C27C47  Hit = 100, Evade = Evade
+# C27C53  Hit = 100, Evade = Evade/2
+# C27C60  Hit = 1st Parameter, Evade = Evade
+# C27C6C  Hit = 1st Parameter, Evade = Evade/2
+# C27C79  Hit = 1st Paramter, Evade = Magic Evade
+# C27C85  Steal Success Determination
+# C27C97  Aegis Shield Check
+# C27CC3  Multitargetting effect on Hit%
+# C27CFC  Check for Evade, Weapon Block or Elf Cape
+# C27D7F  Sword Dance Up Modifier
+# C27D8B  Target Status Effect Modifiers to Magical Hit%
+# C27DAC  Target Status Effect Modifiers to Physical Hit%
+# C27DD1  Attacker Status Effect Modifiers to Physical Hit%
+# C27DE2  Check for Target Image to Miss
+# C27DF1  Check for Void to Miss
+# C27E03  Check for Target Float to Miss
+# C27E12  Hit Determination for status
+# C27E23  Hit Determination for physical?
+# C27E5B  Creature Type Hit Determination
+# C27E67  Hit if Target Level = Multiple of Parameter 1
+# C27E81  Hit Determination for Magic, Autohit Party
+# C27EBE  Hit Determination for physical
+# C27EF6  Hit Determination for Magic
+# C27F1B  Hit Determination for physical Magic
+# C27F30  Magic damage formula
+# C27F6A  Flare Magic damage formula
+# C27FA7  Random Magic damage formula
+# C27FC2  Physical magic damage formula
+# C27FFC  Swords damage formula
+# C2803E  Fists damage formula
+# C280D4  Knives damage formula
+# C2812B  Axes damage formula
+# C2816F  Bells damage formula
+# C281CB  Rods damage formula
+# C28205  Level based damage formula
+# C28227  Monster damage formula
+# C28252  Healing damage formula
+# C28261  damage formula?
+# C28299  Throw damage formula
+# C2830A  GilToss damage formula
+# C28366  Multitargetting Modifications to Damage
+# C2839B  Back Row Modifications to Damage
+# C283BD  Command Modifiers to Damage
+# C28430  Double Grip Modifiers to Damage
+# C28452  Check for Jump?
+# C28467  Bonus to Attack and M, Costing MP
+# C284AF  Specialy Effect Modifier to damage
+# C284CF  Medicine modifier to damage
+# C284DD  Creature type modifier to damage
+# C284F3  Target Status Effect Modifiers to Magic Damage
+# C28512  Target Status Effect Modifiers to Damage
+# C28533  Attacker Status Effect Modifiers to Damage
+# C2855D  Bonus if Equal Level Damage formula
+# C28577  Brave Blade Damage formula
+# C285AD  Goblin Punch Damage formula
+# C285F1  Strong Fight Damage formula
+# C28626  Chicken Knife Damage formula
+# C2866D  Magic Element Up Modifers
+# C28684  Magic Sword Modifiers
+# C28734  Attack Element Modifiers
+# C2876E  Magic Attack Element Modifiers
+# C287B5  Magic Attack Element Modifiers (ii)?
+# C287DF  Check for Critical Hit
+# C287F9  Check Creature type for Critical Hit
+# C28811  Calculate Final Damage
+# C28874  Gravity Attack Damage
+# C288C1  Heal or Damage Undead
+# C288DE  Full Heal or Reduce HP to Critical for Undead
+# C288FD  Reduce HP to critical Damage
+# C28926  Magic Sword Drain
+# C28946  Magic Sword Psyche
+# C28985  Psyche
+# C289F7  Fully Heal MP
+# C28A05  Calculate Magic Final Damage
+# C28A43  Calculate Damage from % of Target Max HP
+# C28A9D  Calculate Damage from % of Attacker Current HP
+# C28AEC  Calculate Damage from % of Target Current MP
+# C28B33  Calculate Damage = Attacker Max HP - Attacker Current HP
+# C28B4D  Calculate Damage = Target Max HP / 2
+# C28B7D  Status Effect Duration Determination
+# C28BCF  Apply Magic Sword Status Effects
+# C28BF9  Apply Bow Status Effects
+# C28C2F  Apply Monster Specialty Effects
+# C28CAC  Apply Status Effect 1
+# C28D2E  Apply Status Effect 2
+# C28DCB  Apply Status Effect 3
+# C28E05  Apply Status Effect 4
+# C28E25  Toggle Status Effect 1
+# C28E3A  Apply Flirt, miss if Heavy
+# C28E51  Apply Status Effect 3, Mutually exclusive Statuses
+# C28EB6  Remove Status 1
+# C28F11  Remove Status 2
+# C28F6E  Remove Status 3
+# C28F82  Kill target, miss if Heavy
+# C28FAA  Revive Target
+# C2902B  Apply Status 1 to Target, bypass Status Immunity
+# C29039  Apply Status 2 to Target, bypass Status Immunity
+# C290CD  Apply Status 3 to Target, bypass Status Immunity
+# C290DB  Apply Status 1 to Attacker, bypass Status Immunity
+# C290E9  Remove Magic Sword Effects
+# C29101  Change Target Row
+# C29117  Move Target to Front Row
+# C29122  Move Attacker to Back Row
+# C291D1  Toggle Status 4 on Target
+# C291E7  Grant Creature Type
+# C291F2  Grant Status 1 Immunity
+# C291FD  Grant Magic Element Up
+# C2912D  Defense & Magic Defense = Half
+# C29136  Level = Half
+# C29143  Add to Level
+# C29153  Subtract from Level
+# C29163  Double Max HP
+# C29197  Increase Monster Attack
+# C291B4  Increase Target Defense and Magic Defense
+# C29208  Steal Subroutine
+# C292A5  Poison Status Effect
+# C2938F  Lose one Image
+# C293F8  Subtract Defense from Damage, Store in $7B69
+# C2940A  Multipy Net Damage by M
+# C2964D  Cover?
+DIALOGUE_POINTERS:
+  Description: Pointers to dialogue used in the game
+  Type: array
+  Size: 0x10E0
+  Offset: 0xC82220
+  Item Type:
+    Type: pointer
+    Size: 2
+    Base: 0xCA0000
+TEXT:
+  Description: Raw text data
+  Type: array
+  Size: 0x10000
+  Offset: 0xCA0000
+  Item Type:
+    Type: script
+    Charset: text
+    Terminator: [0x00]
+ENEMY_STATS:
+  Description: Enemy statistics
+  Type: array
+  Offset: 0xD00000
+  Size: 0x3000
+  Item Type:
+    Type: struct
+    Entries:
+      SPEED:
+        Description: Enemy's speed
+        Type: int
+        Size: 1
+      STRENGTH:
+        Description: Enemy's strength
+        Type: int
+        Size: 1
+      STRENGTH_MULTIPLIER:
+        Description: Enemy's attack multiplier
+        Type: int
+        Size: 1
+      EVASION:
+        Description: Enemy's evasion
+        Type: int
+        Size: 1
+      DEFENSE:
+        Description: Enemy's defense
+        Type: int
+        Size: 1
+      MAGIC:
+        Description: Enemy's magic
+        Type: int
+        Size: 1
+      MAGIC_DEFENSE:
+        Description: Enemy's magic defense
+        Type: int
+        Size: 1
+      MAGIC_EVADE:
+        Description: Enemy's magic evasion
+        Type: int
+        Size: 1
+      HP:
+        Description: Enemy's HP
+        Type: int
+        Size: 2
+      MP:
+        Description: Enemy's MP
+        Type: int
+        Size: 2
+      EXP:
+        Description: Enemy's EXP awarded at the end of battle
+        Type: int
+        Size: 2
+      GP:
+        Description: Enemy's wealth dropped at the end of battle
+        Type: int
+        Size: 2
+      ATTACK_TYPE:
+        Description: Animation used for this enemy's physical attacks
+        Type: int
+        Size: 1
+      ELEMENTAL_IMMUNITIES:
+        Description: Enemy's elemental immunities
+        Type: int
+        Size: 1
+        Bit Values: &ELEMENTAL_TYPES
+          - Fire
+          - Ice
+          - Lightning
+          - Poison
+          - Holy
+          - Earth
+          - Wind
+          - Water
+      STATUS_IMMUNITIES:
+        Description: Status effects that this enemy cannot be afflicted with
+        Type: int
+        Size: 3
+        Bit Values: &STATUS_EFFECTS_3
+          - Darkness
+          - Zombie
+          - Poison
+          - Float
+          - Mini
+          - Toad
+          - Petrify
+          - Permanent
+          - Image (1)
+          - Image (2)
+          - Silence
+          - Berserk
+          - Confuse
+          - Paralyze
+          - Sleep
+          - Old
+          - Regen
+          - Invulnerability
+          - Slow
+          - Haste
+          - Stop
+          - Shell
+          - Armor
+          - Wall
+          - Hidden
+          - N Dead
+          - Singing
+          - HP Leak
+          - Countdown
+          - Controlled
+          - F. Image
+          - Erased
+      ELEMENTAL_ABSORPTION:
+        Description: Elements that this enemy will heal from instead of being dealt damage
+        Type: int
+        Size: 1
+        Bit Values: *ELEMENTAL_TYPES
+      CANNOT_EVADE:
+        Description: Ability types this enemy is unable to evade
+        Type: int
+        Size: 1
+        Bit Values:
+          - Blue
+          - White
+          - Black
+          - Dimen
+          - Summon
+          - Song
+          - Aerial
+          - Physical
+      ELEMENTAL_WEAKNESS:
+        Description: Enemy's elemental weaknesses
+        Type: int
+        Size: 1
+        Bit Values: *ELEMENTAL_TYPES
+      TYPE:
+        Description: Enemy's subtypes
+        Type: int
+        Size: 1
+        Bit Values:
+          - Undead
+          - Toad
+          - Beast
+          - Aevis
+          - Dragon
+          - Heavy
+          - Desert
+          - Humanoid
+      COMMAND_IMMUNITY:
+        Description: Enemy's command immunities...?
+        Type: int
+        Size: 1
+      INITIAL_STATUS:
+        Description: Status effects this enemy enters battle with
+        Type: int
+        Size: 4
+        Bit Values:
+          - Darkness
+          - Zombie
+          - Poison
+          - Float
+          - Mini
+          - Toad
+          - Petrify
+          - Permanent
+          - Image (1)
+          - Image (2)
+          - Silence
+          - Berserk
+          - Confuse
+          - Paralyze
+          - Sleep
+          - Old
+          - Regen
+          - Invulnerability
+          - Slow
+          - Haste
+          - Stop
+          - Shell
+          - Armor
+          - Wall
+          - Hidden
+          - N Dead
+          - Singing
+          - HP Leak
+          - Countdown
+          - Controlled
+          - F. Image
+          - Erased
+      INTERNAL_ID:
+        Description: Enemy's internal ID
+        Type: int
+        Size: 1
+      LEVEL:
+        Description: Enemy's level
+        Type: int
+        Size: 1
+ENEMY_FORMATIONS:
+  Description: Configurations of enemies that can be encountered.
+  Type: array
+  Offset: 0xD03000
+  Size: 8192
+  Item Type:
+    Type: struct
+    Entries:
+      VISUAL_EFFECTS:
+        Description: Enemy's speed
+        Type: int
+        Size: 1
+      ESCAPE_CHANCE:
+        Description: Chance of success for player's escape
+        Type: int
+        Size: 1
+      AP:
+        Description: AP awarded at the end of battle
+        Type: int
+        Size: 1
+      VISIBILITY:
+        Description: Enemies that are initially visible
+        Type: int
+        Size: 1
+      ENEMIES:
+        Description: Enemies found in this formation
+        Type: array
+        Size: 8
+        Item Type:
+          Type: int
+          Size: 1
+      PALETTE:
+        Description: Palettes to load for this battle
+        Type: int
+        Size: 2
+      FLAGS:
+        Description: Miscellaneous battle features
+        Type: int
+        Size: 2
+ENEMY_ITEMS:
+  Description: Items held by enemies.
+  Type: array
+  Offset: 0xD05000
+  Size: 0x600
+  Item Type:
+    Type: struct
+    Entries:
+      STOLEN_ITEMS:
+        Description: Items that can be stolen
+        Type: array
+        Size: 2
+        Item Type:
+          Type: int
+          Size: 1
+      DROPPED_ITEMS:
+        Description: Items that may drop at the end of the battle
+        Type: array
+        Size: 2
+        Item Type:
+          Type: int
+          Size: 1
+ENEMY_CONTROL_ABILITIES:
+  Description: Abilities that can be used when an enemy is controlled
+  Type: array
+  Offset: 0xD05600
+  Size: 0x600
+  Item Type:
+    Type: array
+    Size: 4
+    Item Type:
+      Type: int
+      Size: 1
+      Values:
+        255: None
+ENEMY_NAMES:
+  Description: Full names for enemies
+  Type: unknown
+  Offset: 0xD05C00
+  Size: 3072
+RELEASE_ABILITIES:
+  Description: Ability used by enemies when !Released.
+  Type: array
+  Offset: 0xD08600
+  Size: 256
+  Item Type:
+    Type: int
+    Size: 1
+COORDINATE_BASE:
+  Description: ""
+  Type: array
+  Size: 0x1000
+  Offset: 0xD08900
+  Item Type:
+    Type: array
+    Item Type:
+      Type: int
+      Size: 1
+SPECIAL_ABILITY_TABLE:
+  Description: Special features defined for enemy special abilities.
+  Type: array
+  Size: 0x300
+  Offset: 0xD09900
+  Item Type:
+    Type: array
+    Size: 3
+    Item Type:
+      Type: int
+      Size: 1
+SCRIPT_TABLE:
+  Description: Pointers to enemy AI scripts.
+  Type: array
+  Offset: 0xD09C00
+  Size: 768
+  Item Type:
+    Type: pointer
+    Size: 2
+    Base: 0xD00000
+BATTLE_SCRIPTS:
+  Description: Enemy AI scripts
+  Type: array
+  Offset: 0xD09F00
+  Size: 0x28F0
+  Item Type:
+    Type: struct
+    Entries:
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 5
+      NORMAL_ROUTINE:
+        Description: Script used when monster's turn comes up
+        Type: script
+        Charset: battle
+        Terminator: [0xFF]
+      COUNTER_ROUTINE:
+        Description: Script used for countering attacks
+        Type: script
+        Charset: battle
+        Terminator: [0xFF]
+UNKNOWN_D0C7F0:
+  Description: Nothing
+  Type: empty
+  Offset: 0xD0C7F0
+  Size: 0x10
+SPELL_ACTIONS:
+  Description: Spell effects.
+  Type: array
+  Size: 2048
+  Offset: 0xD10B80
+  Item Type: &ACTION_STRUCT
+    Type: struct
+    Size: 8
+    Entries:
+      TARGETTING:
+        Description: Targetting style
+        Type: int
+        Size: 1
+        Bit Values:
+          - Unknown0
+          - Unknown1
+          - Roulette
+          - Default target enemy
+          - Can target both sides
+          - Can choose target
+          - Targets entire group
+          - Can target entire group
+      TYPE:
+        Description: Attack type
+        Type: int
+        Size: 1
+      FLAGS:
+        Description: Miscellaneous features
+        Type: int
+        Size: 3
+      PARAMETERS:
+        Description: Parameters used by the attack type
+        Type: array
+        Size: 3
+        Item Type:
+          Type: int
+          Size: 1
+ITEM_NAMES:
+  Description: Full names of items
+  Type: array
+  Offset: 0xD11380
+  Size: 2304
+  Item Type:
+    Type: script
+    Charset: text
+    Size: 9
+SPELL_NAMES:
+  Description: Full spell names
+  Type: struct
+  Offset: 0xD11C80
+  Size: 2043
+  Entries:
+    NAMES1:
+      Description: 6-byte spell names
+      Type: array
+      Size: 522
+      Item Type:
+        Type: script
+        Charset: text
+        Size: 6
+    NAMES2:
+      Description: 9-byte spell names
+      Type: array
+      Size: 1521
+      Item Type:
+        Type: script
+        Charset: text
+        Size: 9
+SHOP_DATA:
+  Description: Shop data
+  Type: unknown
+  Offset: 0xD12D00
+  Size: 0x300
+UNKNOWN_D139A9:
+  Description: ""
+  Type: array
+  Offset: 0xD139A9
+  Size: 512
+  Item Type:
+    Type: pointer
+    Size: 2
+UNKNOWN_D14000:
+  Description: ""
+  Type: array
+  Offset: 0xD14000
+  Size: 256
+  Item Type:
+    Type: pointer
+    Size: 2
+    Base: 0xD10000
+UNKNOWN_D14100:
+  Description: ""
+  Type: array
+  Offset: 0xD14100
+  Size: 0x4B6
+  Item Type:
+    Type: script
+    Terminator: [0]
+    Charset: text
+JOB_ABILITY_POINTERS:
+  Description: Pointer to abilities that can be learned by jobs.
+  Type: array
+  Offset: 0xD152C0
+  Size: 42
+  Item Type:
+    Type: pointer
+    Size: 2
+ABILITY_COUNT:
+  Description: Number of abilities that can be learned by jobs.
+  Type: array
+  Offset: 0xD152EA
+  Size: 22
+  Item Type:
+    Type: int
+    Size: 1
+JOB_ABILITIES:
+  Description: Abilities that can be learned by jobs.
+  Type: array
+  Offset: 0xD15300
+  Size: 0x12D
+  Item Type:
+    Type: array
+    Terminator: [0]
+    Item Type:
+      Type: int
+      Size: 1
+JOB_BASE_STATS:
+  Description: Base stats for each job.
+  Type: array
+  Offset: 0xD156B0
+  Size: 88
+  Item Type:
+    Type: unknown
+    Size: 4
+JOB_EQUIPMENT_COMPATIBILITY:
+  Description: Initial equipment compatibility for each job.
+  Type: array
+  Size: 88
+  Offset: 0xD15708
+  Item Type: &EQUIPMENT_TYPE
+    Type: int
+    Size: 4
+    Bit Values:
+      - Knife
+      - Ninja Sword
+      - Sword
+      - Knightsword
+      - Spear
+      - Axe
+      - Hammer
+      - Katana
+      - Rod
+      - Staff
+      - Flail
+      - Bow
+      - Harp
+      - Whip
+      - Bell
+      - Unknown23
+      - Shield
+      - Heavy Helmet
+      - Light Helmet
+      - Dancer Gear
+      - Heavy Armour
+      - Light Armour
+      - Mage Robe
+      - Common
+      - Glove
+      - Ring
+      - Thief Glove
+      - Chemist Gear
+      - Mage hat
+      - Unknown5
+      - Unknown6
+      - Unknown7
+JOB_COMMANDS:
+  Description: Command configuration for jobs. Typically Fight/Job Command/Blank/Item.
+  Type: array
+  Offset: 0xD15760
+  Size: 88
+  Item Type:
+    Type: array
+    Size: 4
+    Item Type:
+      Type: int
+      Size: 1
+JOB_INNATE_ABILITIES:
+  Description: Innate abilities available to each job
+  Type: array
+  Offset: 0xD157B8
+  Size: 72
+  Item Type:
+    Type: int
+    Size: 2
+    Bit Values:
+      - Cover
+      - Brawl
+      - Dbl Grip
+      - Medicine
+      - Berserk
+      - Caution
+      - Preemtiv
+      - 2-Handed
+      - Passages
+      - Pitfalls
+      - DmgFloor
+      - Dash
+      - Learning
+      - Barrier
+      - Evade
+      - Counter
+ABILITY_ACTIONS:
+  Description: Actions mapped to each command.
+  Type: array
+  Size: 768
+  Offset: 0xD159E0
+  Item Type: *ACTION_STRUCT
+UNKNOWN_D15CE0:
+  Description: ""
+  Type: unknown
+  Offset: 0xD15CE0
+  Size: 192
+ACTION_DELAYS:
+  Description: Amount of time required for actions to execute.
+  Type: array
+  Size: 96
+  Offset: 0xD15DA0
+  Item Type:
+    Type: int
+    Size: 1
+COMMAND_ABILITY_BONUSES:
+  Description: Stat bonuses for equipping abilities.
+  Type: array
+  Size: 1024
+  Offset: 0xD15E00
+  Item Type:
+    Type: unknown
+    Size: 8
+SUPPORT_ABILITY_BONUSES:
+  Description: Stat bonuses for equipping passive abilities.
+  Type: array
+  Offset: 0xD16308
+  Size: 0x80
+  Item Type:
+    Type: unknown
+    Size: 4
+INNATE_ABILITY_EFFECTS:
+  Description: Effects for passive abilities.
+  Type: array
+  Offset: 0xD1638C
+  Size: 66
+  Item Type:
+    Type: unknown
+    Size: 2
+EQUIP_COMPATIBILITY_ADDED:
+  Description: Equipment compatibility added by passive abilities.
+  Type: array
+  Offset: 0xD163CE
+  Size: 132
+  Item Type: *EQUIPMENT_TYPE
+ABILITY_EFFECTS:
+  Description: Passive ability actions?
+  Type: array
+  Size: 840
+  Offset: 0xD16AB1
+  Item Type: *ACTION_STRUCT
+...

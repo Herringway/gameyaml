@@ -1,0 +1,135 @@
+---
+Platform: snes
+Title: Kirby Super Star
+Country: US
+Version: v1.0
+Default Script: scripttext
+SHA256: 4E095FBBDEC4A16B075D7140385FF68B259870CA9E3357F076DFFF7F3D1C4A62
+Script Tables:
+  scripttext:
+    - Sequence: [0x00]
+      Replacement: ''
+    - Sequence: [0x02]
+      Replacement: "\n"
+    - Sequence: [0x0E, "XX", "XX"]
+    - Sequence: [0x20]
+      Replacement: ' '
+    - Sequence: [0x2B]
+      Replacement: .
+    - Sequence: [0x2C]
+      Replacement: ','
+    - Sequence: [0x2D]
+      Replacement: "'"
+    - Sequence: [0x30]
+      Replacement: '-'
+    - Sequence: [0x33]
+      Replacement: '!'
+    - Sequence: [0x34]
+      Replacement: "?"
+    - Sequence: [0x4D]
+      Replacement: A
+    - Sequence: [0x4E]
+      Replacement: B
+    - Sequence: [0x4F]
+      Replacement: C
+    - Sequence: [0x50]
+      Replacement: D
+    - Sequence: [0x51]
+      Replacement: E
+    - Sequence: [0x52]
+      Replacement: F
+    - Sequence: [0x53]
+      Replacement: G
+    - Sequence: [0x54]
+      Replacement: H
+    - Sequence: [0x55]
+      Replacement: I
+    - Sequence: [0x56]
+      Replacement: J
+    - Sequence: [0x57]
+      Replacement: K
+    - Sequence: [0x58]
+      Replacement: L
+    - Sequence: [0x59]
+      Replacement: M
+    - Sequence: [0x5A]
+      Replacement: 'N'
+    - Sequence: [0x5B]
+      Replacement: O
+    - Sequence: [0x5C]
+      Replacement: P
+    - Sequence: [0x5D]
+      Replacement: Q
+    - Sequence: [0x5E]
+      Replacement: R
+    - Sequence: [0x5F]
+      Replacement: S
+    - Sequence: [0x60]
+      Replacement: T
+    - Sequence: [0x61]
+      Replacement: U
+    - Sequence: [0x62]
+      Replacement: V
+    - Sequence: [0x63]
+      Replacement: W
+    - Sequence: [0x64]
+      Replacement: X
+    - Sequence: [0x65]
+      Replacement: 'Y'
+    - Sequence: [0x66]
+      Replacement: Z
+    - Sequence: [0x67]
+      Replacement: a
+    - Sequence: [0x68]
+      Replacement: b
+    - Sequence: [0x69]
+      Replacement: c
+    - Sequence: [0x6A]
+      Replacement: d
+    - Sequence: [0x6B]
+      Replacement: e
+    - Sequence: [0x6C]
+      Replacement: f
+    - Sequence: [0x6D]
+      Replacement: g
+    - Sequence: [0x6E]
+      Replacement: h
+    - Sequence: [0x6F]
+      Replacement: i
+    - Sequence: [0x70]
+      Replacement: j
+    - Sequence: [0x71]
+      Replacement: k
+    - Sequence: [0x72]
+      Replacement: l
+    - Sequence: [0x73]
+      Replacement: m
+    - Sequence: [0x74]
+      Replacement: 'n'
+    - Sequence: [0x75]
+      Replacement: o
+    - Sequence: [0x76]
+      Replacement: p
+    - Sequence: [0x77]
+      Replacement: q
+    - Sequence: [0x78]
+      Replacement: r
+    - Sequence: [0x79]
+      Replacement: s
+    - Sequence: [0x7A]
+      Replacement: t
+    - Sequence: [0x7B]
+      Replacement: u
+    - Sequence: [0x7C]
+      Replacement: v
+    - Sequence: [0x7D]
+      Replacement: w
+    - Sequence: [0x7E]
+      Replacement: x
+    - Sequence: [0x7F]
+      Replacement: 'y'
+    - Sequence: [0x80]
+      Replacement: z
+    - Sequence: [0xCB]
+      Replacement: "\n"
+...

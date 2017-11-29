@@ -1,0 +1,1124 @@
+---
+ATTACK_ELEMENTAL_TYPE:
+  Description: ""
+  Type: int
+  Offset: 0x7E11A1
+  Size: 1
+  Bit Values:
+    - Fire
+    - Ice
+    - Bolt
+    - Poison
+    - Wind
+    - Holy
+    - Earth
+    - Water
+ATTACK_FLAGS:
+  Description: ""
+  Type: int
+  Offset: 0x7E11A2
+  Size: 3
+  Bit Values:
+    - Physical or magical damage
+    - Miss if target immune to death
+    - Only target dead or undead targets
+    - Make heal spells damage undead
+    - Randomize target
+    - Ignore defense
+    - Don't split damage in multi-target spells
+    - Abort on allies
+    - Spell is usable outside battle
+    - Ignore reflect
+    - Can learn as Lore
+    - Enable Runic
+    - Quick/Warp flag
+    - Re-target if target is dead
+    - Caster dies after attack
+    - Concern MP
+    - Heal damage
+    - Redirection
+    - Lift status
+    - Toggle status
+    - Stamina used in defense
+    - Can't dodge attack
+    - Use evasion as Lv X Spells
+    - Use HP fraction
+ATTACK_MP_COST:
+  Description: ""
+  Type: int
+  Offset: 0x7E11A5
+  Size: 1
+ATTACK_POWER:
+  Description: ""
+  Type: int
+  Offset: 0x7E11A6
+  Size: 1
+ATTACK_FLAGS2:
+  Description: ""
+  Type: int
+  Offset: 0x7E11A7
+  Size: 1
+  Bit Values:
+    - Miss if immune
+    - Show text
+ATTACK_HIT_RATE:
+  Description: ""
+  Type: int
+  Offset: 0x7E11A8
+  Size: 1
+ATTACK_SPECIAL:
+  Description: ""
+  Type: int
+  Offset: 0x7E11A9
+  Size: 1
+ATTACK_STATUS:
+  Description: ""
+  Type: int
+  Offset: 0x7E11AA
+  Size: 4
+  Bit Values:
+    - Dark
+    - Zombie
+    - Poison
+    - Magitek
+    - Clear
+    - Imp
+    - Petrify
+    - Death
+    - Condemned
+    - Near fatal
+    - Image
+    - Mute
+    - Berserk
+    - Muddle
+    - Seizure
+    - Sleep
+    - Dance
+    - Regen
+    - Slow
+    - Haste
+    - Stop
+    - Shell
+    - Safe
+    - Reflect
+    - Rage
+    - Freeze
+    - Life 3
+    - Morph
+    - Chant
+    - Disappear
+    - Dog block
+    - Float
+ATTACK_STAT_FACTOR:
+  Description: ""
+  Type: int
+  Offset: 0x7E11AE
+  Size: 1
+ATTACK_LEVEL_FACTOR:
+  Description: ""
+  Type: int
+  Offset: 0x7E11AF
+  Size: 1
+ATTACK_DAMAGE:
+  Description: ""
+  Type: int
+  Offset: 0x7E11B0
+  Size: 2
+ACTIVE_BATTLE_FORMATION:
+  Description: ""
+  Type: int
+  Offset: 0x7E11E0
+  Size: 2
+BATTLE_BACKGROUND:
+  Description: ""
+  Type: int
+  Offset: 0x7E11E2
+  Size: 1
+VELDT_AVAILABLE:
+  Description: ""
+  Type: unknown
+  Offset: 0x7E1DDD
+  Size: 0x40
+ACTORS:
+  Description: "Stats of characters that have been made available to the player."
+  Type: array
+  Offset: 0x7E1600
+  Size: 0x24F
+  Item Type:
+    Type: struct
+    Entries:
+      ID:
+        Type: int
+        Description: "ID corresponding to who this character is."
+        Size: 1
+      GFXID:
+        Description: "The character's sprite to load."
+        Type: int
+        Size: 1
+      NAME:
+        Description: "Character's name."
+        Type: script
+        Size: 6
+      LEVEL:
+        Description: "Character's current level."
+        Type: int
+        Size: 1
+      CURRENT_HP:
+        Description: "Character's current HP."
+        Type: int
+        Size: 2
+      MAX_HP:
+        Description: "Character's max HP."
+        Type: int
+        Size: 2
+      CURRENT_MP:
+        Description: "Character's current MP."
+        Type: int
+        Size: 2
+      MAX_MP:
+        Description: "Character's max MP."
+        Type: int
+        Size: 2
+      EXP:
+        Description: "Character's accumulated EXP."
+        Type: int
+        Size: 4
+      STATUS_EFFECTS:
+        Description: "Character's afflcted status effects."
+        Type: int
+        Size: 2
+      BATTLE_COMMANDS:
+        Description: "Character's battle commands."
+        Type: array
+        Item Type:
+          Type: int
+          Size: 1
+        Size: 4
+      VIGOR:
+        Description: "Character's vigor."
+        Type: int
+        Size: 1
+      SPEED:
+        Description: "Character's speed."
+        Type: int
+        Size: 1
+      STAMINA:
+        Description: "Character's stamina."
+        Type: int
+        Size: 1
+      MAGIC_POWER:
+        Description: "Character's magic power."
+        Type: int
+        Size: 1
+      ESPER_EQUIPPED:
+        Description: "Character's equipped esper."
+        Type: int
+        Size: 1
+      RIGHT_HAND_EQUIPPED:
+        Description: "Character's right-hand equipment."
+        Type: int
+        Size: 1
+      LEFT_HAND_EQUIPPED:
+        Description: "Character's left-hand equipment."
+        Type: int
+        Size: 1
+      HEAD_EQUIPPED:
+        Description: "Character's head equipment."
+        Type: int
+        Size: 1
+      BODY_EQUIPPED:
+        Description: "Character's body equipment."
+        Type: int
+        Size: 1
+      RELIC_1_EQUIPPED:
+        Description: "Character's first relic equipped."
+        Type: int
+        Size: 1
+      RELIC_2_EQUIPPED:
+        Description: "Character's second relic equipped."
+        Type: int
+        Size: 1
+GP:
+  Description: "Total accumulated GP."
+  Type: int
+  Offset: 0x7E1860
+  Size: 3
+PLAY_TIME:
+  Description: "Time spent playing this game."
+  Type: struct
+  Offset: 0x7E1863
+  Size: 3
+  Entries:
+    HOURS:
+      Description: "Hours spent playing this game."
+      Type: int
+      Size: 1
+    MINUTES:
+      Description: "Minutes spent playing this game."
+      Type: int
+      Size: 1
+    SECONDS:
+      Description: "Seconds spent playing this game."
+      Type: int
+      Size: 1
+STEPS_TAKEN:
+  Description: ""
+  Type: int
+  Offset: 0x7E1866
+  Size: 3
+ITEM_LIST:
+  Description: ""
+  Type: array
+  Size: 0x100
+  Offset: 0x7E1869
+  Item Type:
+    Type: int
+    Size: 1
+ITEM_QUANTITIES:
+  Description: ""
+  Type: array
+  Size: 0x100
+  Offset: 0x7E1969
+  Item Type:
+    Type: int
+    Size: 1
+# PARTY_MEMBERS:
+#   Type: array
+#   Size: 4
+#   Offset: 0x7E1A69
+#   Item Type:
+#     Type: int
+#     Size: 1
+OBTAINED_ESPERS:
+  Description: ""
+  Type: unknown
+  Size: 4
+  Offset: 0x7E1A69
+ACTIVE_PARTY_ID:
+  Type: int
+  Size: 1
+  Offset: 0x7E1A6D
+  Description: The currently-active party (for multi-party scenarios)
+LEARNED_SPELLS:
+  Description: ""
+  Type: unknown
+  Size: 0x288
+  Offset: 0x7E1A6E
+MORPH_TIME_AVAILABLE:
+  Description: ""
+  Type: int
+  Size: 1
+  Offset: 0x7E1CF6
+AVAILABLE_SWORD_TECH:
+  Description: ""
+  Type: int
+  Size: 1
+  Offset: 0x7E1CF7
+SWORD_TECH_NAMES:
+  Description: ""
+  Type: array
+  Size: 0x30
+  Offset: 0x7E1CF8
+  Item Type:
+    Type: unknown
+    Size: 6
+AVAILABLE_BLITZ:
+  Description: ""
+  Type: int
+  Size: 1
+  Offset: 0x7E1D28
+AVAILABLE_LORE:
+  Description: ""
+  Type: int
+  Size: 3
+  Offset: 0x7E1D29
+AVAILABLE_RAGE:
+  Description: ""
+  Type: unknown
+  Size: 0x20
+  Offset: 0x7E1D2C
+AVAILABLE_DANCE:
+  Description: ""
+  Type: int
+  Size: 1
+  Offset: 0x7E1D4C
+RARE_ITEMS:
+  Description: ""
+  Type: unknown
+  Size: 4
+  Offset: 0x7E1EBA
+AVAILABLE_CHARACTERS:
+  Description: ""
+  Type: unknown
+  Size: 2
+  Offset: 0x7E1EDE
+FLASHBACK_FLAG:
+  Description: ""
+  Type: int
+  Size: 1
+  Offset: 0x7E628A
+  Values:
+    0: 'No'
+    1: 'Yes'
+PAUSED_FLAG:
+  Description: "Whether or not battle is paused"
+  Type: int
+  Size: 1
+  Offset: 0x7E628A
+  Values:
+    0: 'No'
+    1: 'Yes'
+RESET_VECTOR:
+  Type: assembly
+  Offset: 0xC0FF00
+  Description: Entry point for execution
+  Size: 7
+  Initial State:
+    8 Bit Accum: true
+    8 Bit Index: true
+UNKNOWN_C00525:
+  Description: ""
+  Type: assembly
+  Offset: 0xC00525
+  Size: 63
+  Labels:
+    - Offset: 0xB
+      Name: UNKNOWN0
+UNKNOWN_C34EDD:
+  Description: ""
+  Type: assembly
+  Offset: 0xC34EDD
+  Size: 8
+SPELL_DATA:
+  Description: "Data for spells, both player-castable and enemy-castable."
+  Type: array
+  Offset: 0xC46AC0
+  Size: 0xE00
+  Item Type:
+    Type: struct
+    Entries:
+      TARGETTING:
+        Description: "Who this spell can target"
+        Type: int
+        Size: 1
+        Bit Values:
+          - Can move cursor
+          - Selects one side
+          - Auto-selects everyone
+          - Auto-selects party
+          - Auto-confirm
+          - Can select party
+          - Cursor starts on enemy
+          - Random (Roulette)
+      ELEMENT:
+        Description: "Elements used by this spell"
+        Type: int
+        Size: 1
+        Bit Values: &ELEMENTS
+          - Fire
+          - Ice
+          - Thunder
+          - Poison
+          - Wind
+          - Holy
+          - Earth
+          - Water
+      SPECIAL:
+        Description: "Special flags for this spell."
+        Type: int
+        Size: 3
+        Bit Values:
+          - Physical damage
+          - Misses if immune to death
+          - Can only target dead allies
+          - Effects reversed on undead
+          - Random Target
+          - Ignore Defense
+          - Damage is not split between targets
+          - Fail on allies?
+          - Usable outside battle
+          - Not reflectable
+          - Learnable
+          - Absorbable
+          - Unknown (warp, quick)
+          - Change target if target is dead
+          - Caster dies
+          - Affects MP instead of HP
+          - Heal
+          - Heals user
+          - Lift Status
+          - Toggle Status
+          - Target's stamina affects damage
+          - Undodgable
+          - Affects targets of level (success rate)x
+          - Damage = (power*6.25)% of health
+      MP_COST:
+        Type: int
+        Size: 1
+        Description: MP cost of spell.
+      POWER:
+        Type: int
+        Size: 1
+        Description: Power of spell.
+      SPECIAL2:
+        Description: "More special flags for this spell."
+        Type: int
+        Size: 1
+        Bit Values:
+          - Misses if immune to status
+          - Display text if successful (monster only)
+          - Unknown 1
+          - Unknown 2
+          - Unknown 3
+          - Unknown 4
+          - Unknown 5
+          - Unknown 6
+      SUCCESS_RATE:
+        Type: int
+        Size: 1
+        Description: Success rate of spell.
+      SPECIAL_EFFECT:
+        Description: "Special effect of spell."
+        Type: int
+        Size: 1
+        Values:
+          255: Nothing
+      STATUS_EFFECTS:
+        Description: "Status effects cured/inflicted by this spell."
+        Type: int
+        Size: 4
+        Bit Values:
+          - Blind
+          - Zombie
+          - Poison
+          - Magitek
+          - Invisible
+          - Imp
+          - Petrify
+          - Death
+          - Condemned
+          - Near Fatal
+          - Image
+          - Mute
+          - Berserk
+          - Muddle
+          - Seizure
+          - Sleep
+          - Dancing
+          - Regen
+          - Slow
+          - Haste
+          - Stop
+          - Shell
+          - Safe
+          - Reflect
+          - Rage
+          - Freeze
+          - Reraise
+          - Morph
+          - Chant?
+          - Hidden
+          - Interceptor
+          - Float
+DIALOGUE_TEXT_PTR_TABLE:
+  Description: "Pointers to text data."
+  Type: array
+  Offset: 0xCCE604
+  Size: 0x19FC
+  Item Type:
+    Type: pointer
+    Size: 2
+    Base: 0xCD0000
+DIALOGUE_TEXT:
+  Description: "Raw text data."
+  Type: array
+  Offset: 0xCD0000
+  Size: 0x1EFBB
+  Item Type:
+    Type: script
+    Terminator: [0x00]
+PLACE_NAMES:
+  Description: "Names of areas the player can visit."
+  Type: array
+  Offset: 0xCEF100
+  Size: 0x363
+  Item Type:
+    Type: script
+    Terminator: [0x00]
+EMPTY_CEF463:
+  Description: "Nothing."
+  Type: empty
+  Offset: 0xCEF463
+  Size: 0x19D
+MONSTER_CONFIGURATION_TABLE:
+  Description: "Stats for enemies."
+  Type: array
+  Offset: 0xCF0000
+  Size: 0x2FE0
+  Item Type:
+    Type: struct
+    Entries:
+      SPEED:
+        Description: "Enemy's speed."
+        Type: int
+        Size: 1
+      ATTACK_POWER:
+        Description: "Enemy's attack power."
+        Type: int
+        Size: 1
+      HIT_RATE:
+        Description: "Enemy's hit rate."
+        Type: int
+        Size: 1
+      EVASION:
+        Description: "Enemy's evasion."
+        Type: int
+        Size: 1
+      MAGIC_EVASION:
+        Description: "Enemy's magic evasion."
+        Type: int
+        Size: 1
+      DEFENSE:
+        Description: "Enemy's defense."
+        Type: int
+        Size: 1
+      MAGIC_DEFENSE:
+        Description: "Enemy's magic defense."
+        Type: int
+        Size: 1
+      MAGIC_POWER:
+        Description: "Enemy's magic power."
+        Type: int
+        Size: 1
+      HP:
+        Description: "Enemy's HP."
+        Type: int
+        Size: 2
+      MP:
+        Description: "Enemy's MP."
+        Type: int
+        Size: 2
+      EXP:
+        Description: "EXP awarded for defeating this enemy."
+        Type: int
+        Size: 2
+      GP:
+        Description: "GP awarded for defeating this enemy."
+        Type: int
+        Size: 2
+      LEVEL:
+        Description: "Enemy's level."
+        Type: int
+        Size: 1
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 3
+      STATUS_IMMUNITIES:
+        Description: "Status effects that may not be inflicted upon this enemy."
+        Type: int
+        Size: 3
+        Bit Values:
+          - Blind
+          - Zombie
+          - Poison
+          - Magitek
+          - Invisible
+          - Imp
+          - Petrify
+          - Death
+          - Condemned
+          - Near Fatal
+          - Image
+          - Mute
+          - Berserk
+          - Confusion
+          - Sap
+          - Sleep
+          - Float
+          - Regen
+          - Slow
+          - Haste
+          - Stop
+          - Shell
+          - Safe
+          - Reflect
+      ELEMENTAL_RESISTANCE:
+        Description: "Enemy's elemental affinities."
+        Type: struct
+        Size: 3
+        Entries:
+          ABSORBS:
+            Description: "Elements absorbed by the enemy."
+            Type: int
+            Size: 1
+            Bit Values: *ELEMENTS
+          NULLIFIES:
+            Description: "Elements nulled by the enemy."
+            Type: int
+            Size: 1
+            Bit Values: *ELEMENTS
+          WEAKNESSES:
+            Description: "Elements this enemy is weak to."
+            Type: int
+            Size: 1
+            Bit Values: *ELEMENTS
+      ATTACK_ANIMATION:
+        Description: "Weapon animation to use when attacking."
+        Type: int
+        Size: 1
+      INITIAL_STATUS:
+        Description: "Status effects this enemy starts with."
+        Type: int
+        Size: 4
+        Bit Values:
+          - Blind
+          - Zombie
+          - Poison
+          - Magitek
+          - Invisible
+          - Imp
+          - Petrify
+          - Death
+          - Condemned
+          - Near Fatal
+          - Image
+          - Mute
+          - Berserk
+          - Confusion
+          - Sap
+          - Sleep
+          - Float
+          - Regen
+          - Slow
+          - Haste
+          - Stop
+          - Shell
+          - Safe
+          - Reflect
+          - UNKNOWN1
+          - Runic
+          - Reraise
+          - UNKNOWN3
+          - UNKNOWN4
+          - UNKNOWN5
+          - UNKNOWN6
+          - UNKNOWN7
+      SPECIAL_ABILITY:
+        Description: "Enemy's special effects."
+        Type: int
+        Size: 1
+        Bit Values:
+          - Effect ID 1
+          - Effect ID 2
+          - Effect ID 3
+          - Effect ID 4
+          - Effect ID 5
+          - Effect ID 6
+          - No Damage
+          - Unavoidable
+MONSTER_ITEMS:
+  Description: "Items held by enemies."
+  Type: array
+  Offset: 0xCF3000
+  Size: 0x600
+  Item Type:
+    Type: struct
+    Entries:
+      RARE_STEAL:
+        Description: "Item stolen from the enemy (1/8 chance)"
+        Type: int
+        Size: 1
+        Pretty Name: Rare Steal
+      COMMON_STEAL:
+        Description: "Item stolen from the enemy (7/8 chance)"
+        Type: int
+        Size: 1
+        Pretty Name: Common Steal
+      RARE_DROP:
+        Description: "Item dropped by the enemy (1/8 chance)"
+        Type: int
+        Size: 1
+        Pretty Name: Rare Drop
+      COMMON_DROP:
+        Description: "Item dropped by the enemy (7/8 chance)"
+        Type: int
+        Size: 1
+        Pretty Name: Common Drop
+UNKNOWN_DATA_CF3600:
+  Description: ""
+  Type: unknown
+  Offset: 0xCF3600
+  Size: 0x700
+CONTROL_DATA:
+  Description: "Abilities available when controlling enemies."
+  Type: array
+  Offset: 0xCF3D00
+  Size: 0x600
+  Item Type:
+    Type: array
+    Size: 4
+    Item Type:
+      Type: int
+      Size: 1
+      Values:
+        255: Empty
+MONSTER_SKETCH_MOVES:
+  Description: "Abilities to choose from when sketching enemies."
+  Type: array
+  Offset: 0xCF4300
+  Size: 0x300
+  Item Type:
+    Type: array
+    Size: 2
+    Item Type:
+      Type: int
+      Size: 1
+MONSTER_RAGE_MOVES:
+  Description: "Abilities to choose from when raging as enemies."
+  Type: array
+  Offset: 0xCF4600
+  Size: 0x200
+  Item Type:
+    Type: array
+    Size: 2
+    Item Type:
+      Type: int
+      Size: 1
+MONSTER_PACK_TABLE:
+  Description: ""
+  Type: array
+  Offset: 0xCF4800
+  Size: 0x800
+  Item Type:
+    Type: array
+    Size: 8
+    Item Type:
+      Type: int
+      Size: 2
+UNKNOWN_DATA_CF5000:
+  Description: ""
+  Type: array
+  Offset: 0xCF5000
+  Size: 0x400
+  Item Type:
+    Type: unknown
+    Size: 2
+SECTOR_FORMATION_TABLE:
+  Description: "Formations that may appear in each sector of the world maps"
+  Type: array
+  Offset: 0xCF5400
+  Size: 1024
+  Item Type:
+    Type: array
+    Size: 4
+    Item Type:
+      Type: int
+      Size: 1
+MONSTER_FORMATION_ATTRIBUTES_TABLE:
+  Description: "Various attributes associated with enemy formations."
+  Type: array
+  Offset: 0xCF5900
+  Size: 0x900
+  Item Type:
+    Type: struct
+    Entries:
+      FLAGS:
+        Description: "Misc attributes."
+        Type: int
+        Size: 2
+        Bit Values:
+          - APPEARANCE1
+          - APPEARANCE2
+          - APPEARANCE3
+          - APPEARANCE4
+          - No Normal Attacks
+          - No Back Attacks
+          - No Pincer Attacks
+          - No Side Attacks
+          - UNKNOWN_1
+          - No Victory Stance
+          - Block Joker Doom
+          - UNKNOWN_4
+          - UNKNOWN_5
+          - UNKNOWN_6
+          - UNKNOWN_7
+          - Event Battle
+      EVENT:
+        Description: "Event associated with this formation."
+        Type: int
+        Size: 1
+      FLAGS2:
+        Description: "More misc attributes."
+        Type: int
+        Size: 1
+        Bit Values:
+          - Running Disabled
+          - Cannot Appear on Veldt
+          - Hide Start Messages
+          - MUSIC1
+          - MUSIC2
+          - MUSIC3
+          - UNKNOWN
+          - No Music Change
+MONSTER_FORMATION_TABLE:
+  Description: "The enemies found in enemy formations."
+  Type: array
+  Offset: 0xCF6200
+  Size: 0x21C0
+  Item Type:
+    Type: struct
+    Entries:
+      UNKNOWN1:
+        Description: ""
+        Type: unknown
+        Size: 1
+      VISIBILITY:
+        Description: "Signifies which enemies are initially visible."
+        Type: int
+        Size: 1
+        Bit Values:
+          - Enemy 1
+          - Enemy 2
+          - Enemy 3
+          - Enemy 4
+          - Enemy 5
+          - Enemy 6
+          - Unused
+          - Unused2
+      ENEMIES:
+        Description: "Enemies that appear in this formation."
+        Type: array
+        Size: 6
+        Item Type:
+          Type: int
+          Size: 1
+      ENEMY_POSITIONS:
+        Description: "Where the enemies appear on the screen."
+        Type: array
+        Size: 6
+        Item Type:
+          Type: int
+          Size: 1
+      BOSS_FLAGS:
+        Description: "Signifies which enemies are bosses."
+        Type: int
+        Size: 1
+        Bit Values:
+          - Enemy 1
+          - Enemy 2
+          - Enemy 3
+          - Enemy 4
+          - Enemy 5
+          - Enemy 6
+          - Unused
+          - Unused2
+AI_OFFSET_TABLE:
+  Description: "Pointers to enemy battle AI scripts"
+  Type: array
+  Offset: 0xCF8400
+  Size: 768
+  Item Type:
+    Type: pointer
+    Size: 2
+    Base: 0xCF8700
+AI_SCRIPT_DATA:
+  Description: "Enemy battle AI scripts"
+  Type: unknown
+  Offset: 0xCF8700
+  Size: 0x394A
+SPELL_EFFECT_DATA:
+  Description: "Data for determining how spells appear in battle."
+  Type: array
+  Offset: 0xD07FB2
+  Size: 0xE00
+  Item Type:
+    Type: struct
+    Entries:
+      UNKNOWNOFFSETS:
+        Description: ""
+        Type: array
+        Size: 6
+        Item Type:
+          Type: pointer
+          Size: 2
+      PALETTES:
+        Description: "Palettes to load for this spell."
+        Type: array
+        Size: 3
+        Item Type:
+          Type: int
+          Size: 1
+      SOUNDEFFECT:
+        Description: "Sound effect to play for this spell."
+        Type: int
+        Size: 1
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 3
+      ANIMATIONSPEED:
+        Description: "Speed the animation will play at."
+        Type: int
+        Size: 1
+SPELL_PALETTES:
+  Description: "Palettes used for spell animations."
+  Type: array
+  Offset: 0xD26000
+  Size: 0xF00
+  Item Type:
+    Type: array
+    Size: 16
+    Item Type:
+      Type: int
+      Size: 2
+ITEM_DATA:
+  Description: "Data for the non-rare items obtainable in the game"
+  Type: array
+  Offset: 0xD85000
+  Size: 0x1E00
+  Item Type:
+    Type: struct
+    Entries:
+      ITEMTYPE:
+        Description: "Type of item. Weapon, armour, etc."
+        Type: int
+        Size: 1
+      USABLE_BY:
+        Description: "The characters able to use this item."
+        Type: int
+        Size: 2
+        Bit Values:
+          - Terra
+          - Locke
+          - Cyan
+          - Shadow
+          - Edgar
+          - Sabin
+          - Celes
+          - Strago
+          - Relm
+          - Setzer
+          - Mog
+          - Gau
+          - Gogo
+          - Umaro
+          - Imp Special
+          - Merit Award
+      SPELL_LEARN_RATE:
+        Description: "The multiplier (of AP) for learning the spell attached to this item."
+        Type: int
+        Size: 1
+      SPELL_LEARNED:
+        Description: "The spell that can be learned from this item."
+        Type: int
+        Size: 1
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 25
+CHARACTER_DATA:
+  Description: "Playable (mostly) character configuration"
+  Type: array
+  Offset: 0xED7CA0
+  Size: 0x580
+  Item Type:
+    Type: struct
+    Entries:
+      BONUSHP:
+        Description: "HP gained at level up."
+        Type: int
+        Size: 1
+      BONUSMP:
+        Description: "MP gained at level up."
+        Type: int
+        Size: 1
+      COMMANDS:
+        Description: "Commands this character can use by default."
+        Type: array
+        Size: 4
+        Item Type:
+          Type: int
+          Size: 1
+          Values:
+            0: Fight
+            1: Items
+            2: Magic
+            3: Trance
+            4: Revert
+            5: Steal
+            6: Mug
+            7: Bushido
+            8: Throw
+            9: Tools
+            10: Blitz
+            11: Runic
+            12: Lore
+            13: Sketch
+            14: Control
+            15: Slot
+            16: Rage
+            17: Leap
+            18: Mimic
+            19: Dance
+            20: Row
+            21: Defend
+            22: Jump
+            23: Dualcast
+            24: Gil Toss
+            25: Summon
+            26: Pray
+            27: Shock
+            28: Possess
+            29: Magitek
+            255: None
+      VIGOR:
+        Description: "Character's base vigor."
+        Type: int
+        Size: 1
+      SPEED:
+        Description: "Character's base speed."
+        Type: int
+        Size: 1
+      STAMINA:
+        Description: "Character's base stamina."
+        Type: int
+        Size: 1
+      MAGIC_POWER:
+        Description: "Character's base magic power."
+        Type: int
+        Size: 1
+      BATTLE_POWER:
+        Description: "Character's base battle power."
+        Type: int
+        Size: 1
+      DEFENSE:
+        Description: "Character's base defense."
+        Type: int
+        Size: 1
+      MAGIC_DEFENSE:
+        Description: "Character's base magic defense."
+        Type: int
+        Size: 1
+      EVASION:
+        Description: "Character's base evasion."
+        Type: int
+        Size: 1
+      MAGIC_EVASION:
+        Description: "Character's base magic evasion."
+        Type: int
+        Size: 1
+      EQUIPMENT:
+        Description: "Equipment this character will start with."
+        Type: array
+        Size: 6
+        Item Type:
+          Type: int
+          Size: 1
+          Values:
+            255: Empty
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 1
+...

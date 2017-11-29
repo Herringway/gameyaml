@@ -1,0 +1,427 @@
+---
+UNKNOWN_C0000E:
+  Description: ""
+  Type: assembly
+  Offset: 0xC0000E
+  Labels:
+    - Offset: 100
+      Name: UNKNOWN0
+    - Offset: 111
+      Name: UNKNOWN1
+    - Offset: 137
+      Name: UNKNOWN2
+  Size: 221
+UNKNOWN_C0092B:
+  Description: ""
+  Type: assembly
+  Offset: 0xC0092B
+  Size: 53
+  Initial State:
+    8 Bit Accum: true
+  Labels:
+    - Offset: 0x1A
+      Name: UNKNOWN0
+    - Offset: 0x30
+      Name: UNKNOWN1
+UNKNOWN_C00B4E:
+  Description: ""
+  Type: assembly
+  Offset: 0xC00B4E
+  Size: 22
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_C00B64:
+  Description: ""
+  Type: assembly
+  Offset: 0xC00B64
+  Size: 17
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_C00B75:
+  Description: ""
+  Type: assembly
+  Offset: 0xC00B75
+  Size: 17
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_C00B86:
+  Description: ""
+  Type: assembly
+  Offset: 0xC00B86
+  Size: 240
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_C01B53:
+  Description: ""
+  Type: assembly
+  Offset: 0xC01B53
+  Size: 61
+  Initial State:
+    8 Bit Accum: true
+  Labels:
+    - Offset: 0xC
+      Name: UNKNOWN0
+    - Offset: 0x30
+      Name: UNKNOWN1
+    - Offset: 0x3C
+      Name: UNKNOWN2
+UNKNOWN_C02848:
+  Description: ""
+  Type: assembly
+  Offset: 0xC02848
+  Size: 36
+  Initial State:
+    8 Bit Accum: true
+  Labels:
+    - Offset: 0x05
+      Name: UNKNOWN0
+    - Offset: 0x1E
+      Name: UNKNOWN1
+UNKNOWN_C0286C:
+  Description: ""
+  Type: assembly
+  Offset: 0xC0286C
+  Size: 62
+UNKNOWN_C028AA:
+  Description: ""
+  Type: assembly
+  Offset: 0xC028AA
+  Size: 22
+  Labels:
+    - Offset: 8
+      Name: UNKNOWN0
+UNKNOWN_C02DF1:
+  Description: ""
+  Type: assembly
+  Offset: 0xC02DF1
+  Size: 45
+  Initial State:
+    8 Bit Accum: true
+UNKNOWN_C0B192:
+  Description: ""
+  Type: assembly
+  Offset: 0xC0B192
+  Size: 114
+  Labels:
+    - Offset: 0x13
+      Name: UNKNOWN0
+    - Offset: 0x3F
+      Name: UNKNOWN1
+    - Offset: 0x6F
+      Name: UNKNOWN2
+RESET:
+  Type: assembly
+  Offset: 0xC0FF00
+  Description: Execution entry point
+  Size: 7
+  Initial State:
+    8 Bit Accum: true
+    8 Bit Index: true
+UNKNOWN_C28004:
+  Description: ""
+  Type: assembly
+  Offset: 0xC28004
+  Size: 10
+  Labels:
+    - Offset: 0x6
+      Name: UNKNOWN0
+DECOMPRESSION:
+  Description: "Data decompression routine"
+  Type: assembly
+  Offset: 0xC3075B
+  Size: 344
+OVERWORLD_SPRITE_PTRS:
+  Description: "Overworld sprite pointers"
+  Type: array
+  Offset: 0xC6FDF0
+  Size: 0x30
+  Item Type:
+    Type: pointer
+    Size: 3
+OVERWORLD_TILE_PTRS:
+  Description: "Overworld tile pointers"
+  Type: array
+  Offset: 0xC6FE20
+  Size: 0x80
+  Item Type:
+    Type: pointer
+    Size: 3
+OVERWORLD_PALETTE_PTRS:
+  Description: "Overworld tile pointers"
+  Type: array
+  Offset: 0xC6FEA0
+  Size: 0x60
+  Item Type:
+    Type: pointer
+    Size: 3
+UNKNOWN_C70000:
+  Description: ""
+  Type: assembly
+  Offset: 0xC70000
+  Size: 3
+UNKNOWN_C70038:
+  Description: ""
+  Type: assembly
+  Offset: 0xC70038
+  Size: 264
+  Labels:
+    - Offset: 24
+      Name: UNKNOWN0
+    - Offset: 64
+      Name: UNKNOWN1
+    - Offset: 69
+      Name: UNKNOWN2
+    - Offset: 106
+      Name: UNKNOWN3
+    - Offset: 115
+      Name: UNKNOWN4
+    - Offset: 134
+      Name: UNKNOWN5
+    - Offset: 163
+      Name: UNKNOWN6
+    - Offset: 170
+      Name: UNKNOWN7
+    - Offset: 190
+      Name: UNKNOWN8
+    - Offset: 202
+      Name: UNKNOWN9
+    - Offset: 227
+      Name: UNKNOWN10
+WEAPON_STATS:
+  Type: array
+  Offset: 0xCC0262
+  Description: Weapon Stats Table
+  Size: 449
+  Item Type:
+    Type: struct
+    Entries:
+      POWER:
+        Description: "Weapon strength"
+        Type: int
+        Size: 1
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 1
+      CRITICAL_HIT_CHANCE:
+        Description: "Chance of a critical hit"
+        Type: int
+        Size: 1
+      EFFECT:
+        Description: "Special weapon effects"
+        Type: int
+        Size: 1
+        Values:
+          12: 1.5x damage on magic enemies
+      EFFECT_ENABLED:
+        Description: "Whether or not the effect is applied"
+        Type: int
+        Pretty Name: Effect Enabled
+        Size: 1
+WEAPON_NAMES:
+  Description: "Weapon names"
+  Type: array
+  Offset: 0xCC0B5E
+  Size: 0xA71
+  Item Type:
+    Type: script
+    Size: 11
+TECH_NAMES:
+  Description: "Technique names"
+  Type: array
+  Offset: 0xCC15CF
+  Size: 0x4FC
+  Item Type:
+    Type: script
+    Size: 11
+ENEMY_STATS:
+  Type: array
+  Offset: 0xCC4700
+  Description: Enemy Statistics Table
+  Size: 5887
+  Item Type:
+    Type: struct
+    Entries:
+      HP:
+        Description: "Enemy's HP"
+        Type: int
+        Size: 2
+      LEVEL:
+        Description: "Enemy's level"
+        Type: int
+        Size: 1
+      UNKNOWN1:
+        Description: ""
+        Type: unknown
+        Size: 6
+      SPEED:
+        Description: "Enemy's speed"
+        Type: int
+        Size: 1
+      MAGIC:
+        Description: "Enemy's magic"
+        Type: int
+        Size: 1
+      UNKNOWN2:
+        Description: ""
+        Type: unknown
+        Size: 3
+      OFFENSE:
+        Description: "Enemy's offense"
+        Type: int
+        Size: 1
+      DEFENSE:
+        Description: "Enemy's defense"
+        Type: int
+        Size: 1
+      LIGHTNING_DEFENSE:
+        Description: "Enemy's lightning resistance"
+        Type: int
+        Size: 1
+      SHADOW_DEFENSE:
+        Description: "Enemy's shadow resistance"
+        Type: int
+        Size: 1
+      WATER_DEFENSE:
+        Description: "Enemy's water resistance"
+        Type: int
+        Size: 1
+      FIRE_DEFENSE:
+        Description: "Enemy's fire resistance"
+        Type: int
+        Size: 1
+      EVASION:
+        Description: "Enemy's evasion"
+        Type: int
+        Size: 1
+      FLAGS:
+        Description: "Miscellaneous enemy details"
+        Type: int
+        Size: 2
+        Bit Values:
+          - Boss Death
+          - Cannot see HP
+          - Unknown 1
+          - Unknown 2
+          - Unknown 3
+          - Unknown 4
+          - Unknown 5
+          - Unknown 6
+          - Unknown 7
+          - Unknown 8
+          - Unknown 9
+          - Unknown 10
+          - Unknown 11
+          - Unknown 12
+          - Unknown 13
+          - Unknown 14
+ENEMY_NAMES:
+  Description: "Enemy names"
+  Type: array
+  Offset: 0xCC6500
+  Size: 0xAC9
+  Item Type:
+    Type: script
+    Size: 11
+MAGUS_SPRITES:
+  Description: "Magus sprites in 4BPP tiles"
+  Type: unknown
+  Offset: 0xD20000
+  Size: 0x72C0
+CRONO_SPRITES:
+  Description: "Crono sprites in 4BPP tiles"
+  Type: unknown
+  Offset: 0xD272C0
+  Size: 0x75A0
+FROG_SPRITES:
+  Description: "Frog sprites in 4BPP tiles"
+  Type: unknown
+  Offset: 0xD30000
+  Size: 0x6B40
+LUCCA_SPRITES:
+  Description: "Lucca sprites in 4BPP tiles"
+  Type: unknown
+  Offset: 0xD36B40
+  Size: 0x7740
+MARLE_SPRITES:
+  Description: "Marle sprites in 4BPP tiles"
+  Type: unknown
+  Offset: 0xD40000
+  Size: 0x7C40
+ROBO_SPRITES:
+  Description: "Robo sprites in 4BPP tiles"
+  Type: unknown
+  Offset: 0xD47C40
+  Size: 0x7EC0
+AYLA_SPRITES:
+  Description: "Ayla sprites in 4BPP tiles"
+  Type: unknown
+  Offset: 0xD50000
+  Size: 0x8C00
+CHAR_SPRITE_PTRS:
+  Description: "Pointers to character sprite tiles"
+  Type: array
+  Offset: 0xE42000
+  Size: 0x14
+  Item Type:
+    Type: pointer
+    Size: 3
+ENEMY_AND_NPC_SPRITE_PTRS:
+  Description: "Pointers to enemy/npc sprite tiles"
+  Type: array
+  Offset: 0xE42015
+  Size: 0x2D3
+  Item Type:
+    Type: pointer
+    Size: 3
+NULLSPACE_E4CC60:
+  Description: ""
+  Type: empty
+  Offset: 0xE4CC60
+  Size: 9120
+UNKNOWN_FDC000:
+  Description: ""
+  Type: assembly
+  Offset: 0xFDC000
+  Size: 215
+UNKNOWN_FDE437:
+  Description: ""
+  Type: assembly
+  Offset: 0xFDE437
+  Size: 78
+  Labels:
+    - Offset: 0x38
+      Name: UNKNOWN0
+UNKNOWN_FDE4E8:
+  Description: ""
+  Type: assembly
+  Offset: 0xFDE4E8
+  Size: 74
+  Labels:
+    - Offset: 0x25
+      Name: UNKNOWN0
+UNKNOWN_FDE532:
+  Description: ""
+  Type: assembly
+  Offset: 0xFDE532
+  Size: 74
+  Labels:
+    - Offset: 0x25
+      Name: UNKNOWN0
+CHAPTER_TITLES:
+  Type: array
+  Description: Names of each chapter of the game
+  Offset: 0xFFD074
+  Size: 0x222
+  Item Type:
+    Type: script
+    Terminator: [0]
+MISC_MENU_TXT:
+  Description: "Miscellaneous menu text"
+  Type: array
+  Offset: 0xFFD463
+  Size: 0xFD
+  Item Type:
+    Type: script
+    Terminator: [0]
+...

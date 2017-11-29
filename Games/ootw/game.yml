@@ -1,0 +1,180 @@
+---
+UNKNOWN_80862E:
+  Description: ""
+  Type: assembly
+  Offset: 0x80862E
+  Size: 185
+  Labels:
+    - Offset: 0x58
+      Name: UNKNOWN0
+    - Offset: 0x67
+      Name: UNKNOWN1
+    - Offset: 0x9B
+      Name: UNKNOWN2
+UNKNOWN_80DC10:
+  Description: ""
+  Type: assembly
+  Offset: 0x80DC10
+  Size: 307
+  Labels:
+    - Offset: 0x25
+      Name: UNKNOWN0
+    - Offset: 0x27
+      Name: UNKNOWN1
+    - Offset: 0x4B
+      Name: UNKNOWN2
+    - Offset: 0x4F
+      Name: UNKNOWN3
+    - Offset: 0x53
+      Name: UNKNOWN4
+    - Offset: 0x55
+      Name: UNKNOWN5
+    - Offset: 0x57
+      Name: UNKNOWN6
+    - Offset: 0x6F
+      Name: UNKNOWN7
+    - Offset: 0x7A
+      Name: UNKNOWN8
+UNKNOWN_80DEFA:
+  Description: ""
+  Type: assembly
+  Offset: 0x80DEFA
+  Size: 15
+  Labels:
+    - Offset: 0x3
+      Name: UNKNOWN0
+UNKNOWN_80E13D:
+  Description: ""
+  Type: assembly
+  Offset: 0x80E13D
+  Size: 182
+  Labels:
+    - Offset: 0x0B
+      Name: UNKNOWN0
+    - Offset: 0x26
+      Name: UNKNOWN1
+    - Offset: 0x50
+      Name: UNKNOWN2
+    - Offset: 0x5D
+      Name: UNKNOWN3
+    - Offset: 0x5F
+      Name: UNKNOWN4
+    - Offset: 0x71
+      Name: UNKNOWN5
+    - Offset: 0x76
+      Name: UNKNOWN6
+    - Offset: 0x8A
+      Name: UNKNOWN7
+    - Offset: 0xA0
+      Name: UNKNOWN8
+    - Offset: 0xA3
+      Name: UNKNOWN9
+UNKNOWN_80E25C:
+  Description: ""
+  Type: assembly
+  Offset: 0x80E25C
+  Size: 58
+  Labels:
+    - Offset: 0x13
+      Name: UNKNOWN0
+    - Offset: 0x35
+      Name: UNKNOWN1
+UNKNOWN_80E2A9:
+  Description: ""
+  Type: assembly
+  Offset: 0x80E2A9
+  Size: 32
+  Labels:
+    - Offset: 0xF
+      Name: UNKNOWN0
+APU_STUFF_E584:
+  Description: ""
+  Type: assembly
+  Offset: 0x80E584
+  Size: 111
+  Labels:
+    - Offset: 0x03
+      Name: UNKNOWN0
+    - Offset: 0x19
+      Name: UNKNOWN1
+    - Offset: 0x25
+      Name: UNKNOWN2
+    - Offset: 0x30
+      Name: UNKNOWN3
+    - Offset: 0x46
+      Name: UNKNOWN4
+    - Offset: 0x4D
+      Name: UNKNOWN5
+    - Offset: 0x5A
+      Name: UNKNOWN6
+APU_STUFF_E5F3:
+  Description: ""
+  Type: assembly
+  Offset: 0x80E5F3
+  Size: 23
+  Labels:
+    - Offset: 0x5
+      Name: UNKNOWN0
+    - Offset: 0xF
+      Name: UNKNOWN1
+APU_STUFF_E60A:
+  Description: ""
+  Type: assembly
+  Offset: 0x80E60A
+  Size: 41
+  Labels:
+    - Offset: 0x0A
+      Name: UNKNOWN0
+    - Offset: 0x1D
+      Name: UNKNOWN1
+APU_STUFF_E633:
+  Description: ""
+  Type: assembly
+  Offset: 0x80E633
+  Size: 32
+  Labels:
+    - Offset: 0x02
+      Name: UNKNOWN0
+    - Offset: 0x14
+      Name: UNKNOWN1
+LOAD_MUSIC:
+  Description: ""
+  Type: assembly
+  Offset: 0x80E653
+  Size: 142
+  Labels:
+    - Offset: 0x40
+      Name: UNKNOWN0
+    - Offset: 0x4D
+      Name: UNKNOWN1
+    - Offset: 0x5F
+      Name: UNKNOWN2
+    - Offset: 0x6F
+      Name: UNKNOWN3
+    - Offset: 0x79
+      Name: UNKNOWN4
+    - Offset: 0x7C
+      Name: UNKNOWN5
+UNKNOWN_80E6E1:
+  Description: ""
+  Type: assembly
+  Offset: 0x80E6E1
+  Size: 94
+  Labels:
+    - Offset: 0x37
+      Name: UNKNOWN0
+    - Offset: 0x3F
+      Name: UNKNOWN1
+    - Offset: 0x49
+      Name: UNKNOWN2
+    - Offset: 0x4C
+      Name: UNKNOWN3
+UNKNOWN_80E79D:
+  Description: ""
+  Type: assembly
+  Offset: 0x80E79D
+  Size: 45
+  Labels:
+    - Offset: 0x2B
+      Name: UNKNOWN0
+...

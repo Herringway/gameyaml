@@ -1,0 +1,57 @@
+---
+type: map
+mapping:
+  Platform:
+    type: str
+    required: true
+  Country:
+    type: str
+    required: true
+  Version:
+    type: str
+    required: true
+  Title:
+    type: str
+    required: true
+  Series:
+    type: str
+  SHA256:
+    type: str
+    required: true
+    pattern: "[0-9A-Fa-f]{64}"
+    range:
+      min: 64
+      max: 64
+  Mapper:
+    type: int
+  CPU:
+    type: map
+    mapping:
+      Coprocessor:
+        type: str
+      Default Databank:
+        type: int
+      Localvars:
+        type: str
+  Default Script:
+    type: text
+  Script Tables:
+    type: map
+    mapping:
+      regex;(.+):
+        type: seq
+        sequence:
+          - type: map
+            mapping:
+              Sequence:
+                required: yes
+                type: seq
+                sequence:
+                  - type: int
+                    range:
+                      min: 0
+                      max: 255
+                  - type: str
+              Replacement:
+                type: str
+...

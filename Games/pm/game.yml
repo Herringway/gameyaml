@@ -1,0 +1,10 @@
+---
+TEXT_DATA:
+  Type: array
+  Description: Game script
+  Offset: 0x11B830C1
+  Size: 0xF3407
+  Item Type:
+    Type: script
+    Terminator: [0xFD]
+...

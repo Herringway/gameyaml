@@ -1,0 +1,7 @@
+---
+LAYER_1_OVERWORLD_TILE_DATA:
+  Description: Tile data for all Layer 1 overworld tiles
+  Type: unknown
+  Size: 1536
+  Offset: 0x05D000
+...

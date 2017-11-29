@@ -1,0 +1,7 @@
+---
+MAIN:
+  Type: assembly
+  Description: Main Routine
+  Offset: 0x000150
+  Size: 0x1DF
+...
