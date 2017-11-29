@@ -1,106 +1,367 @@
 ---
-CPU:
-  Architecture: ARM
 Platform: gba
 Title: "Mother 3"
 Country: JP
-Version: 1 translated
+Version: v1.0 translated
+SHA256: 4D5AE6F1655499A1A60342E7FDEDFD18799BA27F3E5D1F6A52F0F9AAF8CC37EB
 Default Script: Two-Byte
 Script Tables:
   Two-Byte:
-    Lengths:
-      =: 2
-    Replacements: &text
-      0x00: ' '
-      0x01: '!'
-      0x02: '"'
-      0x03: ·
-      0x04: $
-      0x05: '%'
-      0x06: '&'
-      0x07: "'"
-      0x08: '('
-      0x09: ')'
-      0x0B: '+'
-      0x0C: ','
-      0x0D: '-'
-      0x0E: '.'
-      0x10: 0
-      0x11: 1
-      0x12: 2
-      0x13: 3
-      0x14: 4
-      0x15: 5
-      0x16: 6
-      0x17: 7
-      0x18: 8
-      0x19: 9
-      0x1A: ':'
-      0x1B: ';'
-      0x1C: '“'
-      0x1D: '='
-      0x1E: '”'
-      0x1F: '?'
-      0x20: •
-      0x21: A
-      0x22: B
-      0x23: C
-      0x24: D
-      0x25: E
-      0x26: F
-      0x27: G
-      0x28: H
-      0x29: I
-      0x2A: J
-      0x2B: K
-      0x2C: L
-      0x2D: M
-      0x2E: 'N'
-      0x2F: O
-      0x30: P
-      0x31: Q
-      0x32: R
-      0x33: S
-      0x34: T
-      0x35: U
-      0x36: V
-      0x37: W
-      0x38: X
-      0x39: 'Y'
-      0x3A: Z
-      0x40: ' '
-      0x41: a
-      0x42: b
-      0x43: c
-      0x44: d
-      0x45: e
-      0x46: f
-      0x47: g
-      0x48: h
-      0x49: i
-      0x4A: j
-      0x4B: k
-      0x4C: l
-      0x4D: m
-      0x4E: 'n'
-      0x4F: o
-      0x50: p
-      0x51: q
-      0x52: r
-      0x53: s
-      0x54: t
-      0x55: u
-      0x56: v
-      0x57: w
-      0x58: x
-      0x59: 'y'
-      0x5A: z
-      0x5B: '['
-      0x5C: ♪
-      0x5D: ']'
-      0xFF:
-        0x01: "\n"
-        0xFF: ""
+    - Sequence: [0x00, 0x00]
+      Replacement: ' '
+    - Sequence: [0x01, 0x00]
+      Replacement: '!'
+    - Sequence: [0x02, 0x00]
+      Replacement: '"'
+    - Sequence: [0x03, 0x00]
+      Replacement: ·
+    - Sequence: [0x04, 0x00]
+      Replacement: $
+    - Sequence: [0x05, 0x00]
+      Replacement: '%'
+    - Sequence: [0x06, 0x00]
+      Replacement: '&'
+    - Sequence: [0x07, 0x00]
+      Replacement: "'"
+    - Sequence: [0x08, 0x00]
+      Replacement: '('
+    - Sequence: [0x09, 0x00]
+      Replacement: ')'
+    - Sequence: [0x0B, 0x00]
+      Replacement: '+'
+    - Sequence: [0x0C, 0x00]
+      Replacement: ','
+    - Sequence: [0x0D, 0x00]
+      Replacement: '-'
+    - Sequence: [0x0E, 0x00]
+      Replacement: '.'
+    - Sequence: [0x10, 0x00]
+      Replacement: "0"
+    - Sequence: [0x11, 0x00]
+      Replacement: "1"
+    - Sequence: [0x12, 0x00]
+      Replacement: "2"
+    - Sequence: [0x13, 0x00]
+      Replacement: "3"
+    - Sequence: [0x14, 0x00]
+      Replacement: "4"
+    - Sequence: [0x15, 0x00]
+      Replacement: "5"
+    - Sequence: [0x16, 0x00]
+      Replacement: "6"
+    - Sequence: [0x17, 0x00]
+      Replacement: "7"
+    - Sequence: [0x18, 0x00]
+      Replacement: "8"
+    - Sequence: [0x19, 0x00]
+      Replacement: "9"
+    - Sequence: [0x1A, 0x00]
+      Replacement: ':'
+    - Sequence: [0x1B, 0x00]
+      Replacement: ';'
+    - Sequence: [0x1C, 0x00]
+      Replacement: '“'
+    - Sequence: [0x1D, 0x00]
+      Replacement: '='
+    - Sequence: [0x1E, 0x00]
+      Replacement: '"'
+    - Sequence: [0x1F, 0x00]
+      Replacement: '?'
+    - Sequence: [0x20, 0x00]
+      Replacement: •
+    - Sequence: [0x21, 0x00]
+      Replacement: A
+    - Sequence: [0x22, 0x00]
+      Replacement: B
+    - Sequence: [0x23, 0x00]
+      Replacement: C
+    - Sequence: [0x24, 0x00]
+      Replacement: D
+    - Sequence: [0x25, 0x00]
+      Replacement: E
+    - Sequence: [0x26, 0x00]
+      Replacement: F
+    - Sequence: [0x27, 0x00]
+      Replacement: G
+    - Sequence: [0x28, 0x00]
+      Replacement: H
+    - Sequence: [0x29, 0x00]
+      Replacement: I
+    - Sequence: [0x2A, 0x00]
+      Replacement: J
+    - Sequence: [0x2B, 0x00]
+      Replacement: K
+    - Sequence: [0x2C, 0x00]
+      Replacement: L
+    - Sequence: [0x2D, 0x00]
+      Replacement: M
+    - Sequence: [0x2E, 0x00]
+      Replacement: 'N'
+    - Sequence: [0x2F, 0x00]
+      Replacement: O
+    - Sequence: [0x30, 0x00]
+      Replacement: P
+    - Sequence: [0x31, 0x00]
+      Replacement: Q
+    - Sequence: [0x32, 0x00]
+      Replacement: R
+    - Sequence: [0x33, 0x00]
+      Replacement: S
+    - Sequence: [0x34, 0x00]
+      Replacement: T
+    - Sequence: [0x35, 0x00]
+      Replacement: U
+    - Sequence: [0x36, 0x00]
+      Replacement: V
+    - Sequence: [0x37, 0x00]
+      Replacement: W
+    - Sequence: [0x38, 0x00]
+      Replacement: X
+    - Sequence: [0x39, 0x00]
+      Replacement: 'Y'
+    - Sequence: [0x3A, 0x00]
+      Replacement: Z
+    - Sequence: [0x40, 0x00]
+      Replacement: ' '
+    - Sequence: [0x41, 0x00]
+      Replacement: a
+    - Sequence: [0x42, 0x00]
+      Replacement: b
+    - Sequence: [0x43, 0x00]
+      Replacement: c
+    - Sequence: [0x44, 0x00]
+      Replacement: d
+    - Sequence: [0x45, 0x00]
+      Replacement: e
+    - Sequence: [0x46, 0x00]
+      Replacement: f
+    - Sequence: [0x47, 0x00]
+      Replacement: g
+    - Sequence: [0x48, 0x00]
+      Replacement: h
+    - Sequence: [0x49, 0x00]
+      Replacement: i
+    - Sequence: [0x4A, 0x00]
+      Replacement: j
+    - Sequence: [0x4B, 0x00]
+      Replacement: k
+    - Sequence: [0x4C, 0x00]
+      Replacement: l
+    - Sequence: [0x4D, 0x00]
+      Replacement: m
+    - Sequence: [0x4E, 0x00]
+      Replacement: 'n'
+    - Sequence: [0x4F, 0x00]
+      Replacement: o
+    - Sequence: [0x50, 0x00]
+      Replacement: p
+    - Sequence: [0x51, 0x00]
+      Replacement: q
+    - Sequence: [0x52, 0x00]
+      Replacement: r
+    - Sequence: [0x53, 0x00]
+      Replacement: s
+    - Sequence: [0x54, 0x00]
+      Replacement: t
+    - Sequence: [0x55, 0x00]
+      Replacement: u
+    - Sequence: [0x56, 0x00]
+      Replacement: v
+    - Sequence: [0x57, 0x00]
+      Replacement: w
+    - Sequence: [0x58, 0x00]
+      Replacement: x
+    - Sequence: [0x59, 0x00]
+      Replacement: 'y'
+    - Sequence: [0x5A, 0x00]
+      Replacement: z
+    - Sequence: [0x5B, 0x00]
+      Replacement: '['
+    - Sequence: [0x5C, 0x00]
+      Replacement: ♪
+    - Sequence: [0x5D, 0x00]
+      Replacement: ']'
+    - Sequence: [0xFF, 0x01]
+      Replacement: "\n"
+    - Sequence: [0xFF, 0xFF]
+      Replacement: ""
   One-Byte:
-    Replacements: *text
+    - Sequence: [0x00]
+      Replacement: ' '
+    - Sequence: [0x01]
+      Replacement: '!'
+    - Sequence: [0x02]
+      Replacement: '"'
+    - Sequence: [0x03]
+      Replacement: ·
+    - Sequence: [0x04]
+      Replacement: $
+    - Sequence: [0x05]
+      Replacement: '%'
+    - Sequence: [0x06]
+      Replacement: '&'
+    - Sequence: [0x07]
+      Replacement: "'"
+    - Sequence: [0x08]
+      Replacement: '('
+    - Sequence: [0x09]
+      Replacement: ')'
+    - Sequence: [0x0B]
+      Replacement: '+'
+    - Sequence: [0x0C]
+      Replacement: ','
+    - Sequence: [0x0D]
+      Replacement: '-'
+    - Sequence: [0x0E]
+      Replacement: '.'
+    - Sequence: [0x10]
+      Replacement: "0"
+    - Sequence: [0x11]
+      Replacement: "1"
+    - Sequence: [0x12]
+      Replacement: "2"
+    - Sequence: [0x13]
+      Replacement: "3"
+    - Sequence: [0x14]
+      Replacement: "4"
+    - Sequence: [0x15]
+      Replacement: "5"
+    - Sequence: [0x16]
+      Replacement: "6"
+    - Sequence: [0x17]
+      Replacement: "7"
+    - Sequence: [0x18]
+      Replacement: "8"
+    - Sequence: [0x19]
+      Replacement: "9"
+    - Sequence: [0x1A]
+      Replacement: ':'
+    - Sequence: [0x1B]
+      Replacement: ';'
+    - Sequence: [0x1C]
+      Replacement: '“'
+    - Sequence: [0x1D]
+      Replacement: '='
+    - Sequence: [0x1E]
+      Replacement: '"'
+    - Sequence: [0x1F]
+      Replacement: '?'
+    - Sequence: [0x20]
+      Replacement: •
+    - Sequence: [0x21]
+      Replacement: A
+    - Sequence: [0x22]
+      Replacement: B
+    - Sequence: [0x23]
+      Replacement: C
+    - Sequence: [0x24]
+      Replacement: D
+    - Sequence: [0x25]
+      Replacement: E
+    - Sequence: [0x26]
+      Replacement: F
+    - Sequence: [0x27]
+      Replacement: G
+    - Sequence: [0x28]
+      Replacement: H
+    - Sequence: [0x29]
+      Replacement: I
+    - Sequence: [0x2A]
+      Replacement: J
+    - Sequence: [0x2B]
+      Replacement: K
+    - Sequence: [0x2C]
+      Replacement: L
+    - Sequence: [0x2D]
+      Replacement: M
+    - Sequence: [0x2E]
+      Replacement: 'N'
+    - Sequence: [0x2F]
+      Replacement: O
+    - Sequence: [0x30]
+      Replacement: P
+    - Sequence: [0x31]
+      Replacement: Q
+    - Sequence: [0x32]
+      Replacement: R
+    - Sequence: [0x33]
+      Replacement: S
+    - Sequence: [0x34]
+      Replacement: T
+    - Sequence: [0x35]
+      Replacement: U
+    - Sequence: [0x36]
+      Replacement: V
+    - Sequence: [0x37]
+      Replacement: W
+    - Sequence: [0x38]
+      Replacement: X
+    - Sequence: [0x39]
+      Replacement: 'Y'
+    - Sequence: [0x3A]
+      Replacement: Z
+    - Sequence: [0x40]
+      Replacement: ' '
+    - Sequence: [0x41]
+      Replacement: a
+    - Sequence: [0x42]
+      Replacement: b
+    - Sequence: [0x43]
+      Replacement: c
+    - Sequence: [0x44]
+      Replacement: d
+    - Sequence: [0x45]
+      Replacement: e
+    - Sequence: [0x46]
+      Replacement: f
+    - Sequence: [0x47]
+      Replacement: g
+    - Sequence: [0x48]
+      Replacement: h
+    - Sequence: [0x49]
+      Replacement: i
+    - Sequence: [0x4A]
+      Replacement: j
+    - Sequence: [0x4B]
+      Replacement: k
+    - Sequence: [0x4C]
+      Replacement: l
+    - Sequence: [0x4D]
+      Replacement: m
+    - Sequence: [0x4E]
+      Replacement: 'n'
+    - Sequence: [0x4F]
+      Replacement: o
+    - Sequence: [0x50]
+      Replacement: p
+    - Sequence: [0x51]
+      Replacement: q
+    - Sequence: [0x52]
+      Replacement: r
+    - Sequence: [0x53]
+      Replacement: s
+    - Sequence: [0x54]
+      Replacement: t
+    - Sequence: [0x55]
+      Replacement: u
+    - Sequence: [0x56]
+      Replacement: v
+    - Sequence: [0x57]
+      Replacement: w
+    - Sequence: [0x58]
+      Replacement: x
+    - Sequence: [0x59]
+      Replacement: 'y'
+    - Sequence: [0x5A]
+      Replacement: z
+    - Sequence: [0x5B]
+      Replacement: '['
+    - Sequence: [0x5C]
+      Replacement: ♪
+    - Sequence: [0x5D]
+      Replacement: ']'
+    - Sequence: [0xFF, 0x01]
+      Replacement: "\n"
+    - Sequence: [0xFF, 0xFF]
+      Replacement: ""
 ...

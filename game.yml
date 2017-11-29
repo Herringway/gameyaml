@@ -15,7 +15,7 @@ SINE_TABLE16:
   Item Type:
     Type: int
     Size: 2
-    Signed: yes
+    Signed: true
 BATTLE_MEMORY_ORDER:
   Type: array
   Offset: 0x80C6B64
@@ -380,6 +380,7 @@ PSI_DATA:
   Type: array
   Description: PSI Data
   Size: 5600
+  Offset: 0x80E1908
   Item Type:
     Type: struct
     Entries:
@@ -476,14 +477,14 @@ ITEM_DATA: &ITEM_DATA
         Type: int
         Size: 1
         Bit Values:
-        - Unknown
-        - Flint
-        - Lucas
-        - Duster
-        - Kumatora
-        - Boney
-        - Salsa
-        - UnknownB
+          - Unknown
+          - Flint
+          - Lucas
+          - Duster
+          - Kumatora
+          - Boney
+          - Salsa
+          - UnknownB
       UNKNOWND:
         Description: ""
         Type: unknown
@@ -737,7 +738,7 @@ SINE_TABLE32:
   Item Type:
     Type: int
     Size: 4
-    Signed: yes
+    Signed: true
 UNKNOWN_80F0080:
   Description: ""
   Type: array
@@ -791,7 +792,7 @@ SINE_TABLE16COPY:
   Item Type:
     Type: int
     Size: 2
-    Signed: yes
+    Signed: true
 UNKNOWN_MATH:
   Description: ""
   Type: array
@@ -800,7 +801,7 @@ UNKNOWN_MATH:
   Item Type:
     Type: int
     Size: 2
-    Signed: yes
+    Signed: true
 ABILDESCTEXT:
   Description: "Ability description text"
   Type: array
@@ -873,38 +874,38 @@ HOTSPOT_TABLE:
         Type: int
         Size: 4
         Bit Values:
-        - Valid Entry
-        - "1"
-        - "2"
-        - "3"
-        - "4"
-        - "5"
-        - Door Width A
-        - Door Width B
-        - Door Height A
-        - Door Height B
-        - "10"
-        - "11"
-        - "12"
-        - Hotspot Width A
-        - Hotspot Width B
-        - Hotspot Width C
-        - Hotspot Width D
-        - Hotspot Width E
-        - Hotspot Height A
-        - Hotspot Height B
-        - Hotspot Height C
-        - Hotspot Height D
-        - Hotspot Height E
-        - "23"
-        - "24"
-        - "25"
-        - "26"
-        - "27"
-        - "28"
-        - "29"
-        - "30"
-        - "31"
+          - Valid Entry
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+          - "5"
+          - Door Width A
+          - Door Width B
+          - Door Height A
+          - Door Height B
+          - "10"
+          - "11"
+          - "12"
+          - Hotspot Width A
+          - Hotspot Width B
+          - Hotspot Width C
+          - Hotspot Width D
+          - Hotspot Width E
+          - Hotspot Height A
+          - Hotspot Height B
+          - Hotspot Height C
+          - Hotspot Height D
+          - Hotspot Height E
+          - "23"
+          - "24"
+          - "25"
+          - "26"
+          - "27"
+          - "28"
+          - "29"
+          - "30"
+          - "31"
       UNKNOWNA:
         Description: ""
         Type: unknown
@@ -1014,22 +1015,22 @@ GIFTBOX_TABLE:
         Type: int
         Size: 2
         Bit Values:
-        - "0"
-        - "1"
-        - "2"
-        - "3"
-        - "4"
-        - "5"
-        - "6"
-        - "7"
-        - "8"
-        - "9"
-        - "10"
-        - "11"
-        - "12"
-        - "13"
-        - "14"
-        - "15"
+          - "0"
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+          - "5"
+          - "6"
+          - "7"
+          - "8"
+          - "9"
+          - "10"
+          - "11"
+          - "12"
+          - "13"
+          - "14"
+          - "15"
 DOOR_DESTINATION_TABLE:
   Description: "Destinations for doors."
   Type: struct
@@ -1169,14 +1170,14 @@ TITLE_PTRS:
             Pretty Name: Arrangement
             Base: 0x9BCDD8C
 MUSIC_NAME_PTRS:
- Type: array
- Size: 0x20E
- Description: Music track title offsets
- Offset: 0x8CFB3FC
- Item Type:
-   Type: pointer
-   Size: 2
-   Base: 0x8CFB3FC
+  Type: array
+  Size: 0x20E
+  Description: Music track title offsets
+  Offset: 0x8CFB3FC
+  Item Type:
+    Type: pointer
+    Size: 2
+    Base: 0x8CFB3FC
 MUSIC_NAMES:
   Type: array
   Size: 0x22EC
