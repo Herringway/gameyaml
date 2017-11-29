@@ -1,0 +1,970 @@
+---
+INIDISP:
+  Type: int
+  Size: 1
+  Offset: 0x2100
+  Description: Screen display register
+  Notes: |
+    x000bbbb
+    x: 0 = Screen on, 1 = Screen off
+    b: Brightness
+OBSEL:
+  Type: int
+  Size: 1
+  Offset: 0x2101
+  Description: OAM size register
+  Notes: |
+    sssnnbbb
+    s: Size select
+      000: 8x8/16x16
+      001: 8x8/32x32
+      010: 8x8/64x64
+      011: 16x16/32x32
+      100: 16x16/64x64
+      101: 32x32/64x64
+    n: Name selection
+    b: Base address
+OAMADDL:
+  Type: int
+  Size: 1
+  Offset: 0x2102
+  Description: OAM address register Low
+OAMADDH:
+  Type: int
+  Size: 1
+  Offset: 0x2103
+  Description: OAM address register High
+OAMDATA:
+  Type: int
+  Size: 1
+  Offset: 0x2104
+  Description: OAM data register
+BGMODE:
+  Type: int
+  Size: 1
+  Offset: 0x2105
+  Description: Screen mode register
+MOSAIC:
+  Type: int
+  Size: 1
+  Offset: 0x2106
+  Description: Screen pixelation register
+  Notes: |
+    xxxxabcd
+    x: Pixel size (0: smallest; 0xF: largest)
+    a: BG4
+    b: BG3
+    c: BG2
+    d: BG1
+BG1SC:
+  Type: int
+  Size: 1
+  Offset: 0x2107
+  Description: BG1 VRAM location register
+BG2SC:
+  Type: int
+  Size: 1
+  Offset: 0x2108
+  Description: BG2 VRAM location register
+BG3SC:
+  Type: int
+  Size: 1
+  Offset: 0x2109
+  Description: BG3 VRAM location register
+BG4SC:
+  Type: int
+  Size: 1
+  Offset: 0x210a
+  Description: BG4 VRAM location register
+BG12NBA:
+  Type: int
+  Size: 1
+  Offset: 0x210b
+  Description: BG1 & BG2 VRAM location register
+BG34NBA:
+  Type: int
+  Size: 1
+  Offset: 0x210c
+  Description: BG3 & BG4 VRAM location register
+BG1HOFS:
+  Type: int
+  Size: 1
+  Offset: 0x210d
+  Description: BG1 horizontal scroll register
+BG1VOFS:
+  Type: int
+  Size: 1
+  Offset: 0x210e
+  Description: BG1 vertical scroll register
+BG2HOFS:
+  Type: int
+  Size: 1
+  Offset: 0x210f
+  Description: BG2 horizontal scroll register
+BG2VOFS:
+  Type: int
+  Size: 1
+  Offset: 0x2110
+  Description: BG2 vertical scroll register
+BG3HOFS:
+  Type: int
+  Size: 1
+  Offset: 0x2111
+  Description: BG3 horizontal scroll register
+BG3VOFS:
+  Type: int
+  Size: 1
+  Offset: 0x2112
+  Description: BG3 vertical scroll register
+BG4HOFS:
+  Type: int
+  Size: 1
+  Offset: 0x2113
+  Description: BG4 horizontal scroll register
+BG4VOFS:
+  Type: int
+  Size: 1
+  Offset: 0x2114
+  Description: BG4 vertical scroll register
+VMAIN:
+  Type: int
+  Size: 1
+  Offset: 0x2115
+  Description: Video port control
+VMADDL:
+  Type: int
+  Size: 1
+  Offset: 0x2116
+  Description: Video port address Low
+VMADDH:
+  Type: int
+  Size: 1
+  Offset: 0x2117
+  Description: Video port address High
+VMDATAL:
+  Type: int
+  Size: 1
+  Offset: 0x2118
+  Description: Video port data Low
+VMDATAH:
+  Type: int
+  Size: 1
+  Offset: 0x2119
+  Description: Video port data High
+M7SEL:
+  Type: int
+  Size: 1
+  Offset: 0x211a
+  Description: MODE7 settings register
+M7A:
+  Type: int
+  Size: 1
+  Offset: 0x211b
+  Description: COS (COSINE) rotate angle / X Expansion
+M7B:
+  Type: int
+  Size: 1
+  Offset: 0x211c
+  Description: 'SIN (SIN)    rotate angle / X Expansion'
+M7C:
+  Type: int
+  Size: 1
+  Offset: 0x211d
+  Description: 'SIN (SIN)    rotate angle / Y Expansion'
+M7D:
+  Type: int
+  Size: 1
+  Offset: 0x211e
+  Description: COS (COSINE) rotate angle / Y Expansion
+M7X:
+  Type: int
+  Size: 1
+  Offset: 0x211f
+  Description: Center position X (13-bit data only)
+M7Y:
+  Type: int
+  Size: 1
+  Offset: 0x2120
+  Description: Center position Y (13-bit data only)
+CGADD:
+  Type: int
+  Size: 1
+  Offset: 0x2121
+  Description: 'Colour # (or palette) selection register'
+CGDATA:
+  Type: int
+  Size: 1
+  Offset: 0x2122
+  Description: Colour data register
+W12SEL:
+  Type: int
+  Size: 1
+  Offset: 0x2123
+  Description: Window mask settings register (BG1+2)
+W34SEL:
+  Type: int
+  Size: 1
+  Offset: 0x2124
+  Description: Window mask settings register (BG3+4)
+WOBJSEL:
+  Type: int
+  Size: 1
+  Offset: 0x2125
+  Description: Window mask settings register (OBJ)
+WH0:
+  Type: int
+  Size: 1
+  Offset: 0x2126
+  Description: Window 1 left position register
+WH1:
+  Type: int
+  Size: 1
+  Offset: 0x2127
+  Description: Window 1 right position register
+WH2:
+  Type: int
+  Size: 1
+  Offset: 0x2128
+  Description: Window 2 left position register
+WH3:
+  Type: int
+  Size: 1
+  Offset: 0x2129
+  Description: Window 2 right position register
+WBGLOG:
+  Type: int
+  Size: 1
+  Offset: 0x212a
+  Description: Mask logic settings for Window 1 & 2 per screen
+WOBJLOG:
+  Type: int
+  Size: 1
+  Offset: 0x212b
+  Description: Mask logic settings for Colour Windows & OBJ Windows
+TM:
+  Type: int
+  Size: 1
+  Offset: 0x212c
+  Description: Main screen designation
+TD:
+  Type: int
+  Size: 1
+  Offset: 0x212d
+  Description: Sub-screen designation
+TMW:
+  Type: int
+  Size: 1
+  Offset: 0x212e
+  Description: Window mask main screen designation register
+TSW:
+  Type: int
+  Size: 1
+  Offset: 0x212f
+  Description: Window mask sub screen designation register
+CGWSEL:
+  Type: int
+  Size: 1
+  Offset: 0x2130
+  Description: Fixed color addition or screen addition register
+  Notes: |
+    aabb00cd
+    a: Main
+    b: Sub
+    a/b:
+      00: Always
+      01: Inside window only
+      10: Outside window only
+      11: Always
+    c: 0 = Fixed colour, 1 = Sub screen
+    d: Direct colour data
+CGADSUB:
+  Type: int
+  Size: 1
+  Offset: 0x2131
+  Description: Addition/subtraction for screens, BGs, & OBJs
+COLDATA:
+  Type: int
+  Size: 1
+  Offset: 0x2132
+  Description: Fixed colour data for fixed colour +/-
+SETINI:
+  Type: int
+  Size: 1
+  Offset: 0x2133
+  Description: Screen mode/video select register
+MPYL:
+  Type: int
+  Size: 1
+  Offset: 0x2134
+  Description: Multiplication result register Low
+MPYM:
+  Type: int
+  Size: 1
+  Offset: 0x2135
+  Description: Multiplication result register Mid
+MPYH:
+  Type: int
+  Size: 1
+  Offset: 0x2136
+  Description: Multiplication result register High
+SLHV:
+  Type: int
+  Size: 1
+  Offset: 0x2137
+  Description: Software latch for horizontal/vertical counter
+OAMDATAREAD:
+  Type: int
+  Size: 1
+  Offset: 0x2138
+  Description: Read data from OAM
+VMDATALREAD:
+  Type: int
+  Size: 1
+  Offset: 0x2139
+  Description: Read data from VRAM Low
+VMDATAHREAD:
+  Type: int
+  Size: 1
+  Offset: 0x213a
+  Description: Read data from VRAM High
+CGDATAREAD:
+  Type: int
+  Size: 1
+  Offset: 0x213b
+  Description: Read data from CG-RAM
+OPHCT:
+  Type: int
+  Size: 1
+  Offset: 0x213c
+  Description: Horizontal scanline location
+OPVCT:
+  Type: int
+  Size: 1
+  Offset: 0x213d
+  Description: Vertical scanline location
+STAT77:
+  Type: int
+  Size: 1
+  Offset: 0x213e
+  Description: PPU status flag & version number
+STAT78:
+  Type: int
+  Size: 1
+  Offset: 0x213f
+  Description: PPU status flag & version number 2
+APUI00:
+  Type: int
+  Size: 1
+  Offset: 0x2140
+  Description: SPC-700 I/O Register 0
+APUI01:
+  Type: int
+  Size: 1
+  Offset: 0x2141
+  Description: SPC-700 I/O Register 1
+APUI02:
+  Type: int
+  Size: 1
+  Offset: 0x2142
+  Description: SPC-700 I/O Register 2
+APUI03:
+  Type: int
+  Size: 1
+  Offset: 0x2143
+  Description: SPC-700 I/O Register 3
+WMDATA:
+  Type: int
+  Size: 1
+  Offset: 0x2180
+  Description: Read/write WRAM register
+WMADDL:
+  Type: int
+  Size: 1
+  Offset: 0x2181
+  Description: WRAM data register Low
+WMADDM:
+  Type: int
+  Size: 1
+  Offset: 0x2182
+  Description: WRAM data register Mid
+WMADDH:
+  Type: int
+  Size: 1
+  Offset: 0x2183
+  Description: WRAM data register High
+NMITIMEN:
+  Type: int
+  Size: 1
+  Offset: 0x4200
+  Description: NMI, V/H COUNT, AND JOYPAD ENABLE
+WRIO:
+  Type: int
+  Size: 1
+  Offset: 0x4201
+  Description: Programmable I/O port (out-port)
+WRMPYA:
+  Type: int
+  Size: 1
+  Offset: 0x4202
+  Description: Multiplicand A
+WRMPYB:
+  Type: int
+  Size: 1
+  Description: Multiplier B
+  Offset: 0x4203
+WRDIVL:
+  Type: int
+  Size: 1
+  Description: Dividend C Low
+  Offset: 0x4204
+WRDIVH:
+  Type: int
+  Size: 1
+  Description: Dividend C High
+  Offset: 0x4205
+WRDIVB:
+  Type: int
+  Size: 1
+  Description: Divisor B
+  Offset: 0x4206
+HTIMEL:
+  Type: int
+  Size: 1
+  Offset: 0x4207
+  Description: Video horizontal IRQ beam position/pointer Low
+HTIMEH:
+  Type: int
+  Size: 1
+  Offset: 0x4208
+  Description: Video horizontal IRQ beam position/pointer High
+VTIMEL:
+  Type: int
+  Size: 1
+  Offset: 0x4209
+  Description: Video vertical IRQ beam position/pointer Low
+VTIMEH:
+  Type: int
+  Size: 1
+  Offset: 0x420a
+  Description: Video vertical IRQ beam position/pointer High
+MDMAEN:
+  Type: int
+  Size: 1
+  Offset: 0x420b
+  Description: DMA enable register
+HDMAEN:
+  Type: int
+  Size: 1
+  Offset: 0x420c
+  Description: HDMA enable register
+MEMSEL:
+  Type: int
+  Size: 1
+  Offset: 0x420d
+  Description: Cycle speed register
+RDNMI:
+  Type: int
+  Size: 1
+  Offset: 0x4210
+  Description: NMI register
+TIMEUP:
+  Type: int
+  Size: 1
+  Offset: 0x4211
+  Description: Video IRQ register
+  Notes: |
+    i0000000
+    i: 0 = IRQ disabled, 1 = IRQ enabled
+HVBJOY:
+  Type: int
+  Size: 1
+  Offset: 0x4212
+  Description: Status Register
+RDIO:
+  Type: int
+  Size: 1
+  Offset: 0x4213
+  Description: Programmable I/O port (in-port)
+RDDIVL:
+  Type: int
+  Size: 1
+  Offset: 0x4214
+  Description: Quotient of Divide Result Low
+RDDIVH:
+  Type: int
+  Size: 1
+  Offset: 0x4215
+  Description: Quotient of Divide Result High
+RDMPYL:
+  Type: int
+  Size: 1
+  Offset: 0x4216
+  Description: Multiplication/Division Result Low
+RDMPYH:
+  Type: int
+  Size: 1
+  Offset: 0x4217
+  Description: Multiplication/Division Result High
+JOY1L:
+  Type: int
+  Size: 1
+  Offset: 0x4218
+  Description: 'Joypad #1 Status Low'
+JOY1H:
+  Type: int
+  Size: 1
+  Offset: 0x4219
+  Description: 'Joypad #1 Status High'
+JOY2L:
+  Type: int
+  Size: 1
+  Offset: 0x421a
+  Description: 'Joypad #2 Status Low'
+JOY2H:
+  Type: int
+  Size: 1
+  Offset: 0x421b
+  Description: 'Joypad #2 Status High'
+JOY3L:
+  Type: int
+  Size: 1
+  Offset: 0x421c
+  Description: 'Joypad #3 Status Low'
+JOY3H:
+  Type: int
+  Size: 1
+  Offset: 0x421d
+  Description: 'Joypad #3 Status High'
+JOY4L:
+  Type: int
+  Size: 1
+  Offset: 0x421e
+  Description: 'Joypad #4 Status Low'
+JOY4H:
+  Type: int
+  Size: 1
+  Offset: 0x421f
+  Description: 'Joypad #4 Status High'
+DMAP0:
+  Type: int
+  Size: 1
+  Offset: 0x4300
+  Description: DMA Channel 0 Control register
+  Notes: &DMAP |
+    vh0cbaaa
+    v: Direction. 0 for CPU->PPU, 1 for PPU->CPU
+    h: 0 for absolute addressing, 1 for indirect. HDMA only.
+    c: 0 for auto address increment, 1 for fixed address
+    b: 0 for automatic increment, 1 for automatic decrement
+    a: Transfer type
+      000 - one address, write twice
+      001 - two addresses
+      010 - one address, write once
+      011 - two addresses, write twice
+      100 - four addresses
+BBAD0:
+  Type: int
+  Size: 1
+  Offset: 0x4301
+  Description: DMA Channel 0 Destination register
+A1T0L:
+  Type: int
+  Size: 1
+  Offset: 0x4302
+  Description: DMA Channel 0 Source address Low
+A1T0H:
+  Type: int
+  Size: 1
+  Offset: 0x4303
+  Description: DMA Channel 0 Source address High
+A1B0:
+  Type: int
+  Size: 1
+  Offset: 0x4304
+  Description: DMA Channel 0 Source Bank address
+DAS0L:
+  Type: int
+  Size: 1
+  Offset: 0x4305
+  Description: DMA Channel 0 transfer size & HDMA address register
+DMAP1:
+  Type: int
+  Size: 1
+  Offset: 0x4310
+  Description: DMA Channel 1 Control register
+  Notes: *DMAP
+BBAD1:
+  Type: int
+  Size: 1
+  Offset: 0x4311
+  Description: DMA Channel 1 Destination register
+A1T1L:
+  Type: int
+  Size: 1
+  Offset: 0x4312
+  Description: DMA Channel 1 Source address Low
+A1T1H:
+  Type: int
+  Size: 1
+  Offset: 0x4313
+  Description: DMA Channel 1 Source address High
+A1B1:
+  Type: int
+  Size: 1
+  Offset: 0x4314
+  Description: DMA Channel 1 Source Bank address
+DAS1L:
+  Type: int
+  Size: 1
+  Offset: 0x4315
+  Description: DMA Channel 1 transfer size & HDMA address register
+DMAP2:
+  Type: int
+  Size: 1
+  Offset: 0x4320
+  Description: DMA Channel 2 Control register
+  Notes: *DMAP
+BBAD2:
+  Type: int
+  Size: 1
+  Offset: 0x4321
+  Description: DMA Channel 2 Destination register
+A1T2L:
+  Type: int
+  Size: 1
+  Offset: 0x4322
+  Description: DMA Channel 2 Source address Low
+A1T2H:
+  Type: int
+  Size: 1
+  Offset: 0x4323
+  Description: DMA Channel 2 Source address High
+A1B2:
+  Type: int
+  Size: 1
+  Offset: 0x4324
+  Description: DMA Channel 2 Source Bank address
+DAS2L:
+  Type: int
+  Size: 1
+  Offset: 0x4325
+  Description: DMA Channel 2 transfer size & HDMA address register
+DMAP3:
+  Type: int
+  Size: 1
+  Offset: 0x4330
+  Description: DMA Channel 3 Control register
+  Notes: *DMAP
+BBAD3:
+  Type: int
+  Size: 1
+  Offset: 0x4331
+  Description: DMA Channel 3 Destination register
+A1T3L:
+  Type: int
+  Size: 1
+  Offset: 0x4332
+  Description: DMA Channel 3 Source address Low
+A1T3H:
+  Type: int
+  Size: 1
+  Offset: 0x4333
+  Description: DMA Channel 3 Source address High
+A1B3:
+  Type: int
+  Size: 1
+  Offset: 0x4334
+  Description: DMA Channel 3 Source Bank address
+DAS3L:
+  Type: int
+  Size: 1
+  Offset: 0x4335
+  Description: DMA Channel 3 transfer size & HDMA address register
+DMAP4:
+  Type: int
+  Size: 1
+  Offset: 0x4340
+  Description: DMA Channel 4 Control register
+  Notes: *DMAP
+BBAD4:
+  Type: int
+  Size: 1
+  Offset: 0x4341
+  Description: DMA Channel 4 Destination register
+A1T4L:
+  Type: int
+  Size: 1
+  Offset: 0x4342
+  Description: DMA Channel 4 Source address Low
+A1T4H:
+  Type: int
+  Size: 1
+  Offset: 0x4343
+  Description: DMA Channel 4 Source address High
+A1B4:
+  Type: int
+  Size: 1
+  Offset: 0x4344
+  Description: DMA Channel 4 Source Bank address
+DAS4L:
+  Type: int
+  Size: 1
+  Offset: 0x4345
+  Description: DMA Channel 4 transfer size & HDMA address register
+DMAP5:
+  Type: int
+  Size: 1
+  Offset: 0x4350
+  Description: DMA Channel 5 Control register
+BBAD5:
+  Type: int
+  Size: 1
+  Offset: 0x4351
+  Description: DMA Channel 5 Destination register
+A1T5L:
+  Type: int
+  Size: 1
+  Offset: 0x4352
+  Description: DMA Channel 5 Source address Low
+A1T5H:
+  Type: int
+  Size: 1
+  Offset: 0x4353
+  Description: DMA Channel 5 Source address High
+A1B5:
+  Type: int
+  Size: 1
+  Offset: 0x4354
+  Description: DMA Channel 5 Source Bank address
+DAS5L:
+  Type: int
+  Size: 1
+  Offset: 0x4355
+  Description: DMA Channel 5 transfer size & HDMA address register
+DMAP6:
+  Type: int
+  Size: 1
+  Offset: 0x4360
+  Description: DMA Channel 6 Control register
+  Notes: *DMAP
+BBAD6:
+  Type: int
+  Size: 1
+  Offset: 0x4361
+  Description: DMA Channel 6 Destination register
+A1T6L:
+  Type: int
+  Size: 1
+  Offset: 0x4362
+  Description: DMA Channel 6 Source address Low
+A1T6H:
+  Type: int
+  Size: 1
+  Offset: 0x4363
+  Description: DMA Channel 6 Source address High
+A1B6:
+  Type: int
+  Size: 1
+  Offset: 0x4364
+  Description: DMA Channel 6 Source Bank address
+DAS6L:
+  Type: int
+  Size: 1
+  Offset: 0x4365
+  Description: DMA Channel 6 transfer size & HDMA address register
+DMAP7:
+  Type: int
+  Size: 1
+  Offset: 0x4370
+  Description: DMA Channel 7 Control register
+  Notes: *DMAP
+BBAD7:
+  Type: int
+  Size: 1
+  Offset: 0x4371
+  Description: DMA Channel 7 Destination register
+A1T7L:
+  Type: int
+  Size: 1
+  Offset: 0x4372
+  Description: DMA Channel 7 Source address Low
+A1T7H:
+  Type: int
+  Size: 1
+  Offset: 0x4373
+  Description: DMA Channel 7 Source address High
+A1B7:
+  Type: int
+  Size: 1
+  Offset: 0x4374
+  Description: DMA Channel 7 Source Bank address
+DAS7L:
+  Type: int
+  Size: 1
+  Offset: 0x4375
+  Description: DMA Channel 7 transfer size & HDMA address register
+SNES_HEADER:
+  Type: struct
+  Description: Structure describing aspects of the cartridge
+  Offset: 0x00FFB0
+  Size: 0x4F
+  Entries:
+    ID:
+      Description: "Nintendo-assigned game id"
+      Type: script
+      Size: 6
+      Charset: ascii
+    UNKNOWN:
+      Description: ""
+      Type: unknown
+      Size: 10
+    TITLE:
+      Description: "Title of the game"
+      Type: script
+      Size: 0x15
+      Charset: ascii
+    ROMLAYOUT:
+      Description: "Memory layout used by the cartridge"
+      Type: int
+      Size: 1
+    CARTTYPE:
+      Description: "Type of cartridge"
+      Type: int
+      Size: 1
+    ROMSIZE:
+      Description: "Size of the ROM installed in the cartridge"
+      Type: int
+      Size: 1
+      Values: &__HEADER_SIZES
+        0: None
+        1: 2KiB
+        2: 4KiB
+        3: 8KiB
+        4: 16KiB
+        5: 32KiB
+        6: 64KiB
+        7: 128KiB
+        8: 256KiB
+        9: 512KiB
+        10: 1024KiB
+        11: 2048KiB
+        12: 4096KiB
+        13: 8192KiB
+    RAMSIZE:
+      Description: "Size of the (save) RAM installed in the cartridge"
+      Type: int
+      Size: 1
+      Values: *__HEADER_SIZES
+    COUNTRYCODE:
+      Description: "Region where this cartridge is meant to be sold"
+      Type: int
+      Size: 1
+      Values:
+        0x00: Japan
+        0x01: North America
+        0x02: Europe
+        0x03: Scandinavia
+        0x06: Europe (French)
+        0x07: Dutch
+        0x08: Spanish
+        0x09: German
+        0x0A: Italian
+        0x0B: Chinese
+        0x0D: Korean
+        0x0E: Common
+        0x0F: Canada
+        0x10: Brazil
+        0x11: Australia
+    LICENSEE:
+      Description: "The company holding the license for this game"
+      Type: int
+      Size: 1
+      Values:
+        0x33: Extended
+    REVISION:
+      Description: "Public revision of the ROM"
+      Type: int
+      Size: 1
+    CHECKSUM:
+      Description: "A checksum calculated by adding every byte in the ROM together (checksum and inverse cancel each other out)"
+      Type: int
+      Size: 2
+    CHECKSUMCOMPLEMENT:
+      Description: "Inverse of the checksum"
+      Type: int
+      Size: 2
+    NATIVEMODEVECTORS:
+      Description: "Pointers to routines to execute in native mode once their conditions are met"
+      Type: struct
+      Size: 0x10
+      Entries:
+        UNUSED:
+          Description: ""
+          Type: pointer
+          Size: 2
+        UNUSED2:
+          Description: ""
+          Type: pointer
+          Size: 2
+        COP:
+          Description: "Coprocessor enable vector. Not used."
+          Type: pointer
+          Size: 2
+        BRK:
+          Description: "Break vector. Vector used when the BRK instruction is executed."
+          Type: pointer
+          Size: 2
+        ABORT:
+          Description: "ABORT vector. Allows CPU to be interrupted mid-instruction by external hardware. Not used."
+          Type: pointer
+          Size: 2
+        NMI:
+          Description: "Native mode non-maskable interrupt vector. PPU triggers this interrupt shortly after the last line is drawn. Can be disabled."
+          Type: pointer
+          Size: 2
+        UNUSED3:
+          Description: "This would be the RESET vector for native mode, but the processor enter emulation mode on reset"
+          Type: pointer
+          Size: 2
+        IRQ:
+          Description: "Interrupt ReQuest vector. PPU triggers this interrupt at a programmer-defined time."
+          Type: pointer
+          Size: 2
+    EMULATIONMODEVECTORS:
+      Description: "Pointers to routines to execute in emulation mode once their conditions are met"
+      Type: struct
+      Size: 0x10
+      Entries:
+        UNUSED:
+          Description: ""
+          Type: pointer
+          Size: 2
+        UNUSED2:
+          Description: ""
+          Type: pointer
+          Size: 2
+        COP:
+          Description: "Coprocessor enable vector. Not used."
+          Type: pointer
+          Size: 2
+        UNUSED3:
+          Description: "This would be the BRK vector for emulation mode, but emulation mode uses the IRQ vector for BRK instead"
+          Type: pointer
+          Size: 2
+        ABORT:
+          Description: "ABORT vector. Allows CPU to be interrupted mid-instruction by external hardware. Not used."
+          Type: pointer
+          Size: 2
+        NMI:
+          Description: "Emulation mode non-maskable interrupt vector. PPU triggers this interrupt shortly after the last line is drawn. Can be disabled."
+          Type: pointer
+          Size: 2
+        RESET:
+          Description: "RESET vector. SNES jumps here when booting or reset."
+          Type: pointer
+          Size: 2
+        IRQ:
+          Description: "Interrupt ReQuest vector. PPU triggers this interrupt at a programmer-defined time."
+          Type: pointer
+          Size: 2
+...

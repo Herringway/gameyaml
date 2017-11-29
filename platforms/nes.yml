@@ -1,0 +1,177 @@
+---
+PPUCONTROL1:
+  Offset: 0x2000
+  Type: int
+  Size: 1
+  Description: PPU Control Register 1
+PPUCONTROL2:
+  Offset: 0x2001
+  Type: int
+  Size: 1
+  Description: PPU Control Register 2
+PPUSTATUS:
+  Offset: 0x2002
+  Type: int
+  Size: 1
+  Description: PPU Status Register
+SPRRAMADDR:
+  Offset: 0x2003
+  Type: int
+  Size: 1
+  Description: SPR-RAM Address Register
+SPRRAMIO:
+  Offset: 0x2004
+  Type: int
+  Size: 1
+  Description: SPR-RAM I/O Register
+VRAMADDR1:
+  Offset: 0x2005
+  Type: int
+  Size: 1
+  Description: VRAM Address Register 1
+VRAMADDR2:
+  Offset: 0x2006
+  Type: int
+  Size: 1
+  Description: VRAM Address Register 2
+VRAMIO:
+  Offset: 0x2007
+  Type: int
+  Size: 1
+  Description: VRAM I/O Register
+PAPUPULSE1CONTROL:
+  Offset: 0x4000
+  Type: int
+  Size: 1
+  Description: pAPU Pulse 1 Control Register
+PAPUPULSE1RAMPCONTROL:
+  Offset: 0x4001
+  Type: int
+  Size: 1
+  Description: pAPU Pulse 1 Ramp Control Register
+PAPUPULSE1FINETUNE:
+  Offset: 0x4002
+  Type: int
+  Size: 1
+  Description: pAPU Pulse 1 Fine Tune Register
+PAPUPULSE1COARSETUNE:
+  Offset: 0x4003
+  Type: int
+  Size: 1
+  Description: pAPU Pulse 1 Coarse Tune Register
+PAPUPULSE2CONTROL:
+  Offset: 0x4004
+  Type: int
+  Size: 1
+  Description: pAPU Pulse 2 Control Register
+PAPUPULSE2RAMPCONTROL:
+  Offset: 0x4005
+  Type: int
+  Size: 1
+  Description: pAPU Pulse 2 Ramp Control Register
+PAPUPULSE2FINETUNE:
+  Offset: 0x4006
+  Type: int
+  Size: 1
+  Description: pAPU Pulse 2 Fine Tune Register
+PAPUPULSE2COARSETUNE:
+  Offset: 0x4007
+  Type: int
+  Size: 1
+  Description: pAPU Pulse 2 Coarse Tune Register
+PAPUTRIANGLECONTROL1:
+  Offset: 0x4008
+  Type: int
+  Size: 1
+  Description: pAPU Triangle Control Register 1
+PAPUTRIANGLECONTROL2:
+  Offset: 0x4009
+  Type: int
+  Size: 1
+  Description: pAPU Triangle Control Register 2
+PAPUTRIANGLEFREQ1:
+  Offset: 0x400A
+  Type: int
+  Size: 1
+  Description: pAPU Triangle Frequency Register 1
+PAPUTRIANGLEFREQ2:
+  Offset: 0x400B
+  Type: int
+  Size: 1
+  Description: pAPU Triangle Frequency Register 2
+PAPUNOISECONTROL1:
+  Offset: 0x400C
+  Type: int
+  Size: 1
+  Description: pAPU Noise Control Register 1
+PAPUNOISECONTROL2:
+  Offset: 0x400D
+  Type: int
+  Size: 1
+  Description: pAPU Noise Control Register 2
+PAPUNOISEFREQ1:
+  Offset: 0x400E
+  Type: int
+  Size: 1
+  Description: pAPU Noise Frequency Register 1
+PAPUNOISEFREQ2:
+  Offset: 0x400F
+  Type: int
+  Size: 1
+  Description: pAPU Noise Frequency Register 2
+PAPUDELTACONTROL:
+  Offset: 0x4010
+  Type: int
+  Size: 1
+  Description: pAPU Delta Modulation Control Register
+PAPUDELTADA:
+  Offset: 0x4011
+  Type: int
+  Size: 1
+  Description: pAPU Delta Modulation D/A Register
+PAPUDELTAAR:
+  Offset: 0x4012
+  Type: int
+  Size: 1
+  Description: pAPU Delta Modulation Address Register
+PAPUDELTADL:
+  Offset: 0x4013
+  Type: int
+  Size: 1
+  Description: pAPU Delta Modulation Data Length Register
+SPRITEDMA:
+  Offset: 0x4014
+  Type: int
+  Size: 1
+  Description: Sprite DMA Register
+PAPUVERTICALCLOCK:
+  Offset: 0x4015
+  Type: int
+  Size: 1
+  Description: pAPU Sound / Vertical Clock Signal Register
+JOYPAD1:
+  Offset: 0x4016
+  Type: int
+  Size: 1
+  Description: Joypad 1
+JOYPAD2:
+  Type: int
+  Size: 1
+  Offset: 0x4017
+  Description: Joypad 2
+NMI_VECTOR:
+  Type: pointer
+  Offset: 0xFFFA
+  Size: 2
+  Description: Location the CPU jumps to on NMI.
+RESET_VECTOR:
+  Type: pointer
+  Offset: 0xFFFC
+  Size: 2
+  Description: Location the CPU jumps to on RESET.
+BRK_VECTOR:
+  Type: pointer
+  Offset: 0xFFFE
+  Size: 2
+  Description: Location the CPU jumps to on BRK.
+...
