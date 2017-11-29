@@ -280,76 +280,47 @@ SAVE_SLOT_1:
             Type: unknown
             Size: 7
             Pretty Name: Current Status Effects
-          EQUIPPED_OFFENSE:
-            Description: "Character's offense (after equipment)."
-            Type: int
-            Size: 1
-            Pretty Name: Offense with current equipment
-          EQUIPPED_DEFENSE:
-            Description: "Character's defense (after equipment)"
-            Type: int
-            Size: 1
-            Pretty Name: Defense with current equipment
-          EQUIPPED_SPEED:
-            Description: "Character's speed (after equipment)."
-            Type: int
-            Size: 1
-            Pretty Name: Speed with current equipment
-          EQUIPPED_GUTS:
-            Description: "Character's guts (after equipment)."
-            Type: int
-            Size: 1
-            Pretty Name: Guts with current equipment
-          EQUIPPED_LUCK:
-            Description: "Character's luck (after equipment)."
-            Type: int
-            Size: 1
-            Pretty Name: Luck with current equipment
-          EQUIPPED_VITALITY:
-            Description: "Character's vitality (after equipment)."
-            Type: int
-            Size: 1
-            Pretty Name: Vitality with current equipment
-          EQUIPPED_IQ:
-            Description: "Character's IQ (after equipment)."
-            Type: int
-            Size: 1
-            Pretty Name: IQ with current equipment
-          OFFENSE:
-            Description: "Character's offense (before equipment)."
-            Type: int
-            Size: 1
-            Pretty Name: Offense without current equipment
-          DEFENSE:
-            Description: "Character's defense (before equipment)."
-            Type: int
-            Size: 1
-            Pretty Name: Defense without current equipment
-          SPEED:
-            Description: "Character's speed (before equipment)."
-            Type: int
-            Size: 1
-            Pretty Name: Speed without current equipment
-          GUTS:
-            Description: "Character's guts (before equipment)."
-            Type: int
-            Size: 1
-            Pretty Name: Guts without current equipment
-          LUCK:
-            Description: "Character's luck (before equipment)."
-            Type: int
-            Size: 1
-            Pretty Name: Luck without current equipment
-          VITALITY:
-            Description: "Character's vitality (before equipment)."
-            Type: int
-            Size: 1
-            Pretty Name: Vitality without current equipment
-          IQ:
-            Description: "Character's IQ (before equipment)."
-            Type: int
-            Size: 1
-            Pretty Name: IQ without current equipment
+
+          EQUIPPED_STATS:
+            Description: "Character's stats (after equipment)."
+            Type: struct
+            Size: 7
+            Pretty Name: Stats after equipment
+            Entries: &ALLSTATS
+              OFFENSE:
+                Description: "Offense."
+                Type: int
+                Size: 1
+              DEFENSE:
+                Description: "Defense."
+                Type: int
+                Size: 1
+              SPEED:
+                Description: "Speed."
+                Type: int
+                Size: 1
+              GUTS:
+                Description: "Guts."
+                Type: int
+                Size: 1
+              LUCK:
+                Description: "Luck."
+                Type: int
+                Size: 1
+              VITALITY:
+                Description: "Vitality."
+                Type: int
+                Size: 1
+              IQ:
+                Description: "IQ."
+                Type: int
+                Size: 1
+          BASE_STATS:
+            Description: "Character's stats (before equipment).."
+            Type: struct
+            Size: 7
+            Pretty Name: Base Stats
+            Entries: *ALLSTATS
           ITEMS:
             Description: "Items this character is carrying"
             Type: array
@@ -6695,7 +6666,7 @@ OVERWORLD_SPRITES:
   Item Type:
     Type: tile
     Size: 16
-    BPP: 4
+    Format: 4BPPSNES
   Offset: 0xD10000
 ITEM_CONFIGURATION_TABLE:
   Type: array
@@ -7129,6 +7100,11 @@ ENEMY_CONFIGURATION_TABLE:
         Type: int
         Pretty Name: Action Order
         Size: 1
+        Values:
+          00: Random
+          01: Skewed Random
+          02: In Order
+          03: Staggered
       ACTION1:
         Description: "Enemy's first available action."
         Type: int
@@ -7191,7 +7167,7 @@ ENEMY_CONFIGURATION_TABLE:
         Values:
           00: "False"
           01: "True"
-      ITEMDROPRATE:
+      ITEM_DROP_RATE:
         Description: "Rate at which this enemy will drop its item."
         Type: int
         Pretty Name: Item Rarity
@@ -7205,12 +7181,12 @@ ENEMY_CONFIGURATION_TABLE:
           05: 32/128
           06: 64/128
           07: 128/128
-      ITEMDROPPED:
+      ITEM_DROPPED:
         Description: "What item this enemy can drop."
         Type: int
         Pretty Name: Item Dropped
         Size: 1
-      INITIALSTATUS:
+      INITIAL_STATUS:
         Description: "Status this enemy enters battle with."
         Type: int
         Pretty Name: Initial Status
@@ -7224,7 +7200,7 @@ ENEMY_CONFIGURATION_TABLE:
           05: Asleep
           06: Cannot Concentrate
           07: Feeling Strange
-      DEATHTYPE:
+      DEATH_TYPE:
         Description: "Sound played when defeated."
         Type: int
         Pretty Name: Death Sound
@@ -7237,12 +7213,12 @@ ENEMY_CONFIGURATION_TABLE:
         Type: int
         Pretty Name: Row
         Size: 1
-      MAXCALLED:
+      MAX_CALLED:
         Description: "Maximum number of allies that can be called."
         Type: int
         Pretty Name: Max Call
         Size: 1
-      MIRRORSUCCESS:
+      MIRROR_SUCCESS:
         Description: "Success rate of the player's Mirror command."
         Type: int
         Pretty Name: Mirror Success Rate
@@ -7430,43 +7406,11 @@ DONT_CARE_NAMES:
   Size: 294
   Description: Don't Care Preset Character Names
   Item Type:
-    Type: struct
-    Entries:
-      NAME1:
-        Description: "First name."
-        Type: script
-        Pretty Name: Name 1
-        Size: 6
-      NAME2:
-        Description: "Second name."
-        Type: script
-        Pretty Name: Name 2
-        Size: 6
-      NAME3:
-        Description: "Third name."
-        Type: script
-        Pretty Name: Name 3
-        Size: 6
-      NAME4:
-        Description: "Fourth name."
-        Type: script
-        Pretty Name: Name 4
-        Size: 6
-      NAME5:
-        Description: "Fifth name."
-        Type: script
-        Pretty Name: Name 5
-        Size: 6
-      NAME6:
-        Description: "Sixth name."
-        Type: script
-        Pretty Name: Name 6
-        Size: 6
-      NAME7:
-        Description: "Seventh name."
-        Type: script
-        Pretty Name: Name 7
-        Size: 6
+    Type: array
+    Size: 42
+    Item Type:
+      Type: script
+      Size: 6
   Offset: 0xD5F42F
 INITIAL_STATS:
   Type: array
@@ -7792,7 +7736,7 @@ NORMAL_FONT:
   Item Type:
     Type: tile
     Size: 16
-    BPP: 2
+    Format: 2BPPSNES
   Offset: 0xE0110E
 TEXT_WINDOW_PROPERTIES:
   Type: unknown
@@ -7862,7 +7806,7 @@ BIG_FONT:
   Item Type:
     Type: tile
     Size: 16
-    BPP: 2
+    Format: 2BPPSNES
   Offset: 0xE0209D
 UNKNOWN_E0309D:
   Description: ""
@@ -9021,12 +8965,125 @@ SPRITE_GROUPING_PTR_TABLE:
   Type: array
   Description: Sprite Grouping Pointer Table
   Size: 1856
-  Item Type: *POINTER4
+  Item Type:
+    Type: pointer
+    Size: 4
   Offset: 0xEF6541
 SPRITE_GROUPING_DATA:
-  Type: unknown
+  Type: array
   Description: Sprite Grouping Table
   Size: 12225
+  Item Type:
+    Type: struct
+    Entries:
+      HEIGHT:
+        Description: Height of sprite
+        Type: int
+        Pretty Name: Height
+        Size: 1
+      WIDTH:
+        Description: Width of sprite
+        Type: int
+        Pretty Name: Width
+        Size: 1
+      UNKNOWNA:
+        Description: ""
+        Type: int
+        Size: 1
+      FLAGS:
+        Description: Flags
+        Type: int
+        Pretty Name: Flags
+        Size: 1
+      UNKNOWNB:
+        Description: ""
+        Type: unknown
+        Size: 4
+      BANK:
+        Description: Bank
+        Type: int
+        Pretty Name: Bank
+        Size: 1
+      NSPRITEA:
+        Description: Frame 1 sprite, facing north
+        Type: int
+        Pretty Name: North Sprite A
+        Size: 2
+      NSPRITEB:
+        Description: Frame 2 sprite, facing north
+        Type: int
+        Pretty Name: North Sprite B
+        Size: 2
+      ESPRITEA:
+        Description: Frame 1 sprite, facing east
+        Type: int
+        Pretty Name: East Sprite A
+        Size: 2
+      ESPRITEB:
+        Description: Frame 2 sprite, facing east
+        Type: int
+        Pretty Name: East Sprite B
+        Size: 2
+      SSPRITEA:
+        Description: Frame 1 sprite, facing south
+        Type: int
+        Pretty Name: South Sprite A
+        Size: 2
+      SSPRITEB:
+        Description: Frame 2 sprite, facing south
+        Type: int
+        Pretty Name: South Sprite B
+        Size: 2
+      WSPRITEA:
+        Description: Frame 1 sprite, facing west
+        Type: int
+        Pretty Name: West Sprite A
+        Size: 2
+      WSPRITEB:
+        Description: Frame 2 sprite, facing west
+        Type: int
+        Pretty Name: West Sprite B
+        Size: 2
+      NESPRITEA:
+        Description: Frame 1 sprite, facing north east
+        Type: int
+        Pretty Name: North East Sprite A
+        Size: 2
+      NESPRITEB:
+        Description: Frame 2 sprite, facing north east
+        Type: int
+        Pretty Name: North East Sprite B
+        Size: 2
+      SESPRITEA:
+        Description: Frame 1 sprite, facing south east
+        Type: int
+        Pretty Name: South East Sprite A
+        Size: 2
+      SESPRITEB:
+        Description: Frame 2 sprite, facing south east
+        Type: int
+        Pretty Name: South East Sprite B
+        Size: 2
+      SWSPRITEA:
+        Description: Frame 1 sprite, facing south west
+        Type: int
+        Pretty Name: South West Sprite A
+        Size: 2
+      SWSPRITEB:
+        Description: Frame 2 sprite, facing south west
+        Type: int
+        Pretty Name: South West Sprite B
+        Size: 2
+      NWSPRITEA:
+        Description: Frame 1 sprite, facing north west
+        Type: int
+        Pretty Name: North West Sprite A
+        Size: 2
+      NWSPRITEB:
+        Description: Frame 2 sprite, facing north west
+        Type: int
+        Pretty Name: North West Sprite B
+        Size: 2
   Offset: 0xEF6C81
 UNKNOWN_EF9C42:
   Description: ""
