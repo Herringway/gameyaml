@@ -1,0 +1,6 @@
+language: python
+cache: pip
+install:
+ - pip install pykwalify==1.5.1 yamllint
+script:
+- ./validate-all.sh
