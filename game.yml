@@ -1,0 +1,2622 @@
+---
+EVENT_0E_JUMP:
+  Description: ""
+  Type: array
+  Offset: 0x801BCF0
+  Size: 0x50
+  Item Type:
+    Type: pointer
+    Size: 4
+SINE_TABLE16:
+  Type: array
+  Offset: 0x80C17D8
+  Description: 16-bit Sine lookup table
+  Size: 0x280
+  Item Type:
+    Type: int
+    Size: 2
+    Signed: true
+BATTLE_MEMORY_ORDER:
+  Type: array
+  Offset: 0x80C6B64
+  Description: A list mapping battle memory entries to internal enemy entries
+  Size: 0x1FE
+  Item Type:
+    Type: int
+    Size: 2
+CHARACTER_DATA:
+  Description: "Data for each character"
+  Type: array
+  Offset: 0x80CC4E8
+  Size: 5184
+  Labels:
+    - Offset: 0x0000
+      Name: NOBODY
+    - Offset: 0x0144
+      Name: FLINT
+    - Offset: 0x0288
+      Name: LUCAS
+    - Offset: 0x03CC
+      Name: DUSTER
+    - Offset: 0x0510
+      Name: KUMATORA
+    - Offset: 0x0654
+      Name: BONEY
+    - Offset: 0x0798
+      Name: SALSA
+    - Offset: 0x08DC
+      Name: WESS
+    - Offset: 0x0A20
+      Name: THOMAS
+    - Offset: 0x0B64
+      Name: IONIA
+    - Offset: 0x0CA8
+      Name: FUEL
+    - Offset: 0x0DEC
+      Name: ALEC
+    - Offset: 0x0F30
+      Name: FASSAD
+    - Offset: 0x1074
+      Name: CLAUS
+    - Offset: 0x11B8
+      Name: UNKNOWN1
+    - Offset: 0x12FC
+      Name: UNKNOWN2
+  Item Type:
+    Type: struct
+    Entries:
+      ID:
+        Description: "Character's unique ID."
+        Type: int
+        Size: 1
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 191
+      PSI_LEARNED:
+        Description: "PSI learned by this character."
+        Type: array
+        Size: 116
+        Item Type:
+          Type: struct
+          Entries:
+            ID:
+              Description: "Learned PSI's ID."
+              Type: int
+              Size: 2
+            LEVEL:
+              Description: "Level the PSI is learned at."
+              Type: int
+              Size: 2
+      UNKNOWN2:
+        Description: ""
+        Type: unknown
+        Size: 16
+EXP_NEEDED_TABLE:
+  Type: array
+  Size: 6400
+  Description: EXP needed for next level
+  Offset: 0x80CD928
+  Labels:
+    - Offset: 0x0000
+      Name: NOBODY
+    - Offset: 0x0190
+      Name: FLINT
+    - Offset: 0x0320
+      Name: LUCAS
+    - Offset: 0x04B0
+      Name: DUSTER
+    - Offset: 0x0640
+      Name: KUMATORA
+    - Offset: 0x07D0
+      Name: BONEY
+    - Offset: 0x0960
+      Name: SALSA
+    - Offset: 0x0AF0
+      Name: WESS
+    - Offset: 0x0C80
+      Name: THOMAS
+    - Offset: 0x0E10
+      Name: IONIA
+    - Offset: 0x0FA0
+      Name: FUEL
+    - Offset: 0x1130
+      Name: ALEC
+    - Offset: 0x12C0
+      Name: FASSAD
+    - Offset: 0x1450
+      Name: CLAUS
+    - Offset: 0x15E0
+      Name: UNKNOWN1
+    - Offset: 0x1770
+      Name: UNKNOWN2
+  Item Type:
+    Type: array
+    Size: 400
+    Item Type:
+      Type: int
+      Size: 4
+UNKNOWN_80CF228:
+  Description: ""
+  Type: unknown
+  Size: 6912
+  Offset: 0x80CF228
+HELP_TEXT:
+  Type: array
+  Description: Help Text
+  Offset: 0x8D0BB60
+  Size: 0x7D1C
+  Item Type:
+    Type: script
+    Terminator: [0xFF, 0xFF]
+ENEMY_CONFIGURATION_TABLE:
+  Type: array
+  Size: 36864
+  Offset: 0x80E1908
+  Description: Enemy Stats
+  Item Type:
+    Type: struct
+    Entries:
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 10
+      BACKGROUND:
+        Description: "Background to use for this enemy."
+        Type: int
+        Size: 2
+      SWIRL_MUSIC:
+        Description: "Swirl music to use when encountering this enemy on the overworld."
+        Type: int
+        Size: 2
+      BATTLE_MUSIC:
+        Description: "Battle music to use for this enemy."
+        Type: int
+        Size: 2
+      VICTORY_MUSIC:
+        Description: "Music to use when winning against this enemy."
+        Type: int
+        Size: 2
+      LEVEL:
+        Description: "Level of the enemy."
+        Type: int
+        Size: 2
+      HP:
+        Description: "Enemy's HP."
+        Type: int
+        Size: 4
+      PP:
+        Description: "Enemy's PP."
+        Type: int
+        Size: 4
+      BASIC_STATS:
+        Description: "Enemy's default stats."
+        Type: struct
+        Size: 4
+        Entries: &BASICSTATS
+          OFFENSE:
+            Description: "Offense stat."
+            Type: int
+            Size: 1
+          DEFENSE:
+            Description: "Defense stat."
+            Type: int
+            Size: 1
+          IQ:
+            Description: "IQ stat."
+            Type: int
+            Size: 1
+          SPEED:
+            Description: "Speed stat."
+            Type: int
+            Size: 1
+      UNKNOWNB:
+        Description: ""
+        Type: unknown
+        Size: 4
+      ALTERNATE_STATS:
+        Description: "Alternate stats?"
+        Type: struct
+        Entries: *BASICSTATS
+        Size: 4
+      UNKNOWNC:
+        Description: ""
+        Type: unknown
+        Size: 4
+      STATUS_RESISTANCES:
+        Description: Resistance to various statuses. Lower values = greater resistance.
+        Type: struct
+        Size: 30
+        Entries:
+          POISON:
+            Description: Resistance to being poisoned.
+            Type: int
+            Size: 2
+          PARALYSIS:
+            Description: Resistance to paralysis.
+            Type: int
+            Size: 2
+          SLEEP:
+            Description: Resistance to falling sleep.
+            Type: int
+            Size: 2
+          FEELING_STRANGE:
+            Description: Resistance to feeling strange.
+            Type: int
+            Size: 2
+          CRYING:
+            Description: Resistance to crying.
+            Type: int
+            Size: 2
+          FORGETFUL:
+            Description: Resistance to forgetfulness.
+            Type: int
+            Size: 2
+          NAUSEA:
+            Description: Resistance to nausea.
+            Type: int
+            Size: 2
+          FLEAS:
+            Description: Resistance to fleas.
+            Type: int
+            Size: 2
+          BURNED:
+            Description: Resistance to being burned.
+            Type: int
+            Size: 2
+          SOLIDIFIED:
+            Description: Resistance to being solidified.
+            Type: int
+            Size: 2
+          NUMBNESS:
+            Description: Resistance to numbness.
+            Type: int
+            Size: 2
+          DCMC:
+            Description: Resistance to the DCMC pamphlet.
+            Type: int
+            Size: 2
+          WALL_STAPLES:
+            Description: Resistance to wall staples.
+            Type: int
+            Size: 2
+          APOLOGY:
+            Description: Resistance to apologies.
+            Type: int
+            Size: 2
+          LAUGHTER:
+            Description: Resistance to laughing status.
+            Type: int
+            Size: 2
+      ELEMENTAL_RESISTANCES:
+        Description: Resistance to various statuses. Lower values = greater resistance.
+        Type: struct
+        Size: 10
+        Entries:
+          PK_LOVE:
+            Description: Damage from PK Love.
+            Type: int
+            Size: 2
+          FIRE:
+            Description: Fire damage (PK Fire, etc.).
+            Type: int
+            Size: 2
+          ICE:
+            Description: Ice damage (PK Freeze, etc.).
+            Type: int
+            Size: 2
+          LIGHTNING:
+            Description: Lightning damage (PK Thunder, etc.).
+            Type: int
+            Size: 2
+          EXPLOSIVES:
+            Description: Explosive damage (Bombs, etc.).
+            Type: int
+            Size: 2
+      ACTIONS:
+        Description: Actions this enemy might take.
+        Type: array
+        Size: 16
+        Item Type:
+          Type: int
+          Size: 2
+      UNKNOWND:
+        Description: ""
+        Type: unknown
+        Size: 2
+      ENCOUNTER_TEXT_ID:
+        Description: Text to display when encountered.
+        Type: int
+        Size: 1
+      DEATH_TEXT_ID:
+        Description: Text to display when defeated.
+        Type: int
+        Size: 1
+      UNKNOWNE:
+        Description: ""
+        Type: unknown
+        Size: 16
+      ITEMS_DROPPED:
+        Description: Potential items dropped by this enemy on defeat.
+        Type: array
+        Size: 12
+        Item Type:
+          Type: struct
+          Entries:
+            ITEM:
+              Type: int
+              Description: Item ID
+              Size: 1
+            CHANCE:
+              Description: Chance of this item dropping.
+              Type: int
+              Size: 3
+      EXP_GAINED:
+        Description: Amount of EXP rewarded when defeated.
+        Type: int
+        Size: 4
+      DP_GAINED:
+        Description: Amount of DP rewarded when defeated.
+        Type: int
+        Size: 4
+      UNKNOWNF:
+        Description: ""
+        Type: unknown
+        Size: 4
+ACTION_TABLE:
+  Type: array
+  Size: 31200
+  Description: Action Table?
+  Item Type:
+    Type: unknown
+    Size: 48
+  Offset: 0x80D9D28
+UNKNOWN_80E1708:
+  Description: ""
+  Type: unknown
+  Size: 512
+  Offset: 0x80E1708
+PSI_DATA:
+  Type: array
+  Description: PSI Data
+  Size: 5600
+  Offset: 0x80E1908
+  Item Type:
+    Type: struct
+    Entries:
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 4
+      TYPE:
+        Description: ""
+        Type: int
+        Size: 1
+      UNKNOWNB:
+        Description: ""
+        Type: unknown
+        Size: 7
+      PP_COST:
+        Description: "Amount of PP required to use this PSI."
+        Type: int
+        Size: 2
+      UNKNOWNC:
+        Description: ""
+        Type: unknown
+        Size: 10
+      TARGET:
+        Description: "Who this PSI can target"
+        Type: int
+        Size: 1
+      UNKNOWND:
+        Description: ""
+        Type: unknown
+        Size: 5
+      POWERLOW:
+        Description: ""
+        Type: int
+        Size: 2
+      POWERHIGH:
+        Description: ""
+        Type: int
+        Size: 2
+      UNKNOWNE:
+        Description: ""
+        Type: unknown
+        Size: 13
+      ANIMATION:
+        Description: "Animation to use for this PSI (when used by players and by enemies)"
+        Type: array
+        Size: 2
+        Item Type:
+          Type: int
+          Size: 1
+      UNKNOWNF:
+        Description: ""
+        Type: unknown
+        Size: 7
+UNKNOWN_80E2EE8:
+  Description: ""
+  Type: unknown
+  Size: 8736
+  Offset: 0x80E2EE8
+ITEM_DATA: &ITEM_DATA
+  Type: array
+  Size: 27648
+  Description: Item data
+  Offset: 0x80E5108
+  Item Type:
+    Type: struct
+    Entries:
+      UNKNOWNA:
+        Description: ""
+        Type: unknown
+        Size: 4
+      TYPE:
+        Description: Item type.
+        Type: int
+        Size: 1
+      UNKNOWNB:
+        Description: ""
+        Type: unknown
+        Size: 3
+      KEY_ITEM:
+        Description: Whether or not this is a key item.
+        Type: int
+        Size: 1
+      UNKNOWNC:
+        Description: ""
+        Type: unknown
+        Size: 1
+      SELL_PRICE:
+        Description: Sell price for this item.
+        Type: int
+        Size: 2
+      EQUIPPED BY:
+        Description: Who is able to equip this item.
+        Type: int
+        Size: 1
+        Bit Values:
+          - Unknown
+          - Flint
+          - Lucas
+          - Duster
+          - Kumatora
+          - Boney
+          - Salsa
+          - UnknownB
+      UNKNOWND:
+        Description: ""
+        Type: unknown
+        Size: 3
+      HP_ADDED:
+        Description: Amount of HP added by this item.
+        Type: int
+        Size: 4
+        Signed: true
+      PP_ADDED:
+        Description: Amount of PP added by this item.
+        Type: int
+        Size: 2
+        Signed: true
+      UNKNOWNE:
+        Description: ""
+        Type: unknown
+        Size: 2
+      OFFENSE_ADDED:
+        Description: Amount of offense added by this item.
+        Type: int
+        Size: 1
+        Signed: true
+      DEFENSE_ADDED:
+        Description: Amount of defense added by this item.
+        Type: int
+        Size: 1
+        Signed: true
+      IQ_ADDED:
+        Description: Amount of IQ added by this item.
+        Type: int
+        Size: 1
+        Signed: true
+      SPEED_ADDED:
+        Description: Amount of speed added by this item.
+        Type: int
+        Size: 1
+        Signed: true
+      UNKNOWNF:
+        Description: ""
+        Type: unknown
+        Size: 4
+      PROTECTIONS:
+        Description: Status effects this item protects against.
+        Type: struct
+        Size: 22
+        Entries:
+          POISON:
+            Description: Resistance to being poisoned.
+            Type: int
+            Size: 2
+            Signed: true
+          PARALYSIS:
+            Description: Resistance to paralysis.
+            Type: int
+            Size: 2
+            Signed: true
+          SLEEP:
+            Description: Resistance to falling sleep.
+            Type: int
+            Size: 2
+            Signed: true
+          STRANGE:
+            Description: Resistance to feeling strange.
+            Type: int
+            Size: 2
+            Signed: true
+          CRYING:
+            Description: Resistance to crying.
+            Type: int
+            Size: 2
+            Signed: true
+          FORGETFUL:
+            Description: Resistance to forgetfulness.
+            Type: int
+            Size: 2
+            Signed: true
+          NAUSEA:
+            Description: Resistance to nausea.
+            Type: int
+            Size: 2
+            Signed: true
+          FLEAS:
+            Description: Resistance to fleas.
+            Type: int
+            Size: 2
+            Signed: true
+          BURNED:
+            Description: Resistance to being burned.
+            Type: int
+            Size: 2
+            Signed: true
+          SOLIDIFIED:
+            Description: Resistance to being solidified.
+            Type: int
+            Size: 2
+            Signed: true
+          NUMBNESS:
+            Description: Resistance to numbness.
+            Type: int
+            Size: 2
+            Signed: true
+      ELEMENTAL_PROTECTION:
+        Description: Elements this item protects against.
+        Type: struct
+        Size: 5
+        Entries:
+          PK_LOVE:
+            Description: Damage from PK Love.
+            Type: int
+            Size: 1
+            Signed: true
+          FIRE:
+            Description: Fire damage (PK Fire, etc.).
+            Type: int
+            Size: 1
+            Signed: true
+          ICE:
+            Description: Ice damage (PK Freeze, etc.).
+            Type: int
+            Size: 1
+            Signed: true
+          LIGHTNING:
+            Description: Lightning damage (PK Thunder, etc.).
+            Type: int
+            Size: 1
+            Signed: true
+          EXPLOSIVES:
+            Description: Explosive damage (Bombs, etc.).
+            Type: int
+            Size: 1
+            Signed: true
+      UNKNOWNG:
+        Description: ""
+        Type: unknown
+        Size: 19
+      HP1:
+        Description: ""
+        Type: int
+        Size: 2
+      HP2:
+        Description: ""
+        Type: int
+        Size: 2
+      UNKNOWNH:
+        Description: ""
+        Type: unknown
+        Size: 26
+SHOP_DATA:
+  Type: array
+  Size: 2160
+  Description: Items sold in shops
+  Item Type:
+    Type: array
+    Size: 60
+    Item Type:
+      Type: int
+      Size: 2
+  Offset: 0x80EBD08
+MYSTERY_80EC578:
+  Description: ""
+  Type: array
+  Size: 952
+  Offset: 0x80EC578
+  Item Type:
+    Type: struct
+    Entries:
+      ID:
+        Description: ""
+        Type: int
+        Size: 2
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 6
+MYSTERY_80EC930:
+  Description: "Overworld enemy encounter data?"
+  Type: array
+  Size: 1040
+  Offset: 0x80EC930
+  Item Type:
+    Type: struct
+    Entries:
+      ID:
+        Description: ""
+        Type: int
+        Size: 1
+      ENEMYCOUNT:
+        Description: "Enemy count?"
+        Type: int
+        Size: 1
+      ENEMIES:
+        Description: "Enemies?"
+        Type: array
+        Size: 8
+        Item Type:
+          Type: int
+          Size: 1
+      SWIRLMUSIC:
+        Description: "Swirl music?"
+        Type: int
+        Size: 2
+      BATTLEMUSIC:
+        Description: "Battle music?"
+        Type: int
+        Size: 2
+      WINMUSIC:
+        Description: "Win music?"
+        Type: int
+        Size: 2
+MUSIC_PLAYER_TABLE:
+  Description: "Data for the music player menu."
+  Type: array
+  Size: 0xC00
+  Offset: 0x80ECD40
+  Item Type:
+    Type: struct
+    Entries:
+      MUSIC_PLAYER_ID:
+        Description: "ID of song for the music player."
+        Type: int
+        Size: 2
+        Pretty Name: Music Player ID
+      INTERNAL_SONG_ID:
+        Description: "Internal music track ID."
+        Type: int
+        Size: 2
+        Pretty Name: Internal Song ID
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 4
+      SONG_DURATION:
+        Description: "Length of song in seconds?"
+        Type: int
+        Size: 4
+        Pretty Name: Song Duration
+MOREWEIRDTEXT:
+  Description: ""
+  Type: array
+  Size: 7999
+  Item Type:
+    Type: script
+    Terminator: [0]
+  Offset: 0x80ED940
+SINE_TABLE32:
+  Type: array
+  Offset: 0x80EF880
+  Description: 32-bit Sine lookup table
+  Size: 0x1400
+  Item Type:
+    Type: int
+    Size: 4
+    Signed: true
+UNKNOWN_80F0080:
+  Description: ""
+  Type: array
+  Size: 2048
+  Item Type:
+    Type: unknown
+    Size: 8
+  Offset: 0x80F0080
+UNKNOWN_80F0880:
+  Description: ""
+  Type: array
+  Size: 1024
+  Item Type:
+    Type: unknown
+    Size: 4
+  Offset: 0x80F0880
+UNKNOWN_80F0C80:
+  Description: ""
+  Type: array
+  Size: 3000
+  Item Type:
+    Type: unknown
+    Size: 5
+  Offset: 0x80F0C80
+DEBUG_BLOCK_F1838:
+  Description: ""
+  Type: array
+  Offset: 0x80F1838
+  Size: 0x33EF
+  Item Type: &DEBUGSYMBOLS
+    Type: script
+    Charset: sjis
+    Terminator: [0x00]
+DEBUG_BLOCK_FE6F8:
+  Description: ""
+  Type: array
+  Offset: 0x80FE6F8
+  Size: 0x1FBA
+  Item Type: *DEBUGSYMBOLS
+DEBUG_BLOCK_1016BC:
+  Description: ""
+  Type: array
+  Offset: 0x81016BC
+  Size: 0x1C18
+  Item Type: *DEBUGSYMBOLS
+SINE_TABLE16COPY:
+  Type: array
+  Offset: 0x81006BC
+  Description: 16-bit Sine lookup table copy
+  Size: 0x280
+  Item Type:
+    Type: int
+    Size: 2
+    Signed: true
+UNKNOWN_MATH:
+  Description: ""
+  Type: array
+  Offset: 0x810093C
+  Size: 0xD80
+  Item Type:
+    Type: int
+    Size: 2
+    Signed: true
+ABILDESCTEXT:
+  Description: "Ability description text"
+  Type: array
+  Size: 6064
+  Item Type:
+    Type: script
+    Terminator: [0xFF, 0xFF]
+  Offset: 0x8CF9A8A
+MEMORY_ENEMY_NAMES:
+  Type: array
+  Size: 13180
+  Description: Battle Memory enemy names
+  Item Type:
+    Type: script
+    Size: 0x14
+  Offset: 0x8D23498
+PSI_NAMES:
+  Type: array
+  Size: 0x70C
+  Description: PSI Ability Names
+  Item Type:
+    Type: script
+    Size: 0x14
+    Charset: One-Byte
+  Offset: 0x8D2CBF4
+EVENT_CC_04_LENGTHS:
+  Type: array
+  Size: 0x400
+  Offset: 0x8D2D658
+  Description: Number of arguments for the [04 00 XX 00] event CCs
+  Item Type:
+    Type: int
+    Size: 4
+EVENT_CC_04_FUNCTIONS:
+  Description: "Pointers to routines for [04 00 XX 00] event CCs"
+  Type: array
+  Size: 0x400
+  Offset: 0x8D2DA58
+  Item Type:
+    Type: pointer
+    Size: 4
+HOTSPOT_POINTER_TABLE:
+  Description: "Pointers to hotspots"
+  Type: struct
+  Size: 0x1F44
+  Offset: 0x911DEB4
+  Entries:
+    COUNT:
+      Description: "Number of pointers in this table"
+      Type: int
+      Size: 4
+    POINTERS:
+      Description: "Pointers to hotspots"
+      Type: array
+      Size: 0x1F40
+      Item Type:
+        Type: pointer
+        Size: 4
+        Base: 0x911DEB4
+HOTSPOT_TABLE:
+  Description: "Data for events that occur when the player is at a specific point on a  map"
+  Type: array
+  Size: 0xC594
+  Offset: 0x911FDF8
+  Item Type:
+    Type: struct
+    Entries:
+      TYPE:
+        Description: "Type of hotspot entry"
+        Type: int
+        Size: 4
+        Bit Values:
+          - Valid Entry
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+          - "5"
+          - Door Width A
+          - Door Width B
+          - Door Height A
+          - Door Height B
+          - "10"
+          - "11"
+          - "12"
+          - Hotspot Width A
+          - Hotspot Width B
+          - Hotspot Width C
+          - Hotspot Width D
+          - Hotspot Width E
+          - Hotspot Height A
+          - Hotspot Height B
+          - Hotspot Height C
+          - Hotspot Height D
+          - Hotspot Height E
+          - "23"
+          - "24"
+          - "25"
+          - "26"
+          - "27"
+          - "28"
+          - "29"
+          - "30"
+          - "31"
+      UNKNOWNA:
+        Description: ""
+        Type: unknown
+        Size: 1
+      UNKNOWNB:
+        Description: ""
+        Type: unknown
+        Size: 1
+      UNKNOWNC:
+        Description: ""
+        Type: unknown
+        Size: 1
+      UNKNOWND:
+        Description: ""
+        Type: unknown
+        Size: 1
+      DESTINATION:
+        Description: "Destination of hotspot (for doors?)"
+        Type: int
+        Size: 2
+      X:
+        Description: "X coordinate of hotspot"
+        Type: int
+        Size: 1
+      'Y':
+        Description: "Y coordinate of hotspot"
+        Type: int
+        Size: 1
+MYSTERY_TABLE_912C390:
+  Description: ""
+  Type: unknown
+  Size: 0xFA8
+  Offset: 0x912C390
+MYSTERY_TABLE_912D338:
+  Description: ""
+  Type: unknown
+  Size: 0x5820
+  Offset: 0x912D338
+MYSTERY_TABLE_9132B58_PTRS:
+  Description: ""
+  Type: struct
+  Size: 0x4E24
+  Offset: 0x9132B58
+  Entries:
+    ENTRYCOUNT:
+      Description: "Number of entries in this table."
+      Type: int
+      Size: 4
+    ENTRIES:
+      Description: "Pointers?"
+      Type: array
+      Size: 0x4E20
+      Item Type:
+        Type: pointer
+        Base: 0x9132B58
+        Size: 4
+MYSTERY_TABLE_9132B58:
+  Description: ""
+  Type: array
+  Size: 0x2E294
+  Offset: 0x913797C
+  Item Type:
+    Type: struct
+    Entries:
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 16
+      OBJECTID:
+        Description: ""
+        Type: int
+        Size: 1
+      UNKNOWN2:
+        Description: ""
+        Type: unknown
+        Size: 7
+GIFTBOX_TABLE:
+  Description: "Giftbox data table"
+  Type: array
+  Size: 0x4000
+  Offset: 0x9165C10
+  Item Type:
+    Type: struct
+    Entries:
+      MAPID:
+        Description: "ID of map this giftbox belongs on"
+        Type: int
+        Size: 2
+      X:
+        Description: "X coordinate the giftbox appears at"
+        Type: int
+        Size: 1
+      'Y':
+        Description: "Y coordinate the giftbox appears at"
+        Type: int
+        Size: 1
+      ITEMID:
+        Description: "Item found inside the giftbox"
+        Type: int
+        Size: 2
+      UNKNOWN:
+        Description: ""
+        Type: unknown
+        Size: 8
+      FLAGS:
+        Description: ""
+        Type: int
+        Size: 2
+        Bit Values:
+          - "0"
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+          - "5"
+          - "6"
+          - "7"
+          - "8"
+          - "9"
+          - "10"
+          - "11"
+          - "12"
+          - "13"
+          - "14"
+          - "15"
+DOOR_DESTINATION_TABLE:
+  Description: "Destinations for doors."
+  Type: struct
+  Size: 0x2EEC
+  Offset: 0x9169C1C
+  Entries:
+    UNKNOWN:
+      Description: ""
+      Type: unknown
+      Size: 12
+    DOOR_ENTRIES:
+      Description: "Doors and the data associated with them."
+      Type: array
+      Size: 0x2EE0
+      Item Type:
+        Type: struct
+        Entries:
+          UNKNOWN:
+            Description: ""
+            Type: int
+            Size: 2
+          COORDS_RELATED:
+            Description: ""
+            Type: int
+            Size: 2
+          DESTINATION_MAP:
+            Description: "The map the door will take the player to."
+            Type: int
+            Size: 2
+          DESTINATION_X:
+            Description: "The X coordinate on the map the player will be taken to."
+            Type: int
+            Size: 1
+          DESTINATION_Y:
+            Description: "The Y coordinate on the map the player will be taken to."
+            Type: int
+            Size: 1
+MYSTERIOUS_TEXTISH_DATA:
+  Description: ""
+  Type: unknown
+  Size: 0x1D1AE4
+  Offset: 0x9198C10
+DIALOGUE:
+  Description: "Text data"
+  Type: unknown
+  Size: 0xC9688
+  Offset: 0x936A6F4
+SPRITE_BANK_0_PTRS:
+  Type: array
+  Size: 4000
+  Description: Pointers for sprite bank 0
+  Item Type:
+    Type: pointer
+    Size: 4
+  Offset: 0x9A442A4
+SPRITE_BANK_1:
+  Description: ""
+  Type: unknown
+  Size: 635892
+  Offset: 0x9A45244
+SPRITE_BANK_1_PTRS:
+  Type: array
+  Size: 4000
+  Description: Pointers for sprite bank 1
+  Item Type:
+    Type: pointer
+    Size: 4
+  Offset: 0x9AE0638
+SPRITE_BANK_2_PTRS:
+  Type: array
+  Size: 4000
+  Description: Pointers for sprite bank 2
+  Item Type:
+    Type: pointer
+    Size: 4
+  Offset: 0x9AEE4C4
+SPRITE_BANK_3_PTRS:
+  Type: array
+  Size: 4000
+  Description: Pointers for sprite bank 3
+  Item Type:
+    Type: pointer
+    Size: 4
+  Offset: 0x9AF1ED0
+TITLE_PTRS:
+  Type: struct
+  Description: Pointers for title screen frame data
+  Size: 0xE8
+  Offset: 0x9BCDD8C
+  Entries:
+    ENTRYCOUNT:
+      Type: int
+      Size: 4
+      Pretty Name: Entry Count
+      Description: "Number of entries in this table."
+    INITIAL_FRAME:
+      Type: struct
+      Pretty Name: Initial Frame
+      Description: "Data for the initial frame"
+      Entries:
+        TILESET:
+          Description: "Tileset to use for animation"
+          Type: pointer
+          Size: 4
+          Pretty Name: Tile Set
+          Base: 0x9BCDD8C
+        PALETTE:
+          Description: "Palette to use for the initial frame"
+          Type: pointer
+          Size: 4
+          Pretty Name: Palette Set
+          Base: 0x9BCDD8C
+        ARRANGEMENT:
+          Description: "Arrangement for the initial frame"
+          Type: pointer
+          Size: 4
+          Pretty Name: Arrangement
+          Base: 0x9BCDD8C
+    FRAMES:
+      Description: "Data for all other frames in this animation."
+      Type: array
+      Size: 0xD8
+      Pretty Name: Frames
+      Item Type:
+        Type: struct
+        Entries:
+          PALETTE:
+            Description: "Palette to use for this frame."
+            Type: pointer
+            Size: 4
+            Pretty Name: Tile Set
+            Base: 0x9BCDD8C
+          ARRANGEMENT:
+            Description: "Arrangement to use for this frame."
+            Type: pointer
+            Size: 4
+            Pretty Name: Arrangement
+            Base: 0x9BCDD8C
+MUSIC_NAME_PTRS:
+  Type: array
+  Size: 0x20E
+  Description: Music track title offsets
+  Offset: 0x8CFB3FC
+  Item Type:
+    Type: pointer
+    Size: 2
+    Base: 0x8CFB3FC
+MUSIC_NAMES:
+  Type: array
+  Size: 0x22EC
+  Description: Music track titles
+  Offset: 0x8CFB60A
+  Item Type:
+    Type: script
+    Terminator: [0xFF, 0xFF]
+ENEMY_NAMES:
+  Type: array
+  Size: 16450
+  Description: In-battle enemy names
+  Item Type:
+    Type: script
+    Size: 0x32
+  Offset: 0x9CFFDA4
+BG_TABLE:
+  Type: array
+  Size: 81058
+  Description: Background Layer table
+  Offset: 0x9D0BC9C
+  Item Type:
+    Type: struct
+    Entries:
+      LAYER_COUNT:
+        Description: "Number of layers in this battle background."
+        Type: int
+        Size: 2
+      MASTER_COUNT:
+        Description: "Number of battle backgrounds."
+        Type: int
+        Size: 2
+      LAYER_ENTRIES:
+        Description: "Individual background layer data."
+        Type: struct
+        Size: 78624
+        Entries:
+          GFXID:
+            Description: "ID of graphics to load"
+            Type: int
+            Size: 2
+          ARRID:
+            Description: "ID of arrangement to load"
+            Type: int
+            Size: 2
+          PALETTE1:
+            Description: "First palette to load"
+            Type: array
+            Item Type:
+              Type: int
+              Size: 2
+            Size: 32
+          PALETTE2:
+            Description: "Second palette to load"
+            Type: array
+            Item Type:
+              Type: int
+              Size: 2
+            Size: 32
+          PALETTE_DIRECTION:
+            Description: ""
+            Type: int
+            Size: 2
+          UNKNOWNA:
+            Description: ""
+            Type: int
+            Size: 2
+          PALETTE_START:
+            Description: ""
+            Type: int
+            Size: 2
+          PALETTE_END:
+            Description: ""
+            Type: int
+            Size: 2
+          PALETTE_DELAY:
+            Description: ""
+            Type: int
+            Size: 2
+          UNKNOWNB:
+            Description: ""
+            Type: unknown
+            Size: 38
+          HORIZONTAL_DRIFT:
+            Description: ""
+            Type: int
+            Size: 2
+            Signed: true
+          VERTICAL_DRIFT:
+            Description: ""
+            Type: int
+            Size: 2
+            Signed: true
+          UNKNOWNC:
+            Description: ""
+            Type: unknown
+            Size: 4
+          HORIZONTAL_AMPLITUDE:
+            Description: ""
+            Type: int
+            Size: 2
+            Signed: true
+          VERTICAL_AMPLITUDE:
+            Description: ""
+            Type: int
+            Size: 2
+            Signed: true
+          HORIZONTAL_WAVENUMBER:
+            Description: ""
+            Type: int
+            Size: 2
+            Signed: true
+          VERTICAL_WAVENUMBER:
+            Description: ""
+            Type: int
+            Size: 2
+            Signed: true
+          HORIZONTAL_FREQUENCY:
+            Description: ""
+            Type: int
+            Size: 2
+            Signed: true
+          VERTICAL_FREQUENCY:
+            Description: ""
+            Type: int
+            Size: 2
+            Signed: true
+          UNKNOWND:
+            Description: ""
+            Type: unknown
+            Size: 8
+      MASTER_BACKGROUND_TABLE:
+        Description: "Complete background data"
+        Type: struct
+        Size: 2916
+        Entries:
+          LAYER_1:
+            Description: "First layer to use"
+            Type: int
+            Size: 2
+          LAYER_2:
+            Description: "Second layer to use"
+            Type: int
+            Size: 2
+          ALPHA_1:
+            Description: "Opacity of layer 1"
+            Type: int
+            Size: 2
+          ALPHA_2:
+            Description: "Opacity of layer 2"
+            Type: int
+            Size: 2
+          UNKNOWNA:
+            Description: ""
+            Type: int
+            Size: 2
+          UNKNOWN_B:
+            Description: ""
+            Type: int
+            Size: 2
+UNKNOWN_BG2: &UNKNOWN_BG2
+  Description: ""
+  Type: array
+  Size: 3272
+  Item Type:
+    Type: struct
+    Entries:
+      OFFSET:
+        Description: ""
+        Type: pointer
+        Size: 4
+      SIZE:
+        Description: ""
+        Type: int
+        Size: 4
+  Offset: 0x9D1FB30
+UNKNOWN_9D207F8:
+  Description: ""
+  Type: unknown
+  Size: 832
+  Offset: 0x9D207F8
+UNKNOWN_9D20B38:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D20B38
+UNKNOWN_9D21338:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D21338
+UNKNOWN_9D22438:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D22438
+UNKNOWN_9D22C38:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D22C38
+UNKNOWN_9D23538:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D23538
+UNKNOWN_9D23D38:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D23D38
+UNKNOWN_9D24638:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D24638
+UNKNOWN_9D24E38:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D24E38
+UNKNOWN_9D25738:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D25738
+UNKNOWN_9D25F38:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D25F38
+UNKNOWN_9D26838:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D26838
+UNKNOWN_9D27038:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D27038
+UNKNOWN_9D27938:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D27938
+UNKNOWN_9D28138:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D28138
+UNKNOWN_9D28A38:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D28A38
+UNKNOWN_9D29238:
+  Description: ""
+  Type: unknown
+  Size: 768
+  Offset: 0x9D29238
+UNKNOWN_9D29538:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D29538
+UNKNOWN_9D29D38:
+  Description: ""
+  Type: unknown
+  Size: 1280
+  Offset: 0x9D29D38
+UNKNOWN_9D2A238:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D2A238
+UNKNOWN_9D2AA38:
+  Description: ""
+  Type: unknown
+  Size: 768
+  Offset: 0x9D2AA38
+UNKNOWN_9D2AD38:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D2AD38
+UNKNOWN_9D2B538:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D2B538
+UNKNOWN_9D2BE38:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D2BE38
+UNKNOWN_9D2C638:
+  Description: ""
+  Type: unknown
+  Size: 768
+  Offset: 0x9D2C638
+UNKNOWN_9D2C938:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D2C938
+UNKNOWN_9D2D138:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D2D138
+UNKNOWN_9D2DA38:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D2DA38
+UNKNOWN_9D2E238:
+  Description: ""
+  Type: unknown
+  Size: 6400
+  Offset: 0x9D2E238
+UNKNOWN_9D2FB38:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D2FB38
+UNKNOWN_9D30338:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D30338
+UNKNOWN_9D31438:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D31438
+UNKNOWN_9D31C38:
+  Description: ""
+  Type: unknown
+  Size: 1280
+  Offset: 0x9D31C38
+UNKNOWN_9D32138:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D32138
+UNKNOWN_9D32938:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D32938
+UNKNOWN_9D33238:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D33238
+UNKNOWN_9D33A38:
+  Description: ""
+  Type: unknown
+  Size: 8448
+  Offset: 0x9D33A38
+UNKNOWN_9D35B38:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D35B38
+UNKNOWN_9D36338:
+  Description: ""
+  Type: unknown
+  Size: 448
+  Offset: 0x9D36338
+UNKNOWN_9D364F8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D364F8
+UNKNOWN_9D36CF8:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D36CF8
+UNKNOWN_9D37DF8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D37DF8
+UNKNOWN_9D385F8:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D385F8
+UNKNOWN_9D38EF8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D38EF8
+UNKNOWN_9D396F8:
+  Description: ""
+  Type: unknown
+  Size: 3648
+  Offset: 0x9D396F8
+UNKNOWN_9D3A538:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D3A538
+UNKNOWN_9D3AD38:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D3AD38
+UNKNOWN_9D3B638:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D3B638
+UNKNOWN_9D3BE38:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D3BE38
+UNKNOWN_9D3C738:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D3C738
+UNKNOWN_9D3CF38:
+  Description: ""
+  Type: unknown
+  Size: 8448
+  Offset: 0x9D3CF38
+UNKNOWN_9D3F038:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D3F038
+UNKNOWN_9D3F838:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D3F838
+UNKNOWN_9D40938:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D40938
+UNKNOWN_9D41138:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D41138
+UNKNOWN_9D41A38:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D41A38
+UNKNOWN_9D42238:
+  Description: ""
+  Type: unknown
+  Size: 800
+  Offset: 0x9D42238
+UNKNOWN_9D42558:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D42558
+UNKNOWN_9D42D58:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D42D58
+UNKNOWN_9D43E58:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D43E58
+UNKNOWN_9D44658:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D44658
+UNKNOWN_9D44F58:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D44F58
+UNKNOWN_9D45758:
+  Description: ""
+  Type: unknown
+  Size: 1312
+  Offset: 0x9D45758
+UNKNOWN_9D45C78:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D45C78
+UNKNOWN_9D46478:
+  Description: ""
+  Type: unknown
+  Size: 8448
+  Offset: 0x9D46478
+UNKNOWN_9D48578:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D48578
+UNKNOWN_9D48D78:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D48D78
+UNKNOWN_9D49E78:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D49E78
+UNKNOWN_9D4A678:
+  Description: ""
+  Type: unknown
+  Size: 8448
+  Offset: 0x9D4A678
+UNKNOWN_9D4C778:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D4C778
+UNKNOWN_9D4CF78:
+  Description: ""
+  Type: unknown
+  Size: 1280
+  Offset: 0x9D4CF78
+UNKNOWN_9D4D478:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D4D478
+UNKNOWN_9D4DC78:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D4DC78
+UNKNOWN_9D4ED78:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D4ED78
+UNKNOWN_9D4F578:
+  Description: ""
+  Type: unknown
+  Size: 8448
+  Offset: 0x9D4F578
+UNKNOWN_9D51678:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D51678
+UNKNOWN_9D51E78:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D51E78
+UNKNOWN_9D52F78:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D52F78
+UNKNOWN_9D55F38:
+  Description: ""
+  Type: unknown
+  Size: 1280
+  Offset: 0x9D55F38
+UNKNOWN_9D56438:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D56438
+UNKNOWN_9D56C38:
+  Description: ""
+  Type: unknown
+  Size: 768
+  Offset: 0x9D56C38
+UNKNOWN_9D56F38:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D56F38
+UNKNOWN_9D57738:
+  Description: ""
+  Type: unknown
+  Size: 8448
+  Offset: 0x9D57738
+UNKNOWN_9D59838:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D59838
+UNKNOWN_9D5A038:
+  Description: ""
+  Type: unknown
+  Size: 1216
+  Offset: 0x9D5A038
+UNKNOWN_9D5A4F8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D5A4F8
+UNKNOWN_9D5C038:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D5C038
+UNKNOWN_9D5D138:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D5D138
+UNKNOWN_9D5D938:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D5D938
+UNKNOWN_9D5E238:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D5E238
+UNKNOWN_9D5EA38:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D5EA38
+UNKNOWN_9D5FB38:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D5FB38
+UNKNOWN_9D60338:
+  Description: ""
+  Type: unknown
+  Size: 8448
+  Offset: 0x9D60338
+UNKNOWN_9D62438:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D62438
+UNKNOWN_9D62C38:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D62C38
+UNKNOWN_9D63D38:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D63D38
+UNKNOWN_9D69778:
+  Description: ""
+  Type: unknown
+  Size: 3840
+  Offset: 0x9D69778
+UNKNOWN_9D6A678:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D6A678
+UNKNOWN_9D70D38:
+  Description: ""
+  Type: unknown
+  Size: 512
+  Offset: 0x9D70D38
+UNKNOWN_9D70F38:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D70F38
+UNKNOWN_9D71C38:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D71C38
+UNKNOWN_9D72438:
+  Description: ""
+  Type: unknown
+  Size: 1280
+  Offset: 0x9D72438
+UNKNOWN_9D72938:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D72938
+UNKNOWN_9D73138:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D73138
+UNKNOWN_9D74238:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D74238
+UNKNOWN_9D78658:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D78658
+UNKNOWN_9D78F58:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D78F58
+UNKNOWN_9D79758:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D79758
+UNKNOWN_9D7A858:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D7A858
+UNKNOWN_9D7B058:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D7B058
+UNKNOWN_9D7C158:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D7C158
+UNKNOWN_9D7C958:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D7C958
+UNKNOWN_9D7DA58:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D7DA58
+UNKNOWN_9D7E258:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D7E258
+UNKNOWN_9D7EB58:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D7EB58
+UNKNOWN_9D7F358:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D7F358
+UNKNOWN_9D80458:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D80458
+UNKNOWN_9D83418:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D83418
+UNKNOWN_9D84518:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D84518
+UNKNOWN_9D9BB18:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D9BB18
+UNKNOWN_9D9C418:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D9C418
+UNKNOWN_9D9CC18:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9D9CC18
+UNKNOWN_9D9D518:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D9D518
+UNKNOWN_9D9DD18:
+  Description: ""
+  Type: unknown
+  Size: 1280
+  Offset: 0x9D9DD18
+UNKNOWN_9D9E218:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D9E218
+UNKNOWN_9D9EA18:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9D9EA18
+UNKNOWN_9D9FB18:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9D9FB18
+UNKNOWN_9DA0318:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DA0318
+UNKNOWN_9DA0C18:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DA0C18
+UNKNOWN_9DA1418:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DA1418
+UNKNOWN_9DA1D18:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DA1D18
+UNKNOWN_9DA2518:
+  Description: ""
+  Type: unknown
+  Size: 4640
+  Offset: 0x9DA2518
+UNKNOWN_9DA3738:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DA3738
+UNKNOWN_9DA3F38:
+  Description: ""
+  Type: unknown
+  Size: 512
+  Offset: 0x9DA3F38
+UNKNOWN_9DA4138:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DA4138
+UNKNOWN_9DA4938:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DA4938
+UNKNOWN_9DA5238:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DA5238
+UNKNOWN_9DA5A38:
+  Description: ""
+  Type: unknown
+  Size: 1280
+  Offset: 0x9DA5A38
+UNKNOWN_9DA5F38:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DA5F38
+UNKNOWN_9DA6738:
+  Description: ""
+  Type: unknown
+  Size: 512
+  Offset: 0x9DA6738
+UNKNOWN_9DA6938:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DA6938
+UNKNOWN_9DA7138:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9DA7138
+UNKNOWN_9DA8238:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DA8238
+UNKNOWN_9DA8A38:
+  Description: ""
+  Type: unknown
+  Size: 1280
+  Offset: 0x9DA8A38
+UNKNOWN_9DA8F38:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DA8F38
+UNKNOWN_9DA9738:
+  Description: ""
+  Type: unknown
+  Size: 384
+  Offset: 0x9DA9738
+UNKNOWN_9DA98B8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DA98B8
+UNKNOWN_9DAA0B8:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9DAA0B8
+UNKNOWN_9DAB1B8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DAB1B8
+UNKNOWN_9DAECD8:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9DAECD8
+UNKNOWN_9DAFDD8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DAFDD8
+UNKNOWN_9DB05D8:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9DB05D8
+UNKNOWN_9DB16D8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DB16D8
+UNKNOWN_9DB1ED8:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DB1ED8
+UNKNOWN_9DB27D8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DB27D8
+UNKNOWN_9DB2FD8:
+  Description: ""
+  Type: unknown
+  Size: 512
+  Offset: 0x9DB2FD8
+UNKNOWN_9DB31D8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DB31D8
+UNKNOWN_9DB39D8:
+  Description: ""
+  Type: unknown
+  Size: 3392
+  Offset: 0x9DB39D8
+UNKNOWN_9DB4718:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DB4718
+UNKNOWN_9DB4F18:
+  Description: ""
+  Type: unknown
+  Size: 384
+  Offset: 0x9DB4F18
+UNKNOWN_9DB5098:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DB5098
+UNKNOWN_9DB5898:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DB5898
+UNKNOWN_9DB6198:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DB6198
+UNKNOWN_9DB6998:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DB6998
+UNKNOWN_9DB7298:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DB7298
+UNKNOWN_9DB7A98:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DB7A98
+UNKNOWN_9DB8398:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DB8398
+UNKNOWN_9DB8B98:
+  Description: ""
+  Type: unknown
+  Size: 768
+  Offset: 0x9DB8B98
+UNKNOWN_9DB8E98:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DB8E98
+UNKNOWN_9DB9698:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DB9698
+UNKNOWN_9DB9F98:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DB9F98
+UNKNOWN_9DBA798:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9DBA798
+UNKNOWN_9DBB898:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DBB898
+UNKNOWN_9DBC098:
+  Description: ""
+  Type: unknown
+  Size: 768
+  Offset: 0x9DBC098
+UNKNOWN_9DBC398:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DBC398
+UNKNOWN_9DBCB98:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9DBCB98
+UNKNOWN_9DBDC98:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DBDC98
+UNKNOWN_9DBE498:
+  Description: ""
+  Type: unknown
+  Size: 1792
+  Offset: 0x9DBE498
+UNKNOWN_9DBEB98:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DBEB98
+UNKNOWN_9DBF398:
+  Description: ""
+  Type: unknown
+  Size: 384
+  Offset: 0x9DBF398
+UNKNOWN_9DBF518:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DBF518
+UNKNOWN_9DBFD18:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9DBFD18
+UNKNOWN_9DC0E18:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DC0E18
+UNKNOWN_9DC1618:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9DC1618
+UNKNOWN_9DC2718:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DC2718
+UNKNOWN_9DC2F18:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DC2F18
+UNKNOWN_9DC3818:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DC3818
+UNKNOWN_9DC4018:
+  Description: ""
+  Type: unknown
+  Size: 1280
+  Offset: 0x9DC4018
+UNKNOWN_9DC4518:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DC4518
+UNKNOWN_9DC4D18:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DC4D18
+UNKNOWN_9DC5618:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DC5618
+UNKNOWN_9DC5E18:
+  Description: ""
+  Type: unknown
+  Size: 8704
+  Offset: 0x9DC5E18
+UNKNOWN_9DC8018:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DC8018
+UNKNOWN_9DC8818:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DC8818
+UNKNOWN_9DC9118:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DC9118
+UNKNOWN_9DC9918:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DC9918
+UNKNOWN_9DCA218:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DCA218
+UNKNOWN_9DCAA18:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9DCAA18
+UNKNOWN_9DCBB18:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DCBB18
+UNKNOWN_9DCC318:
+  Description: ""
+  Type: unknown
+  Size: 512
+  Offset: 0x9DCC318
+UNKNOWN_9DCC518:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DCC518
+UNKNOWN_9DCCD18:
+  Description: ""
+  Type: unknown
+  Size: 8448
+  Offset: 0x9DCCD18
+UNKNOWN_9DCEE18:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DCEE18
+UNKNOWN_9DCF618:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DCF618
+UNKNOWN_9DCFF18:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DCFF18
+UNKNOWN_9DD0718:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DD0718
+UNKNOWN_9DD1018:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DD1018
+UNKNOWN_9DD1818:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DD1818
+UNKNOWN_9DD2118:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DD2118
+UNKNOWN_9DD2918:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DD2918
+UNKNOWN_9DD3218:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DD3218
+UNKNOWN_9DD3A18:
+  Description: ""
+  Type: unknown
+  Size: 1536
+  Offset: 0x9DD3A18
+UNKNOWN_9DD4018:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DD4018
+UNKNOWN_9DD4818:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DD4818
+UNKNOWN_9DD5118:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DD5118
+UNKNOWN_9DD5918:
+  Description: ""
+  Type: unknown
+  Size: 8448
+  Offset: 0x9DD5918
+UNKNOWN_9DD7A18:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DD7A18
+UNKNOWN_9DD8218:
+  Description: ""
+  Type: unknown
+  Size: 8448
+  Offset: 0x9DD8218
+UNKNOWN_9DDA318:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DDA318
+UNKNOWN_9DDAB18:
+  Description: ""
+  Type: unknown
+  Size: 1280
+  Offset: 0x9DDAB18
+UNKNOWN_9DDB018:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DDB018
+UNKNOWN_9DDB818:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DDB818
+UNKNOWN_9DDC118:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DDC118
+UNKNOWN_9DDC918:
+  Description: ""
+  Type: unknown
+  Size: 8448
+  Offset: 0x9DDC918
+UNKNOWN_9DDEA18:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DDEA18
+UNKNOWN_9DDF218:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DDF218
+UNKNOWN_9DDFB18:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DDFB18
+UNKNOWN_9DE0318:
+  Description: ""
+  Type: unknown
+  Size: 7424
+  Offset: 0x9DE0318
+UNKNOWN_9DE2018:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DE2018
+UNKNOWN_9DE2818:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DE2818
+UNKNOWN_9DE3118:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DE3118
+UNKNOWN_9DE3918:
+  Description: ""
+  Type: unknown
+  Size: 704
+  Offset: 0x9DE3918
+UNKNOWN_9DE3BD8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DE3BD8
+UNKNOWN_9DE43D8:
+  Description: ""
+  Type: unknown
+  Size: 768
+  Offset: 0x9DE43D8
+UNKNOWN_9DE46D8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DE46D8
+UNKNOWN_9DE4ED8:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DE4ED8
+UNKNOWN_9DE57D8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DE57D8
+UNKNOWN_9DE5FD8:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DE5FD8
+UNKNOWN_9DE68D8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DE68D8
+UNKNOWN_9DE70D8:
+  Description: ""
+  Type: unknown
+  Size: 2304
+  Offset: 0x9DE70D8
+UNKNOWN_9DE79D8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DE79D8
+UNKNOWN_9DE81D8:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9DE81D8
+UNKNOWN_9DE92D8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DE92D8
+UNKNOWN_9DE9AD8:
+  Description: ""
+  Type: unknown
+  Size: 1280
+  Offset: 0x9DE9AD8
+UNKNOWN_9DE9FD8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DE9FD8
+UNKNOWN_9DED1D8:
+  Description: ""
+  Type: unknown
+  Size: 7936
+  Offset: 0x9DED1D8
+UNKNOWN_9DEF0D8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DEF0D8
+UNKNOWN_9DEF8D8:
+  Description: ""
+  Type: unknown
+  Size: 8448
+  Offset: 0x9DEF8D8
+UNKNOWN_9DF19D8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DF19D8
+UNKNOWN_9DF4AD8:
+  Description: ""
+  Type: unknown
+  Size: 4352
+  Offset: 0x9DF4AD8
+UNKNOWN_9DF5BD8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9DF5BD8
+UNKNOWN_9E14A18:
+  Description: ""
+  Type: unknown
+  Size: 416
+  Offset: 0x9E14A18
+UNKNOWN_9E14BB8:
+  Description: ""
+  Type: unknown
+  Size: 2048
+  Offset: 0x9E14BB8
+...
