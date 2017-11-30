@@ -1,0 +1,695 @@
+---
+CPU:
+  Default Databank: 0x7E
+Platform: snes
+Title: Mother 2
+Country: JP
+Series: Mother
+Default Script: standardtext
+SHA256: 1F8CFD13177D86B0EB2C8ADCF9E1A4F0EC8966FA1583072B65A1B1C0E7961A5D
+Version: v1.0
+Script Tables:
+  stafftext:
+    - Sequence: [0x00]
+      Replacement: ""
+    - Sequence: [0x03, "XX"]
+    - Sequence: [0x40]
+      Replacement: ' '
+    - Sequence: [0x42]
+      Replacement: a
+    - Sequence: [0x43]
+      Replacement: c
+    - Sequence: [0x44]
+      Replacement: e
+    - Sequence: [0x46]
+      Replacement: g
+    - Sequence: [0x48]
+      Replacement: ''''
+    - Sequence: [0x4A]
+      Replacement: i
+    - Sequence: [0x4B]
+      Replacement: k
+    - Sequence: [0x4C]
+      Replacement: m
+    - Sequence: [0x4D]
+      Replacement: o
+    - Sequence: [0x4F]
+      Replacement: s
+    - Sequence: [0x52]
+      Replacement: b
+    - Sequence: [0x53]
+      Replacement: d
+    - Sequence: [0x54]
+      Replacement: f
+    - Sequence: [0x56]
+      Replacement: h
+    - Sequence: [0x5B]
+      Replacement: l
+    - Sequence: [0x5C]
+      Replacement: "n"
+    - Sequence: [0x5D]
+      Replacement: p
+    - Sequence: [0x5E]
+      Replacement: r
+    - Sequence: [0x5F]
+      Replacement: t
+    - Sequence: [0x6A]
+      Replacement: u
+    - Sequence: [0x6B]
+      Replacement: w
+    - Sequence: [0x6D]
+      Replacement: .
+    - Sequence: [0x6C]
+      Replacement: "y"
+    - Sequence: [0x6E]
+      Replacement: u
+    - Sequence: [0x6F]
+      Replacement: '?'
+    - Sequence: [0x7A]
+      Replacement: v
+    - Sequence: [0x7B]
+      Replacement: x
+    - Sequence: [0x80]
+      Replacement: '-'
+    - Sequence: [0x81]
+      Replacement: A
+    - Sequence: [0x82]
+      Replacement: B
+    - Sequence: [0x83]
+      Replacement: C
+    - Sequence: [0x84]
+      Replacement: D
+    - Sequence: [0x85]
+      Replacement: E
+    - Sequence: [0x86]
+      Replacement: F
+    - Sequence: [0x87]
+      Replacement: G
+    - Sequence: [0x88]
+      Replacement: H
+    - Sequence: [0x89]
+      Replacement: I
+    - Sequence: [0x8A]
+      Replacement: J
+    - Sequence: [0x8B]
+      Replacement: K
+    - Sequence: [0x8C]
+      Replacement: L
+    - Sequence: [0x8D]
+      Replacement: M
+    - Sequence: [0x8E]
+      Replacement: "N"
+    - Sequence: [0x8F]
+      Replacement: O
+    - Sequence: [0xA0]
+      Replacement: P
+    - Sequence: [0xA1]
+      Replacement: Q
+    - Sequence: [0xA2]
+      Replacement: R
+    - Sequence: [0xA3]
+      Replacement: S
+    - Sequence: [0xA4]
+      Replacement: T
+    - Sequence: [0xA5]
+      Replacement: U
+    - Sequence: [0xA6]
+      Replacement: V
+    - Sequence: [0xA7]
+      Replacement: W
+    - Sequence: [0xA8]
+      Replacement: X
+    - Sequence: [0xA9]
+      Replacement: "Y"
+    - Sequence: [0xAA]
+      Replacement: Z
+    - Sequence: [0xAE]
+      Replacement: .
+  standardtext:
+    - Sequence: [0x00]
+      Replacement: ""
+    - Sequence: [0x03]
+      Replacement: "▾\n"
+    - Sequence: [0x04, "XX", "XX"]
+    - Sequence: [0x05, "XX", "XX"]
+    - Sequence: [0x06, "XX", "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x07, "XX", "XX"]
+    - Sequence: [0x08, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x09, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x0A, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x0B, "XX"]
+    - Sequence: [0x0C, "XX"]
+    - Sequence: [0x0D, "XX"]
+    - Sequence: [0x0E, "XX"]
+    - Sequence: [0x10, "XX"]
+    - Sequence: [0x18, 0x01, "XX"]
+    - Sequence: [0x18, 0x03, "XX"]
+    - Sequence: [0x18, 0x05, "XX", "XX"]
+    - Sequence: [0x18, 0x07, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x18, 0x0D, "XX", "XX"]
+    - Sequence: [0x18, "XX"]
+    - Sequence: [0x19, 0x05, "XX", "XX", "XX"]
+    - Sequence: [0x19, 0x10, "XX"]
+    - Sequence: [0x19, 0x11, "XX"]
+    - Sequence: [0x19, 0x16, "XX", "XX"]
+    - Sequence: [0x19, 0x18, "XX"]
+    - Sequence: [0x19, 0x19, "XX", "XX"]
+    - Sequence: [0x19, 0x1A, "XX"]
+    - Sequence: [0x19, 0x1B, "XX"]
+    - Sequence: [0x19, 0x1C, "XX", "XX"]
+    - Sequence: [0x19, 0x1D, "XX", "XX"]
+    - Sequence: [0x19, 0x21, "XX"]
+    - Sequence: [0x19, 0x22, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x19, 0x23, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x19, 0x24, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x19, 0x25, "XX"]
+    - Sequence: [0x19, 0x26, "XX"]
+    - Sequence: [0x19, 0x27, "XX"]
+    - Sequence: [0x19, 0x28, "XX"]
+    - Sequence: [0x19, "XX"]
+    - Sequence: [0x1A, 0x06, "XX"]
+    - Sequence: [0x1A, "XX"]
+    - Sequence: [0x1B, 0x02, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1B, 0x03, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1B, "XX"]
+    - Sequence: [0x1C, 0x04]
+    - Sequence: [0x1C, 0x0A, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1C, 0x0B, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1C, 0x0D]
+    - Sequence: [0x1C, 0x0E]
+    - Sequence: [0x1C, 0x0F]
+    - Sequence: [0x1C, 0x13, "XX", "XX"]
+    - Sequence: [0x1C, "XX", "XX"]
+    - Sequence: [0x1D, 0x00, "XX", "XX"]
+    - Sequence: [0x1D, 0x01, "XX", "XX"]
+    - Sequence: [0x1D, 0x02, "XX"]
+    - Sequence: [0x1D, 0x03, "XX"]
+    - Sequence: [0x1D, 0x04, "XX", "XX"]
+    - Sequence: [0x1D, 0x05, "XX", "XX"]
+    - Sequence: [0x1D, 0x06, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1D, 0x07, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1D, 0x08, "XX", "XX"]
+    - Sequence: [0x1D, 0x09, "XX", "XX"]
+    - Sequence: [0x1D, 0x0E, "XX", "XX"]
+    - Sequence: [0x1D, 0x0F, "XX", "XX"]
+    - Sequence: [0x1D, 0x10, "XX", "XX"]
+    - Sequence: [0x1D, 0x11, "XX", "XX"]
+    - Sequence: [0x1D, 0x12, "XX", "XX"]
+    - Sequence: [0x1D, 0x13, "XX", "XX"]
+    - Sequence: [0x1D, 0x14, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1D, 0x15, "XX", "XX"]
+    - Sequence: [0x1D, 0x17, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1D, 0x18, "XX"]
+    - Sequence: [0x1D, 0x19, "XX"]
+    - Sequence: [0x1D, 0x21, "XX"]
+    - Sequence: [0x1D, 0x23, "XX"]
+    - Sequence: [0x1D, 0x24, "XX"]
+    - Sequence: [0x1D, "XX"]
+    - Sequence: [0x1E, 0x09, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1E, "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x00, "XX", "XX"]
+    - Sequence: [0x1F, 0x02, "XX"]
+    - Sequence: [0x1F, 0x03]
+    - Sequence: [0x1F, 0x05]
+    - Sequence: [0x1F, 0x06]
+    - Sequence: [0x1F, 0x13, "XX", "XX"]
+    - Sequence: [0x1F, 0x15, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x16, "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x17, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x18, "XX", "XX", "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x19, "XX", "XX", "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x1A, "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x1C, "XX", "XX"]
+    - Sequence: [0x1F, 0x1E, "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x1F, "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x20, "XX", "XX"]
+    - Sequence: [0x1F, 0x30]
+    - Sequence: [0x1F, 0x31]
+    - Sequence: [0x1F, 0x40, "XX", "XX"]
+    - Sequence: [0x1F, 0x50]
+    - Sequence: [0x1F, 0x51]
+    - Sequence: [0x1F, 0x61]
+    - Sequence: [0x1F, 0x63, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x64]
+    - Sequence: [0x1F, 0x65]
+    - Sequence: [0x1F, 0x66, "XX", "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x68]
+    - Sequence: [0x1F, 0x69]
+    - Sequence: [0x1F, 0x71, "XX", "XX"]
+    - Sequence: [0x1F, 0x81, "XX", "XX"]
+    - Sequence: [0x1F, 0x83, "XX", "XX"]
+    - Sequence: [0x1F, 0x90]
+    - Sequence: [0x1F, 0xA0]
+    - Sequence: [0x1F, 0xA1]
+    - Sequence: [0x1F, 0xA2]
+    - Sequence: [0x1F, 0xB0]
+    - Sequence: [0x1F, 0xC0, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0xD1]
+    - Sequence: [0x1F, 0xE1, "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0xE4, "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0xE6, "XX", "XX"]
+    - Sequence: [0x1F, 0xE7, "XX", "XX"]
+    - Sequence: [0x1F, 0xE9, "XX", "XX"]
+    - Sequence: [0x1F, 0xEA, "XX", "XX"]
+    - Sequence: [0x1F, 0xEB, "XX", "XX"]
+    - Sequence: [0x1F, 0xEC, "XX", "XX"]
+    - Sequence: [0x1F, 0xED]
+    - Sequence: [0x1F, 0xEE, "XX", "XX"]
+    - Sequence: [0x1F, 0xEF, "XX", "XX"]
+    - Sequence: [0x1F, 0xF1, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0xF2, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0xF3, "XX", "XX", "XX"]
+    - Sequence: [0x1F, "XX", "XX"]
+    - Sequence: [0x20]
+      Replacement: ' '
+    - Sequence: [0x25]
+      Replacement: ー
+    - Sequence: [0x28]
+      Replacement: '!'
+    - Sequence: [0x29]
+      Replacement: '?'
+    - Sequence: [0x2A]
+      Replacement: α
+    - Sequence: [0x2B]
+      Replacement: β
+    - Sequence: [0x2C]
+      Replacement: γ
+    - Sequence: [0x2D]
+      Replacement: Σ
+    - Sequence: [0x2E]
+      Replacement: Ω
+    - Sequence: [0x2F]
+      Replacement: /
+    - Sequence: [0x30]
+      Replacement: "0"
+    - Sequence: [0x31]
+      Replacement: "1"
+    - Sequence: [0x32]
+      Replacement: "2"
+    - Sequence: [0x33]
+      Replacement: "3"
+    - Sequence: [0x34]
+      Replacement: "4"
+    - Sequence: [0x35]
+      Replacement: "5"
+    - Sequence: [0x36]
+      Replacement: "6"
+    - Sequence: [0x37]
+      Replacement: "7"
+    - Sequence: [0x38]
+      Replacement: "8"
+    - Sequence: [0x39]
+      Replacement: "9"
+    - Sequence: [0x3A]
+      Replacement: (
+    - Sequence: [0x3B]
+      Replacement: )
+    - Sequence: [0x3C]
+      Replacement: 「
+    - Sequence: [0x3D]
+      Replacement: 」
+    - Sequence: [0x3E]
+      Replacement: ♪
+    - Sequence: [0x3F]
+      Replacement: ○
+    - Sequence: [0x40]
+      Replacement: •
+    - Sequence: [0x41]
+      Replacement: A
+    - Sequence: [0x42]
+      Replacement: B
+    - Sequence: [0x43]
+      Replacement: C
+    - Sequence: [0x44]
+      Replacement: D
+    - Sequence: [0x45]
+      Replacement: E
+    - Sequence: [0x46]
+      Replacement: F
+    - Sequence: [0x47]
+      Replacement: G
+    - Sequence: [0x48]
+      Replacement: H
+    - Sequence: [0x49]
+      Replacement: I
+    - Sequence: [0x4A]
+      Replacement: J
+    - Sequence: [0x4B]
+      Replacement: K
+    - Sequence: [0x4C]
+      Replacement: L
+    - Sequence: [0x4D]
+      Replacement: M
+    - Sequence: [0x4E]
+      Replacement: "N"
+    - Sequence: [0x4F]
+      Replacement: O
+    - Sequence: [0x50]
+      Replacement: P
+    - Sequence: [0x51]
+      Replacement: Q
+    - Sequence: [0x52]
+      Replacement: R
+    - Sequence: [0x53]
+      Replacement: S
+    - Sequence: [0x54]
+      Replacement: T
+    - Sequence: [0x55]
+      Replacement: U
+    - Sequence: [0x56]
+      Replacement: V
+    - Sequence: [0x57]
+      Replacement: W
+    - Sequence: [0x58]
+      Replacement: X
+    - Sequence: [0x59]
+      Replacement: "Y"
+    - Sequence: [0x5A]
+      Replacement: Z
+    - Sequence: [0x5B]
+      Replacement: ':'
+    - Sequence: [0x5C]
+      Replacement: ・
+    - Sequence: [0x5D]
+      Replacement: …
+    - Sequence: [0x5F]
+      Replacement: .
+    - Sequence: [0x60]
+      Replacement: あ
+    - Sequence: [0x61]
+      Replacement: ぁ
+    - Sequence: [0x62]
+      Replacement: か
+    - Sequence: [0x63]
+      Replacement: が
+    - Sequence: [0x64]
+      Replacement: さ
+    - Sequence: [0x65]
+      Replacement: ざ
+    - Sequence: [0x66]
+      Replacement: た
+    - Sequence: [0x67]
+      Replacement: だ
+    - Sequence: [0x68]
+      Replacement: な
+    - Sequence: [0x69]
+      Replacement: は
+    - Sequence: [0x6A]
+      Replacement: ば
+    - Sequence: [0x6B]
+      Replacement: ぱ
+    - Sequence: [0x6C]
+      Replacement: ま
+    - Sequence: [0x6D]
+      Replacement: や
+    - Sequence: [0x6E]
+      Replacement: ゃ
+    - Sequence: [0x6F]
+      Replacement: ら
+    - Sequence: [0x70]
+      Replacement: い
+    - Sequence: [0x71]
+      Replacement: ぃ
+    - Sequence: [0x72]
+      Replacement: き
+    - Sequence: [0x73]
+      Replacement: ぎ
+    - Sequence: [0x74]
+      Replacement: し
+    - Sequence: [0x75]
+      Replacement: じ
+    - Sequence: [0x76]
+      Replacement: ち
+    - Sequence: [0x77]
+      Replacement: ぢ
+    - Sequence: [0x78]
+      Replacement: に
+    - Sequence: [0x79]
+      Replacement: ひ
+    - Sequence: [0x7A]
+      Replacement: び
+    - Sequence: [0x7B]
+      Replacement: ぴ
+    - Sequence: [0x7C]
+      Replacement: み
+    - Sequence: [0x7D]
+      Replacement: わ
+    - Sequence: [0x7E]
+      Replacement: っ
+    - Sequence: [0x7F]
+      Replacement: り
+    - Sequence: [0x80]
+      Replacement: う
+    - Sequence: [0x81]
+      Replacement: ぅ
+    - Sequence: [0x82]
+      Replacement: く
+    - Sequence: [0x83]
+      Replacement: ぐ
+    - Sequence: [0x84]
+      Replacement: す
+    - Sequence: [0x85]
+      Replacement: ず
+    - Sequence: [0x86]
+      Replacement: つ
+    - Sequence: [0x87]
+      Replacement: づ
+    - Sequence: [0x88]
+      Replacement: ぬ
+    - Sequence: [0x89]
+      Replacement: ふ
+    - Sequence: [0x8A]
+      Replacement: ぶ
+    - Sequence: [0x8B]
+      Replacement: ぷ
+    - Sequence: [0x8C]
+      Replacement: む
+    - Sequence: [0x8D]
+      Replacement: ゆ
+    - Sequence: [0x8E]
+      Replacement: ゅ
+    - Sequence: [0x8F]
+      Replacement: る
+    - Sequence: [0x90]
+      Replacement: え
+    - Sequence: [0x91]
+      Replacement: ぇ
+    - Sequence: [0x92]
+      Replacement: け
+    - Sequence: [0x93]
+      Replacement: げ
+    - Sequence: [0x94]
+      Replacement: せ
+    - Sequence: [0x95]
+      Replacement: ぜ
+    - Sequence: [0x96]
+      Replacement: て
+    - Sequence: [0x97]
+      Replacement: で
+    - Sequence: [0x98]
+      Replacement: ね
+    - Sequence: [0x99]
+      Replacement: へ
+    - Sequence: [0x9A]
+      Replacement: べ
+    - Sequence: [0x9B]
+      Replacement: ぺ
+    - Sequence: [0x9C]
+      Replacement: め
+    - Sequence: [0x9D]
+      Replacement: ん
+    - Sequence: [0x9E]
+      Replacement: を
+    - Sequence: [0x9F]
+      Replacement: れ
+    - Sequence: [0xA0]
+      Replacement: お
+    - Sequence: [0xA1]
+      Replacement: ぉ
+    - Sequence: [0xA2]
+      Replacement: こ
+    - Sequence: [0xA3]
+      Replacement: ご
+    - Sequence: [0xA4]
+      Replacement: そ
+    - Sequence: [0xA5]
+      Replacement: ぞ
+    - Sequence: [0xA6]
+      Replacement: と
+    - Sequence: [0xA7]
+      Replacement: ど
+    - Sequence: [0xA8]
+      Replacement: の
+    - Sequence: [0xA9]
+      Replacement: ほ
+    - Sequence: [0xAA]
+      Replacement: ぼ
+    - Sequence: [0xAB]
+      Replacement: ぽ
+    - Sequence: [0xAC]
+      Replacement: も
+    - Sequence: [0xAD]
+      Replacement: よ
+    - Sequence: [0xAE]
+      Replacement: ょ
+    - Sequence: [0xAF]
+      Replacement: ろ
+    - Sequence: [0xB0]
+      Replacement: ア
+    - Sequence: [0xB1]
+      Replacement: ァ
+    - Sequence: [0xB2]
+      Replacement: カ
+    - Sequence: [0xB3]
+      Replacement: ガ
+    - Sequence: [0xB4]
+      Replacement: サ
+    - Sequence: [0xB5]
+      Replacement: ザ
+    - Sequence: [0xB6]
+      Replacement: タ
+    - Sequence: [0xB7]
+      Replacement: ダ
+    - Sequence: [0xB8]
+      Replacement: ナ
+    - Sequence: [0xB9]
+      Replacement: ハ
+    - Sequence: [0xBA]
+      Replacement: バ
+    - Sequence: [0xBB]
+      Replacement: パ
+    - Sequence: [0xBC]
+      Replacement: マ
+    - Sequence: [0xBD]
+      Replacement: ヤ
+    - Sequence: [0xBE]
+      Replacement: ャ
+    - Sequence: [0xBF]
+      Replacement: ラ
+    - Sequence: [0xC0]
+      Replacement: イ
+    - Sequence: [0xC1]
+      Replacement: ィ
+    - Sequence: [0xC2]
+      Replacement: キ
+    - Sequence: [0xC3]
+      Replacement: ギ
+    - Sequence: [0xC4]
+      Replacement: シ
+    - Sequence: [0xC5]
+      Replacement: ジ
+    - Sequence: [0xC6]
+      Replacement: チ
+    - Sequence: [0xC7]
+      Replacement: ヂ
+    - Sequence: [0xC8]
+      Replacement: ニ
+    - Sequence: [0xC9]
+      Replacement: ヒ
+    - Sequence: [0xCA]
+      Replacement: ビ
+    - Sequence: [0xCB]
+      Replacement: ピ
+    - Sequence: [0xCC]
+      Replacement: ミ
+    - Sequence: [0xCD]
+      Replacement: ワ
+    - Sequence: [0xCE]
+      Replacement: ッ
+    - Sequence: [0xCF]
+      Replacement: リ
+    - Sequence: [0xD0]
+      Replacement: ウ
+    - Sequence: [0xD1]
+      Replacement: ゥ
+    - Sequence: [0xD2]
+      Replacement: ク
+    - Sequence: [0xD3]
+      Replacement: グ
+    - Sequence: [0xD4]
+      Replacement: ス
+    - Sequence: [0xD5]
+      Replacement: ズ
+    - Sequence: [0xD6]
+      Replacement: ツ
+    - Sequence: [0xD7]
+      Replacement: ヅ
+    - Sequence: [0xD8]
+      Replacement: ヌ
+    - Sequence: [0xD9]
+      Replacement: フ
+    - Sequence: [0xDA]
+      Replacement: ブ
+    - Sequence: [0xDB]
+      Replacement: プ
+    - Sequence: [0xDC]
+      Replacement: ム
+    - Sequence: [0xDD]
+      Replacement: ユ
+    - Sequence: [0xDE]
+      Replacement: ュ
+    - Sequence: [0xDF]
+      Replacement: ル
+    - Sequence: [0xE0]
+      Replacement: エ
+    - Sequence: [0xE1]
+      Replacement: ェ
+    - Sequence: [0xE2]
+      Replacement: ケ
+    - Sequence: [0xE3]
+      Replacement: ゲ
+    - Sequence: [0xE4]
+      Replacement: セ
+    - Sequence: [0xE5]
+      Replacement: ゼ
+    - Sequence: [0xE6]
+      Replacement: テ
+    - Sequence: [0xE7]
+      Replacement: デ
+    - Sequence: [0xE8]
+      Replacement: ネ
+    - Sequence: [0xE9]
+      Replacement: ヘ
+    - Sequence: [0xEA]
+      Replacement: ベ
+    - Sequence: [0xEB]
+      Replacement: ペ
+    - Sequence: [0xEC]
+      Replacement: メ
+    - Sequence: [0xED]
+      Replacement: ン
+    - Sequence: [0xEF]
+      Replacement: レ
+    - Sequence: [0xF0]
+      Replacement: オ
+    - Sequence: [0xF1]
+      Replacement: ォ
+    - Sequence: [0xF2]
+      Replacement: コ
+    - Sequence: [0xF3]
+      Replacement: ゴ
+    - Sequence: [0xF4]
+      Replacement: ソ
+    - Sequence: [0xF5]
+      Replacement: ゾ
+    - Sequence: [0xF6]
+      Replacement: ト
+    - Sequence: [0xF7]
+      Replacement: ド
+    - Sequence: [0xF8]
+      Replacement: ノ
+    - Sequence: [0xF9]
+      Replacement: ホ
+    - Sequence: [0xFA]
+      Replacement: ボ
+    - Sequence: [0xFB]
+      Replacement: ポ
+    - Sequence: [0xFC]
+      Replacement: モ
+    - Sequence: [0xFD]
+      Replacement: ヨ
+    - Sequence: [0xFE]
+      Replacement: ョ
+    - Sequence: [0xFF]
+      Replacement: ロ
+...
