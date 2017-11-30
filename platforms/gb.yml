@@ -1,0 +1,317 @@
+---
+JOYP:
+  Type: int
+  Description: Joypad (R/W)
+  Offset: 0xFF00
+  Size: 1
+SB:
+  Type: int
+  Description: Serial transfer data (R/W)
+  Offset: 0xFF01
+  Size: 1
+SC:
+  Type: int
+  Description: Serial Transfer Control (R/W)
+  Offset: 0xFF02
+  Size: 1
+DIV:
+  Type: int
+  Description: Divider Register (R/W)
+  Offset: 0xFF04
+  Size: 1
+TIMA:
+  Type: int
+  Description: Timer counter (R/W)
+  Offset: 0xFF05
+  Size: 1
+TMA:
+  Type: int
+  Description: Timer Modulo (R/W)
+  Offset: 0xFF06
+  Size: 1
+TAC:
+  Type: int
+  Description: Timer Control (R/W)
+  Offset: 0xFF07
+  Size: 1
+IF:
+  Type: int
+  Description: Interrupt Flag (R/W)
+  Offset: 0xFF0F
+  Size: 1
+NR10:
+  Type: int
+  Description: Channel 1 Sweep register (R/W)
+  Offset: 0xFF10
+  Size: 1
+NR11:
+  Type: int
+  Description: Channel 1 Sound length/Wave pattern duty (R/W)
+  Offset: 0xFF11
+  Size: 1
+NR12:
+  Type: int
+  Description: Channel 1 Volume Envelope (R/W)
+  Offset: 0xFF12
+  Size: 1
+NR13:
+  Type: int
+  Description: Channel 1 Frequency lo (Write Only)
+  Offset: 0xFF13
+  Size: 1
+NR14:
+  Type: int
+  Description: Channel 1 Frequency hi (R/W)
+  Offset: 0xFF14
+  Size: 1
+NR21:
+  Type: int
+  Description: Channel 2 Sound Length/Wave Pattern Duty (R/W)
+  Offset: 0xFF16
+  Size: 1
+NR22:
+  Type: int
+  Description: Channel 2 Volume Envelope (R/W)
+  Offset: 0xFF17
+  Size: 1
+NR23:
+  Type: int
+  Description: Channel 2 Frequency lo data (W)
+  Offset: 0xFF18
+  Size: 1
+NR24:
+  Type: int
+  Description: Channel 2 Frequency hi data (R/W)
+  Offset: 0xFF19
+  Size: 1
+NR30:
+  Type: int
+  Description: Channel 3 Sound on/off (R/W)
+  Offset: 0xFF1A
+  Size: 1
+NR31:
+  Type: int
+  Description: Channel 3 Sound Length
+  Offset: 0xFF1B
+  Size: 1
+NR32:
+  Type: int
+  Description: Channel 3 Select output level (R/W)
+  Offset: 0xFF1C
+  Size: 1
+NR33:
+  Type: int
+  Description: Channel 3 Frequency's lower data (W)
+  Offset: 0xFF1D
+  Size: 1
+NR34:
+  Type: int
+  Description: Channel 3 Frequency's higher data (R/W)
+  Offset: 0xFF1E
+  Size: 1
+NR41:
+  Type: int
+  Description: Channel 4 Sound Length (R/W)
+  Offset: 0xFF20
+  Size: 1
+NR42:
+  Type: int
+  Description: Channel 4 Volume Envelope (R/W)
+  Offset: 0xFF21
+  Size: 1
+NR43:
+  Type: int
+  Description: Channel 4 Polynomial Counter (R/W)
+  Offset: 0xFF22
+  Size: 1
+NR44:
+  Type: int
+  Description: Channel 4 Counter/consecutive; Inital (R/W)
+  Offset: 0xFF23
+  Size: 1
+NR50:
+  Type: int
+  Description: Channel control / ON-OFF / Volume (R/W)
+  Offset: 0xFF24
+  Size: 1
+NR51:
+  Type: int
+  Description: Selection of Sound output terminal (R/W)
+  Offset: 0xFF25
+  Size: 1
+NR52:
+  Type: int
+  Description: Sound on/off
+  Offset: 0xFF26
+  Size: 1
+WAVE_PATTERN_RAM:
+  Type: int
+  Description: Wave Pattern RAM
+  Offset: 0xFF30
+  Size: 16
+LCDC:
+  Type: int
+  Description: LCD Control (R/W)
+  Offset: 0xFF40
+  Size: 1
+STAT:
+  Type: int
+  Description: LCDC Status (R/W)
+  Offset: 0xFF41
+  Size: 1
+SCY:
+  Type: int
+  Description: Scroll Y (R/W)
+  Offset: 0xFF42
+  Size: 1
+SCX:
+  Type: int
+  Description: Scroll X (R/W)
+  Offset: 0xFF43
+  Size: 1
+LY:
+  Type: int
+  Description: LCDC Y-Coordinate (R)
+  Offset: 0xFF44
+  Size: 1
+LYC:
+  Type: int
+  Description: LY Compare (R/W)
+  Offset: 0xFF45
+  Size: 1
+DMA:
+  Type: int
+  Description: DMA Transfer and Start Address (W)
+  Offset: 0xFF46
+  Size: 1
+BGP:
+  Type: int
+  Description: BG Palette Data (R/W) - Non CGB Mode Only
+  Offset: 0xFF47
+  Size: 1
+OBP0:
+  Type: int
+  Description: Object Palette 0 Data (R/W) - Non CGB Mode Only
+  Offset: 0xFF48
+  Size: 1
+OBP1:
+  Type: int
+  Description: Object Palette 1 Data (R/W) - Non CGB Mode Only
+  Offset: 0xFF49
+  Size: 1
+WY:
+  Type: int
+  Description: Window Y Position (R/W)
+  Offset: 0xFF4A
+  Size: 1
+WX:
+  Type: int
+  Description: Window X Position minus 7 (R/W)
+  Offset: 0xFF4B
+  Size: 1
+KEY1:
+  Type: int
+  Description: CGB Mode Only - Prepare Speed Switch
+  Offset: 0xFF4D
+  Size: 1
+VBK:
+  Type: int
+  Description: CGB Mode Only - VRAM Bank
+  Offset: 0xFF4F
+  Size: 1
+HDMA1:
+  Type: int
+  Description: CGB Mode Only - New DMA Source, High
+  Offset: 0xFF51
+  Size: 1
+HDMA2:
+  Type: int
+  Description: CGB Mode Only - New DMA Source, Low
+  Offset: 0xFF52
+  Size: 1
+HDMA3:
+  Type: int
+  Description: CGB Mode Only - New DMA Destination, High
+  Offset: 0xFF53
+  Size: 1
+HDMA4:
+  Type: int
+  Description: CGB Mode Only - New DMA Destination, Low
+  Offset: 0xFF54
+  Size: 1
+HDMA5:
+  Type: int
+  Description: CGB Mode Only - New DMA Length/Mode/Start
+  Offset: 0xFF55
+  Size: 1
+RP:
+  Type: int
+  Description: CGB Mode Only - Infrared Communications Port
+  Offset: 0xFF56
+  Size: 1
+BGPI:
+  Type: int
+  Description: CGB Mode Only - Background Palette Index
+  Offset: 0xFF68
+  Size: 1
+BGPD:
+  Type: int
+  Description: CGB Mode Only - Background Palette Data
+  Offset: 0xFF69
+  Size: 1
+OBPI:
+  Type: int
+  Description: CGB Mode Only - Sprite Palette Index
+  Offset: 0xFF6A
+  Size: 1
+OBPD:
+  Type: int
+  Description: CGB Mode Only - Sprite Palette Data
+  Offset: 0xFF6B
+  Size: 1
+UNDOC_6C:
+  Type: int
+  Offset: 0xFF6C
+  Description: Bit 0 (Read/Write) - CGB Mode Only
+  Size: 1
+SVBK:
+  Type: int
+  Description: CGB Mode Only - WRAM Bank
+  Offset: 0xFF70
+  Size: 1
+UNDOC_72:
+  Type: int
+  Offset: 0xFF72
+  Description: Bit 0-7 (Read/Write)
+  Size: 1
+UNDOC_73:
+  Type: int
+  Offset: 0xFF73
+  Description: Bit 0-7 (Read/Write)
+  Size: 1
+UNDOC_74:
+  Type: int
+  Offset: 0xFF74
+  Description: Bit 0-7 (Read/Write) - CGB Mode Only
+  Size: 1
+UNDOC_75:
+  Type: int
+  Offset: 0xFF75
+  Description: Bit 4-6 (Read/Write)
+  Size: 1
+UNDOC_76:
+  Type: int
+  Offset: 0xFF76
+  Description: Always 00h (Read Only)
+  Size: 1
+UNDOC_77:
+  Type: int
+  Offset: 0xFF77
+  Description: Always 00h (Read Only)
+  Size: 1
+IE:
+  Type: int
+  Description: Interrupt Enable (R/W)
+  Offset: 0xFFFF
+  Size: 1
+...
